@@ -1,6 +1,111 @@
 OpenCV Change Logs
 ==================
 
+<details>
+
+<summary>Coming soon... 4.5.2 / 3.4.14</summary>
+
+version:4.5.2
+-------------
+
+
+*April, 2021*
+
+Spring update for OpenCV 4.x has been released.
+
+
+**Highlights of this release**:
+
+- core: added support for parallel [backends](https://github.com/opencv/opencv/pull/19365). Special OpenCV builds allow to select parallel backend and/or load it dynamically through [plugins](https://github.com/opencv/opencv/pull/19470)
+
+- imgproc: added [IntelligentScissors](https://github.com/opencv/opencv/pull/19194) implementation ([JS demo](https://docs.opencv.org/master/d9/df5/tutorial_js_intelligent_scissors.html)). The feature is integrated into [CVAT annotation tool](https://github.com/openvinotoolkit/cvat) and you can try it online on https://cvat.org
+
+- videoio: [improved](https://github.com/opencv/opencv/pull/19460) hardware-accelerated video decoding/encoding tasks. [Wiki page](https://github.com/opencv/opencv/wiki/Video-IO-hardware-acceleration)
+
+![](images/dnn.png)
+
+- DNN module:
+
+    - Improved debugging of TensorFlow parsing errors: [#19220](https://github.com/opencv/opencv/pull/19220)
+
+    - Improved layers / activations / supported more models:
+
+      - optimized: NMS processing, DetectionOutput
+      - fixed: Div with constant, MatMul, Reshape (TensorFlow behaviour)
+      - added support: Mish ONNX subgraph, NormalizeL2 (ONNX), LeakyReLU (TensorFlow), TanH (Darknet), SAM (Darknet), Exp
+
+    - Intel® Inference Engine backend ( [OpenVINO™](https://software.intel.com/en-us/openvino-toolkit) ):
+
+      - added support for OpenVINO 2021.3 release
+
+![](images/gapi.png)
+
+- G-API module:
+
+    - TBD
+
+![](images/rtfm.png)
+
+- Documentation:
+
+    - [GSoC] Added TF and PyTorch classification conversion cases: [#17604](https://github.com/opencv/opencv/pull/17604)
+
+![](images/github2.png)
+
+- And many other great contributions from OpenCV community:
+
+    - core: add cuda::Stream constructor with cuda stream flags: [#19286](https://github.com/opencv/opencv/pull/19286)
+
+    - highgui: expose VSYNC window property for OpenGL on Win32: [#19408](https://github.com/opencv/opencv/pull/19408)
+
+    - highgui: pollKey() implementation for w32 backend: [#19411](https://github.com/opencv/opencv/pull/19411)
+
+    - imgcodecs: Added Exif parsing for PNG: [#19439](https://github.com/opencv/opencv/pull/19439)
+
+    - imgcodecs: OpenEXR compression options: [#19540](https://github.com/opencv/opencv/pull/19540)
+
+    - imgproc: connectedComponents optimizations: ([Spaghetti Labeling](https://ieeexplore.ieee.org/document/8874953)): [#19631](https://github.com/opencv/opencv/pull/19631)
+
+    - videoio: Android NDK camera support [#19597](https://github.com/opencv/opencv/pull/19597)
+
+    - (opencv_contrib) WeChat QRCode module open source: [#2821](https://github.com/opencv/opencv_contrib/pull/2821)
+
+    - (opencv_contrib) Implement cv::cuda::inRange(): [#2803](https://github.com/opencv/opencv_contrib/pull/2803)
+
+
+
+### Contributors
+
+<details>
+<summary>opencv (XX contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.5.1..4.5.2
+```
+
+</details>
+
+<details>
+<summary>opencv_contrib (XX contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.5.1..4.5.2
+```
+
+</details>
+
+
+
+version:3.4.14
+-------------
+
+*April, 2021*
+
+OpenCV 3.4.14 has been released. Bug fixes, optimizations and other enhancements are propagated into OpenCV 4.5.2.
+
+</details>
+
+
 
 version:4.5.1
 -------------
