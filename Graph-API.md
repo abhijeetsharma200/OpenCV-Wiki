@@ -30,6 +30,8 @@ source path-to-unpacked-openvino/bin/setupvars.sh
 cmake /path-to-opencv -DWITH_INF_ENGINE=ON -DINF_ENGINE_RELEASE=2021030000
 ```
 
+*NOTE*: Set `INF_ENGINE_RELEASE` to the proper version, depending on the package you use.
+
 ## Building with PlaidML support
 * Follow instruction to build PlaidML2: https://plaidml.github.io/plaidml/docs/building
 ```bash
@@ -50,7 +52,7 @@ cmake /path-to-opencv -DPlaidML2_DIR=path-to-miniconda3/share/plaidml2 -DWITH_PL
 /path-to-opencv-build/bin/opencv_test_gapi --gtest_filter=*GAPI_PlaidML_Pipelines*
 ```
 
-## Building with Microsoft ONNX Runtime support:
+## Building with Microsoft ONNX Runtime support
 
 * Build and install the ONNX RT (currently tested with v1.5.1):
 
