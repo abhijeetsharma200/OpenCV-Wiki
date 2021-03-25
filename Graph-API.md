@@ -29,21 +29,24 @@ TBD
 
 ## Building with Microsoft ONNX Runtime support:
 
-    * Build and install the ONNX RT (currently tested with v1.5.1):
-    ```bash
-     $ git clone --recursive https://github.com/microsoft/onnxruntime.git
-     $ cd onnxruntime
-     $ git checkout v1.5.1
-     $ git submodule update --init
-     $ ./build.sh --config Release --build_shared_lib --parallel \
-     $     --cmake_extra_defines CMAKE_INSTALL_PREFIX=install
-     $ cd build/Linux/Release
-     $ make install
-    ```
-    * Then specify extra options to OpenCV CMake:    
-    ```bash
-     $ cmake /path-to-opencv -DWITH_ONNX=ON -DORT_INSTALL_DIR=/path-to-ort-install-dir
-    ```
+* Build and install the ONNX RT (currently tested with v1.5.1):
+
+```bash
+ $ git clone --recursive https://github.com/microsoft/onnxruntime.git
+ $ cd onnxruntime
+ $ git checkout v1.5.1
+ $ git submodule update --init
+ $ ./build.sh --config Release --build_shared_lib --parallel \
+ $     --cmake_extra_defines CMAKE_INSTALL_PREFIX=install
+ $ cd build/Linux/Release
+ $ make install
+```
+
+* Then specify extra options to OpenCV CMake:    
+
+```bash
+ $ cmake /path-to-opencv -DWITH_ONNX=ON -DORT_INSTALL_DIR=/path-to-ort-install-dir
+```
 
 Testing G-API
 =============
