@@ -19,15 +19,16 @@ What it is?
 
 G-API is built with OpenCV by default, however some features may require additional options or dependencies enabled.
 
-## How to build with OpenVINO Toolkit:
+## Building with OpenVINO Toolkit support
 
 TBD
 
-## How to build with PlaidML:
+## Building with PlaidML support
 
 TBD
 
-## How to build with ONNX RT:
+## Building with Microsoft ONNX Runtime support:
+
     * Build and install the ONNX RT (currently tested with v1.5.1):
     ```bash
      $ git clone --recursive https://github.com/microsoft/onnxruntime.git
