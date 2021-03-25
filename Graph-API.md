@@ -14,7 +14,20 @@ What it is?
 * G-API GPU backend implements the majority of available functions and allows to run OpenCL kernels on available OpenCL-programmable devices. At the moment, GPU backend is based on OpenCV Transparent API; in future versions it will be extended to support integration of arbitrary OpenCL kernels (and likely be renamed to "OpenCL backend").
 
 * G-API ONNX backend implements [ONNX models](https://github.com/onnx/models) inference operations on input data and outputs the results. At the moment, ONNX backend is based on [ONNX Runtime](https://github.com/microsoft/onnxruntime) C/C++ API.
-    #### How to build with ONNX RT:
+
+# Building G-API
+
+G-API is built with OpenCV by default, however some features may require additional options or dependencies enabled.
+
+## How to build with OpenVINO Toolkit:
+
+TBD
+
+## How to build with PlaidML:
+
+TBD
+
+## How to build with ONNX RT:
     * Build and install the ONNX RT (currently tested with v1.5.1):
     ```bash
      $ git clone --recursive https://github.com/microsoft/onnxruntime.git
