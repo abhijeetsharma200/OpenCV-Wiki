@@ -20,8 +20,15 @@ What it is?
 G-API is built with OpenCV by default, however some features may require additional options or dependencies enabled.
 
 ## Building with OpenVINO Toolkit support
-
-TBD
+* Get `openvino` from https://docs.openvinotoolkit.org/
+* Configure enviroment:
+```bash
+source path-to-unpacked-openvino/bin/setupvars.sh
+```
+* Build G-API with OpenVINO support:
+```bash
+cmake /path-to-opencv -DWITH_INF_ENGINE=ON -DINF_ENGINE_RELEASE=2021030000
+```
 
 ## Building with PlaidML support
 
