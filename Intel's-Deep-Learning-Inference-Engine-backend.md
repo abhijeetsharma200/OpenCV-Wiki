@@ -13,11 +13,11 @@ To use OpenCV with Inference Engine, choose one of the options:
 
 ### Intel&reg; OpenVINO&trade; toolkit
 
-* Download and install [Intel&reg; OpenVINO&trade; toolkit](https://software.seek.intel.com/openvino-toolkit). 
+* Download and install [Intel&reg; OpenVINO&trade; toolkit](https://software.intel.com/content/www/us/en/develop/tools/openvino-toolkit/download.html). 
 
   **Important note**: if you want to transfer the installed Inference Engine binaries to another machine w/o running OpenVINO installer there, you need [the redistributable files of Intel C++ compiler](https://software.intel.com/en-us/articles/intel-compilers-redistributable-libraries-by-version) (use the latest update, 64-bit version), otherwise the Inference Engine or some of its essential plugins will refuse to load and run, which may result in an app crash.
-* To perform deep neural networks inference on ARM CPUs, build ARM CPU Plugin from [openvino_contrib](https://github.com/openvinotoolkit/openvino_contrib).
-OpenVINO contrib isn't distributed in the package. This way requires building OpenVINO and OpenCV from source. ARM CPU Plugin build [instructions](https://github.com/openvinotoolkit/openvino_contrib/blob/master/modules/arm_plugin/README.md).
+* To perform deep neural networks inference on ARM CPUs, build ARM CPU Plugin from [openvino_contrib](https://github.com/openvinotoolkit/openvino_contrib/tree/master/modules/arm_plugin).
+ARM CPU Plugin isn't distributed in the package. This way requires building OpenVINO and OpenCV from source. ARM CPU Plugin build [instructions](https://github.com/openvinotoolkit/openvino_contrib/blob/master/modules/arm_plugin/README.md).
   * OpenVINO release tag [2021.3](https://github.com/openvinotoolkit/openvino/releases/tag/2021.3)
   * OpenVINO contrib release tag [2021.3](https://github.com/openvinotoolkit/openvino_contrib/releases/tag/2021.3)
 
