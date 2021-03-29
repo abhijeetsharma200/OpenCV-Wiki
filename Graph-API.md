@@ -175,7 +175,7 @@ test_modules:Custom=gapi
 test_filter:Custom=*ONNX*
 ```
 
-or [FreeType](https://www.freetype.org/)
+or [FreeType](https://www.freetype.org/):
 
 ```
 force_builders=Custom
