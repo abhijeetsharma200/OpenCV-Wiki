@@ -133,8 +133,8 @@ build_gapi_standalone:Win64=ade-0.1.1f
 build_gapi_standalone:Mac=ade-0.1.1f
 build_gapi_standalone:Linux x64 Debug=ade-0.1.1f
 
-build_image:Custom=centos:7
-buildworker:Custom=linux-1
+Xbuild_image:Custom=centos:7
+Xbuildworker:Custom=linux-1
 build_gapi_standalone:Custom=ade-0.1.1f
 
 build_image:Custom=ubuntu-openvino-2021.3.0:20.04
