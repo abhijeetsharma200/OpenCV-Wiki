@@ -175,6 +175,14 @@ test_modules:Custom=gapi
 test_filter:Custom=*ONNX*
 ```
 
+or [FreeType](https://www.freetype.org/)
+
+```
+force_builders=Custom
+buildworker:Custom=linux-1
+build_image:Custom=ubuntu-gapi-freetype:16.04
+```
+
 It is also worth testing if any internal API changes are made.
 
 Materials
