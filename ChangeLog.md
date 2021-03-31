@@ -42,7 +42,33 @@ Spring update for OpenCV 4.x has been released.
 
 - G-API module:
 
-    - TBD
+  - Python support:
+
+    - Introduced a new Python backend - now G-API can run custom kernels written in Python as part of the pipeline: [#19351](https://github.com/opencv/opencv/pull/19351);
+    - Extended Inference support in the G-API Python bindings: [#19318](https://github.com/opencv/opencv/pull/19318);
+    - Added more graph data types support in the G-API Python bindings: [#19319](https://github.com/opencv/opencv/pull/19319);
+    
+  - Inference support:
+  
+    - Introduced dynamic input / CNN reshape functionality in the OpenVINO inference backend [#18240](https://github.com/opencv/opencv/pull/18240);
+    - Introduced asynchronous execution support in the OpenVINO inference backend, now inference can run in multiple requests in parallel to increase stream density/throughput: [#19487](https://github.com/opencv/opencv/pull/19487), [#19425](https://github.com/opencv/opencv/pull/19425);
+    - Extended supported data types with INT64/INT32 in ONNX inference backend and with INT32 in the OpenVINO inference backend [#19792](https://github.com/opencv/opencv/pull/19792);    
+    - Introduced `cv::GFrame` / `cv::MediaFrame` and constant support in the ONNX backend: [#19070](https://github.com/opencv/opencv/pull/19205);
+  
+  - Media support:
+  
+    - Introduced `cv::GFrame` / `cv::MediaFrame` support in the drawing/rendering interface: [#19516](https://github.com/opencv/opencv/pull/19516);
+    - Introduced multi-stream input support in Streaming mode and frame synchronization policies to support cases like Stereo: [#19731](https://github.com/opencv/opencv/pull/19731);
+    - Added `Y` and `UV` operations to access NV12 data of `cv::GFrame` at the graph level; conversions are done on-the-fly if the media format is different: [#19325](https://github.com/opencv/opencv/pull/19325);
+
+  - Operations and kernels:
+
+    - Added performance tests for new operations (MorphologyEx, BoundingRect, FitLine, FindContours, KMeans, Kalman, BackgroundSubtractor);
+    - Fixed RMat input support in the PlaidML backend: [#19782](https://github.com/opencv/opencv/pull/19782);
+    - Added ARM NEON optimizations for Fluid AbsDiffC, AddWeighted, and bitwise operations: [#18466](https://github.com/opencv/opencv/pull/18466), [#19233](https://github.com/opencv/opencv/pull/19233);
+
+  - Other various static analysis and warning fixes;
+
 
 ![](images/rtfm.png)
 
