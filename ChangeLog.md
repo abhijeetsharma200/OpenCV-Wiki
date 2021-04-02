@@ -1,9 +1,6 @@
 OpenCV Change Logs
 ==================
 
-<details>
-
-<summary>Coming soon... 4.5.2 / 3.4.14</summary>
 
 version:4.5.2
 -------------
@@ -47,16 +44,16 @@ Spring update for OpenCV 4.x has been released.
     - Introduced a new Python backend - now G-API can run custom kernels written in Python as part of the pipeline: [#19351](https://github.com/opencv/opencv/pull/19351);
     - Extended Inference support in the G-API Python bindings: [#19318](https://github.com/opencv/opencv/pull/19318);
     - Added more graph data types support in the G-API Python bindings: [#19319](https://github.com/opencv/opencv/pull/19319);
-    
+
   - Inference support:
-  
+
     - Introduced dynamic input / CNN reshape functionality in the OpenVINO inference backend [#18240](https://github.com/opencv/opencv/pull/18240);
     - Introduced asynchronous execution support in the OpenVINO inference backend, now inference can run in multiple requests in parallel to increase stream density/throughput: [#19487](https://github.com/opencv/opencv/pull/19487), [#19425](https://github.com/opencv/opencv/pull/19425);
     - Extended supported data types with INT64/INT32 in ONNX inference backend and with INT32 in the OpenVINO inference backend [#19792](https://github.com/opencv/opencv/pull/19792);    
     - Introduced `cv::GFrame` / `cv::MediaFrame` and constant support in the ONNX backend: [#19070](https://github.com/opencv/opencv/pull/19205);
-  
+
   - Media support:
-  
+
     - Introduced `cv::GFrame` / `cv::MediaFrame` support in the drawing/rendering interface: [#19516](https://github.com/opencv/opencv/pull/19516);
     - Introduced multi-stream input support in Streaming mode and frame synchronization policies to support cases like Stereo: [#19731](https://github.com/opencv/opencv/pull/19731);
     - Added `Y` and `UV` operations to access NV12 data of `cv::GFrame` at the graph level; conversions are done on-the-fly if the media format is different: [#19325](https://github.com/opencv/opencv/pull/19325);
@@ -75,6 +72,13 @@ Spring update for OpenCV 4.x has been released.
 - Documentation:
 
     - [GSoC] Added TF and PyTorch classification conversion cases: [#17604](https://github.com/opencv/opencv/pull/17604)
+
+    - [GSoC] Added TF and PyTorch segmentation conversion cases: [#17801](https://github.com/opencv/opencv/pull/17801)
+
+    - [GSoC] Added TF and PyTorch detection model conversion cases: [#18237](https://github.com/opencv/opencv/pull/18237)
+
+    - Updated documentation to address Wide Universal Intrinsics (WUI) SIMD API: [#18952](https://github.com/opencv/opencv/pull/18952)
+
 
 ![](images/github2.png)
 
@@ -96,26 +100,152 @@ Spring update for OpenCV 4.x has been released.
 
     - (opencv_contrib) WeChat QRCode module open source: [#2821](https://github.com/opencv/opencv_contrib/pull/2821)
 
-    - (opencv_contrib) Implement cv::cuda::inRange(): [#2803](https://github.com/opencv/opencv_contrib/pull/2803)
+    - (opencv_contrib) Implemented cv::cuda::inRange(): [#2803](https://github.com/opencv/opencv_contrib/pull/2803)
+
+    - (opencv_contrib) Added algorithms from Edge Drawing Library: [#2313](https://github.com/opencv/opencv_contrib/pull/2313)
+
+    - (opencv_contrib) Added Python bindings for Viz module: [#2882](https://github.com/opencv/opencv_contrib/pull/2882)
 
 
 
 ### Contributors
 
 <details>
-<summary>opencv (XX contributors)</summary>
+<summary>opencv (92 contributors)</summary>
 
 ```
 git shortlog --no-merges -ns 4.5.1..4.5.2
+    97  Alexander Alekhin
+    14  Anatoliy Talamanov
+    13  Maksim Shabunin
+     9  Dale Phurrough
+     8  Liubov Batanina
+     7  Alexander Smorkalov
+     7  Anastasia M
+     7  Maxim Pashchenkov
+     6  Orest Chura
+     5  Anastasia Murzova
+     4  LaurentBerger
+     4  Rachel A
+     4  Tomoaki Teshima
+     4  Zhuo Zhang
+     3  Christoph Rackwitz
+     3  Giles Payne
+     3  OrestChura
+     3  Qoo
+     3  Ruslan Garnov
+     3  SamFC10
+     3  Vitaly Tuzov
+     2  APrigarina
+     2  Aaron Greig
+     2  Amir Tulegenov
+     2  Anastasiya Pronina
+     2  Anna Khakimova
+     2  Dan Ben Yosef
+     2  Dan Ben-Yosef
+     2  Dmitry Budnikov
+     2  Francesco Petrogalli
+     2  Ilya Lavrenov
+     2  Liangqian
+     2  Mikhail Nikolskii
+     2  Sayed Adel
+     2  Suleyman TURKMEN
+     2  Vadim Levin
+     2  WeiChungChang
+     2  YashasSamaga
+     1  Alexander Reynolds
+     1  Alexey Smirnov
+     1  Andrey Golubev
+     1  Anton Potapov
+     1  Aryansh Omray
+     1  Cuntian Liu
+     1  Daniel Playfair Cal
+     1  Federico Bolelli
+     1  Federico Martinez
+     1  Grégoire Piffault
+     1  Ian Maquignaz
+     1  Igor Murzov
+     1  Ilya Churaev
+     1  Ixarias
+     1  Jebastin Nadar
+     1  Jonathan Deakin
+     1  Justin Chu
+     1  Kun Liang
+     1  Larry Wei
+     1  Liangda-w
+     1  Lukas-Alexander Weber
+     1  Mark Harfouche
+     1  Matt Alvarado
+     1  MaximMilashchenko
+     1  Mieszko Boczkowski
+     1  Mradul Agrawal
+     1  Namgoo Lee
+     1  Nicola Landolfi
+     1  Olivier Le Doeuff
+     1  Pavel Rojtberg
+     1  Polina Smolnikova
+     1  Ruan
+     1  Sergei Slashchinin
+     1  Sergey Krivohatskiy
+     1  Sergey Slashchinin
+     1  Smirnov Alexey
+     1  Stefan Dragnev
+     1  Tsukasa Sugiura
+     1  Vincent Rabaud
+     1  Xinguang Bian
+     1  Your Name
+     1  ZhM
+     1  Ziachnix
+     1  aDanPin
+     1  amir.tulegenov
+     1  cyy
+     1  eplankin
+     1  krush11
+     1  kyshel
+     1  lionkun
+     1  mznw
+     1  notmatthancock
+     1  shioko
+     1  the-sparrow
 ```
 
 </details>
 
 <details>
-<summary>opencv_contrib (XX contributors)</summary>
+<summary>opencv_contrib (30 contributors)</summary>
 
 ```
 git shortlog --no-merges -ns 4.5.1..4.5.2
+     8  Tomoaki Teshima
+     7  dddzg
+     5  Pavel Rojtberg
+     4  Alexander Alekhin
+     2  DumDereDum
+     2  LaurentBerger
+     2  Vadim Pisarevsky
+     1  Aaron Miller
+     1  Atlas42
+     1  Dimitrios Psychogyios
+     1  Jan-Kristian Herring
+     1  Kévin Andrieux
+     1  MrKepzie
+     1  Namgoo Lee
+     1  Roman Golovanov
+     1  Rostislav Vasilikhin
+     1  Stefan Brechtken
+     1  Suleyman TURKMEN
+     1  Sun Aries
+     1  Tobias Senst
+     1  Ubuntu
+     1  Vishal Chiluka
+     1  Yahui Wang
+     1  aaarthurliu
+     1  amir.tulegenov
+     1  arsaratovtsev
+     1  batters21
+     1  berak
+     1  chester
+     1  dzyGIT
 ```
 
 </details>
@@ -128,8 +258,6 @@ version:3.4.14
 *April, 2021*
 
 OpenCV 3.4.14 has been released. Bug fixes, optimizations and other enhancements are propagated into OpenCV 4.5.2.
-
-</details>
 
 
 
