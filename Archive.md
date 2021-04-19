@@ -56,6 +56,7 @@ Previous idea lists:
 - [[Unix based guide|Linux_contribution_guide]]
 
 ##### Individual Contributors
+- [List](https://github.com/opencv/opencv/wiki/Individual-Contributors)
 
 
 
