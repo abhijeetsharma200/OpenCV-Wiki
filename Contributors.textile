@@ -22,8 +22,9 @@ h2. Corporate Contributors
 |  "NVIDIA":http://www.nvidia.com | Supporting Android, Embedded Linux, WinRT and CUDA ports |
 |  "Itseez":http://www.itseez.com | Supporting current core programming team|
 |  "Willow Garage":http://www.willowgarage.com | Supported core programming team for 5 years|
-|  "Google":http://www.google.com |  Image wrapper class cvwimage |
-|  "Phase Space":http://www.phasespace.com/ | Bundle adjustment |
+|  "Xperience AI":http://www.https://xperience.ai/ |  Supporting current core programming team |
+|  "Advanced Micro Devices, Inc":https://www.amd.com/en | Supported for 3 years |
+|  "Shenzhen Institute of Artificial Intelligence and Robotics for Society":https://airs.cuhk.edu.cn/en | Supporting current core programming team |
 
 h2. Individual Contributors
 
