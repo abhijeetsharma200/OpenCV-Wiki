@@ -55,6 +55,9 @@ Previous idea lists:
 - [[Windows 7 guide|Windows_7_and_TortoiseGit_contribution_guide]]
 - [[Unix based guide|Linux_contribution_guide]]
 
+##### Individual Contributors
+
+
 
 ##### Others
 
