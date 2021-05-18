@@ -21,7 +21,7 @@ Many time-critical kernels in OpenCV are optimized using our own cross-platform 
    cd $HOME/projects/build/opencv_rvv071
    cmake ../../opencv -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE="../../opencv/platforms/linux/riscv64-0.7.1-gcc.toolchain.cmake" -DWITH_OPENCL=OFF -DBUILD_opencv_calib3d=ON -DBUILD_ZLIB=ON -DBUILD_PNG=ON -DBUILD_SHARED_LIBS=OFF -DCMAKE_BUILD_WITH_INSTALL_RPATH=1 -DCMAKE_INSTALL_PREFIX=./install
    make -j8
-   make install # optional
+   make install # optionally
    ```
 5. You can now run the tests on the real hardware or QEMU emulator. In the latter case, you can do it with
    ```
