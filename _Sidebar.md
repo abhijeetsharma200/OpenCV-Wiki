@@ -9,6 +9,8 @@
     - [[TensorFlow text graphs|TensorFlow text graphs]]
     - [[TensorFlow Object Detection API|TensorFlow Object Detection API]]
     - [[Intel's Deep Learning Inference Engine backend|Intel's Deep Learning Inference Engine backend]]
+- [[Running OpenCV on Various Platforms|OpenCV-Platforms]]
+    - [[Running OpenCV on RISC-V|OpenCV-RISC-V]]
 - [[OpenCV 4|Opencv4]]
     - [[Graph API (G-API)|Graph-API]]
 - [[OpenCV 3|Opencv3]]
