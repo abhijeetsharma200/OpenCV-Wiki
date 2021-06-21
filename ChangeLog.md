@@ -2,6 +2,104 @@ OpenCV Change Logs
 ==================
 
 
+<details>
+
+<summary>Coming soon... 4.5.3 / 3.4.15</summary>
+
+
+version:4.5.3
+-------------
+
+
+*July, 2021*
+
+Summer update for OpenCV 4.x has been released.
+
+
+**Highlights of this release**:
+
+- highgui: added support for U/I [backends](https://github.com/opencv/opencv/pull/20116). Special OpenCV builds allow to select U/I backend and/or load it dynamically through plugins.
+
+- videoio: supported UMat/OpenCL hardware-accelerated video decoding/encoding through [FFmpeg backend](https://github.com/opencv/opencv/pull/19755).
+
+- video: [DaSiamRPN](https://github.com/opencv/opencv/pull/20036) tracker is implemented as OpenCV algorithm.
+
+![](images/dnn.png)
+
+- DNN module:
+
+    - Improved layers / activations / supported more models:
+
+      - optimized: MatMul support in CUDA backend ([#20138](https://github.com/opencv/opencv/pull/20138))
+      - fixed: BatchNorm reinitialization ([#20283](https://github.com/opencv/opencv/pull/20283))
+
+    - Intel® Inference Engine backend ( [OpenVINO™](https://software.intel.com/en-us/openvino-toolkit) ):
+
+      - added support for OpenVINO 2021.4 release
+      - enabled OpenCL kernels cache in IE clDNN plugin ([#20006](https://github.com/opencv/opencv/pull/20006))
+
+![](images/gapi.png)
+
+- G-API module:
+
+  - **TBD**
+
+
+![](images/rtfm.png)
+
+- Documentation:
+
+    - Updated documentation to address plugin support modes / build options: [#20194](https://github.com/opencv/opencv/pull/20194)
+
+
+![](images/github2.png)
+
+- And many other great contributions from OpenCV community:
+
+    - samples: added PaddlePaddle classification model conversion case: [#19976](https://github.com/opencv/opencv/pull/19976)
+
+    - core: fix dynamic loading of clBLAS and clFFT: [#20203](https://github.com/opencv/opencv/pull/20203)
+
+    - imgproc: improved implementation of rotatedRectangleIntersection: [#19842](https://github.com/opencv/opencv/pull/19842)
+
+    - (opencv_contrib) 1D Barcode support: [#2757](https://github.com/opencv/opencv_contrib/pull/2757)
+
+
+### Contributors
+
+<details>
+<summary>opencv (92 contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.5.2..4.5.3
+```
+
+</details>
+
+<details>
+<summary>opencv_contrib (30 contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.5.2..4.5.3
+```
+
+</details>
+
+
+
+version:3.4.15
+-------------
+
+*July, 2021*
+
+OpenCV 3.4.15 has been released. Bug fixes, optimizations and other enhancements are propagated into OpenCV 4.5.3.
+
+Long-lived OpenCV 3.x release series is here since 2015. We are going to reduce support of 3.x branch in the future to move forward to OpenCV 5.0.
+
+</details>
+
+
+
 version:4.5.2
 -------------
 
