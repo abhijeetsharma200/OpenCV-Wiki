@@ -42,8 +42,35 @@ Summer update for OpenCV 4.x has been released.
 
 - G-API module:
 
-  - **TBD**
+  - Python support:
+  
+    - Introduced a new Python Operation API: now G-API can be extended with new graph operations in Python directly: [#19982](https://github.com/opencv/opencv/pull/19982);
+    - Extended Python bindings with more G-API confuration options: specifying arbitrary number of NN models for the pipeline ([#20157](https://github.com/opencv/opencv/pull/20157)), graph compile arguments ([#20196](https://github.com/opencv/opencv/pull/20196)).
+    - Exposed more G-API operations in Python bindings: `parseSSD`, `parseYolo`, `copy`, `timestamp`, `seq_id` ([#20271](https://github.com/opencv/opencv/pull/20271)).
+  
+  - Inference support:
+  
+    - Added FP16 data type handling in the OpenVINO™ inference backend;
+    - Introduced inference with remote context in the OpenVINO™ inference backend ([#20156](https://github.com/opencv/opencv/pull/20156)), also extended `cv::MediaFrame` data structure to carry extra information about remote memory when possible ([20151](https://github.com/opencv/opencv/pull/20151));
+    
+  - Operations:
+  
+    - Added Transpose operation ([#20107](https://github.com/opencv/opencv/pull/20107));
+    - Fixed a possible ambiguous overload problem in `parseSSD` operation.
 
+  - Demos:
+  
+    - Introduced a MTCNN object detection demo. This demo highlights how to combine Deep Learning with a non-trivial user-defined pre- and post-processing in G-API: [#19923](https://github.com/opencv/opencv/pull/19923);
+    
+  - Other changes:
+
+    - Added a new graph compile option to specify the internal queue capacity in the Streaming mode -- this option may be used to fine-tune the execution behavior from a throughput-oriented (default) to a latency oriented mode: [#20119](https://github.com/opencv/opencv/pull/20119);
+    - Added ITT instrumentation in the Streaming executor -- now different parts of the pipeline execution can be highlited in the Intel® VTune™ Profiler.
+    - Fixed issue with passing empty data inputs to the graph: [#20184](https://github.com/opencv/opencv/pull/20184).
+    
+  - Documentation:
+  
+    - Extended the Doxygen reference with new structures/method description for `Generic` inference ([#20169](https://github.com/opencv/opencv/pull/20169)), OpenVINO™ inference parameters ([#20112](https://github.com/opencv/opencv/pull/20112)), Stereo, `cv::MediaFrame` ([#20238](https://github.com/opencv/opencv/pull/20238)), and other API parts.
 
 ![](images/rtfm.png)
 
