@@ -2,10 +2,6 @@ OpenCV Change Logs
 ==================
 
 
-<details>
-
-<summary>Coming soon... 4.5.3 / 3.4.15</summary>
-
 
 version:4.5.3
 -------------
@@ -18,7 +14,7 @@ Summer update for OpenCV 4.x has been released.
 
 **Highlights of this release**:
 
-- highgui: added support for U/I [backends](https://github.com/opencv/opencv/pull/20116). Special OpenCV builds allow to select U/I backend and/or load it dynamically through plugins.
+- highgui: added support for UI [backends](https://github.com/opencv/opencv/pull/20116). Special OpenCV builds allow to select UI backend and/or load it dynamically through plugins.
 
 - videoio: supported UMat/OpenCL hardware-accelerated video decoding/encoding through [FFmpeg backend](https://github.com/opencv/opencv/pull/19755).
 
@@ -35,7 +31,7 @@ Summer update for OpenCV 4.x has been released.
 
     - Intel® Inference Engine backend ( [OpenVINO™](https://software.intel.com/en-us/openvino-toolkit) ):
 
-      - added support for OpenVINO 2021.4 release
+      - added support for OpenVINO 2021.4 LTS release
       - enabled OpenCL kernels cache in IE clDNN plugin ([#20006](https://github.com/opencv/opencv/pull/20006))
 
 ![](images/gapi.png)
@@ -43,33 +39,33 @@ Summer update for OpenCV 4.x has been released.
 - G-API module:
 
   - Python support:
-  
+
     - Introduced a new Python Operation API: now G-API can be extended with new graph operations in Python directly: [#19982](https://github.com/opencv/opencv/pull/19982);
     - Extended Python bindings with more G-API confuration options: specifying arbitrary number of NN models for the pipeline ([#20157](https://github.com/opencv/opencv/pull/20157)), graph compile arguments ([#20196](https://github.com/opencv/opencv/pull/20196)).
     - Exposed more G-API operations in Python bindings: `parseSSD`, `parseYolo`, `copy`, `timestamp`, `seq_id` ([#20271](https://github.com/opencv/opencv/pull/20271)).
-  
+
   - Inference support:
-  
+
     - Added FP16 data type handling in the OpenVINO™ inference backend;
     - Introduced inference with remote context in the OpenVINO™ inference backend ([#20156](https://github.com/opencv/opencv/pull/20156)), also extended `cv::MediaFrame` data structure to carry extra information about remote memory when possible ([20151](https://github.com/opencv/opencv/pull/20151));
-    
+
   - Operations:
-  
+
     - Added Transpose operation ([#20107](https://github.com/opencv/opencv/pull/20107));
     - Fixed a possible ambiguous overload problem in `parseSSD` operation.
 
   - Demos:
-  
+
     - Introduced a MTCNN object detection demo. This demo highlights how to combine Deep Learning with a non-trivial user-defined pre- and post-processing in G-API: [#19923](https://github.com/opencv/opencv/pull/19923);
-    
+
   - Other changes:
 
     - Added a new graph compile option to specify the internal queue capacity in the Streaming mode -- this option may be used to fine-tune the execution behavior from a throughput-oriented (default) to a latency oriented mode: [#20119](https://github.com/opencv/opencv/pull/20119);
     - Added ITT instrumentation in the Streaming executor -- now different parts of the pipeline execution can be highlited in the Intel® VTune™ Profiler.
     - Fixed issue with passing empty data inputs to the graph: [#20184](https://github.com/opencv/opencv/pull/20184).
-    
+
   - Documentation:
-  
+
     - Extended the Doxygen reference with new structures/method description for `Generic` inference ([#20169](https://github.com/opencv/opencv/pull/20169)), OpenVINO™ inference parameters ([#20112](https://github.com/opencv/opencv/pull/20112)), Stereo, `cv::MediaFrame` ([#20238](https://github.com/opencv/opencv/pull/20238)), and other API parts.
 
 ![](images/rtfm.png)
@@ -95,19 +91,115 @@ Summer update for OpenCV 4.x has been released.
 ### Contributors
 
 <details>
-<summary>opencv (92 contributors)</summary>
+<summary>opencv (76 contributors)</summary>
 
 ```
 git shortlog --no-merges -ns 4.5.2..4.5.3
+    46  Alexander Alekhin
+    10  Giles Payne
+     9  Anatoliy Talamanov
+     7  Smirnov Egor
+     6  Maxim Pashchenkov
+     5  Dmitry Budnikov
+     5  Maksim Shabunin
+     5  berak
+     4  Danny
+     4  Ian Maquignaz
+     4  Tiago De Gaspari
+     2  APrigarina
+     2  Alexander Smorkalov
+     2  Alexey Smirnov
+     2  Anna Prigarina
+     2  Dale Phurrough
+     2  Developer-Ecosystem-Engineering
+     2  Francesco Petrogalli
+     2  Joe Howse
+     2  Kai Stüdemann
+     2  SamFC10
+     2  Sergey Ivanov
+     2  Suleyman TURKMEN
+     2  Vincent Rabaud
+     2  danielenricocahall
+     2  rogday
+     1  103yiran
+     1  Aaron Greig
+     1  Aleksandr Voron
+     1  Alex Kalmuk
+     1  Anastasiya Pronina
+     1  Andreas Franek
+     1  Andrei Costinescu
+     1  Antonio Rojas
+     1  CSBVision
+     1  Christoph Rackwitz
+     1  David Geldreich
+     1  Dmitry Matveev
+     1  Florian Berchtold
+     1  Guillaume Jacob
+     1  HAN Liutong
+     1  Harald Scheirich
+     1  HattrickGenerator
+     1  Ilya Lavrenov
+     1  Jake Staahl
+     1  Jason
+     1  JoeHowse
+     1  Jonathan Deakin
+     1  Lukas-Alexander Weber
+     1  Maksym Ivashechkin
+     1  Mary Strodl
+     1  Mikhail Nikolskii
+     1  Nathan Hartman
+     1  Nikolay Polyarniy
+     1  Paul Jurczak
+     1  Pinaev Danil
+     1  Quella Zhang (Beyondsoft Corporation)
+     1  Rafael H Tibães
+     1  Stefano Allegretti
+     1  Vladimir
+     1  Xinguang Bian
+     1  YashasSamaga
+     1  Zhuo Zhang
+     1  catree
+     1  changh95
+     1  damonyu1989
+     1  deniz.aksayli
+     1  hyrodium
+     1  jiangjiajun
+     1  jogo-
+     1  kikaxa
+     1  micha137
+     1  mitruska
+     1  thezane
+     1  xzvno
+     1  yo1990
 ```
 
 </details>
 
 <details>
-<summary>opencv_contrib (30 contributors)</summary>
+<summary>opencv_contrib (20 contributors)</summary>
 
 ```
 git shortlog --no-merges -ns 4.5.2..4.5.3
+     4  Alexander Alekhin
+     3  Suleyman TURKMEN
+     2  DumDereDum
+     2  Ivar Clemens
+     2  Pavel Rojtberg
+     2  Smirnov Egor
+     2  Vincent Rabaud
+     2  berak
+     1  Aleksandr Patsekin
+     1  Archit Rungta
+     1  Artem Saratovtsev
+     1  David Forrest
+     1  Frank Dana
+     1  Junhao Liang
+     1  Killer_Quinn
+     1  TT
+     1  channings
+     1  pathbreak
+     1  scloke
+     1  shimat
 ```
 
 </details>
@@ -115,15 +207,13 @@ git shortlog --no-merges -ns 4.5.2..4.5.3
 
 
 version:3.4.15
--------------
+--------------
 
 *July, 2021*
 
 OpenCV 3.4.15 has been released. Bug fixes, optimizations and other enhancements are propagated into OpenCV 4.5.3.
 
 Long-lived OpenCV 3.x release series is here since 2015. We are going to reduce support of 3.x branch in the future to move forward to OpenCV 5.0.
-
-</details>
 
 
 
