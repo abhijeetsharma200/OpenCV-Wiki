@@ -71,7 +71,7 @@ Links: [Green's Theorem](http://en.wikipedia.org/wiki/Green's_theorem)
 <br>Error example:</br>
 ```onnx_graph_simplifier.cpp:592: error: (-210:Unsupported format or combination of formats) Unsupported data type: BOOL in function 'getMatFromTensor'```
 <br>The problem appeared during ``.onnx`` feeding into ``cv2.dnn.readNetFromONNX(...)``.</br>
-<br>**Discussion:** [#19366](https://github.com/opencv/opencv/issues/19366)</br>
+<br>**Discussion:** [#19366](https://github.com/opencv/opencv/issues/19366), [#19977](https://github.com/opencv/opencv/issues/19977)</br>
 
 # Python Bindings
 
