@@ -1,0 +1,33 @@
+# Rationale
+
+OpenCV contains a lot of algorithms and provides APIs to different languages. In many cases the library works as black box and it's not easy to understand what went wrong or why particular function or module behaves against developer expectations. The page is collection if ideas and recipes how to debug OpenCV based program. The page will be very useful, if you want to submit a bug and need provide details about found issue.
+
+# General
+
+1. *Linkage*. OpenCV library is part of popular Linux distributions and can be a part of other 3rd party libraries in your project. So you may have several instances of OpenCV and the project may work in wrong way. In case of issues, please ensure that the project starts with the same OpenCV instance you expected. Windows, Linux and other OSes provides tooling to review list of libraries linked with your dynamic library or app.
+
+For Linux use `ldd`:
+```
+$ ~/Projects/OpenCV/opencv-master-build/bin$ ldd ./opencv_test_calib3d 
+        linux-vdso.so.1 (0x00007fffeebb9000)
+        libopencv_calib3d.so.4.5 => /home/alexander/Projects/OpenCV/opencv-master-build/lib/libopencv_calib3d.so.4.5 (0x00007f6b5b151000)
+        libopencv_highgui.so.4.5 => /home/alexander/Projects/OpenCV/opencv-master-build/lib/libopencv_highgui.so.4.5 (0x00007f6b5af3b000)
+        libopencv_features2d.so.4.5 => /home/alexander/Projects/OpenCV/opencv-master-build/lib/libopencv_features2d.so.4.5 (0x00007f6b5ac67000)
+        libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f6b5aa48000)
+        libopencv_imgcodecs.so.4.5 => /home/alexander/Projects/OpenCV/opencv-master-build/lib/libopencv_imgcodecs.so.4.5 (0x00007f6b5a78b000)
+        libopencv_imgproc.so.4.5 => /home/alexander/Projects/OpenCV/opencv-master-build/lib/libopencv_imgproc.so.4.5 (0x00007f6b58a1a000)
+        libopencv_core.so.4.5 => /home/alexander/Projects/OpenCV/opencv-master-build/lib/libopencv_core.so.4.5 (0x00007f6b57832000)
+        libstdc++.so.6 => /usr/lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007f6b574a9000)
+```
+
+For Windows use [Dependency Walker](https://www.dependencywalker.com/) or its analog.
+
+2. *OpenCV Build Options*. OpenCV may be built with various options related to media i/o, UI, acceleration frameworks. The library presume original API for compatibility, but some functions may throw "not implemented" exception or behaves differently. The pre-built library can report its build options with [cv::getBuildInformation](https://docs.opencv.org/master/db/de0/group__core__utils.html#ga0ae377100bc03ce22322926bba7fdbb5) call in C++, Python, Java and other supported languages.
+
+# DNN
+
+# Video I/O & Cameras
+
+# Python
+
+1. *Types conversion.* Python bindings for OpenCV are generated automatically and work as wrapper for C++ code. It means that C++ and Python calls to OpenCV with the same parameters should return the same results. Unexpected results in Python could be caused by incorrect or unexpected arrays conversion from Numpy array to OpenCV structures. [cv.utils.dumpInputArray](https://docs.opencv.org/master/db/de0/group__core__utils.html#gabbbbf8c36017475930ae8817189e9fa6) and [cv.utils.dumpInputArrayOfArrays](https://docs.opencv.org/master/db/de0/group__core__utils.html#gabe4f2b9ed3bcc3988cc26e962d0d3eb7) can help to trace data conversion in auto-generated code.
