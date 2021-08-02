@@ -24,6 +24,7 @@
     - [[How to contribute|How_to_contribute]]
     - [[Coding style guide|Coding_Style_Guide]]
     - [[Branches]]
+    - [[OpenCV Debugging Facilities]]
     - [[Evolution Proposals|Evolution-Proposals]]
     - [[Contributors]]
     - [[Meeting notes|Meeting_notes]]
