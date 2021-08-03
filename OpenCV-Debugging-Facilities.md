@@ -26,6 +26,47 @@ For Windows use [Dependency Walker](https://www.dependencywalker.com/) or its an
 
 # DNN
 
+Model diagnostic tool can be useful to debug import-related problems of a network: it will try to import as much layers as possible in spite of errors. This process can show unsupported layers or which supported layers have unexpected parameters, giving an overview of amount of work it would take to get the network running. As of now, this tool supports ONNX(.onnx) and TensorFlow(.pb) models.
+
+*Beware, this tool skips series of assertions, it can lead to the expected application crash.*
+
+In order to build it, `-DBUILD_APPS=ON` cmake flag should be used. The target name is `opencv_model_diagnostics`.
+
+Usage example:
+
+`./opencv_model_diagnostics -m=test_net.pb -c=test_net.pbtxt`
+
+Output example:
+
+<details>
+<summary>
+Unsupported layer
+</summary>
+
+```
+[ERROR:0] global opencv/modules/dnn/src/dnn.cpp (134) addMissing DNN: Node='model_28/tf.expand_dims_12/ExpandDims' of type='UnknownLayer' is not supported. This error won't be displayed again.
+[ERROR:0] global opencv/modules/dnn/src/dnn.cpp (3571) getLayerShapesRecursively OPENCV/DNN: [NotImplemented]:(model_28/tf.expand_dims_12/ExpandDims): getMemoryShapes() throws exception. inputs=0 outputs=0/0 blobs=0
+[ERROR:0] global opencv/modules/dnn/src/dnn.cpp (3584) getLayerShapesRecursively Exception message: OpenCV(4.5.3-dev) opencv/modules/dnn/src/layers/not_implemented_layer.cpp:153: error: (-213:The function/feature is not implemented) Node for layer 'model_28/tf.expand_dims_12/ExpandDims' of type 'UnknownLayer' wasn't initialized. in function 'getMemoryShapes'
+[ERROR:0] global opencv/modules/dnn/src/tensorflow/tf_importer.cpp (2915) parseNode DNN/TF: Can't parse layer for node='model_28/tf.math.multiply_29/Mul' of type='Mul'. Exception: OpenCV(4.5.3-dev) opencv/modules/dnn/src/layers/not_implemented_layer.cpp:153: error: (-213:The function/feature is not implemented) Node for layer 'model_28/tf.expand_dims_12/ExpandDims' of type 'UnknownLayer' wasn't initialized. in function 'getMemoryShapes'
+```
+
+</details>
+
+
+<details>
+<summary>
+Layer failure
+</summary>
+
+```
+[ERROR:0] global opencv/modules/dnn/src/tensorflow/tf_importer.cpp (2915) parseNode DNN/TF: Can't parse layer for node='model_24/tf.math.multiply_24/Mul' of type='Mul'. Exception: OpenCV(4.5.3-dev) opencv/modules/dnn/src/tensorflow/tf_importer.cpp:1539: error: (-215:Assertion failed) (constId != -1) || (num_inputs == 2) in function 'parseMul'
+[ERROR:0] global opencv/modules/dnn/src/dnn.cpp (3571) getLayerShapesRecursively OPENCV/DNN: [NotImplemented]:(model_24/tf.math.multiply_24/Mul): getMemoryShapes() throws exception. inputs=0 outputs=0/0 blobs=0
+[ERROR:0] global opencv/modules/dnn/src/dnn.cpp (3584) getLayerShapesRecursively Exception message: OpenCV(4.5.3-dev) opencv/modules/dnn/src/layers/not_implemented_layer.cpp:153: error: (-213:The function/feature is not implemented) Node for layer 'model_24/tf.math.multiply_24/Mul' of type 'Mul' wasn't initialized. in function 'getMemoryShapes'
+[ERROR:0] global opencv/modules/dnn/src/tensorflow/tf_importer.cpp (2915) parseNode DNN/TF: Can't parse layer for node='model_24/tf.math.multiply_25/Mul' of type='Mul'. Exception: OpenCV(4.5.3-dev) opencv/modules/dnn/src/layers/not_implemented_layer.cpp:153: error: (-213:The function/feature is not implemented) Node for layer 'model_24/tf.math.multiply_24/Mul' of type 'Mul' wasn't initialized. in function 'getMemoryShapes'
+```
+
+</details>
+
 # Video I/O & Cameras
 
 # Python
