@@ -26,7 +26,7 @@ For Windows use [Dependency Walker](https://www.dependencywalker.com/) or its an
 
 # DNN
 
-Model diagnostic tool can be useful to debug import-related problems of a network: it will try to import as much layers as possible in spite of errors. This process can show unsupported layers or which supported layers have unexpected parameters, giving an overview of amount of work it would take to get the network running. As of now, this tool supports ONNX(.onnx) and TensorFlow(.pb) models.
+1. OpenCV DNN module uses "Fail Fast" strategy loading model. It means that it stops model initialization with the first found problem. Model diagnostic tool can be useful to debug import-related problems of a network: it will try to import as much layers as possible in spite of errors. This process can show unsupported layers or which supported layers have unexpected parameters, giving an overview of amount of work it would take to get the network running. As of now, this tool supports ONNX(.onnx) and TensorFlow(.pb) models.
 
 *Beware, this tool skips series of assertions, it can lead to the expected application crash.*
 
