@@ -4,7 +4,9 @@ OpenCV contains a lot of algorithms and provides APIs to different languages. In
 
 # General
 
-1. *Linkage*. OpenCV library is part of popular Linux distributions and can be a part of other 3rd party libraries in your project. So you may have several instances of OpenCV and the project may work in wrong way. In case of issues, please ensure that the project starts with the same OpenCV instance you expected. Windows, Linux and other OSes provides tooling to review list of libraries linked with your dynamic library or app.
+## Linkage
+
+OpenCV library is part of popular Linux distributions and can be a part of other 3rd party libraries in your project. So you may have several instances of OpenCV and the project may work in wrong way. In case of issues, please ensure that the project starts with the same OpenCV instance you expected. Windows, Linux and other OSes provides tooling to review list of libraries linked with your dynamic library or app.
 
 For Linux use `ldd`:
 ```
@@ -22,11 +24,15 @@ $ ~/Projects/OpenCV/opencv-master-build/bin$ ldd ./opencv_test_calib3d
 
 For Windows use [Dependency Walker](https://www.dependencywalker.com/) or its analog.
 
-2. *OpenCV Build Options*. OpenCV may be built with various options related to media i/o, UI, acceleration frameworks. The library presume original API for compatibility, but some functions may throw "not implemented" exception or behaves differently. The pre-built library can report its build options with [cv::getBuildInformation](https://docs.opencv.org/master/db/de0/group__core__utils.html#ga0ae377100bc03ce22322926bba7fdbb5) call in C++, Python, Java and other supported languages.
+## OpenCV Build Options
+
+OpenCV may be built with various options related to media i/o, UI, acceleration frameworks. The library presume original API for compatibility, but some functions may throw "not implemented" exception or behaves differently. The pre-built library can report its build options with [cv::getBuildInformation](https://docs.opencv.org/master/db/de0/group__core__utils.html#ga0ae377100bc03ce22322926bba7fdbb5) call in C++, Python, Java and other supported languages.
 
 # DNN
 
-1. OpenCV DNN module uses "Fail Fast" strategy loading model. It means that it stops model initialization with the first found problem. Model diagnostic tool can be useful to debug import-related problems of a network: it will try to import as much layers as possible in spite of errors. This process can show unsupported layers or which supported layers have unexpected parameters, giving an overview of amount of work it would take to get the network running. As of now, this tool supports ONNX(.onnx) and TensorFlow(.pb) models.
+## Model diagnostic tool
+
+OpenCV DNN module uses "Fail Fast" strategy loading model. It means that it stops model initialization with the first found problem. Model diagnostic tool can be useful to debug import-related problems of a network: it will try to import as much layers as possible in spite of errors. This process can show unsupported layers or which supported layers have unexpected parameters, giving an overview of amount of work it would take to get the network running. As of now, this tool supports ONNX(.onnx) and TensorFlow(.pb) models.
 
 *Beware, this tool skips series of assertions, it can lead to the expected application crash.*
 
@@ -67,8 +73,28 @@ Layer failure
 
 </details>
 
+## Optimizing the network to make it easier for OpenCV to import your model.
+
+### General recommendation
+
+Use any network visualizer([netron](https://netron.app/), [tensorboard](https://www.tensorflow.org/tensorboard)) to pinpoint the problematic layer - maybe you can just replace the layer or its attributes and it will work. Nevertheless, you should file an issue.
+
+
+### ONNX
+
+Consider using [ONNX-simplifier](https://github.com/daquexian/onnx-simplifier): there is a constant folding pass, which will remove the layers operating on constants, a fair amount of which aren't supported, e.g. `Range`, `Size`, `Tile`, etc. You can skip certain optimizers if it introduces new fused layers which aren't supported. 
+Also you can use `onnx` module directly to, for example, check if the model is valid: `onnx.checker.check_model(your_model)`, or to infer its shapes(if netron is having problems): `onnx.shape_inference.infer_shapes(your_model)`.
+
+
+### Tensorflow
+
+Make sure your graph is frozen(in netron there shouldn't be any `Variable` nodes). You can use [transform_graph](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tools/graph_transforms/README.md) tool to fold constants, for example:
+`transform_graph --in_graph=<in_model.pb> --out_graph=<out_model.pb> --inputs=<inputs> --outputs=<outputs> --transforms='remove_nodes(op=Identity) strip_unused_nodes fold_constants(ignore_errors=true)'`.
+
 # Video I/O & Cameras
 
 # Python
 
-1. *Types conversion.* Python bindings for OpenCV are generated automatically and work as wrapper for C++ code. It means that C++ and Python calls to OpenCV with the same parameters should return the same results. Unexpected results in Python could be caused by incorrect or unexpected arrays conversion from Numpy array to OpenCV structures. [cv.utils.dumpInputArray](https://docs.opencv.org/master/db/de0/group__core__utils.html#gabbbbf8c36017475930ae8817189e9fa6) and [cv.utils.dumpInputArrayOfArrays](https://docs.opencv.org/master/db/de0/group__core__utils.html#gabe4f2b9ed3bcc3988cc26e962d0d3eb7) can help to trace data conversion in auto-generated code.
+## Types conversion
+
+Python bindings for OpenCV are generated automatically and work as wrapper for C++ code. It means that C++ and Python calls to OpenCV with the same parameters should return the same results. Unexpected results in Python could be caused by incorrect or unexpected arrays conversion from Numpy array to OpenCV structures. [cv.utils.dumpInputArray](https://docs.opencv.org/master/db/de0/group__core__utils.html#gabbbbf8c36017475930ae8817189e9fa6) and [cv.utils.dumpInputArrayOfArrays](https://docs.opencv.org/master/db/de0/group__core__utils.html#gabe4f2b9ed3bcc3988cc26e962d0d3eb7) can help to trace data conversion in auto-generated code.
