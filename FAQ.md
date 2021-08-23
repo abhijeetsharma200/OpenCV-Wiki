@@ -86,3 +86,8 @@ Links: [Green's Theorem](http://en.wikipedia.org/wiki/Green's_theorem)
 **A**: No, OpenCV classes are C++ classes wrapped to Python. Inheritance is not supported right now and may lead to segmentation fails and other undefined behavior.
 
 Discussion: [15804](https://github.com/opencv/opencv/issues/15804)
+
+**Q**: _I tried to build the OpenCV-Python from source on Windows with Python 3.9, but after `import cv2` got an error:
+`ImportError: DLL load failed while importing cv2: The specified module could not be found.`_
+
+**A**: Python 3.9 has changed the way libraries are loaded. You can downgrade your Python's version to 3.8 or setup additional environment variables as described at [#20206](https://github.com/opencv/opencv/issues/20206).
