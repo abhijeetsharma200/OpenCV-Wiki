@@ -79,4 +79,10 @@ Links: [Green's Theorem](http://en.wikipedia.org/wiki/Green's_theorem)
 
 **A**: OpenCV Bindings for Python use Numpy Array as base container instead or wrapping `cv::Mat` to Python. Data conversion is done on-the-go in C++ during function call. Some of conversions could be buggy or counterintuitive. OpenCV provides function `cv.utils.dumpInputArray()` that returns details of C++ representation of Python arrays that can help.  
 
-**Documentation:** [#16807](https://github.com/opencv/opencv/issues/16807) [#19091](https://github.com/opencv/opencv/issues/19091), [#17456](https://github.com/opencv/opencv/issues/17456)
+**Documentation:** [#16807](https://github.com/opencv/opencv/issues/16807) [#19091](https://github.com/opencv/opencv/issues/19091), [#17456](https://github.com/opencv/opencv/issues/17456) 
+
+**Q**: _May I use inheritance with OpenCV classes in Python?_
+
+**A**: No, OpenCV classes are C++ classes wrapped to Python. Inheritance is not supported right now and may lead to segmentation fails and other undefined behavior.
+
+Discussion: [15804](https://github.com/opencv/opencv/issues/15804)
