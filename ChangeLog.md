@@ -2,6 +2,106 @@ OpenCV Change Logs
 ==================
 
 
+<details>
+
+<summary>Coming soon... 4.5.4 / 3.4.16</summary>
+
+
+version:4.5.4
+-------------
+
+
+*October, 2021*
+
+The fall update for OpenCV 4.x has been released.
+
+
+**Highlights of this release**:
+
+- [GSoC 2021](https://github.com/opencv/opencv/wiki/GSoC_2021) is over. 11 projects are successful, and most of the results are already merged into OpenCV tree and available in 4.5.4 (in the main repository or in opencv_contrib). Here is the list of merged functionality:
+   - 8-bit quantization in DNN Module: [#20228](https://github.com/opencv/opencv/pull/20228) + onnx importer [#20535](https://github.com/opencv/opencv/pull/20535)
+   - Improved OpenCV bindings for Julia: [opencv_contib#3009](https://github.com/opencv/opencv_contrib/pull/3009)
+   - Speech recognition sample: [#20291](https://github.com/opencv/opencv/pull/20291)
+   - Optimizing OpenCV DNN for RISC-V: [#20287](https://github.com/opencv/opencv/pull/20287) + [#20521](https://github.com/opencv/opencv/pull/20521)
+   - Tutorial for Universal Intrinsics and parallel_for_ for efficient cross-platform algorithm implementation: [#20361](https://github.com/opencv/opencv/pull/20361)
+
+![](images/dnn.png)
+
+- DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2021-07-06..2021-10-10):
+
+    - Improved layers / activations / supported more models:
+
+      - [GRU](https://github.com/opencv/opencv/pull/20442), [CumSum](https://github.com/opencv/opencv/pull/20483), [Max](https://github.com/opencv/opencv/pull/20466), [Min](https://github.com/opencv/opencv/pull/20682), [ExpandDims](https://github.com/opencv/opencv/pull/20702)
+      - Fixed convolution with asymmetric padding
+      - Fixed Unsqueeze (ONNX opset 13)
+      - Fixed several memory access issues in OpenCL kernels
+
+    - Implement CTC prefix beam search decode for TextRecognitionModel: [#20524](https://github.com/opencv/opencv/pull/20524)
+
+    - Intel® Inference Engine backend ( [OpenVINO™](https://software.intel.com/en-us/openvino-toolkit) ):
+
+      - added support for OpenVINO 2021.4.1 LTS release
+      - added support for models with non-FP32 outputs or for outputs with 1D layout
+
+
+![](images/gapi.png)
+
+- G-API module:
+
+  - **TBD**
+
+
+![](images/github2.png)
+
+- And many other contributions:
+
+    - Restored LineSegmentDetector (LSD) implementation
+
+    - Python: `cv.Mat` wrapper over numpy.ndarray is introduced to handle issues with passing of 3D arrays into C++ algorithms: [#19091](https://github.com/opencv/opencv/issues/19091)
+
+    - Python: support OpenCV extension with pure Python modules [#20611](https://github.com/opencv/opencv/pull/20611)
+
+    - Debugging: Add gdb pretty printer for cv::Mat [#20547](https://github.com/opencv/opencv/pull/20547)
+
+    - Add Quicklook for Mat on iOS and macOS: [#20457](https://github.com/opencv/opencv/pull/20457)
+
+    - Added generation of new type of radon checkerboard: [#20735](https://github.com/opencv/opencv/issues/20364)
+
+
+### Contributors
+
+<details>
+<summary>opencv (XX contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.5.3..4.5.4
+```
+
+</details>
+
+<details>
+<summary>opencv_contrib (XX contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.5.3..4.5.4
+```
+
+</details>
+
+
+
+version:3.4.16
+--------------
+
+*October, 2021*
+
+OpenCV 3.4.16 has been released. Bug fixes, optimizations and other enhancements are propagated into OpenCV 4.5.4.
+
+Long-lived OpenCV 3.x release series is here since 2015. We are going to reduce support of 3.x branch in the future to move forward to OpenCV 5.0.
+
+</details>
+
+
 
 version:4.5.3
 -------------
