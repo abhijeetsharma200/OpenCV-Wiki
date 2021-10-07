@@ -111,9 +111,10 @@ openvino$ ./tools/downloader/downloader.py -o ${OPENCV_DNN_TEST_DATA_PATH}/omz_i
 
 When you build G-API with ONNX Runtime support, tests for inference are enabled and require `OPENCV_GAPI_ONNX_MODEL_PATH` to be set:
 ```bash
-$ export OPENCV_GAPI_ONNX_MODEL_PATH=/path-to/onnx-models/
+$ export OPENCV_TEST_DATA_PATH=/path-to-opencv-extra/testdata
+$ export OPENCV_GAPI_ONNX_MODEL_PATH=/path-to-onnx-models/
 ```
-and [models](https://github.com/onnx/models) downloaded using the commands:
+and [models](https://github.com/onnx/models) are downloaded using the commands:
 ```bash
 $ git clone --recursive https://github.com/onnx/models.git
 $ cd models
