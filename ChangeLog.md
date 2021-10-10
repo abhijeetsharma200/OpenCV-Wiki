@@ -2,11 +2,6 @@ OpenCV Change Logs
 ==================
 
 
-<details>
-
-<summary>Coming soon... 4.5.4 / 3.4.16</summary>
-
-
 version:4.5.4
 -------------
 
@@ -38,6 +33,8 @@ The fall update for OpenCV 4.x has been released.
 
     - Implement CTC prefix beam search decode for TextRecognitionModel: [#20524](https://github.com/opencv/opencv/pull/20524)
 
+    - Added SoftNMS implementation: [#20813](https://github.com/opencv/opencv/pull/20813)
+
     - Intel® Inference Engine backend ( [OpenVINO™](https://software.intel.com/en-us/openvino-toolkit) ):
 
       - added support for OpenVINO 2021.4.1 LTS release
@@ -55,35 +52,129 @@ The fall update for OpenCV 4.x has been released.
 
 - And many other contributions:
 
-    - Restored LineSegmentDetector (LSD) implementation
+    - Add DNN-based face detection and face recognition into modules/objdetect: [#20422](https://github.com/opencv/opencv/pull/20422)
+
+    - Restore LineSegmentDetector (LSD) implementation
 
     - Python: `cv.Mat` wrapper over numpy.ndarray is introduced to handle issues with passing of 3D arrays into C++ algorithms: [#19091](https://github.com/opencv/opencv/issues/19091)
 
-    - Python: support OpenCV extension with pure Python modules [#20611](https://github.com/opencv/opencv/pull/20611)
+    - Python: support OpenCV extension with pure Python modules: [#20611](https://github.com/opencv/opencv/pull/20611)
 
-    - Debugging: Add gdb pretty printer for cv::Mat [#20547](https://github.com/opencv/opencv/pull/20547)
+    - Debugging: Add gdb pretty printer for cv::Mat: [#20547](https://github.com/opencv/opencv/pull/20547)
 
     - Add Quicklook for Mat on iOS and macOS: [#20457](https://github.com/opencv/opencv/pull/20457)
 
-    - Added generation of new type of radon checkerboard: [#20735](https://github.com/opencv/opencv/issues/20364)
+    - Add generation of new type of radon checkerboard: [#20735](https://github.com/opencv/opencv/issues/20364)
 
 
 ### Contributors
 
 <details>
-<summary>opencv (XX contributors)</summary>
+<summary>opencv (76 contributors)</summary>
 
 ```
 git shortlog --no-merges -ns 4.5.3..4.5.4
+    53  Alexander Alekhin
+    10  Smirnov Egor
+     9  Anatoliy Talamanov
+     8  rogday
+     7  Sergey Ivanov
+     6  AleksandrPanov
+     6  Suleyman TURKMEN
+     5  Alexander Panov
+     5  Dale Phurrough
+     5  Giles Payne
+     5  SamFC10
+     4  Julia Bareeva
+     4  Vadim Levin
+     3  Dmitry Budnikov
+     3  HAN Liutong
+     2  Alexander Smorkalov
+     2  Alexey Smirnov
+     2  Francesco Petrogalli
+     2  Iyad Ahmed
+     2  Jonas Vautherin
+     2  Maxim Pashchenkov
+     2  Stanislaw Halik
+     2  Vincent Rabaud
+     2  WJJ1995
+     2  YashasSamaga
+     2  Zhuo Zhang
+     2  Zihao Mu
+     2  berak
+     2  thezane
+     1  Abhinav Sharma
+     1  Amir Tulegenov
+     1  Cavendish-Koo
+     1  César Gouveia
+     1  Daniel Playfair Cal
+     1  Dmitriy Fishman
+     1  Duong Dac
+     1  Hamdi Sahloul
+     1  Ilya Lavrenov
+     1  JIANG Yichen
+     1  Jannik Bamberger
+     1  Jebastin Nadar
+     1  Lukas-Alexander Weber
+     1  Mahendra Kumar
+     1  Nicholas Ho
+     1  Nicolai Behmann
+     1  Oliver Kuckertz
+     1  Pablo Romero
+     1  Parsa
+     1  Rohit Sutradhar
+     1  Roland Meertens
+     1  Ruben Gonzalez
+     1  Ruslan Garnov
+     1  Saikat Nanda
+     1  Saša Bajtl
+     1  Scott Noyes
+     1  Shivanshu Tyagi
+     1  Shreyas Taware
+     1  Smirnov Alexey
+     1  Tomoaki Teshima
+     1  Tsukasa Sugiura
+     1  Xerxes Battiwalla
+     1  Xiaoxiao Tian
+     1  Xinguang Bian
+     1  Yaniv Hollander
+     1  Yuantao Feng
+     1  Zhang Yin
+     1  ZhangYin
+     1  easonycwang
+     1  fortemSteve
+     1  keroiber
+     1  kikaxa
+     1  mikael
+     1  shengyu
+     1  utibenkei
+     1  xhawk18
+     1  zyp
 ```
 
 </details>
 
 <details>
-<summary>opencv_contrib (XX contributors)</summary>
+<summary>opencv_contrib (16 contributors)</summary>
 
 ```
 git shortlog --no-merges -ns 4.5.3..4.5.4
+     4  Suleyman TURKMEN
+     2  Alexander Alekhin
+     2  Archit Rungta
+     2  Yoshiaki Sato
+     2  cudawarped
+     1  Andreas Franek
+     1  Artem Saratovtsev
+     1  Gokberk Gul
+     1  Paul Jurczak
+     1  Pavel Rojtberg
+     1  Shahnawaz Ahmed
+     1  Stephen McDowell
+     1  Tomoaki Teshima
+     1  Vadim Levin
+     1  WN90
+     1  kuloPo
 ```
 
 </details>
@@ -98,8 +189,6 @@ version:3.4.16
 OpenCV 3.4.16 has been released. Bug fixes, optimizations and other enhancements are propagated into OpenCV 4.5.4.
 
 Long-lived OpenCV 3.x release series is here since 2015. We are going to reduce support of 3.x branch in the future to move forward to OpenCV 5.0.
-
-</details>
 
 
 
