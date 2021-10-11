@@ -45,7 +45,44 @@ The fall update for OpenCV 4.x has been released.
 
 - G-API module:
 
-  - **TBD**
+  - G-API framework:
+
+    - Introduced generic visitor(s) for the G-API's own implementation of `variant<>` data structure: [#20039](https://github.com/opencv/opencv/pull/20039).
+    - Introduced a full-featured graph reshape support for the heterogeneous graphs: [#20705](https://github.com/opencv/opencv/pull/20705).
+    - Fixed `cv::RMat` handling in the regular execution mode: [#20593](https://github.com/opencv/opencv/pull/20593).
+    - Fixed `cv::RMat` and introduced `cv::MediaFrame` handling with the `desync()` operation: [#20747](https://github.com/opencv/opencv/pull/20747).
+
+  - OpenVINO™ Toolkit backend:
+
+    - Introduced FP16 data type support in the OpenVINO™ inference backend: [#20490](https://github.com/opencv/opencv/pull/20490).
+    - Fixed issues with incorrect precision and preprocessing options set for imported binary network blobs: [#20528](https://github.com/opencv/opencv/pull/20528);
+    - Fixed issue with possible extra external resources being held during the inference execution, causing hangs at some platforms (e.g. with GStreamer memory in): [#20791](https://github.com/opencv/opencv/pull/20791).
+
+  - Python bindings:
+
+    - Extended OpenVINO™ inference backend parameters in Python with methods to configure constant input layers and the number of asynchronous infer requests: [#20508](https://github.com/opencv/opencv/pull/#20508);
+    - Aligned the `compileStreaming()` behavior in Python with the C++ version: [#20555](https://github.com/opencv/opencv/pull/20555);
+
+  - Serialization:
+
+    - Covered serialization-related methods with Doxygen documentation: [#20163](https://github.com/opencv/opencv/pull/20163);
+    - Added serialization support for graph constant data: [#20372](https://github.com/opencv/opencv/pull/20372);
+    - Added serialization support for the `cv::MediaFrame` data structure: [#20329](https://github.com/opencv/opencv/pull/20329);
+
+  - Media integration:
+
+    - Merged the first bits of the upcoming [oneVPL](https://github.com/oneapi-src/oneVPL) integration for accelerated Media on Windows;
+
+  - Samples and demos:
+
+    - Added various graph-level optimizations to the MTCNN demo: [#20383](https://github.com/opencv/opencv/pull/20383), [#20474](https://github.com/opencv/opencv/pull/20474);
+    - Extended the Semantic Segmentation demo with new type of networks ([`unet-camvid-onnx-0001`](https://docs.openvinotoolkit.org/latest/omz_models_model_unet_camvid_onnx_0001.html)): [#20476](https://github.com/opencv/opencv/pull/20476);
+    - Fixed various issues in the Python port of the gaze estimation demo: [#20510](https://github.com/opencv/opencv/pull/20510).
+
+  - Other changes and fixes:
+
+    - Fixed various issues with ONNX RT inference tests: [#20359](https://github.com/opencv/opencv/pull/20359).
+    - Extended Render fixture with more parameters: [#20771](https://github.com/opencv/opencv/pull/20771).
 
 
 ![](images/github2.png)
