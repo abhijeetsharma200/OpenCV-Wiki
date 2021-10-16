@@ -5,7 +5,7 @@ The **OpenCV** logo is composed of the 3 capital letters **O, C, V** arranged in
 
 The 3 letters O, C, V are reminiscent of the famous [Kanizsa triangle optical illusion](http://en.wikipedia.org/wiki/Kanizsa_triangle). The letters are shaped after the **open lock** [OpenSource logo](http://www.opensource.org/). The colors symbolize the common RGB color space.
 
-The logo was designed and contributed to the library in 2006 by Adi Shavit. Redesigned in 2020 (https://opencv.org/resources/media-kit/).
+The logo was designed and contributed to the library in November 2006 by Adi Shavit. Redesigned in 2020 (https://opencv.org/resources/media-kit/).
 
 ### Logo images
 
