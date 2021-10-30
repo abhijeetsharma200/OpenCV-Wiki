@@ -27,7 +27,7 @@ source path-to-unpacked-openvino/bin/setupvars.sh
 ```
 * Build G-API with OpenVINO support:
 ```bash
-cmake /path-to-opencv -DWITH_INF_ENGINE=ON -DINF_ENGINE_RELEASE=2021030000
+cmake /path-to-opencv -DWITH_INF_ENGINE=ON
 ```
 
 *NOTE*: Set `INF_ENGINE_RELEASE` to the proper version, depending on the package you use.
@@ -138,9 +138,9 @@ Xbuild_image:Custom=centos:7
 Xbuildworker:Custom=linux-1
 build_gapi_standalone:Custom=ade-0.1.1f
 
-build_image:Custom=ubuntu-openvino-2021.4.0:20.04
-build_image:Custom Win=openvino-2021.4.0
-build_image:Custom Mac=openvino-2021.4.0
+build_image:Custom=ubuntu-openvino-2021.4.1:20.04
+build_image:Custom Win=openvino-2021.4.1
+build_image:Custom Mac=openvino-2021.4.1
 
 test_modules:Custom=gapi,python2,python3,java
 test_modules:Custom Win=gapi,python2,python3,java

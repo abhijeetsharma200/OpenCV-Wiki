@@ -129,15 +129,8 @@ Android:
 - `android-gradle` (`linux-4` on `Android*` builders only)
 
 DNN backends testing:
-- `ubuntu-openvino:16.04`
-- `ubuntu-openvino:18.04`
-- `ubuntu-openvino-2021.2.0:20.04`
-- `ubuntu-openvino-2021.1.0:20.04`
-- `ubuntu-openvino-2020.4.0:16.04`
+- `ubuntu-openvino-2021.4.1:20.04`
 - `ubuntu-openvino-2020.3.0:16.04`, `ubuntu-openvino-2020.3.0:18.04`
-- `ubuntu-openvino-2020.2.0:16.04`
-- `ubuntu-openvino-2020.1.0:16.04`
-- `ubuntu-openvino-2019r3.0:16.04`
 - `ubuntu-vulkan:16.04` - for testing DNN Vulkan backend
 - `ubuntu-cuda:18.04` (`linux-4`) - CUDA 10.0 with CUDNN?
 - `ubuntu-cuda11:18.04` (`linux-4`) - CUDA 11.0 with CUDNN 8
@@ -158,7 +151,8 @@ and many deprecated/special build_images for coverage/valgrind/etc
 - `msvs2015`, `msvs2015-win32`
 - `msvs2017`, `msvs2017-win32` (`windows-1`)
 - `msvs2019`, `msvs2019-win32` (`windows-1`)
-- `openvino-2021.2.0`, `openvino-2021.1.0`, `openvino-2020.4.0`, `openvino-2020.3.0`, `openvino-2020.2.0`, `openvino-2020.1.0`
+- `openvino-2021.4.1` (`windows-1,3`)
+- `openvino-2020.3.0` (`windows-1,2`)
 - `winpack-dldt-*`, `winpack-dldt-*-debug` (`windows-1`)
 
 Build only:
@@ -170,7 +164,7 @@ Useful extra parameters: `test_opencl=ON`
 
 ### macOS X `build_image` list
 
-- `openvino-2021.2.0`, `openvino-2021.1.0`, `openvino-2020.4.0`, `openvino-2020.3.0`, `openvino-2020.2.0`, `openvino-2020.1.0`
+- `openvino-2021.4.1`, `openvino-2020.3.0`
 - `osx_framework`
 
 
@@ -197,9 +191,9 @@ disable_ipp=ON
 - DNN testing (OpenVINO or new layers, tests set changes):
 ```
 force_builders=Custom,Custom Win,Custom Mac
-build_image:Custom=ubuntu-openvino-2021.2.0:20.04
-build_image:Custom Win=openvino-2021.2.0
-build_image:Custom Mac=openvino-2021.2.0
+build_image:Custom=ubuntu-openvino-2021.4.1:20.04
+build_image:Custom Win=openvino-2021.4.1
+build_image:Custom Mac=openvino-2021.4.1
 
 test_modules:Custom=dnn,python2,python3,java
 test_modules:Custom Win=dnn,python2,python3,java
