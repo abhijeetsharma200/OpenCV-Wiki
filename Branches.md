@@ -12,8 +12,23 @@ Common rules for all branches
 Branches and contribution policies in OpenCV
 --------------------------------------------
 
-Please target Pull Requests (PR) to the right branches.
+Please target Pull Requests (PR) to the right branches. Quick summary of the rules is presented in the table below. More formal description is in the sections after the table.
 
+### Which branch should I target my PR?
+
+Policy  |   5.x     |    4.x    |    3.4   |
+-------- | --------- | --------- | -------- |
+Preserve API compatibility | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+Preserve ABI compatibility | :x: | :x::grey_exclamation: | :heavy_check_mark: |
+Change applicable only to this branch | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+Bugfix / minor fix | :point_right: | :point_right: | :heavy_check_mark: |
+Optimization | :point_right: | :point_right: | :heavy_check_mark: |
+Small feature | :point_right: | :heavy_check_mark: | :x: |
+Large feature | :heavy_check_mark: | :x: | :x: |
+Branch alias (do not use!) | next | master | - |
+
+- :grey_exclamation: - avoid major breakages
+- :point_right: - rebase to previous branch if patch is applicable, it will be ported to other branches by the Core team in a week or two
 
 ### 5.x
 
