@@ -92,11 +92,19 @@ $ cmake --build . --target opencv_test_gapi --config Release -- /maxcpucount:4
 $ bin\Release\opencv_test_gapi.exe
 ```
 
-A tiny fraction of G-API tests requires external test data to be available. This data is taken from the [opencv_extra](http://github.com/opencv/opencv_extra) repo:
+## Requirements
+
+Some G-API tests require test data to be available. This data is taken from the [opencv_extra](http://github.com/opencv/opencv_extra) repo. You have to set the `OPENCV_TEST_DATA_PATH` environment variable to avoid failed tests (due to absence of test data):
 
 ```
 export OPENCV_TEST_DATA_PATH=/path/to/opencv_extra/testdata
 ```
+or
+```
+SET OPENCV_TEST_DATA_PATH=\path\to\opencv_extra\testdata
+```
+Some tests require **external** test data to be available. This is test data not included in [opencv_extra](http://github.com/opencv/opencv_extra). ONNX models are an example. The absence of this data doesn't break the tests. Tests are skipped without **external** test data.  
+
 ## With OpenVINO Inference Engine
 
 When you build G-API with OpenVINO Inference Engine support (`-DInferenceEngine_DIR=...` `-DWITH_INF_ENGINE=ON`), some extra tests for inference are enabled and require `OPENCV_DNN_TEST_DATA_PATH` to be set and **models downloaded** using the command below!
