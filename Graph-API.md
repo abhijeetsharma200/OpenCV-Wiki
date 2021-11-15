@@ -97,11 +97,11 @@ $ bin\Release\opencv_test_gapi.exe
 Some G-API tests require test data to be available. This data is taken from the [opencv_extra](http://github.com/opencv/opencv_extra) repo. You have to set the `OPENCV_TEST_DATA_PATH` environment variable to avoid failed tests (due to absence of test data):
 
 ```
-export OPENCV_TEST_DATA_PATH=/path/to/opencv_extra/testdata
+export OPENCV_TEST_DATA_PATH=/Linux/path/to/opencv_extra/testdata
 ```
 or
 ```
-SET OPENCV_TEST_DATA_PATH=\path\to\opencv_extra\testdata
+SET OPENCV_TEST_DATA_PATH=\Windows\path\to\opencv_extra\testdata
 ```
 Some tests require **external** test data to be available. This is test data not included in [opencv_extra](http://github.com/opencv/opencv_extra). ONNX models are an example. The absence of this data doesn't break the tests. Tests are skipped without **external** test data.  
 
