@@ -73,7 +73,7 @@ Layer failure
 
 </details>
 
-## Optimizing the network to make it easier for OpenCV to import your model.
+## Optimizing the network to make it easier for OpenCV to import your model
 
 ### General recommendation
 
