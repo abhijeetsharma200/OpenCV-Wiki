@@ -95,6 +95,13 @@ Make sure your graph is frozen(in netron there shouldn't be any `Variable` nodes
 
 # Python
 
+## Package Initialization
+
+Since OpenCV 4.5.4 Python loader become mandatory part of OpenCV Python distribution. The loader allows to manage binary OpenCV instances and load complex bindings that contain both C++ and Python code (G-API, cv.Mat class, etc). The loader provides debug option to trace loaded binaries and made platform specific decisions. To get python loader trace, you need to add the following line of code BEFORE OpenCV import:
+```
+sys.OpenCV_LOADER_DEBUG = True
+```
+
 ## Types conversion
 
 Python bindings for OpenCV are generated automatically and work as wrapper for C++ code. It means that C++ and Python calls to OpenCV with the same parameters should return the same results. Unexpected results in Python could be caused by incorrect or unexpected arrays conversion from Numpy array to OpenCV structures. [cv.utils.dumpInputArray](https://docs.opencv.org/master/db/de0/group__core__utils.html#gabbbbf8c36017475930ae8817189e9fa6) and [cv.utils.dumpInputArrayOfArrays](https://docs.opencv.org/master/db/de0/group__core__utils.html#gabe4f2b9ed3bcc3988cc26e962d0d3eb7) can help to trace data conversion in auto-generated code.
