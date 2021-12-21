@@ -2,6 +2,104 @@ OpenCV Change Logs
 ==================
 
 
+<details>
+
+<summary>Coming soon... 4.5.5 / 3.4.17</summary>
+
+version:4.5.5
+-------------
+
+
+*December, 2021*
+
+New Year's update for OpenCV 4.x has been released.
+
+
+**Highlights of this release**:
+
+- Audio support as part of VideoCapture API: [MSMF #19721](https://github.com/opencv/opencv/pull/19721) + [GStreamer #21264](https://github.com/opencv/opencv/pull/21264)
+
+- Updated SOVERSION handling rules: [#21178](https://github.com/opencv/opencv/pull/21178)
+
+![](images/dnn.png)
+
+- DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2021-10-11..2021-12-25):
+
+    - Added tests to cover ONNX conformance test suite: [#21088](https://github.com/opencv/opencv/pull/21088)
+
+    - Improved layers / activations / supported more models
+
+    - Upgraded builtin protobuf from 3.5.2 to 3.19.1
+
+    - More optimizations for RISC-V platform
+
+    - Intel® Inference Engine backend ( [OpenVINO™](https://software.intel.com/en-us/openvino-toolkit) ):
+
+      - added support for OpenVINO 2021.4.2 LTS release
+
+
+![](images/gapi.png)
+
+- G-API module:
+
+  - TBD
+
+
+![](images/github2.png)
+
+- And many other contributions:
+
+    - Added QRcode encoder: [#17889](https://github.com/opencv/opencv/pull/17889)
+
+    - GSoC - OpenCV.js: Accelerate OpenCV.js DNN via WebNN: [#20406](https://github.com/opencv/opencv/pull/20406)
+
+    - Add conventional Bayer naming: [#20970](https://github.com/opencv/opencv/pull/20970)
+
+    - (opencv_contrib) Add Radon transform function to ximgproc: [#3090](https://github.com/opencv/opencv_contrib/pull/3090)
+
+    - (opencv_contrib) New superpixel algorithm (F-DBSCAN): [#3093](https://github.com/opencv/opencv_contrib/pull/3093)
+
+    - Created Stitching Tool: [#21020](https://github.com/opencv/opencv/pull/21020)
+
+    - Improve CCL with new algorithms and tests: [#21275](https://github.com/opencv/opencv/pull/21275)
+
+    - (opencv_contrib) Update ArUco tutorial: [#3126](https://github.com/opencv/opencv_contrib/pull/3126)
+
+
+### Contributors
+
+<details>
+<summary>opencv (XX contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.5.4..4.5.5
+```
+
+</details>
+
+<details>
+<summary>opencv_contrib (XX contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.5.4..4.5.5
+```
+
+</details>
+
+
+
+version:3.4.17
+--------------
+
+*December, 2021*
+
+OpenCV 3.4.17 has been released. Bug fixes, optimizations and other enhancements are propagated into OpenCV 4.5.5.
+
+Long-lived OpenCV 3.x release series is here since 2015. We are going to reduce support of 3.x branch in the future to move forward to OpenCV 5.0.
+
+</details>
+
+
 version:4.5.4
 -------------
 
