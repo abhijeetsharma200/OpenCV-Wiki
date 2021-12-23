@@ -42,8 +42,21 @@ New Year's update for OpenCV 4.x has been released.
 
 - G-API module:
 
-  - TBD
+  - G-API framework:
 
+    - Various fixes in G-API Doxygen reference: [#20924](https://github.com/opencv/opencv/pull/20924);
+
+  - G-API Fluid backend:
+
+    - Added vectorized version of Multiply kernel ([#21024](https://github.com/opencv/opencv/pull/21024)), enabled SIMD dispatching for AbsDiffC ([#21204](https://github.com/opencv/opencv/pull/21204));
+
+  - G-API OpenCL backend:
+
+    - Fixed sporadic test failures in Multiply kernel running on GPU: [#21205](https://github.com/opencv/opencv/pull/21205);
+
+  - Other changes and fixes:
+
+    - Fixed various static analysis issues for OpenVINO 2021.4 release: [#21212](https://github.com/opencv/opencv/pull/21212);
 
 ![](images/github2.png)
 
