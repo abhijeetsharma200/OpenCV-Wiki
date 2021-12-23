@@ -44,19 +44,48 @@ New Year's update for OpenCV 4.x has been released.
 
   - G-API framework:
 
+    - Fixed issue with accessing 1D data from `cv::RMat`: [#21103](https://github.com/opencv/opencv/pull/21103);
+    - Restricted passing the G-API types to graph inputs/outputs for execution: [#21041](https://github.com/opencv/opencv/pull/21041);
     - Various fixes in G-API Doxygen reference: [#20924](https://github.com/opencv/opencv/pull/20924);
+    - Renamed various internal structures for consistency [#20836](https://github.com/opencv/opencv/pull/20836) [#21040](https://github.com/opencv/opencv/pull/21040);
 
-  - G-API Fluid backend:
+  - Fluid backend:
 
-    - Added vectorized version of Multiply kernel ([#21024](https://github.com/opencv/opencv/pull/21024)), enabled SIMD dispatching for AbsDiffC ([#21204](https://github.com/opencv/opencv/pull/21204));
+    - Introduced a better vectorized version of Resize: [#20664](https://github.com/opencv/opencv/pull/20664).
+    - Added vectorized version of Multiply kernel: [#21024](https://github.com/opencv/opencv/pull/21024);
+    - Added vectorized version of Divide kernel: [#20914](https://github.com/opencv/opencv/pull/20914);
+    - Added vectorized version of AddC kernel: [#21119](https://github.com/opencv/opencv/pull/21119);
+    - Added vectorized version of SubC kernel: [#21158](https://github.com/opencv/opencv/pull/21158);
+    - Added vectorized version of MulC kernel: [#21177](https://github.com/opencv/opencv/pull/21177);
+    - Added vectorized version of SubRC kernel: [#21231](https://github.com/opencv/opencv/pull/21231);
+    - Enabled SIMD dispatching for AbsDiffC: [#21204](https://github.com/opencv/opencv/pull/21204);
 
-  - G-API OpenCL backend:
+  - OpenCL backend:
 
     - Fixed sporadic test failures in Multiply kernel running on GPU: [#21205](https://github.com/opencv/opencv/pull/21205);
 
+  - Intel® OpenVINO™ inference backend:
+
+    - Extended `ie::Params` to support static batch size as input to inference: [#20856](https://github.com/opencv/opencv/pull/20856);
+    - Enabled 2D input tensor support in IE backend: [#20925](https://github.com/opencv/opencv/pull/20925);
+    - Fixed various issues with imported (pre-compiled) networks: [#20918](https://github.com/opencv/opencv/pull/20918);
+
+  - Media integration:
+
+    - Introduced a GStreamer-based pipeline source for G-API: [#20709](https://github.com/opencv/opencv/pull/20709);
+    - Completed the integration of Intel® oneVPL as a pipeline source for G-API [#20773](https://github.com/opencv/opencv/pull/20773) with device selection [#20738](https://github.com/opencv/opencv/pull/20738), asynchronous execution [#20901](https://github.com/opencv/opencv/pull/20901), intial demux support [#21022](https://github.com/opencv/opencv/pull/21022), and GPU-side memory allocation via DirectX 11 [#21049](https://github.com/opencv/opencv/pull/21049).
+
+  - Samples:
+
+    - Replaced custom kernels with now-standard G-API operations in several samples [#21106](https://github.com/opencv/opencv/pull/21106);
+    - Moved API snippets from G-API samples to a dedicated place [#20857](https://github.com/opencv/opencv/pull/20857);
+
   - Other changes and fixes:
 
-    - Fixed various static analysis issues for OpenVINO 2021.4 release: [#21212](https://github.com/opencv/opencv/pull/21212);
+    - Fixed various static analysis issues for OpenVINO 2021.4 release: [#21083](https://github.com/opencv/opencv/pull/21083) and [#21212](https://github.com/opencv/opencv/pull/21212);
+    - Fixed various build warnings introduced after OpenVINO update: [#20937](https://github.com/opencv/opencv/pull/20937);
+    - Continued clean-up in the G-API test suite on GTest macros [#20922](https://github.com/opencv/opencv/pull/20922) and test data [#20995](https://github.com/opencv/opencv/pull/20995);
+    - Added custom accuracy comparison functions to Fluid performance tests: [#21150](https://github.com/opencv/opencv/pull/21150).
 
 ![](images/github2.png)
 
@@ -601,7 +630,7 @@ Spring update for OpenCV 4.x has been released.
 
     - Introduced dynamic input / CNN reshape functionality in the OpenVINO inference backend [#18240](https://github.com/opencv/opencv/pull/18240);
     - Introduced asynchronous execution support in the OpenVINO inference backend, now inference can run in multiple requests in parallel to increase stream density/throughput: [#19487](https://github.com/opencv/opencv/pull/19487), [#19425](https://github.com/opencv/opencv/pull/19425);
-    - Extended supported data types with INT64/INT32 in ONNX inference backend and with INT32 in the OpenVINO inference backend [#19792](https://github.com/opencv/opencv/pull/19792);    
+    - Extended supported data types with INT64/INT32 in ONNX inference backend and with INT32 in the OpenVINO inference backend [#19792](https://github.com/opencv/opencv/pull/19792);
     - Introduced `cv::GFrame` / `cv::MediaFrame` and constant support in the ONNX backend: [#19070](https://github.com/opencv/opencv/pull/19205);
 
   - Media support:
@@ -861,7 +890,7 @@ New Year's update for OpenCV 4.x has been released.
 - G-API module:
 
     - G-API Framework:
-  
+
       - Introduced serialization for `cv::RMat`, including serialization for user-defined memory adapters ([#18584](https://github.com/opencv/opencv/pull/18584));
       - Introduced `desync`, a new Operation for in-graph asynchronous execution - to allow different parts of the graph run with a different latency ([#18673](https://github.com/opencv/opencv/pull/18673));
       - Introduced a notion of "in-graph metadata" ([#18793](https://github.com/opencv/opencv/pull/18793)), now various media-related information can be accessed in graph directly (currently only limited to timestamps and frame IDs);
@@ -892,7 +921,7 @@ New Year's update for OpenCV 4.x has been released.
 ![](images/riscv.png)
 
 - Significant progress on RISC-V port.
-   
+
     - much more complete RISC-V backend of [universal intrinsics](https://docs.opencv.org/4.5.1/df/d91/group__core__hal__intrin.html) has been contributed by Yin Zhang from ISCAS. It is based on the latest RVV (RISC-V vector extension) 0.9.
 
 ![](images/rtfm.png)
@@ -2148,7 +2177,7 @@ Highlights of this release:
 
         OpenCV face detection network efficiency on a single Intel Neural Compute Stick 2:
 
-        | sync | x3 asynchronous forwards | 
+        | sync | x3 asynchronous forwards |
         |---|---|
         | 26.43 FPS | 53.2 FPS (x2.01) |
 
