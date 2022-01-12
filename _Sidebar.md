@@ -28,6 +28,7 @@
     - [[Evolution Proposals|Evolution-Proposals]]
     - [[Contributors]]
     - [[Meeting notes|Meeting_notes]]
+        - [[2022]]
         - [[2021]]
     - [[QA for OpenCV|QA_in_OpenCV]]
         - [[Using performance tests|HowToUsePerfTests]]
