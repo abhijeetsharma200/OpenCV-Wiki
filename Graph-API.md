@@ -99,8 +99,8 @@ Also see `Building with OpenVINO Toolkit support` section to how to configure G-
 
 ### VPL Source capabilities & limitations
 * G-API oneVPL Source implements string-based parameters configuration mechanism through `CfgParam` objects packed into array or initialization list. These parameters has reflection of `oneVPL` configuration parameters which can be found by the link https://spec.oneapi.io/versions/latest/elements/oneVPL/source/programming_guide/VPL_prg_session.html#dsp-conf-prop-table.
-Some of these parameters is MAJOR but some other is OPTIONAL. When MAJOR params is necessary for making VPL source works meantime OPTIONAL params supply some optimization tricks or advice VPL dispatcher to select the preferable one VPL library implementation (like as version index) and so on.
-All params have `name` and `value` which should be mapped to VPL-related configuration parameter by G-API oneVPL Source by itself.
+Some of these parameters are MAJOR and some others are OPTIONAL. Using MAJOR params is necessary to make VPL source work, while OPTIONAL params provide extra optimization tricks or advice VPL dispatcher to select the preferable oneVPL library implementation (like a version index) and so on.
+All params have `name` and `value` fields which should be mapped to VPL-related configuration parameter by G-API oneVPL Source by itself.
 
 Lets consider example of choosing Hardware Acceleration type for VPL Source:
 
@@ -117,7 +117,7 @@ cfg_params.push_back(CfgParam::create_acceleration_mode("MFX_ACCEL_MODE_VIA_D3D1
 ```
 
 G-API oneVPL Source interface must parse either `int` or `string` like parameter value representation. To find out which VPL parameters are supported please proceed by https://github.com/opencv/opencv/blob/4.x/modules/gapi/include/opencv2/gapi/streaming/onevpl/cfg_params.hpp#L63
-(List of parameters is constantly growing)
+(List of parameters is updated regularly)
 
 * Only Windows platform is tested and supported with Hardware Acceleration DX11
 
