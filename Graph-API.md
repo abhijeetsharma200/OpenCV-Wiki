@@ -121,11 +121,12 @@ G-API oneVPL Source interface must parse either `int` or `string` like parameter
 
 * Only Windows platform is tested and supported with Hardware Acceleration DX11
 
-According to `oneVPL` dispatcher the user is free to choose preferred acceleration type. But default deployment of VPL implementation driver supply hardware acceleration only which means that ALL decoding operations uses hardware acceleration. It is possible only to clarify to G-API oneVPL Source what types of memory should produce oneVPL Source in its own `cv::MediaFrame` as result. If no parameters described `mfxImplDescription.AccelerationMode` have passed during G-API oneVPL source construction then `cv::MediaFrame` will carry CPU memory as frame data (it means copy from CPU to acceleration during decode operation and back again). In otherwise, let's assume we passed `CfgParam::create_acceleration_mode("MFX_ACCEL_MODE_VIA_D3D11"))`, a `cv::MediaFrame` would carry GPU memory as data in DX11Texture2D inside and would require using `cv::MediaFrame::access` to get it's value.
+According to `oneVPL` dispatcher the user is free to choose preferred acceleration type. But default deployment of VPL implementation driver supply hardware acceleration only which means that ALL decoding operations use hardware acceleration. It is possible only to clarify to G-API oneVPL Source what types of memory should produce oneVPL Source in its own `cv::MediaFrame` as result. If no parameters described `mfxImplDescription.AccelerationMode` have passed during G-API oneVPL source construction then `cv::MediaFrame` will carry CPU memory as frame data (it means copy from CPU to acceleration during decode operation and back again). In otherwise, let's assume we passed `CfgParam::create_acceleration_mode("MFX_ACCEL_MODE_VIA_D3D11"))`, a `cv::MediaFrame` would carry GPU memory as data in DX11Texture2D inside and would require using `cv::MediaFrame::access` to get it's value.
 
 * G-API oneVPL Source support video decoding either using RAW video stream formats (see onVPL support codes) and inner demultiplexing using `Microsoft Foundation Primitives`. 
 
-Implementation doesn't rely on file extension to choose format because usually it might be wrong. Instead the following interface is provided: If no parameters described `mfxImplDescription.mfxDecoderDescription.decoder.CodecID` have passed during G-API oneVPL source construction then implementation try out demultiplexing schema; if specific codecId is set ( for example `CfgParam::create_decoder_id(MFX_CODEC_HEVC)`) then implementation assume RAW stream unconditionally
+Implementation doesn't rely on file extension to choose format because usually it might be wrong. Instead the following interface is provided: If no parameters described `mfxImplDescription.mfxDecoderDescription.decoder.CodecID` have passed during G-API oneVPL source construction then implementation try out demultiplexing schema; if specific codecId is set ( for example `CfgParam::create_decoder_id(MFX_CODEC_HEVC)`) then implementation assume RAW stream unconditionally.
+
 Please use environment variable `OPENCV_LOG_LEVEL=Info` at least to consider full description in case of any source file errors but usually default level `OPENCV_LOG_LEVEL=Warn` is enough
 
 Testing G-API
@@ -215,6 +216,8 @@ test_opencl:Custom=OFF
 test_bigdata:Custom=1
 test_filter:Custom=*
 ```
+
+In order to enable `oneVPL` related builders please use `Custom Win` with `build_image:Custom Win=gapi-onevpl-2021.6.0`
 
 Notes:
 - ADE version may change, refer to the latest correct one (see `DownloadADE.cmake`).
