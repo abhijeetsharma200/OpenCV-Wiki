@@ -73,6 +73,61 @@ cmake /path-to-opencv -DPlaidML2_DIR=path-to-miniconda3/share/plaidml2 -DWITH_PL
  $ cmake /path-to-opencv -DWITH_ONNX=ON -DORT_INSTALL_DIR=/path-to-ort-install-dir
 ```
 
+## Building with oneVPL Toolkit support
+
+* Build (https://github.com/oneapi-src/oneVPL) or install `oneVPL` from installation manager (https://www.intel.com/content/www/us/en/developer/tools/oneapi/onevpl.html)
+
+* Source an oneVPL environment variables or execute shell script
+
+```bash
+<installation path>/share/oneVPL/env/vars.bat"
+```
+
+* Then specify extra options to OpenCV CMake:
+
+```bash
+ $ cmake /path-to-opencv -DWITH_GAPI_ONEVPL=ON
+```
+
+* Run tests:
+```bash
+/path-to-opencv-build/bin/opencv_test_gapi --gtest_filter=*OneVPL_Source*
+```
+
+* How to run example and configure `oneVPL` file-based source and launch `OpenVINO` inference please find out examples in `/path-to-opencv-build/bin/example_gapi_onevpl_infer_single_roi`.
+Also see `Building with OpenVINO Toolkit support` section to how to configure G-API with `OpenVINO`
+
+### VPL Source capabilities & limitations
+* G-API oneVPL Source implements string-based parameters configuration mechanism through `CfgParam` objects packed into array or initialization list. These parameters has reflection of `oneVPL` configuration parameters which can be found by the link https://spec.oneapi.io/versions/latest/elements/oneVPL/source/programming_guide/VPL_prg_session.html#dsp-conf-prop-table.
+Some of these parameters is MAJOR but some other is OPTIONAL. When MAJOR params is necessary for making VPL source works meantime OPTIONAL params supply some optimization tricks or advice VPL dispatcher to select the preferable one VPL library implementation (like as version index) and so on.
+All params have `name` and `value` which should be mapped to VPL-related configuration parameter by G-API oneVPL Source by itself.
+
+Lets consider example of choosing Hardware Acceleration type for VPL Source:
+
+As described in https://spec.oneapi.io/versions/latest/elements/oneVPL/source/programming_guide/VPL_prg_session.html#dsp-conf-prop-table it has name `mfxImplDescription.AccelerationMode` and with type `MFX_VARIANT_TYPE_U32` then we just use 
+
+```
+std::vector<CfgParam> cfg_params;
+cfg_params.push_back(CfgParam::create_acceleration_mode(MFX_ACCEL_MODE_VIA_D3D11));
+```
+or
+```
+std::vector<CfgParam> cfg_params;
+cfg_params.push_back(CfgParam::create_acceleration_mode("MFX_ACCEL_MODE_VIA_D3D11"));
+```
+
+G-API oneVPL Source interface must parse either `int` or `string` like parameter value representation. To find out which VPL parameters are supported please proceed by https://github.com/opencv/opencv/blob/4.x/modules/gapi/include/opencv2/gapi/streaming/onevpl/cfg_params.hpp#L63
+(List of parameters is constantly growing)
+
+* Only Windows platform is tested and supported with Hardware Acceleration DX11
+
+According to `oneVPL` dispatcher the user is free to choose preferred acceleration type. But default deployment of VPL implementation driver supply hardware acceleration only which means that ALL decoding operations uses hardware acceleration. It is possible only to clarify to G-API oneVPL Source what types of memory should produce oneVPL Source in its own `cv::MediaFrame` as result. If no parameters described `mfxImplDescription.AccelerationMode` have passed during G-API oneVPL source construction then `cv::MediaFrame` will carry CPU memory as frame data (it means copy from CPU to acceleration during decode operation and back again). In otherwise, let's assume we passed `CfgParam::create_acceleration_mode("MFX_ACCEL_MODE_VIA_D3D11"))`, a `cv::MediaFrame` would carry GPU memory as data in DX11Texture2D inside and would require using `cv::MediaFrame::access` to get it's value.
+
+* G-API oneVPL Source support video decoding either using RAW video stream formats (see onVPL support codes) and inner demultiplexing using `Microsoft Foundation Primitives`. 
+
+Implementation doesn't rely on file extension to choose format because usually it might be wrong. Instead the following interface is provided: If no parameters described `mfxImplDescription.mfxDecoderDescription.decoder.CodecID` have passed during G-API oneVPL source construction then implementation try out demultiplexing schema; if specific codecId is set ( for example `CfgParam::create_decoder_id(MFX_CODEC_HEVC)`) then implementation assume RAW stream unconditionally
+Please use environment variable `OPENCV_LOG_LEVEL=Info` at least to consider full description in case of any source file errors but usually default level `OPENCV_LOG_LEVEL=Warn` is enough
+
 Testing G-API
 =============
 
