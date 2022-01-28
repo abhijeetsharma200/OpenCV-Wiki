@@ -35,7 +35,7 @@
         - [[Writing performance tests|HowToWritePerfTests]]
         - [[CI configuration|CI-configuration]]
 - [[OpenCV GSoC | OpenCV_GSoC]]
+    - [[2022 Ideas List|GSoC_2022]]
     - [[2021 Ideas List|GSoC_2021]]
-    - [[2020 Ideas List|GSoC_2020]]
     - [[Our Application|OpenCV_GSoC_Application]]
 - [[Archive]]
