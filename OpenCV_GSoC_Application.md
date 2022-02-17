@@ -116,6 +116,7 @@ And the releases:
 
 https://opencv.org/releases/, and recent change logs: https://github.com/opencv/opencv/wiki/ChangeLog, and meeting notes https://github.com/opencv/opencv/wiki/Meeting_notes). 
 We are used in virtually every university and every business that deals with computer vision.
+
 ------------------------------------------------------------------------
 
 OpenCV Profile:
