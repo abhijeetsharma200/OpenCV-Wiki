@@ -11,7 +11,7 @@ GSoC has been invaluable to OpenCV because the fields of computer vision and dee
 
 Coding for OpenCV benefits the students with visible modern code https://github.com/opencv/opencv/wiki/Coding_Style_Guide in a hot field. The admin co-founded two companies with a former GSoC student one which sold to Google in 2013 (Industrial Perception Inc), and another which sold to Matterport in 2019 (Arraiy). We've co-written papers with advanced students and have placed students and mentors in various companies, including Google (https://www.linkedin.com/in/vincent-rabaud-3b592268/?originalSubdomain=fr).
 
-Some video of past GSoC contributions: (2020: https://youtu.be/9dAMAvh2Em4) (2017: https://docs.opencv.org/master/da/d9d/tutorial_dnn_yolo.html) (2015: https://youtu.be/OUbUFn71S4s) (2014: https://youtu.be/3f76HCHJJRA) (2013: https://youtu.be/_TTtN4frMEA).
+Some video of past GSoC contributions: (2021: https://www.youtube.com/watch?v=6He1Ay7hfQc) (2020: https://youtu.be/9dAMAvh2Em4) (2017: https://docs.opencv.org/master/da/d9d/tutorial_dnn_yolo.html) (2015: https://youtu.be/OUbUFn71S4s) (2014: https://youtu.be/3f76HCHJJRA) (2013: https://youtu.be/_TTtN4frMEA).
 
 ### What would your org consider to be a successful summer?
 
