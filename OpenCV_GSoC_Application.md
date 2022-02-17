@@ -15,9 +15,9 @@ Some video of past GSoC contributions: (2021: https://www.youtube.com/watch?v=6H
 
 ### What would your org consider to be a successful summer?
 
-A successful summer is one where a supermajority of the projects (14/14 in 2020) become accepted pull requests having passed the functionality, unit test, style checks, docs, built bots, and pull master. We believe this goal produces the maximal benefit both to the students and to the org.
+A successful summer is one where a supermajority of the projects (11/13 in 2021, 14/14 in 2020) become accepted pull requests having passed the functionality, unit test, style checks, docs, built bots, and pull master. We believe this goal produces the maximal benefit both to the students and to the org.
  
-We carefully select the students and the mentors to achieve this. In addition, the admin likes to see one published paper come out by at least one student-mentor pair.
+We carefully select the students and the mentors to achieve this. In addition, the admin likes to see one published paper come out by at least one student-mentor pair. Each year we post a video summary of the successful projects, see 2021: https://www.youtube.com/watch?v=6He1Ay7hfQc 2020: https://youtu.be/9dAMAvh2Em4
 
 
 
