@@ -93,6 +93,8 @@ Make sure your graph is frozen(in netron there shouldn't be any `Variable` nodes
 
 # Video I/O & Cameras
 
+OpenCV library uses external video decoding APIs that depend on target platform. The same platform can provide several video i/o capabilities and OpenCV tries the first capable to play back video or open camera in priority order. Backend selection logic and internal state is hidden from the library users, but could be managed with run-time options through environment. `OPENCV_VIDEOIO_DEBUG=1` environment variable enables verbose logging for videoio module. `OPENCV_VIDEOIO_PRIORITY_<backend>=9999` option forces particular priority for particular backend. See more options and details in [Query I/O API backends registry](https://docs.opencv.org/4.x/de/db1/group__videoio__registry.html#ga6723e68832186e20bd44cd3c2b0d8c60) description of Doxygen documentation.
+
 # Python
 
 ## Package Initialization
