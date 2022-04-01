@@ -45,6 +45,16 @@ The supported layers:
  * PReLU (including ChannelPReLU with channel-specific slopes)
  * PriorBox (SSD-specific layer)
  * ReLU
+ * ReduceL1
+ * ReduceL2
+ * ReduceLogSum
+ * ReduceLogSumExp
+ * ReduceMax
+ * ReduceMean
+ * ReduceMin
+ * ReduceProd
+ * ReduceSum
+ * ReduceSumSquare
  * Region (for DarkNet models)
  * Reorg
  * Resize
