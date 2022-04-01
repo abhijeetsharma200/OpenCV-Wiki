@@ -105,7 +105,7 @@ cmake --build timvx-build --target install -j 8
 cd /opt
 
 # Get source code
-git clone -b timvx_backend_support --single-branch https://github.com/fengyuentau/opencv
+git clone https://github.com/opencv/opencv
 
 # Configure
 # For Khadas VIM3, turn off building with Eigen if compilation fails at Eigen: -D WITH_EIGEN=OFF
