@@ -79,6 +79,7 @@ export VIVANTE_SDK_DIR=/path/to/<VIVANTE_SDK_path>
 ## Compile OpenCV with TIM-VX library installed previously
 
 You can try latest or a different version of TIM-VX with the following steps, but **note that latest TIM-VX may not work with OpenCV**.
+
 ### Step 1: Compile and install TIM-VX
 ```bash
 cd /opt
@@ -99,7 +100,7 @@ cmake -B timvx-build \
 cmake --build timvx-build --target install -j 8
 ```
 
-## Step2: Compile OpenCV with TimVX
+### Step2: Compile OpenCV with TimVX
 ```bash
 cd /opt
 
