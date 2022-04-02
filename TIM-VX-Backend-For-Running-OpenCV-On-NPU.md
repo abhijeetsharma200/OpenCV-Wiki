@@ -153,6 +153,50 @@ PYTHONPATH=.. python3 benchmark.py --cfg ./config/face_detection_yunet.yaml
 ```
 Ensure you have set `LD_LIBRARY_PATH` and `VIVANTE_SDK_DIR` properly as noted above.
 
+## Example
+### Python Example
+We have prepared some quantized models and demo code at OpenCV Zoo: https://github.com/opencv/opencv_zoo.
+
+### C++ Example
+The example model is [Resnet Int8 Model](https://github.com/onnx/models/blob/main/vision/classification/resnet/model/resnet50-v1-12-int8.onnx).
+Some example image can be found at [this repo](https://github.com/EliSchwartz/imagenet-sample-images), and the label information can be found at [this repo](https://github.com/EliSchwartz/imagenet-sample-images).
+```c++
+#include <iostream>
+#include <vector>
+#include <opencv2/dnn.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
+#include<algorithm>
+
+using namespace std;
+using namespace cv;
+using namespace cv::dnn;
+
+int main()
+{
+    // load input
+    Mat image = imread("PATH_TO_image");
+    Scalar meanValue(0.485, 0.456, 0.406);
+    Scalar stdValue(0.229, 0.224, 0.225);
+
+    Mat blob = blobFromImage(image, 1.0/255.0, Size(224, 224), meanValue, true);
+    blob /= stdValue;
+    Net net = readNetFromONNX("PATH_TO_MODEL/resnet50-v1-12-int8.onnx");
+
+    // set TimVX backend
+    net.setPreferableBackend(DNN_BACKEND_TIMVX);
+    net.setPreferableTarget(DNN_TARGET_NPU);
+    
+    std::vector<Mat> out;
+    net.setInput(blob);
+    net.forward(out);
+    
+    double min=0, max=0;
+    Point minLoc, maxLoc;
+    minMaxLoc(out[0], &min, &max, &minLoc, &maxLoc);
+    cout<<"class num = "<<maxLoc.x<<std::endl;
+}
+```
 
 ## FAQ
 
