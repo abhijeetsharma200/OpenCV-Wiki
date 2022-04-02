@@ -156,6 +156,7 @@ Ensure you have set `LD_LIBRARY_PATH` and `VIVANTE_SDK_DIR` properly as noted ab
 ## Example
 ### Python Example
 We have prepared some quantized models and demo code at OpenCV Zoo: https://github.com/opencv/opencv_zoo.
+Please set the right backend and quantized model path for the demo argument.
 
 ### C++ Example
 The example model is [Resnet Int8 Model](https://github.com/onnx/models/blob/main/vision/classification/resnet/model/resnet50-v1-12-int8.onnx).
