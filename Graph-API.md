@@ -166,10 +166,11 @@ Some tests require **external** test data to be available. This is test data not
 When you build G-API with OpenVINO Inference Engine support (`-DInferenceEngine_DIR=...` `-DWITH_INF_ENGINE=ON`), some extra tests for inference are enabled and require `OPENCV_DNN_TEST_DATA_PATH` to be set and **models downloaded** using the command below!
 
 ```bash
-export OPENCV_DNN_TEST_DATA_PATH=/path/to/opencv_extra/testdata/dnn
-openvino$ ./tools/downloader/downloader.py -o ${OPENCV_DNN_TEST_DATA_PATH}/omz_intel_models/2020.3.0 \
+git clone https://github.com/openvinotoolkit/open_model_zoo.git \
+open_model_zoo$ ./tools/model_tools/downloader.py -o ${OPENCV_DNN_TEST_DATA_PATH}/omz_intel_models/ \
     --cache_dir ${OPENCV_DNN_TEST_DATA_PATH}/.omz_cache/ \
     --name age-gender-recognition-retail-0013
+export OPENCV_DNN_TEST_DATA_PATH=/path/to/opencv_extra/testdata/dnn
 ```
 ## With ONNX Runtime
 
