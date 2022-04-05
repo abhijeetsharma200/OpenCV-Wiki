@@ -129,34 +129,51 @@ Implementation doesn't rely on file extension to choose format because usually i
 
 Please use environment variable `OPENCV_LOG_LEVEL=Info` at least to consider full description in case of any source file errors but usually default level `OPENCV_LOG_LEVEL=Warn` is enough
 
-### How to launch OpenVINO Inference using VPL Source examples
+### How-to-launch OpenVINO Inference using VPL Source practical guide
+
 First of all make sure that conditions are met: https://github.com/opencv/opencv/wiki/Graph-API#building-with-openvino-toolkit-support and https://github.com/opencv/opencv/wiki/Graph-API#building-with-onevpl-toolkit-support.
 The sample with oneVPL & OpenVINO Inference Engine can be found in `gapi/samples` directory under openCV project directories tree. Only infer single ROI is supported at now.
+
 (Current configuration parameters are obsolete and new will be introduced in https://github.com/opencv/opencv/pull/21716. Description written down in assumption that this PR was merged)
 
 * Source video file is a RAW encoded video stream (h265 for example)
-`example_gapi_onevpl_infer_single_roi --facem=<model path> --cfg_params="mfxImplDescription.mfxDecoderDescription.decoder.CodecID:MFX_CODEC_HEVC;" --input=<full RAW file path>`
+```bash
+example_gapi_onevpl_infer_single_roi --facem=<model path> --cfg_params="mfxImplDescription.mfxDecoderDescription.decoder.CodecID:MFX_CODEC_HEVC;" --input=<full RAW file path>
+```
 
 * Source file is a containerized media file: *.mkv, *.mp4, etc. (Applicable for WINDOWS only)
-`example_gapi_onevpl_infer_single_roi --facem=<model path> --cfg_params="" --input=<full RAW file path>`
+```bash
+example_gapi_onevpl_infer_single_roi --facem=<model path> --cfg_params="" --input=<full RAW file path>
+```
 or
-`example_gapi_onevpl_infer_single_roi --facem=<model path> --input=<full file path>`
+```bash
+example_gapi_onevpl_infer_single_roi --facem=<model path> --input=<full file path>
+```
 
 Please pay attention that examples launch non-optimized pipeline for default acceleration types:
 - VPL Source uses GPU device for decoding with copying media frame into CPU RAM
 - VPL preprocessing used GPU device for decoding with copying media frame from/into CPU RAM
 - Inference uses CPU device too
 
-Also it is possible to configure such pipeline stages in fine-grained way and seize heterogenous computation advantages. Thus, three acceleration parameters exposed: `source_device`, `preproc_device` and `faced`. Variety combinations of either `CPU` & `GPU` values are supported. Full list of supported configuration enumerated in sample support device matrix and is constantly growing. The most interesting cases are:
+Also it is possible to configure such pipeline stages in fine-grained way and seize heterogenous computation advantages. Thus, three acceleration parameters exposed: `source_device`, `preproc_device` and `faced`. Variety combinations of either `CPU` & `GPU` values are supported. 
+Full list of supported configuration enumerated in sample support device matrix and is constantly growing. 
+
+The most interesting cases are:
 
 * Default GPU-accelerated decoding & copy-based CPU use-case is similar with (synonym for empty parameters): 
-`example_gapi_onevpl_infer_single_roi  <...> --source_device=CPU --preproc_device=CPU --facem=CPU`
+```bash
+example_gapi_onevpl_infer_single_roi  <...> --source_device=CPU --preproc_device=CPU --facem=CPU
+```
 
 *  GPU decode/preprocessing pipeline with CPU-based inference: 
-`example_gapi_onevpl_infer_single_roi  <...> --source_device=GPU --preproc_device=GPU --facem=CPU`
+```bash
+example_gapi_onevpl_infer_single_roi  <...> --source_device=GPU --preproc_device=GPU --facem=CPU
+```
 
 *  Full copy-free GPU pipeline can be configured as:
-`example_gapi_onevpl_infer_single_roi  <...> --source_device=GPU --preproc_device=GPU --facem=GPU`
+```bash
+example_gapi_onevpl_infer_single_roi  <...> --source_device=GPU --preproc_device=GPU --facem=GPU
+```
 
 Testing G-API
 =============
