@@ -140,6 +140,7 @@ The sample with oneVPL & OpenVINO Inference Engine can be found in `gapi/samples
 ```bash
 example_gapi_onevpl_infer_single_roi --facem=<model path> --cfg_params="mfxImplDescription.mfxDecoderDescription.decoder.CodecID:MFX_CODEC_HEVC;" --input=<full RAW file path>
 ```
+Please explore the full list of supported codec constants here: https://github.com/opencv/opencv/blob/4.x/modules/gapi/include/opencv2/gapi/streaming/onevpl/cfg_params.hpp#L95
 
 * Source file is a containerized media file: *.mkv, *.mp4, etc. (Applicable for WINDOWS only)
 ```bash
