@@ -167,8 +167,8 @@ When you build G-API with OpenVINO Inference Engine support (`-DInferenceEngine_
 
 ```bash
 $ git clone https://github.com/openvinotoolkit/open_model_zoo.git
-$ cd open_model_zoo
-$ ./tools/model_tools/downloader.py -o /path/to/opencv_extra/testdata/dnn/omz_intel_models/ \
+$ cd open_model_zoo/tools/model_tools
+$ ./downloader.py -o /path/to/opencv_extra/testdata/dnn/omz_intel_models/ \
     --cache_dir /path/to/opencv_extra/testdata/dnn/.omz_cache/ \
     --name age-gender-recognition-retail-0013
 $ export OPENCV_DNN_TEST_DATA_PATH=/path/to/opencv_extra/testdata/dnn
