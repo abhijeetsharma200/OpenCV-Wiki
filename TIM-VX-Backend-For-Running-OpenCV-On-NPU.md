@@ -6,6 +6,8 @@ TIM-VX is provided with x86_64 simulator. So you can try OpenCV with TIM-VX back
 - (Recommanded) Compile OpenCV together with TIM-VX.
 - Compile OpenCV with TIM-VX library installed previously.
 
+NOTE: we also provide [two dockerfiles](https://gist.github.com/fengyuentau/bf9e54f80dbec4cc0ea13b8f8a985f0b) for building on x86_64 simulator and cross-compiling for Khadas VIM3.
+
 ## Requirements
 
 Before compiling, make sure you have the following dependencies installed:
