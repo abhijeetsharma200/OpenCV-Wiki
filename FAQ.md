@@ -8,7 +8,7 @@ You may consider [opencv_contrib](https://github.com/opencv/opencv_contrib) appr
   
 **Q:** _OpenCV build fails with internal compiler error (a.k.a ICE) or segmentation fault on my ARM board. What can I do?_  
 **A:** OpenCV team does not work on such kind of bug reports and the best solution for it is to file bugs to compiler team. However there are several popular solutions to fix the problem:
-- Reduce amount of build jobs in make and even remove `-j` option from `make` command line. Each build job is dedicated compiler process that consumes RAM. Serial build without `-j` consumes minimal amount if RAM.
+- Reduce amount of build jobs in make and even remove `-j` option from `make` command line. Each build job is dedicated compiler process that consumes RAM. Serial build without `-j` consumes minimal amount of RAM.
 - Add swap space in your OS. Relates to previous one.
 - Use cross compilation approach:[link](https://docs.opencv.org/master/d0/d76/tutorial_arm_crosscompile_with_cmake.html)
 - Update compiler.  
@@ -28,7 +28,7 @@ TBD
 
 # Video I/O, Image I/O, Data serialization
 
-**Q:** _Why OpenCV does not provide functions with `wchar_t`, `wstring`? What about non-Latin symbols in file names?_  
+**Q:** _Why does OpenCV not provide functions with `wchar_t`, `wstring`? What about non-Latin symbols in file names?_  
 **A:** OpenCV team decided to stay conservative and do not introduce new API calls with `wchar_t`, `wstring` and other string types By the following reasons:
 - Most of image decoding and encoding libraries use standard `fopen` call to open files and extra `wchar_t` support requires domain libraries modification.
 - Modern Linux, Mac OS and latest Windows releases support UTF-8 encoding that allows to use `std::string` as container to pass it to OpenCV functions.
@@ -36,7 +36,7 @@ TBD
 
 There are 2 alternatives to use `wchar_t` strings with OpenCV (see discussion section for code snippets and solutions):
 
-1. Convert `wchar_t` strings to UTF-8 and pass UTF-8 string as `cv::imread`, `cv::imwrite`, etc parameter. UTF-8 string is handled by system `fopen` call and it's behavior depends on OS support and locale. See `mbstowcs` in C++ standard for more details.
+1. Convert `wchar_t` strings to UTF-8 and pass UTF-8 string as `cv::imread`, `cv::imwrite`, etc parameter. UTF-8 string is handled by system `fopen` call and its behavior depends on OS support and locale. See `mbstowcs` in C++ standard for more details.
 
 2. OpenCV provides `cv::imdecode` and `cv::imencode` functions that allow to decode and encode image using memory buffer as input and output. The solution decouples file IO and image decoding and allows to manage path strings, locales, etc in user code.  
 
@@ -77,7 +77,7 @@ Links: [Green's Theorem](http://en.wikipedia.org/wiki/Green's_theorem)
 
 **Q**: _I call OpenCV function as it's done in C++ or stated in documentation, but get some strange data type or buffer size exception. How to debug it?_
 
-**A**: OpenCV Bindings for Python use Numpy Array as base container instead or wrapping `cv::Mat` to Python. Data conversion is done on-the-go in C++ during function call. Some of conversions could be buggy or counterintuitive. OpenCV provides function `cv.utils.dumpInputArray()` that returns details of C++ representation of Python arrays that can help.  
+**A**: OpenCV Bindings for Python use Numpy Array as base container instead or wrapping `cv::Mat` to Python. Data conversion is done on-the-go in C++ during function call. Some conversions could be buggy or counterintuitive. OpenCV provides function `cv.utils.dumpInputArray()` that returns details of C++ representation of Python arrays that can help.  
 
 **Documentation:** [#16807](https://github.com/opencv/opencv/issues/16807) [#19091](https://github.com/opencv/opencv/issues/19091), [#17456](https://github.com/opencv/opencv/issues/17456) 
 
