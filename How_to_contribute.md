@@ -12,7 +12,7 @@ Before you start contributing you should
 
 -   If you are submitting a new algorithm implementation, do a quick search over internet to see whether the algorithm is patented or not. **Note:** All new algorithms should go into [opencv_contrib](https://github.com/opencv/opencv_contrib) repository by default.
 
--   If you are going to fix a bug, check that it's still exists. This can be done by building the latest [2.4](https://github.com/opencv/opencv/tree/2.4)/[3.4](https://github.com/opencv/opencv/tree/3.4) branch or the [latest master branch](https://github.com/opencv/opencv), and make sure that the error is still reproducable there. We do not fix bugs that only affect deprecated versions like OpenCV 2.1 for example.
+-   If you are going to fix a bug, check that it still exists. This can be done by building the latest [2.4](https://github.com/opencv/opencv/tree/2.4)/[3.4](https://github.com/opencv/opencv/tree/3.4) branch or the [latest master branch](https://github.com/opencv/opencv), and make sure that the error is still reproducible there. We do not fix bugs that only affect deprecated versions like OpenCV 2.1 for example.
 
 -   Make sure that nobody beat you into fixing or reporting the issue by doing a search on the Github [OpenCV issues page](https://github.com/opencv/opencv/issues), and making sure that there isn't someone working on it. In the latter case you might provide support or suggestion in the issue or in the linked pull request.
 
@@ -32,7 +32,7 @@ Before you open up anything on the OpenCV GitHub page, be sure that you are at t
 
 1.  Install [[Git]].
 2.  Register at GitHub. Create your fork of OpenCV repository https://github.com/opencv/opencv (see https://help.github.com/articles/fork-a-repo for details).
-3.  Choose a task for youself. It could be a [bugfix](https://github.com/opencv/opencv/issues?q=is%3Aissue+is%3Aopen+label%3Abug) or some new code.
+3.  Choose a task for yourself. It could be a [bugfix](https://github.com/opencv/opencv/issues?q=is%3Aissue+is%3Aopen+label%3Abug) or some new code.
 4.  Choose a base branch for your work. More details about branches and policies are here: [[Branches]]
 5.  Clone your fork to your computer. **You can install the default pre-commit hook by renaming `opencv/.git/hooks/pre-commit.sample` to `opencv/.git/hooks/pre-commit` - this will prevent you from committing whitespace errors.**
 6.  Create a new branch (with a meaningful name) from the base branch you chose.
@@ -55,14 +55,14 @@ Following these guidelines will increase the likelihood of your pull request bei
 4.  If you have added new functionality, you should update/create the relevant documentation, as well as add tests for it to the testsuite.
 5.  Try not to include "oops" commits - ones that just fix an error in the previous commit. If you have those, then before submitting [squash](http://git-scm.com/book/en/Git-Tools-Rewriting-History#Squashing-Commits) those fixes directly into the commits where they belong.
 6.  Make sure to choose the right base branch and to follow the [[Coding_Style_Guide]] for your code.
-7. Make sure to add test for new functionality or test that reproduces fixed bug with related test data. Please do not add extra images or videos, if some of existing media files are suitable.
-8. Make sure to add performance test, if you propose optimization or the patch could affect performance of major functionality. See [HowToWritePerfTests](HowToWritePerfTests) page to implement good test and [HowToUsePerfTests](HowToUsePerfTests) page to run performance tests properly.
+7. Make sure to add tests for new functionality or test that reproduces fixed bug with related test data. Please do not add extra images or videos, if some of existing media files are suitable.
+8. Make sure to add performance tests, if you propose optimization or the patch could affect performance of major functionality. See [HowToWritePerfTests](HowToWritePerfTests) page to implement good tests and [HowToUsePerfTests](HowToUsePerfTests) page to run performance tests properly.
 
 Testing and merging pull requests
 ---------------------------------
 
 1.  Your pull request will be automatically tested by OpenCV's buildbot (testing status can be checked here: http://pullrequest.opencv.org). If any builders have failed, you should fix the issue. To rerun the automatic builds just push changes to your branch on GitHub. *No need to close pull request and open a new one!*
-2.  Once all the builders are "green", one of OpenCV developers will review your code. Reviewer could ask you to modify your pull request. Please provide timely response for reviewers (within weeks, not months), otherwise you submission could be postponed or even rejected.
+2.  Once all the builders are "green", one of OpenCV developers will review your code. Reviewer could ask you to modify your pull request. Please provide timely response for reviewers (within weeks, not months), otherwise your submission could be postponed or even rejected.
 
 ### Here is the flow-chart of the process:
 
