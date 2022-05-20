@@ -14,7 +14,7 @@ General Comments about Writing OpenCV code
 Files
 -----
 
-All the functionality must be put into one or more `.cpp` and `.hpp` files into the appropriate module of OpenCV (`opencv/modules` or `opencv_contrib/modules`). A new module should be created if the contributed functionality is does not fit any existing module.
+All the functionality must be put into one or more `.cpp` and `.hpp` files into the appropriate module of OpenCV (`opencv/modules` or `opencv_contrib/modules`). A new module should be created if the contributed functionality does not fit any existing module.
 
 -   All the file names are written in lower case for better compatibility with both POSIX and Windows.
 -   C++ interface headers have `.hpp` extension
@@ -125,7 +125,7 @@ User may want to ignore some input values or omit producing some output arrays. 
 High-level C++ interface. Algorithms
 ------------------------------------
 
-In some cases it is necessary to represent an algorithm as a class, not a function. For example, an algorithm can have internal state updated with each run, e.g. background subtraction. Or an algorithm can have many parameters. Some algorithms can have include several stages or steps, e.g. training and prediction in machine learning methods.
+In some cases it is necessary to represent an algorithm as a class, not a function. For example, an algorithm can have internal state updated with each run, e.g. background subtraction. Or an algorithm can have many parameters. Some algorithms can have several stages or steps, e.g. training and prediction in machine learning methods.
 
 If you decide to make your algorithm a class, you should follow OpenCV Algorithm concept.
 
@@ -301,7 +301,7 @@ Python samples
 
 Python samples can be executed in two modes:
 - standalone
-- throught `demo.py`. This helper script imports samples .py files (one file per sample)
+- through `demo.py`. This helper script imports sample .py files (one file per sample)
 
 Please follow this template for OpenCV samples on Python:
 
