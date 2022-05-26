@@ -227,13 +227,11 @@ Then run `cmake --build $opencv_build --target install -j 8` to re-build OpenCV.
 
 ### Q2: How do I install the built Python interface of OpenCV?
 
-By default, you can locate the OpenCV's Python interface `cv2.x.so` under `$opencv_build/install/lib/python3.8/site-packages/cv2/python-3.8` once compilation is finished.
-
-You may create a symbolic link to `cv2.x.so` under python3's package directory. For example,
+You can find a directory named `python_loader` in `/opt/opencv-build` if python3 interface option is on. Add the path to `python_loader` to `PYTHONPATH` to import opencv in python3:
 ```bash
-# '/usr/lib/python3/dist-packages/cv2.so': you will need to find your own location to replace in your system
-ln -sf ${opencv}/build/install/lib/python3.8/site-packages/cv2/python-3.8/cv2.cpython-38-aarch64-linux-gnu.so /usr/lib/python3/dist-packages/cv2.so
+export PYTHONPATH=/opt/opencv-build/python_loader:$PYTHONPATH
 ```
+Add this line to the end of your `~/.bashrc` or `~/.zshrc` if you want it taking effects every time you start a new session.
 
 OpenCV should be ready for Python:
 ```bash
