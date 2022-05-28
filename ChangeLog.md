@@ -2,6 +2,108 @@ OpenCV Change Logs
 ==================
 
 
+<details>
+
+<summary>Coming soon... 4.6.0 / 3.4.18</summary>
+
+
+version:4.6.0
+-------------
+
+
+*June, 2022*
+
+The summer update for OpenCV 4.x has been released.
+
+
+**Highlights of this release**:
+
+- OpenCV project infrastructure migrating on GitHub Actions workflows for CI and release purposes
+
+- Added support for GCC 12, Clang 15
+
+- Added support for FFmpeg 5.0
+
+![](images/dnn.png)
+
+- DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2021-12-26..2022-06-01):
+
+    - Improved layers / activations / supported more models:
+
+      - LSTM (+CUDA), resize (+ONNX13), Sign, Shrink, Reciprocal, depth2space, space2depth
+      - fixes in Reduce, Slice, Expand
+
+    - Disabled floating-point denormals processing [#21521](https://github.com/opencv/opencv/pull/21521)
+
+    - Changed layer names in ONNX importer to support "output" entities properly
+
+    - Added TIM-VX NPU backend support: https://github.com/opencv/opencv/wiki/TIM-VX-Backend-For-Running-OpenCV-On-NPU
+
+    - Added Softmax parameter to ClassificationModel
+
+    - Add audio speech recognition sample (C++) [#21458](https://github.com/opencv/opencv/pull/21458)
+
+    - Intel® Inference Engine backend ( [OpenVINO™](https://software.intel.com/en-us/openvino-toolkit) ):
+
+      - added initial support for OpenVINO 2022.1 release
+      - removed support of legacy API (dropped since 2020.3)
+
+
+![](images/gapi.png)
+
+- G-API module:
+
+  - **TBD**
+
+
+![](images/github2.png)
+
+- And many other contributions:
+
+    - Support downloading 3rdparty resources from Gitcode & Gitlab-style mirrors [#21531](https://github.com/opencv/opencv/pull/21531)
+
+    - Added NEON support in builds for Windows on ARM [#21630](https://github.com/opencv/opencv/pull/21630)
+
+    - Add n-dimensional transpose to core [#21703](https://github.com/opencv/opencv/pull/21703)
+
+    - (opencv_contrib) Add Connected Components Labeling in CUDA [#3153](https://github.com/opencv/opencv_contrib/pull/3153)
+
+
+### Contributors
+
+<details>
+<summary>opencv (XX contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.5.5..4.6.0
+```
+
+</details>
+
+<details>
+<summary>opencv_contrib (XX contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.5.5..4.6.0
+```
+
+</details>
+
+
+
+version:3.4.18
+--------------
+
+*June, 2022*
+
+OpenCV 3.4.18 has been released. Bug fixes, optimizations and other enhancements are propagated into OpenCV 4.6.0.
+
+Long-lived OpenCV 3.x release series is here since 2015. We are going to reduce support of 3.x branch in the future to move forward to OpenCV 5.0.
+
+</details>
+
+
+
 version:4.5.5
 -------------
 
