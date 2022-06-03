@@ -34,8 +34,8 @@ PERF_TEST_P( Size_MatType_OutMatDepth, integral1,
     /* 6. Collect the samples! */
     TEST_CYCLE(100) { integral(src, sum, sdepth); }
 
-    /* 7. Add simple regression check */
-    SANITY_CHECK(sum);
+    /* 7. Add dummy regression check */
+    SANITY_CHECK_NOTHING();
 }
 ```
 
@@ -190,13 +190,13 @@ stopTimer();
 }
 ```
 
-Add a simple regression check
+Simple regression check
 -----------------------------
 
-And final touch is adding simple regression check into your test:
+All `SANITY_CHECK_*` macros are depricated.
+
+Add `SANITY_CHECK_NOTHING()` for compatibility with legacy code
 
 ```.cpp
-SANITY_CHECK(sum [, epsilon]);
+SANITY_CHECK_NOTHING();
 ```
-
-This command does not do full regression check but provides a fast and simple way to ensure that values returned by tested function are adequate.
