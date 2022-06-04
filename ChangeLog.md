@@ -53,7 +53,60 @@ The summer update for OpenCV 4.x has been released.
 
 - G-API module:
 
-  - **TBD**
+  - G-API framework:
+
+    - Introduced a Grayscale image format support for `cv::MediaFrame`: [#21511](https://github.com/opencv/opencv/pull/21511);
+    - Enabeled `.reshape()` support in the CPU backend: [#21669](https://github.com/opencv/opencv/pull/21669);
+    - Fixed possible hang in streaming execution mode with constant inputs: [#21567](https://github.com/opencv/opencv/pull/21567);
+    - Introduced proper error/exception propagation in the asynchronous streaming execution mode: [#21660](https://github.com/opencv/opencv/pull/21660);
+    - Fixed new stream event handling: [#21731](https://github.com/opencv/opencv/pull/21731).
+
+  - Fluid backend:
+
+    - Fixed horizontal pass in the Resize kernel, fixed Valgrind issues: [#21144](https://github.com/opencv/opencv/pull/21144);
+    - Extended Resize kernel with F32 version: [#21678](https://github.com/opencv/opencv/pull/21678), added AVX: [#21728](https://github.com/opencv/opencv/pull/21728).
+    - Enabled dynamic dispatch for Split4 kernel: [#21520](https://github.com/opencv/opencv/pull/21520);
+    - Enabled dynamic dispatch for Merge3 kernel: [#21529](https://github.com/opencv/opencv/pull/21529);
+    - Added a SIMD version for DivC kernel: [#21474](https://github.com/opencv/opencv/pull/21474);
+    - Added a SIMD version for DivRC kernel: [#21530](https://github.com/opencv/opencv/pull/21530);
+    - Enabled dynamic dispatch for Add kernel: [#21686](https://github.com/opencv/opencv/pull/21686);
+    - Enabled dynamic dispatch for Sub kernel: [#21746](https://github.com/opencv/opencv/pull/21746);
+    - Added a SIMD version for ConvertTo kernel: [#21777](https://github.com/opencv/opencv/pull/21777);
+    - Fixed kernel matrix size for Sobel kernel: [#21613](https://github.com/opencv/opencv/pull/21613).
+
+  - OpenCL backend:
+
+  - Intel® OpenVINO™ inference backend:
+
+    - Fixed NV12 format support for remote memory when OpenVINO™ remote context is used: [#21424](https://github.com/opencv/opencv/pull/21424).
+    - Implemented correct error handling in the backend: [#21579](https://github.com/opencv/opencv/pull/21579).
+    - Fixed ngraph warnings [#21362](https://github.com/opencv/opencv/pull/21362).
+
+  - OpenCV AI Kit backend:
+
+    - Introduced a new backend to program [OpenCV AI Kit](https://store.opencv.ai/collections/usb) boards via G-API. Currently the backend is in experimental state, but allows to build Camera+NN pipeline and supports heterogeneity (mixing with host-side code): [#20785](https://github.com/opencv/opencv/pull/20785), [#21504](https://github.com/opencv/opencv/pull/21504).
+
+  - Media integration:
+
+    - Enabled GPU inference with oneVPL and DirectX11 on Windows in Intel® OpenVINO™ inference backend: [#21232](https://github.com/opencv/opencv/pull/21232), [#21618](https://github.com/opencv/opencv/pull/21618), [#21658](https://github.com/opencv/opencv/pull/21658), [#21687](21687), [#21688](https://github.com/opencv/opencv/pull/21688). Now GPU textures decoded by oneVPL decoder can be preprocessed and inferred on GPU with no extra host processing.
+    - Enabled oneVPL support on Linux: [#21883](https://github.com/opencv/opencv/pull/21883).
+    - Extended GStreamer pipeline source with Grayscale image format support: [#21560](https://github.com/opencv/opencv/pull/21560).
+
+  - Python bindings:
+
+    - Exposed GStreamer pipeline source in Python bindings: [#20832](https://github.com/opencv/opencv/pull/20832).
+
+  - Samples:
+
+    - Introduced a pipeline modelling tool for cascaded model benchmarking: [#21477](https://github.com/opencv/opencv/pull/21477), [#21636](https://github.com/opencv/opencv/pull/21636), [#21719](https://github.com/opencv/opencv/pull/21719). The tool supports a declarative YAML-based config to describe pipelines with simulated pre-/post-processing. The tool collects and reports latency and throughput information for the modelled pipeline.
+
+  - Other changes and fixes:
+
+    - Moved `GKernelPackage` into `cv::` namespace by default, its `cv::gapi::` alias remain for compatibility: [#21318](https://github.com/opencv/opencv/pull/21318);
+    - Moved Resize kernel from core to imgproc kernel packages for CPU, OpenCL, and Fluid backends: [#21157](https://github.com/opencv/opencv/pull/21157). Also moved tests appropriately: [#21475](https://github.com/opencv/opencv/pull/21475);
+    - Avoided sporadic test failures in DivC: [#21626](https://github.com/opencv/opencv/pull/21626);
+    - Fixed 1D Mat handling in the framework: [#21782](https://github.com/opencv/opencv/pull/21782);
+    - Reduced the number of G-API generated accuracy tests: [#21909](https://github.com/opencv/opencv/pull/21909).
 
 
 ![](images/github2.png)
