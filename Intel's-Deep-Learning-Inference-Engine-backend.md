@@ -41,6 +41,11 @@ Software requirements:
 - CMake 3.5.1+ (MSVS 2015+) or CMake 3.14+ (MSVS 2019+)
 
 
+#### OpenCV 4.6.0
+
+No community packages with OpenVINO are prepared for this release. You could build them from the source code.
+
+
 #### OpenCV 4.5.5
 
 | [OpenVINO version](https://github.com/openvinotoolkit/openvino/releases) | [GitHub releases](https://github.com/opencv/opencv/releases) | [SourceForge](https://sourceforge.net/projects/opencvlibrary/) |

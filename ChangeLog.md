@@ -2,11 +2,6 @@ OpenCV Change Logs
 ==================
 
 
-<details>
-
-<summary>Coming soon... 4.6.0 / 3.4.18</summary>
-
-
 version:4.6.0
 -------------
 
@@ -125,19 +120,134 @@ The summer update for OpenCV 4.x has been released.
 ### Contributors
 
 <details>
-<summary>opencv (XX contributors)</summary>
+<summary>opencv (92 contributors)</summary>
 
 ```
 git shortlog --no-merges -ns 4.5.5..4.6.0
+    58  Alexander Alekhin
+    19  Andrey Senyaev
+    11  Suleyman TURKMEN
+    10  Anna Khakimova
+    10  Maksim Shabunin
+     9  rogday
+     8  Anatoliy Talamanov
+     7  Vadim Levin
+     7  Vincent Rabaud
+     6  Aleksei Trutnev
+     6  Sergey Ivanov
+     4  Victor
+     4  Yuantao Feng
+     4  Zihao Mu
+     3  Dmitry Budnikov
+     3  Kataev Victor
+     3  Kumataro
+     3  Pierre Chatelier
+     3  Trutnev Aleksei
+     3  berak
+     3  cudawarped
+     3  fengyuentau
+     2  Alexander Smorkalov
+     2  Alexey Smirnov
+     2  Christine Poerschke
+     2  HAN Liutong
+     2  Harvey
+     2  Lukas-Alexander Weber
+     2  OpenCV Developers
+     2  Smirnov Egor
+     2  Stefano Allegretti
+     2  Tsukasa Sugiura
+     2  Yulv-git
+     2  Yuriy Chernyshov
+     2  lamm45
+     2  luz paz
+     2  pkubaj
+     1  Alexander Conner
+     1  Alexander Panov
+     1  Anastasiya(Asya) Pronina
+     1  Artem Saratovtsev
+     1  Chen Jun
+     1  Christoph Rackwitz
+     1  David Fan
+     1  Ed Martin
+     1  Egor Smirnov
+     1  Giles Payne
+     1  Greg Fiumara
+     1  Guillaume Gigaud
+     1  Ilya Churaev
+     1  Ilya Lavrenov
+     1  Jan Polák
+     1  Jeremy Ephron
+     1  Joe Howse
+     1  Joona Heikkilä
+     1  Juan López Rubio
+     1  Julian Szigethy
+     1  KaurkerDevourer
+     1  LaurentBerger
+     1  Lukas Yoder
+     1  Manolis Lourakis
+     1  Martin Tůma
+     1  Maxim Pashchenkov
+     1  Namgoo Lee
+     1  Oguzhan Guclu
+     1  Pavel Rojtberg
+     1  Phil Ruffwind
+     1  Qingnan Duan
+     1  Ruslan Garnov
+     1  Sean McBride
+     1  Sergey
+     1  Sinitsina Maria
+     1  Stefan Brüns
+     1  Stefan Dragnev
+     1  Tatsuro Shibamura
+     1  Yash Singhal
+     1  Yusuke Kameda
+     1  Zach Lowry
+     1  Zhuo Zhang
+     1  dbudnikov
+     1  eplankin
+     1  h6197627
+     1  hellodoge
+     1  huangziqing
+     1  luzpaz
+     1  masa-iwm
+     1  mohawk2
+     1  shengwenxue
+     1  sivanov-work
+     1  xiong-jie-y
+     1  xiongzhen
+     1  zihaomu
 ```
 
 </details>
 
 <details>
-<summary>opencv_contrib (XX contributors)</summary>
+<summary>opencv_contrib (23 contributors)</summary>
 
 ```
 git shortlog --no-merges -ns 4.5.5..4.6.0
+    11  cudawarped
+     6  Alexander Panov
+     5  Suleyman TURKMEN
+     4  Andrey Senyaev
+     3  AleksandrPanov
+     3  Alexander Alekhin
+     2  Pavel Rojtberg
+     2  Vincent Rabaud
+     1  Aditya Mehrotra
+     1  Aleksandr Panov
+     1  Alexander Smorkalov
+     1  Dan
+     1  Dan Oprea
+     1  Matti Jukola
+     1  Mitul Vekariya
+     1  Namgoo Lee
+     1  Ninh Huynh
+     1  Pranay Pandit
+     1  Simon Traub
+     1  Stefano Allegretti
+     1  huangziqing
+     1  leatherwang
+     1  مهدي شينون (Mehdi Chinoune)
 ```
 
 </details>
@@ -152,8 +262,6 @@ version:3.4.18
 OpenCV 3.4.18 has been released. Bug fixes, optimizations and other enhancements are propagated into OpenCV 4.6.0.
 
 Long-lived OpenCV 3.x release series is here since 2015. We are going to reduce support of 3.x branch in the future to move forward to OpenCV 5.0.
-
-</details>
 
 
 
