@@ -8,7 +8,12 @@ version:4.6.0
 
 *June, 2022*
 
-The summer update for OpenCV 4.x has been released.
+The summer update for OpenCV 4.x has been released. 
+
+**Credits:**
+
+- OpenCV China team for new hardware for CI Farm.
+- @alalek, @asenyaev, @fengyuentau for great work on OpenCV CI migration to Github Actions 
 
 
 **Highlights of this release**:
@@ -36,7 +41,7 @@ The summer update for OpenCV 4.x has been released.
 
     - Added Softmax parameter to ClassificationModel
 
-    - Add audio speech recognition sample (C++) [#21458](https://github.com/opencv/opencv/pull/21458)
+    - Added audio speech recognition sample (C++) [#21458](https://github.com/opencv/opencv/pull/21458)
 
     - Intel® Inference Engine backend ( [OpenVINO™](https://software.intel.com/en-us/openvino-toolkit) ):
 
@@ -90,6 +95,7 @@ The summer update for OpenCV 4.x has been released.
   - Python bindings:
 
     - Exposed GStreamer pipeline source in Python bindings: [#20832](https://github.com/opencv/opencv/pull/20832).
+    - Fixed Python bindings for CudaBufferPool, cudacodec and cudastereo modules in OpenCV Contrib. 
 
   - Samples:
 
