@@ -112,7 +112,7 @@ The summer update for OpenCV 4.x has been released.
 
 ![](images/github2.png)
 
-- And many other contributions:
+- And many other contributions, including:
 
     - Support downloading 3rdparty resources from Gitcode & Gitlab-style mirrors [#21531](https://github.com/opencv/opencv/pull/21531)
 
