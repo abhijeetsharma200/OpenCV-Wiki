@@ -12,7 +12,7 @@ The summer update for OpenCV 4.x has been released.
 
 **Credits:**
 
-- OpenCV China team for new hardware for CI Farm.
+- OpenCV China team for the new hardware for CI Build Farm.
 - @alalek, @asenyaev, @fengyuentau for great work on OpenCV CI migration to Github Actions 
 
 
