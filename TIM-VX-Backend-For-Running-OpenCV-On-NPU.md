@@ -161,7 +161,7 @@ We have prepared some quantized models and demo code at OpenCV Zoo: https://gith
 Please set the right backend and quantized model path for the demo argument.
 
 ### C++ Example
-The example model is [Resnet Int8 Model](https://github.com/onnx/models/blob/main/vision/classification/resnet/model/resnet50-v1-12-int8.onnx).
+The example model is [Per-Tensor quantized Resnet Int8 Model](https://drive.google.com/file/d/11AiISuvk0AOvHKLH_lN6AAnp2Oho1ibD/view?usp=sharing).
 Some example image can be found at [this repo](https://github.com/EliSchwartz/imagenet-sample-images), and the label information can be found at [this repo](https://github.com/EliSchwartz/imagenet-sample-images).
 ```c++
 #include <iostream>
