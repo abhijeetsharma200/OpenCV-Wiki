@@ -1,6 +1,19 @@
 # OpenCV CI Build parameters
 
-## List of Pull requests builders
+## List of Pull Requests Builders on GitHub Actions
+
+For each version branch (3.4, 4.x and 5.x), we have the pull request builders on GitHub Actions.
+
+| Name | Description|
+| --- | --- |
+| `ARM64`       | Ubuntu-based image on ARM64 platform |
+| `U20`         | Ubuntu-absed image on Intel x86_64 platform |
+| `W10`         | Windows 10 on Intel x86_64 platform |
+| `macOS-ARM64` | macOS Monterey 12.4 on Apple M1 |
+| `macOS-X64`   | macOS Monterey 12.4 on Intel i7 |
+| `TIM-VX`      | simulator: Ubuntu 20.04 hosted by GitHub; khads-vim3: Khads VIM3 board running Ubuntu 20.04 with A311D NPU |
+
+## List of Pull Requests Builders on BuildBot
 
 Frequently used:
 
