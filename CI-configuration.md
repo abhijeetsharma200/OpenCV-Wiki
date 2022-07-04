@@ -7,7 +7,7 @@ For each version branch (3.4, 4.x and 5.x), we have the pull request builders on
 | Name | Description|
 | --- | --- |
 | `ARM64`       | Ubuntu-based image on ARM64 platform |
-| `U20`         | Ubuntu-absed image on Intel x86_64 platform |
+| `U20`         | Ubuntu-based image on Intel x86_64 platform |
 | `W10`         | Windows 10 on Intel x86_64 platform |
 | `macOS-ARM64` | macOS Monterey 12.4 on Apple M1 |
 | `macOS-X64`   | macOS Monterey 12.4 on Intel i7 |
