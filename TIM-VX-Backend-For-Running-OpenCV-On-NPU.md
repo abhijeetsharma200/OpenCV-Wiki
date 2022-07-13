@@ -47,7 +47,7 @@ mv /path/to/aarch64_A311D_6.4.8/galcore.ko <found_galcore_path_in_usr_lib>
 sudo reboot # reboot to take effect
 ```
 
-## Compile OpenCV together with TIM-VX
+## Compile OpenCV together with TIM-VX (Highly Recommended)
 
 To compile OpenCV together with TIM-VX, all you need to do is adding a CMake option `-DWITH_TIMVX=ON`:
 ```bash
@@ -79,7 +79,7 @@ export VIVANTE_SDK_DIR=/path/to/<VIVANTE_SDK_path>
 ```
 
 
-## Compile OpenCV with TIM-VX library installed previously
+## Compile OpenCV with TIM-VX library installed previously (Not Recommended)
 
 You can try latest or a different version of TIM-VX with the following steps, but **note that latest TIM-VX may not work with OpenCV**.
 
