@@ -60,6 +60,7 @@ git clone https://github.com/opencv/opencv
 # Turn on OpenCV's Python interface: -D BUILD_opencv_python3=ON
 cmake -B opencv-build \
       -D CMAKE_BUILD_TYPE=RELEASE \
+      -D BUILD_opencv_gapi=OFF \
       -D CMAKE_INSTALL_PREFIX=opencv-install \
       -D WITH_TIMVX=ON opencv
 # NOTE: Make sure you see `TIMVX: YES` in the CMake output.
@@ -116,6 +117,7 @@ git clone https://github.com/opencv/opencv
 cmake -B opencv-build \
       -D CMAKE_BUILD_TYPE=RELEASE \
       -D CMAKE_INSTALL_PREFIX=./install \
+      -D BUILD_opencv_gapi=OFF \
       -D WITH_TIMVX=ON \
       -D TIMVX_INSTALL_DIR=/opt/timvx-build/install \
       -D VIVANTE_SDK_DIR=/opt/aarch64_A311D_6.4.8 opencv
