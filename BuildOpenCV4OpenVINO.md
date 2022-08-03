@@ -46,10 +46,8 @@ libva-dev \
 libmfx-dev \  
 libgstreamer1.0-dev \  
 libgstreamer-plugins-base1.0-dev 
-4. Create build and install directories and enter into build directory:
-> mkdir ~/build-opencv && \  
-mkdir ~/build-opencv/install && \  
-cd ~/build-opencv
+4. Create build directory and enter into it:
+> mkdir ~/build-opencv && cd ~/build-opencv
 5. Compile OpenCV:
 > cmake -G Ninja \  
 -D BUILD_INFO_SKIP_EXTRA_MODULES=ON \  
@@ -144,7 +142,7 @@ export PYTHONPATH="~/build-opencv/install/python${PYTHONPATH:+:$PYTHONPATH}"
 > git clone --recurse-submodules https://github.com/opencv/opencv.git
 3. Install [Intel® Media SDK for Windows](https://www.intel.com/content/www/us/en/developer/tools/media-sdk/choose-download-client.html)
 4. Create build and install directories and enter into build directory:
-> mkdir "build-opencv" && mkdir "build-opencv\install" && cd "build-opencv"
+> mkdir "build-opencv" && cd "build-opencv"
 5. Compile OpenCV:
 > cmake -G Ninja ^  
 -DBUILD_INFO_SKIP_EXTRA_MODULES=ON ^  
