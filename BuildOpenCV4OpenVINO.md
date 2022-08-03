@@ -125,7 +125,7 @@ libgstreamer-plugins-base1.0-dev
 -D VIDEOIO_PLUGIN_LIST=ffmpeg,gstreamer,mfx \\\
 -D CMAKE_EXE_LINKER_FLAGS=-Wl,--allow-shlib-undefined \\\
 -D CMAKE_BUILD_TYPE=Release <OpenCV_ROOT_REPO_DIRECTORY> && \\\
-ninja
+ninja && cmake --install .
 
 OpenCV package is available at ~/build-opencv directory. 
 To compile application that uses OpenCV, the following environment variables should be specified:
