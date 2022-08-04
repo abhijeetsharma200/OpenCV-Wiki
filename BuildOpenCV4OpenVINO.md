@@ -1,5 +1,11 @@
 # Build OpenCV for OpenVINO
 
+# Contents
+- [Introduction](#introduction)
+- [Building on Ubuntu](#building-on-ubuntu)
+- [Building on Windows](#building-on-windows)
+
+# Introduction
 OpenVINO does not provide custom OpenCV drop since 2022.1.1 release.
 If OpenVINO user needs OpenCV functionality there are 2 approaches how to get it:
 1. Get OpenCV from another sources (system repositories, pip, conda, homebrew). It is easy to follow this approach, however it has several disadvantages:
@@ -12,7 +18,7 @@ If OpenVINO user needs OpenCV functionality there are 2 approaches how to get it
 
 The instruction below shows how to build OpenCV for OpenVINO.
 
-## Ubuntu
+## Building on Ubuntu
 
 ### Prerequisites 
 1. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_linux.html)
@@ -137,7 +143,7 @@ export LD_LIBRARY_PATH="<OpenCV_INSTALL_DIR>/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_
 export PYTHONPATH="<OpenCV_INSTALL_DIR>/python${PYTHONPATH:+:$PYTHONPATH}"
 
 
-## Windows
+## Building on Windows
 
 ### Prerequisites 
 1. Install Microsoft Visual Studio 
