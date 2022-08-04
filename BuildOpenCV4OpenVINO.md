@@ -39,7 +39,6 @@ libavcodec-dev \
 libavformat-dev \  
 libswscale-dev \  
 libavresample-dev \  
-ffmpeg-dev \  
 libtbb2 \  
 libssl-dev \  
 libva-dev \  
@@ -116,7 +115,7 @@ libgstreamer-plugins-base1.0-dev
 -D PYTHON3_LIMITED_API=ON \  
 -D HIGHGUI_PLUGIN_LIST=all \  
 -D OPENCV_PYTHON_INSTALL_PATH=python \  
--D CPU_BASELINE=SSE2 \  
+-D CPU_BASELINE=SSE4_2 \  
 -D OPENCV_IPP_GAUSSIAN_BLUR=ON \  
 -D WITH_INF_ENGINE=ON \  
 -D InferenceEngine_DIR=<OpenVINO_ROOT_DIRECTORY>/runtime/cmake/ \  
