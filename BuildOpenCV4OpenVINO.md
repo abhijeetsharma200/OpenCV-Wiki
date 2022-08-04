@@ -132,9 +132,9 @@ ninja && cmake --install .
 OpenCV package is available at `~/build-opencv/install` directory. 
 
 To compile application that uses OpenCV, the following environment variables should be specified:
-> export OpenCV_DIR="\~/build-opencv/install/cmake"  
-export LD_LIBRARY_PATH="\~/build-opencv/install/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"  
-export PYTHONPATH="~/build-opencv/install/python${PYTHONPATH:+:$PYTHONPATH}"
+> export OpenCV_DIR="<OpenCV_INSTALL_DIR>/cmake"  
+export LD_LIBRARY_PATH="<OpenCV_INSTALL_DIR>/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"  
+export PYTHONPATH="<OpenCV_INSTALL_DIR>/python${PYTHONPATH:+:$PYTHONPATH}"
 
 
 ## Windows
