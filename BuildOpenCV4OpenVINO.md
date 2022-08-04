@@ -14,10 +14,9 @@ The instruction below shows how to build OpenCV for OpenVINO.
 
 ## Ubuntu
 
+### Prerequisites 
 1. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_linux.html)
-2. Copy OpenCV repository:
-> git clone --recurse-submodules https://github.com/opencv/opencv.git
-3. Install the following packages:
+2. Install the following packages:
 > sudo apt-get install \  
 build-essential \  
 cmake \  
@@ -45,9 +44,13 @@ libva-dev \
 libmfx-dev \  
 libgstreamer1.0-dev \  
 libgstreamer-plugins-base1.0-dev 
-4. Create build directory and enter into it:
+
+### Procedure
+1. Copy OpenCV repository:
+> git clone --recurse-submodules https://github.com/opencv/opencv.git
+2. Create build directory and enter into it:
 > mkdir ~/build-opencv && cd ~/build-opencv
-5. Compile OpenCV:
+3. Compile and install OpenCV:
 > cmake -G Ninja \  
 -D BUILD_INFO_SKIP_EXTRA_MODULES=ON \  
 -D BUILD_EXAMPLES=OFF \  
@@ -136,13 +139,19 @@ export PYTHONPATH="~/build-opencv/install/python${PYTHONPATH:+:$PYTHONPATH}"
 
 ## Windows
 
+### Prerequisites 
+1. Install Microsoft Visual Studio 
+2. Install [cmake](https://cmake.org/download/)
 1. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_windows.html)
-2. Copy OpenCV repository:
+2. Install [Intel® Media SDK for Windows](https://www.intel.com/content/www/us/en/developer/tools/media-sdk/choose-download-client.html)
+
+### Procedure
+1. Copy OpenCV repository:
 > git clone --recurse-submodules https://github.com/opencv/opencv.git
-3. Install [Intel® Media SDK for Windows](https://www.intel.com/content/www/us/en/developer/tools/media-sdk/choose-download-client.html)
-4. Create build and install directories and enter into build directory:
+2. Create build directory and enter into it:
 > mkdir "build-opencv" && cd "build-opencv"
-5. Compile OpenCV:
+3. Setup MSVC environment by running `vcvars64.bat`
+4. Compile and install OpenCV:
 > cmake -G Ninja ^  
 -DBUILD_INFO_SKIP_EXTRA_MODULES=ON ^  
 -DBUILD_EXAMPLES=OFF ^  
@@ -219,3 +228,10 @@ export PYTHONPATH="~/build-opencv/install/python${PYTHONPATH:+:$PYTHONPATH}"
 -DCMAKE_BUILD_TYPE=Release <OpenCV_ROOT_REPO_DIRECTORY> &&  
 ninja &&  
 cmake --install .
+
+OpenCV package is available at `build-opencv/install` directory. 
+
+To compile application that uses OpenCV, the following environment variables should be specified:
+>set "OpenCV_DIR=<OpenCV_INSTALL_DIR>\cmake"  
+set "PATH=<OpenCV_INSTALL_DIR>\bin;%PATH%"  
+set "PYTHONPATH=<OpenCV_INSTALL_DIR>\python;%PYTHONPATH%"  
