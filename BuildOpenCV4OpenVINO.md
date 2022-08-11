@@ -2,22 +2,55 @@
 
 # Contents
 - [Introduction](#introduction)
-- [Building on Ubuntu](#building-on-ubuntu)
-- [Building on Windows](#building-on-windows)
-- [Building on macOS](#building-on-macos)
+- [Approach #1: Install prebuilt OpenCV](#approach-1-install-prebuilt-opencv)
+   - [Installing on Ubuntu](#installing-on-ubuntu)
+   - [Installing on RHEL](#installing-on-rhel)
+   - [Installing on Windows](#installing-on-windows)
+   - [Installing on macOS](#installing-on-macos)
+- [Approach #2: Build OpenCV against specific version of OpenVINO](#approach-2-build-opencv-against-specific-version-of-openvino)
+   - [Building on Ubuntu](#building-on-ubuntu)
+   - [Building on Windows](#building-on-windows)
+   - [Building on macOS](#building-on-macos)
 
 # Introduction
 OpenVINO does not provide custom OpenCV drop since 2022.1.1 release.
 If OpenVINO user needs OpenCV functionality there are 2 approaches how to get it:
-1. Get OpenCV from another sources (system repositories, pip, conda, homebrew). It is easy to follow this approach, however it has several disadvantages:
+1. Install prebuilt OpenCV from another sources (system repositories, pip, conda, homebrew). It is easy to follow this approach, however it has several disadvantages:
    * OpenCV version is out-of-date  
    * OpenCV does not contain G-API module (e.g. some OMZ demos use G-API functionality)
    * OpenCV does not use available CPU instructions since it has build to cover wide range of hardware
    * OpenCV does not support Intel TBB, Intel Media SDK
    * OpenCV DNN module can not use OpenVINO as computational backend
-2. Compile OpenCV from source code. This approach solves the issues mentioned above.
+2. Build OpenCV from source code against specific version of OpenVINO. This approach solves the issues mentioned above.
 
-The instruction below shows how to build OpenCV for OpenVINO.
+# Approach #1: Install prebuilt OpenCV
+
+## Installing on Ubuntu
+OpenCV is available from the default Ubuntu repositories:
+> sudo apt update  
+  sudo apt install libopencv-dev python3-opencv
+
+## Installing on RHEL
+
+OpenCV is available from the default RHEL repositories. 
+1. Enable CodeReady Linux Builder Repository: 
+> subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms
+2. Run:
+> sudo yum update  
+  sudo yum install opencv opencv-devel opencv-python
+
+## Installing on Windows
+
+1. Download OpenCV windows package on [the official OpenCV releases page](https://github.com/opencv/opencv/releases)
+Windows archive contains VC postfix, e.g.: `opencv-4.6.0-vc14_vc15.exe`
+2. Extract the archive
+3. Run the script `opencv\build\setup_vars_opencv4.cmd`
+
+## Installing on macOS
+OpenCV could be installed via Homebrew:
+> brew install opencv
+
+# Approach #2: Build OpenCV against specific version of OpenVINO
 
 ## Building on Ubuntu
 
