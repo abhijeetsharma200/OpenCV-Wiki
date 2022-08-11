@@ -35,7 +35,7 @@ OpenCV is available from the default Ubuntu repositories:
 OpenCV is available from the default RHEL repositories. 
 1. Enable CodeReady Linux Builder Repository: 
 > subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms
-2. Run:
+2. Install OpenCV:
 > sudo yum update  
   sudo yum install opencv opencv-devel opencv-python
 
@@ -44,7 +44,7 @@ OpenCV is available from the default RHEL repositories.
 1. Download OpenCV windows package on [the official OpenCV releases page](https://github.com/opencv/opencv/releases)
 Windows archive contains VC postfix, e.g.: `opencv-4.6.0-vc14_vc15.exe`
 2. Extract the archive
-3. Run the script `opencv\build\setup_vars_opencv4.cmd`
+3. Setup environment variables by running the script `opencv\build\setup_vars_opencv4.cmd`
 
 ## Installing on macOS
 OpenCV could be installed via Homebrew:
