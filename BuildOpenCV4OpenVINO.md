@@ -1,4 +1,4 @@
-# Build OpenCV for OpenVINO
+# OpenCV usage with OpenVINO
 
 # Contents
 - [Introduction](#introduction)
