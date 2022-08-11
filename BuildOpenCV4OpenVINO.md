@@ -251,7 +251,9 @@ set "PYTHONPATH=<OpenCV_INSTALL_DIR>\python;%PYTHONPATH%"
 > brew install cmake \  
  ffmpeg \  
  gstreamer \  
- gst-devtools  
+ gst-devtools  \
+ python \  
+ numpy  
 
 ### Procedure
 1. Copy OpenCV repository:
