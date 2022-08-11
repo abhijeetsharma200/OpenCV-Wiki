@@ -4,6 +4,7 @@
 - [Introduction](#introduction)
 - [Building on Ubuntu](#building-on-ubuntu)
 - [Building on Windows](#building-on-windows)
+- [Building on macOS](#building-on-macos)
 
 # Introduction
 OpenVINO does not provide custom OpenCV drop since 2022.1.1 release.
@@ -148,8 +149,8 @@ export PYTHONPATH="<OpenCV_INSTALL_DIR>/python${PYTHONPATH:+:$PYTHONPATH}"
 ### Prerequisites 
 1. Install Microsoft Visual Studio 
 2. Install [cmake](https://cmake.org/download/)
-1. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_windows.html)
-2. Install [Intel® Media SDK for Windows](https://www.intel.com/content/www/us/en/developer/tools/media-sdk/choose-download-client.html)
+3. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_windows.html)
+4. Install [Intel® Media SDK for Windows](https://www.intel.com/content/www/us/en/developer/tools/media-sdk/choose-download-client.html)
 
 ### Procedure
 1. Copy OpenCV repository:
@@ -241,3 +242,99 @@ To compile application that uses OpenCV, the following environment variables sho
 >set "OpenCV_DIR=<OpenCV_INSTALL_DIR>\cmake"  
 set "PATH=<OpenCV_INSTALL_DIR>\bin;%PATH%"  
 set "PYTHONPATH=<OpenCV_INSTALL_DIR>\python;%PYTHONPATH%"  
+
+## Building on macOS
+
+### Prerequisites 
+1. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_macos.html)
+2. Install the following packages: 
+> brew install cmake \  
+ ffmpeg \  
+ gstreamer \  
+ gst-devtools  
+
+### Procedure
+1. Copy OpenCV repository:
+> git clone --recurse-submodules https://github.com/opencv/opencv.git
+2. Create build directory and enter into it:
+> mkdir "build-opencv" && cd "build-opencv"
+3. Compile and install OpenCV:
+> cmake \  
+-DBUILD_INFO_SKIP_EXTRA_MODULES=ON \  
+-DBUILD_EXAMPLES=OFF \  
+-DBUILD_JASPER=OFF \  
+-DBUILD_JAVA=OFF \  
+-DBUILD_JPEG=ON \  
+-DBUILD_APPS_LIST=version \  
+-DBUILD_opencv_apps=ON \  
+-DBUILD_opencv_java=OFF \  
+-DBUILD_OPENEXR=OFF \  
+-DBUILD_PNG=ON \  
+-DBUILD_TBB=OFF \  
+-DBUILD_WEBP=OFF \  
+-DBUILD_ZLIB=ON \  
+-DWITH_1394=OFF \  
+-DWITH_CUDA=OFF \  
+-DWITH_EIGEN=OFF \  
+-DWITH_GPHOTO2=OFF \  
+-DWITH_GSTREAMER=ON \  
+-DOPENCV_GAPI_GSTREAMER=OFF \  
+-DWITH_GTK_2_X=OFF \  
+-DWITH_IPP=ON \  
+-DWITH_JASPER=OFF \  
+-DWITH_LAPACK=OFF \  
+-DWITH_MATLAB=OFF \  
+-DWITH_MFX=OFF \  
+-DWITH_OPENCLAMDBLAS=OFF \  
+-DWITH_OPENCLAMDFFT=OFF \  
+-DWITH_OPENEXR=OFF \  
+-DWITH_OPENJPEG=OFF \  
+-DWITH_QUIRC=OFF \  
+-DWITH_TBB=OFF \  
+-DWITH_TIFF=OFF \  
+-DWITH_VTK=OFF \  
+-DWITH_WEBP=OFF \  
+-DCMAKE_USE_RELATIVE_PATHS=ON \  
+-DCMAKE_SKIP_INSTALL_RPATH=ON \  
+-DENABLE_BUILD_HARDENING=ON \  
+-DENABLE_CONFIG_VERIFICATION=ON \  
+-DENABLE_PRECOMPILED_HEADERS=OFF \  
+-DENABLE_CXX11=ON \  
+-DINSTALL_PDB=ON \  
+-DINSTALL_TESTS=ON \  
+-DINSTALL_C_EXAMPLES=ON \  
+-DINSTALL_PYTHON_EXAMPLES=ON \  
+-DCMAKE_INSTALL_PREFIX=install \  
+-DOPENCV_SKIP_PKGCONFIG_GENERATION=ON \  
+-DOPENCV_SKIP_PYTHON_LOADER=OFF \  
+-DOPENCV_SKIP_CMAKE_ROOT_CONFIG=ON \  
+-DOPENCV_GENERATE_SETUPVARS=OFF \  
+-DOPENCV_BIN_INSTALL_PATH=bin \  
+-DOPENCV_INCLUDE_INSTALL_PATH=include \  
+-DOPENCV_LIB_INSTALL_PATH=lib \  
+-DOPENCV_CONFIG_INSTALL_PATH=cmake \  
+-DOPENCV_3P_LIB_INSTALL_PATH=3rdparty \  
+-DOPENCV_SAMPLES_SRC_INSTALL_PATH=samples \  
+-DOPENCV_DOC_INSTALL_PATH=doc \  
+-DOPENCV_OTHER_INSTALL_PATH=etc \  
+-DOPENCV_LICENSES_INSTALL_PATH=etc/licenses \  
+-DOPENCV_INSTALL_FFMPEG_DOWNLOAD_SCRIPT=ON \  
+-DBUILD_opencv_world=OFF \  
+-DBUILD_opencv_python2=OFF \  
+-DBUILD_opencv_python3=ON \  
+-DPYTHON3_PACKAGES_PATH=install/python/python3 \  
+-DPYTHON3_LIMITED_API=ON \  
+-DOPENCV_PYTHON_INSTALL_PATH=python \  
+-DCPU_BASELINE=SSE4_2 \  
+-DWITH_AVFOUNDATION=ON \  
+-DOPENCV_IPP_GAUSSIAN_BLUR=ON \  
+-DWITH_INF_ENGINE=ON \  
+-DInferenceEngine_DIR=<OpenVINO_ROOT_DIRECTORY>/runtime/cmake \  
+-Dngraph_DIR=<OpenVINO_ROOT_DIRECTORY>/runtime/cmake \  
+-DINF_ENGINE_RELEASE=2022010000 \  
+-DVIDEOIO_PLUGIN_LIST=ffmpeg,gstreamer \  
+-DCMAKE_BUILD_TYPE=Release <OpenCV_ROOT_REPO_DIRECTORY> &&  
+ninja &&  
+cmake --install 
+
+OpenCV package is available at `build-opencv/install` directory. 
