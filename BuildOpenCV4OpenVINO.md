@@ -387,7 +387,10 @@ set "PYTHONPATH=<OpenCV_INSTALL_DIR>\python;%PYTHONPATH%"
 -DVIDEOIO_PLUGIN_LIST=ffmpeg,gstreamer \  
 -DCMAKE_BUILD_TYPE=Release <OpenCV_ROOT_REPO_DIRECTORY> &&  
 ninja &&  
-cmake --install 
+cmake --install .
 </details>
 
 OpenCV package is available at `build-opencv/install` directory. 
+
+To compile application that uses OpenCV, the following environment variables should be specified:
+> export OpenCV_DIR="<OpenCV_INSTALL_DIR>/cmake"  
