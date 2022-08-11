@@ -57,6 +57,9 @@ OpenCV could be installed via Homebrew:
 ### Prerequisites 
 1. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_linux.html)
 2. Install the following packages:
+<details>
+  <summary>The command</summary>
+
 > sudo apt-get install \  
 build-essential \  
 cmake \  
@@ -84,6 +87,7 @@ libva-dev \
 libmfx-dev \  
 libgstreamer1.0-dev \  
 libgstreamer-plugins-base1.0-dev 
+</details>
 
 ### Procedure
 1. Copy OpenCV repository:
@@ -91,6 +95,9 @@ libgstreamer-plugins-base1.0-dev
 2. Create build directory and enter into it:
 > mkdir ~/build-opencv && cd ~/build-opencv
 3. Compile and install OpenCV:
+<details>
+  <summary>The command</summary>
+
 > cmake -G Ninja \  
 -D BUILD_INFO_SKIP_EXTRA_MODULES=ON \  
 -D BUILD_EXAMPLES=OFF \  
@@ -168,6 +175,7 @@ libgstreamer-plugins-base1.0-dev
 -D CMAKE_EXE_LINKER_FLAGS=-Wl,--allow-shlib-undefined \  
 -D CMAKE_BUILD_TYPE=Release <OpenCV_ROOT_REPO_DIRECTORY> && \  
 ninja && cmake --install .
+</details>
 
 OpenCV package is available at `~/build-opencv/install` directory. 
 
@@ -192,6 +200,9 @@ export PYTHONPATH="<OpenCV_INSTALL_DIR>/python${PYTHONPATH:+:$PYTHONPATH}"
 > mkdir "build-opencv" && cd "build-opencv"
 3. Setup MSVC environment by running `vcvars64.bat`
 4. Compile and install OpenCV:
+<details>
+  <summary>The command</summary>
+
 > cmake -G Ninja ^  
 -DBUILD_INFO_SKIP_EXTRA_MODULES=ON ^  
 -DBUILD_EXAMPLES=OFF ^  
@@ -268,6 +279,7 @@ export PYTHONPATH="<OpenCV_INSTALL_DIR>/python${PYTHONPATH:+:$PYTHONPATH}"
 -DCMAKE_BUILD_TYPE=Release <OpenCV_ROOT_REPO_DIRECTORY> &&  
 ninja &&  
 cmake --install .
+</details>
 
 OpenCV package is available at `build-opencv/install` directory. 
 
@@ -295,6 +307,9 @@ set "PYTHONPATH=<OpenCV_INSTALL_DIR>\python;%PYTHONPATH%"
 2. Create build directory and enter into it:
 > mkdir "build-opencv" && cd "build-opencv"
 3. Compile and install OpenCV:
+<details>
+  <summary>The command</summary>
+
 > cmake \  
 -G Ninja \  
 -DBUILD_INFO_SKIP_EXTRA_MODULES=ON \  
@@ -373,5 +388,6 @@ set "PYTHONPATH=<OpenCV_INSTALL_DIR>\python;%PYTHONPATH%"
 -DCMAKE_BUILD_TYPE=Release <OpenCV_ROOT_REPO_DIRECTORY> &&  
 ninja &&  
 cmake --install 
+</details>
 
 OpenCV package is available at `build-opencv/install` directory. 
