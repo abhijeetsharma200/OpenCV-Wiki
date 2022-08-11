@@ -249,6 +249,7 @@ set "PYTHONPATH=<OpenCV_INSTALL_DIR>\python;%PYTHONPATH%"
 1. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_macos.html)
 2. Install the following packages: 
 > brew install cmake \  
+ ninja \  
  ffmpeg \  
  gstreamer \  
  gst-devtools  \
@@ -262,6 +263,7 @@ set "PYTHONPATH=<OpenCV_INSTALL_DIR>\python;%PYTHONPATH%"
 > mkdir "build-opencv" && cd "build-opencv"
 3. Compile and install OpenCV:
 > cmake \  
+-G Ninja \  
 -DBUILD_INFO_SKIP_EXTRA_MODULES=ON \  
 -DBUILD_EXAMPLES=OFF \  
 -DBUILD_JASPER=OFF \  
