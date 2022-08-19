@@ -189,7 +189,11 @@ export PYTHONPATH="<OpenCV_INSTALL_DIR>/python${PYTHONPATH:+:$PYTHONPATH}"
 
 ### Prerequisites 
 1. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_docker_linux.html)
-2. Install the following packages:
+2. Install EPEL and RPM Fusion repositories using the following commands:
+> yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm  
+yum install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm  
+yum install https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm 
+3. Install the following packages:
 <details>
   <summary>The command</summary>
 
