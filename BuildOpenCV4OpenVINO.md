@@ -77,10 +77,6 @@ libavutil-dev \
 libavcodec-dev \  
 libavformat-dev \  
 libswscale-dev \  
-libavresample-devlibavutil-dev \  
-libavcodec-dev \  
-libavformat-dev \  
-libswscale-dev \  
 libavresample-dev \  
 libtbb2 \  
 libssl-dev \  
