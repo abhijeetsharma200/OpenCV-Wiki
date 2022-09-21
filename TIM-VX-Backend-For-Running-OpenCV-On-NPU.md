@@ -89,18 +89,32 @@ cd /opt
 
 # Get source code
 git clone https://github.com/VeriSilicon/TIM-VX.git
+git checkout 68b5acb
 
 # Configure
 # x86_64 Linux
-cmake -B timvx-build \
-      -D BUILD_SHARED_LIBS=OFF TIM-VX
-# Khadas VIM3
-cmake -B timvx-build \
-      -D EXTERNAL_VIV_SDK=/opt/aarch64_A311D_6.4.8 \
-      -D BUILD_SHARED_LIBS=OFF TIM-VX
+cmake -B timvx-build TIM-VX
 
+# Khadas VIM3
+# Please modify this file at `./cmake/local_sdk.cmake`:
+# From line 11 to 17:
+# Make sure your file look like the following:
+#    ${EXTERNAL_VIV_SDK}/lib/libCLC.so
+#    ${EXTERNAL_VIV_SDK}/lib/libGAL.so
+#    ${EXTERNAL_VIV_SDK}/lib/libOpenVX.so
+#    ${EXTERNAL_VIV_SDK}/lib/libOpenVXU.so
+#    ${EXTERNAL_VIV_SDK}/lib/libVSC.so
+#    ${EXTERNAL_VIV_SDK}/lib/libArchModelSw.so
+#    ${EXTERNAL_VIV_SDK}/lib/libNNArchPerf.so)
+
+# After that, we continue to compile TIM-VX
+cmake -B timvx-build \
+      -D EXTERNAL_VIV_SDK=/opt/aarch64_A311D_6.4.8 TIM-VX
 # Compile
 cmake --build timvx-build --target install -j 8
+
+# Before the next step, to make sure your TIMVX is calling the correct lib, we do some necessary checks.
+ldd ./timvx-build/install/lib/libtim-vx.so # Make sure your `libtim-vx.so` has found all used library.
 ```
 
 ### Step2: Compile OpenCV with TimVX
