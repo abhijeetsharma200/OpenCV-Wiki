@@ -1,8 +1,9 @@
-[Intel's Deep Learning Inference Engine](https://software.intel.com/inference-engine-devguide) (DL IE) is a part of [Intel&reg; OpenVINO&trade; toolkit](https://software.intel.com/openvino-toolkit).
+[OpenVINO&trade; Runtime](https://software.intel.com/inference-engine-devguide) is a part of [Intel&reg; OpenVINO&trade; toolkit](https://software.intel.com/openvino-toolkit).
 You can use it as a computational backend for OpenCV deep learning module.
 
-To use OpenCV with Inference Engine, choose one of the options:
-* [Intel&reg; OpenVINO&trade; toolkit](#intel-openvino-toolkit) - includes ready to use build of OpenCV
+To use OpenCV with OpenVINO&trade; Runtime, choose one of the options:
+* [Intel&reg; OpenVINO&trade; toolkit](#intel-openvino-toolkit) - includes ready to use build of OpenCV.  
+  This option is applicable for Intel&reg; OpenVINO&trade; before 2022.1.1 release. Since 2022.1.1 release Intel&reg; OpenVINO&trade; does not include OpenCV.
 * [OpenCV+OpenVINO Windows package (community version)](#opencvopenvino-windows-package-community-version)
 * [Build from source](#build-opencv-from-source)
   * [Linux](#linux)
@@ -12,6 +13,9 @@ To use OpenCV with Inference Engine, choose one of the options:
 ---
 
 ### Intel&reg; OpenVINO&trade; toolkit
+
+  > **NOTE**: Starts from 2022.1.1 release Intel&reg; OpenVINO&trade; does not contain OpenCV build.  
+This approach is applicable for Intel&reg; OpenVINO&trade; before 2022.1.1 release.
 
 * Download and install [Intel&reg; OpenVINO&trade; toolkit](https://software.intel.com/content/www/us/en/develop/tools/openvino-toolkit/download.html). 
 
@@ -26,7 +30,7 @@ ARM CPU Plugin isn't distributed in the package. This way requires building Open
 <a id="opencvdldt-windows-package-community-version"></a>
 ### OpenCV+OpenVINO Windows package (community version)
 
-This community package uses open source version of Inference Engine from [Deep Learning Deployment Toolkit repository](https://github.com/openvinotoolkit/openvino) (distributed under Apache 2 license).
+This community package uses open source version of [OpenVINO&trade; toolkit](https://github.com/openvinotoolkit/openvino) (distributed under Apache 2 license).
 
 Hardware requirements:
 - CPU with support of AVX2 instruction set
@@ -273,7 +277,10 @@ Steps below require package with release binaries. Steps for debug binaries migh
 
 ### Build OpenCV from source
 
-Build OpenCV with pre-built Inference Engine binaries from OpenVINO toolkit.
+Build OpenCV with pre-built OpenVINO Runtime binaries from OpenVINO toolkit.
+
+  > **NOTE**: The instruction below uses the minimal set of compilation flags to build OpenCV compatible with OpenVINO.  
+More comprehensive set of compilation flags and additional dependencies were used to build OpenCV that was included into Intel&reg; OpenVINO&trade; distribution before 2022.1.1 release. If you need to build OpenCV with the same set of flags and dependencies please follow [another instruction](https://github.com/opencv/opencv/wiki/BuildOpenCV4OpenVINO).
 
 #### Linux
 
@@ -286,8 +293,7 @@ export ngraph_DIR=/opt/intel/openvino/deployment_tools/ngraph/cmake/
 Build OpenCV with extra flags:
 ```
 cmake \
-  -DWITH_INF_ENGINE=ON \
-  -DENABLE_CXX11=ON \
+  -DWITH_OPENVINO=ON
   ...
 ```
 
@@ -301,8 +307,7 @@ Setup environment variables to detect Inference Engine:
 Build OpenCV with extra flags:
 ```
 cmake ^
-  -DWITH_INF_ENGINE=ON ^
-  -DENABLE_CXX11=ON ^
+  -DWITH_OPENVINO=ON
   ...
 ```
 
@@ -370,7 +375,7 @@ Use Docker to cross-compile OpenCV for Raspberry Pi. Check that `uname -m` detec
         -DPYTHON3_CVPY_SUFFIX=".cpython-37m-arm-linux-gnueabihf.so" \
         -DENABLE_NEON=ON \
         -DCPU_BASELINE="NEON" \
-        -DWITH_INF_ENGINE=ON \
+        -DWITH_OPENVINO=ON \
         -DINF_ENGINE_LIB_DIRS="/l_openvino_toolkit_runtime_raspbian_p_2019.2.242/inference_engine/lib/armv7l" \
         -DINF_ENGINE_INCLUDE_DIRS="/l_openvino_toolkit_runtime_raspbian_p_2019.2.242/inference_engine/include" \
         -DCMAKE_FIND_ROOT_PATH="/l_openvino_toolkit_runtime_raspbian_p_2019.2.242" \
