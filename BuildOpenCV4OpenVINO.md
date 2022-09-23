@@ -90,6 +90,8 @@ libgstreamer-plugins-base1.0-dev
 </details>
 
 ### Procedure
+0. Setup environment variables to detect OpenVINO:
+> source /opt/intel/openvino/bin/setupvars.sh
 1. Copy OpenCV repository:
 > git clone --recurse-submodules https://github.com/opencv/opencv.git
 2. Create build directory and enter into it:
@@ -167,10 +169,7 @@ libgstreamer-plugins-base1.0-dev
 -D OPENCV_PYTHON_INSTALL_PATH=python \  
 -D CPU_BASELINE=SSE4_2 \  
 -D OPENCV_IPP_GAUSSIAN_BLUR=ON \  
--D WITH_INF_ENGINE=ON \  
--D InferenceEngine_DIR=<OpenVINO_ROOT_DIRECTORY>/runtime/cmake/ \  
--D ngraph_DIR=<OpenVINO_ROOT_DIRECTORY>/runtime/cmake/ \  
--D INF_ENGINE_RELEASE=2022010000 \  
+-D WITH_OPENVINO=ON \  
 -D VIDEOIO_PLUGIN_LIST=ffmpeg,gstreamer,mfx \  
 -D CMAKE_EXE_LINKER_FLAGS=-Wl,--allow-shlib-undefined \  
 -D CMAKE_BUILD_TYPE=Release <OpenCV_ROOT_REPO_DIRECTORY> && \  
@@ -204,6 +203,8 @@ ffmpeg-devel
 </details>
 
 ### Procedure
+0. Setup environment variables to detect OpenVINO:
+> source /opt/intel/openvino/bin/setupvars.sh
 1. Copy OpenCV repository:
 > git clone --recurse-submodules https://github.com/opencv/opencv.git
 2. Create build directory and enter into it:
@@ -281,10 +282,7 @@ ffmpeg-devel
 -D OPENCV_PYTHON_INSTALL_PATH=python \  
 -D CPU_BASELINE=SSE4_2 \  
 -D OPENCV_IPP_GAUSSIAN_BLUR=ON \  
--D WITH_INF_ENGINE=ON \  
--D InferenceEngine_DIR=<OpenVINO_ROOT_DIRECTORY>/runtime/cmake/ \  
--D ngraph_DIR=<OpenVINO_ROOT_DIRECTORY>/runtime/cmake/ \  
--D INF_ENGINE_RELEASE=2022010000 \  
+-D WITH_OPENVINO=ON \  
 -D VIDEOIO_PLUGIN_LIST=ffmpeg,gstreamer \  
 -D CMAKE_EXE_LINKER_FLAGS=-Wl,--allow-shlib-undefined \  
 -D CMAKE_BUILD_TYPE=Release <OpenCV_ROOT_REPO_DIRECTORY> && \  
@@ -308,6 +306,8 @@ export PYTHONPATH="<OpenCV_INSTALL_DIR>/python${PYTHONPATH:+:$PYTHONPATH}"
 4. Install [Intel® Media SDK for Windows](https://www.intel.com/content/www/us/en/developer/tools/media-sdk/choose-download-client.html)
 
 ### Procedure
+0. Setup environment variables to detect OpenVINO:
+> "C:\Program Files (x86)\IntelSWTools\openvino\bin\setupvars.bat"
 1. Copy OpenCV repository:
 > git clone --recurse-submodules https://github.com/opencv/opencv.git
 2. Create build directory and enter into it:
@@ -385,10 +385,7 @@ export PYTHONPATH="<OpenCV_INSTALL_DIR>/python${PYTHONPATH:+:$PYTHONPATH}"
 -DOPENCV_PYTHON_INSTALL_PATH=python ^  
 -DCPU_BASELINE=SSE4_2 ^  
 -DOPENCV_IPP_GAUSSIAN_BLUR=ON ^  
--DWITH_INF_ENGINE=ON ^  
--DInferenceEngine_DIR="<OpenVINO_ROOT_DIRECTORY>\runtime\cmake" ^  
--Dngraph_DIR="<OpenVINO_ROOT_DIRECTORY>\runtime\cmake" ^  
--DINF_ENGINE_RELEASE=2022010000 ^  
+-DWITH_OPENVINO=ON ^   
 -DVIDEOIO_PLUGIN_LIST=mfx,msmf ^  
 -DCMAKE_BUILD_TYPE=Release <OpenCV_ROOT_REPO_DIRECTORY> &&  
 ninja &&  
@@ -405,7 +402,7 @@ set "PYTHONPATH=<OpenCV_INSTALL_DIR>\python;%PYTHONPATH%"
 ## Building on macOS
 
 ### Prerequisites 
-1. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_macos.html)
+1. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_from_archive_macos.html#doxid-openvino-docs-install-guides-installing-openvino-from-archive-macos)
 2. Install the following packages: 
 > brew install cmake \  
  ninja \  
@@ -416,6 +413,8 @@ set "PYTHONPATH=<OpenCV_INSTALL_DIR>\python;%PYTHONPATH%"
  numpy  
 
 ### Procedure
+0. Setup environment variables to detect OpenVINO:
+> source /opt/intel/openvino/bin/setupvars.sh
 1. Copy OpenCV repository:
 > git clone --recurse-submodules https://github.com/opencv/opencv.git
 2. Create build directory and enter into it:
@@ -494,10 +493,7 @@ set "PYTHONPATH=<OpenCV_INSTALL_DIR>\python;%PYTHONPATH%"
 -DCPU_BASELINE=SSE4_2 \  
 -DWITH_AVFOUNDATION=ON \  
 -DOPENCV_IPP_GAUSSIAN_BLUR=ON \  
--DWITH_INF_ENGINE=ON \  
--DInferenceEngine_DIR=<OpenVINO_ROOT_DIRECTORY>/runtime/cmake \  
--Dngraph_DIR=<OpenVINO_ROOT_DIRECTORY>/runtime/cmake \  
--DINF_ENGINE_RELEASE=2022010000 \  
+-DWITH_OPENVINO=ON \  
 -DVIDEOIO_PLUGIN_LIST=ffmpeg,gstreamer \  
 -DCMAKE_BUILD_TYPE=Release <OpenCV_ROOT_REPO_DIRECTORY> &&  
 ninja &&  
