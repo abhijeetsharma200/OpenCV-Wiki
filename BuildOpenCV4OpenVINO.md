@@ -59,7 +59,7 @@ If you would like to use a minimal set of compilation flags and dependencies to 
 ## Building on Ubuntu
 
 ### Prerequisites 
-1. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_linux.html)
+1. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_from_archive_linux.html#doxid-openvino-docs-install-guides-installing-openvino-from-archive-linux)
 2. Install the following packages:
 <details>
   <summary>The command</summary>
