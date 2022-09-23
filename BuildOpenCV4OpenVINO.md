@@ -53,6 +53,9 @@ OpenCV could be installed via Homebrew:
 
 # Approach #2: Build OpenCV against specific version of OpenVINO
 
+  > **NOTE**: The instruction below describes how to build OpenCV with the same compilation flags and dependencies as were used for OpenVINO OpenCV build before 2022.1.1 release.  
+If you would like to use a minimal set of compilation flags and dependencies to build OpenCV compatible with OpenVINO please follow [another instruction](https://github.com/opencv/opencv/wiki/Intel-OpenVINO-backend#build-opencv-from-source).
+
 ## Building on Ubuntu
 
 ### Prerequisites 
