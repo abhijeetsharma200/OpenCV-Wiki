@@ -61,7 +61,7 @@ Following these guidelines will increase the likelihood of your pull request bei
 Testing and merging pull requests
 ---------------------------------
 
-1.  Your pull request will be automatically tested by OpenCV's Github Action (testing status can be checked here: http://pullrequest.opencv.org) and OpenCV's buildbot (http://pullrequest.opencv.org). If any builders have failed, you should fix the issue. If you want to rerun builders, for Github Action, there is a button in the upper right corner of the status page and for buildbot, you just push changes to your branch on GitHub. *No need to close pull request and open a new one!*
+1.  Your pull request will be automatically tested by OpenCV's Github Action (testing status can be checked here: https://github.com/opencv/opencv/actions) and OpenCV's buildbot (http://pullrequest.opencv.org). If any builders have failed, you should fix the issue. If you want to rerun builders, for Github Action, there is a button in the upper right corner of the status page and for buildbot, you just push changes to your branch on GitHub. *No need to close pull request and open a new one!*
 2.  Once all the builders are "green", one of OpenCV developers will review your code. Reviewer could ask you to modify your pull request. Please provide timely response for reviewers (within weeks, not months), otherwise your submission could be postponed or even rejected.
 
 ### Here is the flow-chart of the process:
