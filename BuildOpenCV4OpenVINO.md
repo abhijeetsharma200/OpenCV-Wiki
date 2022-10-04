@@ -302,7 +302,7 @@ export PYTHONPATH="<OpenCV_INSTALL_DIR>/python${PYTHONPATH:+:$PYTHONPATH}"
 ### Prerequisites 
 1. Install Microsoft Visual Studio 
 2. Install [cmake](https://cmake.org/download/)
-3. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_windows.html)
+3. Install OpenVINO according to the [instruction](https://docs.openvino.ai/latest/openvino_docs_install_guides_installing_openvino_from_archive_windows.html#doxid-openvino-docs-install-guides-installing-openvino-from-archive-windows)
 4. Install [Intel® Media SDK for Windows](https://www.intel.com/content/www/us/en/developer/tools/media-sdk/choose-download-client.html)
 
 ### Procedure
