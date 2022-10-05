@@ -62,7 +62,7 @@ cmake /path-to-opencv -DPlaidML2_DIR=path-to-miniconda3/share/plaidml2 -DWITH_PL
  $ git checkout v1.5.1
  $ git submodule update --init
  $ ./build.sh --config Release --build_shared_lib --parallel \
- $     --cmake_extra_defines CMAKE_INSTALL_PREFIX=install
+ $     --cmake_extra_defines CMAKE_INSTALL_PREFIX=/path-to-install-dir
  $ cd build/Linux/Release
  $ make install
 ```
