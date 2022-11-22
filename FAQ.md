@@ -13,6 +13,24 @@ You may consider [opencv_contrib](https://github.com/opencv/opencv_contrib) appr
 - Use cross compilation approach:[link](https://docs.opencv.org/master/d0/d76/tutorial_arm_crosscompile_with_cmake.html)
 - Update compiler.  
 
+**Q:** _My build failed at downloading third-party resources, such as ADE, IPP and so on. What should I do?_  
+**A:** Ensure you have Internet connection, especially good connection to github.com. Most of the third-party resources are kept on GitHub and some of them will be downloaded for default OpenCV build. For users in China who may have connection problem with GitHub, they can use our official mirror for downloading third-party resources:
+
+```shell
+# opencv cloned from github, need to use '-DOPENCV_DOWNLOAD_MIRROR_ID=gitcode' to specify the source to gitcode
+git clone https://github.com/opencv/opencv.git
+cd opencv
+mkdir build && cd build
+cmake -DOPENCV_DOWNLOAD_MIRROR_ID=gitcode ..
+
+# opencv cloned from gitcode, third-party resources will be downloaded automatically from gitcode
+git clone https://gitcode.net/opencv/opencv.git
+cd opencv
+mkdir build && cd build
+cmake ..
+```
+
+
 **Discussion:** TBD  
 
 # General API Concepts
