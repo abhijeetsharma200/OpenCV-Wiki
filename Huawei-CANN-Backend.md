@@ -139,7 +139,7 @@ Copy and save the attached `.cpp` files and `CMakeLists.txt`. You will need to
 
 ## OpenCV Zoo benchmark
 
-We tested PP-ResNet50, MobileNetV1 and YOLOX from [OpenCV Zoo](https://github.com/opencv/opencv_zoo) and the CANN backend is able to make a speedup up to 22X! Free free to more models.
+We tested PP-ResNet50, MobileNetV1 and YOLOX from [OpenCV Zoo](https://github.com/opencv/opencv_zoo) and the CANN backend is able to make a speedup up to 22X! Free free to try more models on the CANN backend.
 
 | Model       | CANN backend | CPU Backend |
 | ----------- | ------------ | ----------- |
