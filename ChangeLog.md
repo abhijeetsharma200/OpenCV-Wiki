@@ -2,6 +2,86 @@ OpenCV Change Logs
 ==================
 
 
+<details>
+
+<summary>Coming soon... 4.7.0 / 3.4.19</summary>
+
+
+version:4.7.0
+-------------
+
+
+*December, 2022*
+
+New Year's update for OpenCV 4.x has been released.
+
+
+**Highlights of this release**:
+
+- TBD
+
+- TBD
+
+- TBD
+
+![](images/dnn.png)
+
+- DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2022-06-07..2022-12-25):
+
+    - TBD
+
+
+![](images/gapi.png)
+
+- G-API module:
+
+  - TBD
+
+
+![](images/github2.png)
+
+- And many other contributions:
+
+    - TBD
+
+    - TBD
+
+
+### Contributors
+
+<details>
+<summary>opencv (XX contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.6.0..4.7.0
+```
+
+</details>
+
+<details>
+<summary>opencv_contrib (XX contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.6.0..4.7.0
+```
+
+</details>
+
+
+
+version:3.4.19
+--------------
+
+*December, 2022*
+
+OpenCV 3.4.19 has been released. Bug fixes, optimizations and other enhancements are propagated into OpenCV 4.7.0.
+
+Long-lived OpenCV 3.x release series is here since 2015. We are going to reduce support of 3.x branch in the future to move forward to OpenCV 5.0.
+
+</details>
+
+
+
 version:4.6.0
 -------------
 
