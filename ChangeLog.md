@@ -2,11 +2,6 @@ OpenCV Change Logs
 ==================
 
 
-<details>
-
-<summary>Coming soon... 4.7.0 / 3.4.19</summary>
-
-
 version:4.7.0
 -------------
 
@@ -87,19 +82,159 @@ Optimization:
 ### Contributors
 
 <details>
-<summary>opencv (XX contributors)</summary>
+<summary>opencv (109 contributors)</summary>
 
 ```
 git shortlog --no-merges -ns 4.6.0..4.7.0
+    54  Alexander Alekhin
+    34  Zihao Mu
+    22  TolyaTalamanov
+    21  Alexander Smorkalov
+    18  Andrey Senyaev
+    16  HAN Liutong
+    14  fengyuentau
+    11  cudawarped
+    10  Vincent Rabaud
+     9  catree
+     8  zoom
+     7  AleksandrPanov
+     7  Maksim Shabunin
+     7  SergeyIvanov87
+     7  ocpalo
+     6  zihaomu
+     5  Tomoaki Teshima
+     4  @lizhiyu3
+     4  Biswapriyo Nath
+     4  Christine Poerschke
+     4  Dan Mašek
+     4  Dmitry Matveev
+     4  Giles Payne
+     4  Markus Heck
+     4  Stefan Spiss
+     4  Vadim Levin
+     4  Yuantao Feng
+     4  rogday
+     3  Anatoliy Talamanov
+     3  Berke
+     3  Dan
+     3  Dmitry Kurtaev
+     3  Matej Jeglic
+     3  Pavel Rojtberg
+     3  Rong Mantle Bao
+     3  Sergei Shutov
+     3  Smirnov Egor
+     3  Suleyman TURKMEN
+     2  Alex
+     2  Alexander Panov
+     2  Amir Hassan
+     2  Ed J
+     2  Eran Geva
+     2  Juha Reunanen
+     2  Kumataro
+     2  Rostislav Vasilikhin
+     2  Sean McBride
+     2  Stefan Dragnev
+     2  dan
+     2  fwcd
+     2  hzc
+     2  hzcyf
+     2  kallaballa
+     2  lamm45
+     2  xiong-jie-y
+     1  AlejandroSilvestri
+     1  Alessandro de Oliveira Faria (A.K.A. CABELO)
+     1  Alexey Smirnov
+     1  Andrew Chinery
+     1  CSBVision
+     1  ClayXrex
+     1  Daisuke Mizobuchi
+     1  David Geldreich
+     1  Dmtiry Matveev
+     1  Egor Smirnov
+     1  Hao Chen
+     1  Harvey
+     1  Harvey Huang
+     1  Hashem Zavvari
+     1  Henrik Dobbe Flemmen
+     1  Hyunggi Chang
+     1  Jochen Sprickerhof
+     1  Joel Winarske
+     1  JopKnoppers
+     1  Kian Eliasi
+     1  Kôtaro Mukai
+     1  Long Nguyen
+     1  Lucas Yang
+     1  Lukas Weber
+     1  MENG Yu
+     1  Marco Feuerstein
+     1  Mateusz Tabaka
+     1  Maxim Milashchenko
+     1  Michael Gruner
+     1  Michael Klatis
+     1  Parthiban Marimuthu
+     1  Petr Glotov
+     1  Philipp Hutterer
+     1  Povilas Kanapickas
+     1  Ramiro Silveyra d'Avila
+     1  Tomasz Ożański
+     1  Vadim Pisarevsky
+     1  Voron
+     1  Wanli
+     1  Yulv-git
+     1  Zhuo Zhang
+     1  alessandro faria
+     1  anton
+     1  augustinmanecy
+     1  gbowser3@gmail.com
+     1  heavyrain-lzy
+     1  lgx
+     1  robin
+     1  scorpiozj
+     1  scottchou007
+     1  su77ungr
+     1  wxsheng
+     1  xiang.zhang
+     1  赵楚洋
 ```
 
 </details>
 
 <details>
-<summary>opencv_contrib (XX contributors)</summary>
+<summary>opencv_contrib (31 contributors)</summary>
 
 ```
 git shortlog --no-merges -ns 4.6.0..4.7.0
+    44  AleksandrPanov
+    17  James Bowley
+    15  Sergei Shutov
+     5  Alexander Alekhin
+     5  Your Name
+     4  Yannis Guyon
+     4  sitong lian
+     3  Alexander Smorkalov
+     3  Andrey Senyaev
+     2  Aleksandr Panov
+     2  Biswapriyo Nath
+     2  Kevin Christensen
+     2  Suleyman TURKMEN
+     2  Vincent Rabaud
+     2  fengyuentau
+     1  Augustin Manecy
+     1  Benjamin Buch
+     1  David Geldreich
+     1  Gary Allen
+     1  Giles Payne
+     1  Iago Suárez
+     1  Jochen Sprickerhof
+     1  Kishor
+     1  Kumataro
+     1  Mathijs de Groot
+     1  Pavel Procopiuc
+     1  Ping Wu
+     1  Tomoaki Teshima
+     1  Zhanbo Huang
+     1  huangqinjin
+     1  jmackay2
 ```
 
 </details>
@@ -114,8 +249,6 @@ version:3.4.19
 OpenCV 3.4.19 has been released. Bug fixes, optimizations and other enhancements are propagated into OpenCV 4.7.0.
 
 Long-lived OpenCV 3.x release series is here since 2015. We are going to reduce support of 3.x branch in the future to move forward to OpenCV 5.0.
-
-</details>
 
 
 
