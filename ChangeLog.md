@@ -33,7 +33,7 @@ New Year's update for OpenCV 4.x has been released.
       - Scatter and ScatterND [#22529](https://github.com/opencv/opencv/pull/22529), Tile [#22809](https://github.com/opencv/opencv/pull/22809)
 
       - Fixes in Slice (support negative step [#22898](https://github.com/opencv/opencv/pull/22898))
-      - Support some reduce layers of ONNX on CPU backend [#21601](https://github.com/opencv/opencv/pull/21601)
+      - Support some reduce layers of ONNX [#21601](https://github.com/opencv/opencv/pull/21601)
 
     - Added CANN backend support [#22634](https://github.com/opencv/opencv/pull/22634). Link to the manual:  https://github.com/opencv/opencv/wiki/Huawei-CANN-Backend.
 
