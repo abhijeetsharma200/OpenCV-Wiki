@@ -28,7 +28,15 @@ New Year's update for OpenCV 4.x has been released.
 
 - DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2022-06-07..2022-12-25):
 
-    - TBD
+    - Improved layers / supported more models:
+
+      - Scatter and ScatterND [#22529](https://github.com/opencv/opencv/pull/22529), Tile [#22809](https://github.com/opencv/opencv/pull/22809)
+
+      - Fixes in Slice (support negative step [#22898](https://github.com/opencv/opencv/pull/22898))
+
+    - Added CANN backend support [#22634](https://github.com/opencv/opencv/pull/22634). Link to the manual:  https://github.com/opencv/opencv/wiki/Huawei-CANN-Backend.
+
+    - Added bacthed NMS for multi-class object detection [#22857](https://github.com/opencv/opencv/pull/22857)
 
 
 ![](images/gapi.png)
@@ -42,7 +50,7 @@ New Year's update for OpenCV 4.x has been released.
 
 - And many other contributions:
 
-    - TBD
+    - Added n-dimensional flip to core [#22898](https://github.com/opencv/opencv/pull/22898)
 
     - TBD
 
