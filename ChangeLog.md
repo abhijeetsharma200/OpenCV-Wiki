@@ -38,7 +38,7 @@ New Year's update for OpenCV 4.x has been released.
     - Added CANN backend support [#22634](https://github.com/opencv/opencv/pull/22634). Link to the manual:  https://github.com/opencv/opencv/wiki/Huawei-CANN-Backend.
 
     - Added bacthed NMS for multi-class object detection [#22857](https://github.com/opencv/opencv/pull/22857)
-    - Accelerating convolution, especially for ARM CPU [#21910](https://github.com/opencv/opencv/pull/21910)
+    - Accelerating convolution, especially for ARM CPU. [#21910](https://github.com/opencv/opencv/pull/21910) and [#22905](https://github.com/opencv/opencv/pull/22905)
     - Winograd's convolution optimization
 
 
