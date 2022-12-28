@@ -18,11 +18,36 @@ New Year's update for OpenCV 4.x has been released.
 
 **Highlights of this release**:
 
-- TBD
+DNN:
+- New ONNX layers: TBD
+- Signinficant performance optimization for convolutions. Winograd algoritm implementation.
+- TBD: Broadcasting.
+- OpenVino 2022.1 support.
 
-- TBD
+Algorithms:
+- ArUco markers and April tags support including ChAruco and diamond boards detection and calibration.
+- QR code detection and decoding quality imrovement. Alignment markers support. Benchmark for QR codes: [link](https://github.com/opencv/opencv_benchmarks/tree/develop/python_benchmarks/qr_codes)
+- Nanotrack v2 tracker based on neural networks.
+- Stackblur algoruthm implementation.
 
-- TBD
+
+Multimedia:
+- FFmpeg 5.x support.
+- CUDA 12.0 support. Hardware accelerated video codecs support on NVIDIA platforms with modern Video Codec SDK (NVCUVID and NVENCODEAPI).
+- CV_16UC1 read/write video support with FFmpeg.
+- Orientation meta support on Mac with native media API.
+- New iterator-based API for multi-page image formats.
+- libSPNG support for PNG format.
+- SIMD acceleration for self-built libJPEG-Turbo
+- H264/H265 support on Android. Multiple fixes for video decoder, endcoder and camera memory layout.
+
+
+G-API
+- Exposed all core APIs to Python, including stateful kernels.
+
+Optimization:
+- New universal intrinsics backend for scalable vector instructions. The first scalable implementation for RISC-V RVV 1.0.
+- 
 
 ![](images/dnn.png)
 
