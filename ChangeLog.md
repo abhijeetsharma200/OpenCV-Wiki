@@ -40,10 +40,11 @@ Multimedia:
 
 G-API
 - Exposed all core APIs to Python, including stateful kernels.
+- Introduced efficient path from oneVPL GPU surfaces to OpenCL GPU buffers.
 
 Optimization:
 - New universal intrinsics backend for scalable vector instructions. The first scalable implementation for RISC-V RVV 1.0.
-- 
+-
 
 ![](images/dnn.png)
 
@@ -67,8 +68,37 @@ Optimization:
 
 - G-API module:
 
-  - TBD
+  - G-API framework:
 
+    - Slightly refactored G-API executor class hierarchy for the future extensibility: [#22451](https://github.com/opencv/opencv/pull/22451);
+
+  - OpenCL backend:
+
+    - Introduced zero-copy path from oneVPL surfaces to OpenCL/GPU memory buffers in the OpenCL backend: [#22559](https://github.com/opencv/opencv/pull/22559);
+
+  - Intel® OpenVINO™ inference backend:
+
+    - Enabled asynchronous infer requests in the OpenVINO NN backend: [#22588](https://github.com/opencv/opencv/pull/22588).
+
+  - Media integration:
+
+    - Added tests and samples for oneVPL VAAPI (Linux) backend: [#22212](https://github.com/opencv/opencv/pull/22212);
+    - Fixed various issues with oneVPL build on Windows and Linux: [#22393](https://github.com/opencv/opencv/pull/22393), [#22456](https://github.com/opencv/opencv/pull/22456), [#22462](https://github.com/opencv/opencv/pull/22462);
+
+  - Python bindings:
+
+    - Exposed Stateful Kernels in Python: [#22037](https://github.com/opencv/opencv/pull/22037);
+    - Exposed ONNX Runtime NN backend in Python: [#22017](https://github.com/opencv/opencv/pull/22017);
+    - Exposed all `core` and `imgproc` G-API operations in Python: [#22494](https://github.com/opencv/opencv/pull/22494), [#22735](https://github.com/opencv/opencv/pull/22735);
+
+  - Samples:
+
+    - Various updates to the G-API Pipeline Modelling tool: [#22518](https://github.com/opencv/opencv/pull/22518), [#22583](https://github.com/opencv/opencv/pull/22583);
+
+  - Other changes and fixes:
+
+    - Updated ADE (the core internal graph library) to version 0.1.2a: [#22432](https://github.com/opencv/opencv/pull/22432);
+    - Fixed various build warnings: [#22935](https://github.com/opencv/opencv/pull/22935), and issues: [#22712](https://github.com/opencv/opencv/pull/22712);
 
 ![](images/github2.png)
 
@@ -259,12 +289,12 @@ version:4.6.0
 
 *June, 2022*
 
-The summer update for OpenCV 4.x has been released. 
+The summer update for OpenCV 4.x has been released.
 
 **Credits:**
 
 - OpenCV China team for the new hardware for CI Build Farm.
-- @alalek, @asenyaev, @fengyuentau for great work on OpenCV CI migration to Github Actions 
+- @alalek, @asenyaev, @fengyuentau for great work on OpenCV CI migration to Github Actions
 
 
 **Highlights of this release**:
@@ -346,7 +376,7 @@ The summer update for OpenCV 4.x has been released.
   - Python bindings:
 
     - Exposed GStreamer pipeline source in Python bindings: [#20832](https://github.com/opencv/opencv/pull/20832).
-    - Fixed Python bindings for CudaBufferPool, cudacodec and cudastereo modules in OpenCV Contrib. 
+    - Fixed Python bindings for CudaBufferPool, cudacodec and cudastereo modules in OpenCV Contrib.
 
   - Samples:
 
