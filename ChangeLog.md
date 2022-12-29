@@ -14,10 +14,11 @@ New Year's update for OpenCV 4.x has been released.
 **Highlights of this release**:
 
 DNN:
-- New ONNX layers: TBD
+- New ONNX layers: Scatter and ScatterND, Tile, ReduceL1, ReduceMin and more.
 - Signinficant performance optimization for convolutions. Winograd algoritm implementation.
-- TBD: Broadcasting.
+- Element-wise operation (add, sub, mul, div, ...): Broadcasting.
 - OpenVino 2022.1 support.
+- CANN backend support.
 
 Algorithms:
 - ArUco markers and April tags support including ChAruco and diamond boards detection and calibration.
