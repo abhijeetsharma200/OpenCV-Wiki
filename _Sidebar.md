@@ -31,6 +31,7 @@
     - [[Evolution Proposals|Evolution-Proposals]]
     - [[Contributors]]
     - [[Meeting notes|Meeting_notes]]
+        - [[2023]]
         - [[2022]]
         - [[2021]]
     - [[QA for OpenCV|QA_in_OpenCV]]
