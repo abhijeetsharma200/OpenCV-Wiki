@@ -24,7 +24,7 @@ Algorithms:
 - ArUco markers and April tags support including ChAruco and diamond boards detection and calibration.
 - QR code detection and decoding quality imrovement. Alignment markers support. Benchmark for QR codes: [link](https://github.com/opencv/opencv_benchmarks/tree/develop/python_benchmarks/qr_codes)
 - Nanotrack v2 tracker based on neural networks.
-- Stackblur algoruthm implementation.
+- Stackblur algorithm implementation.
 
 
 Multimedia:
