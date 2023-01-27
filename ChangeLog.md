@@ -77,8 +77,9 @@ New Year's update for OpenCV 4.x has been released.
   - N-dimensional flip [#22898](https://github.com/opencv/opencv/pull/22898)
   - CUDA 12.0 support.
 
-- Imgproc:
+- Imgproc module:
   - Add StackBlur for imgproc [#20379](https://github.com/opencv/opencv/pull/20379)
+  - Various performance optimizations
 
 - Multimedia:
   - FFmpeg 5.x support.
