@@ -10,42 +10,6 @@ version:4.7.0
 
 New Year's update for OpenCV 4.x has been released.
 
-
-**Highlights of this release**:
-
-DNN:
-- New ONNX layers: Scatter and ScatterND, Tile, ReduceL1, ReduceMin and more.
-- Signinficant performance optimization for convolutions. Winograd algoritm implementation.
-- Element-wise operation (add, sub, mul, div, ...): Broadcasting.
-- OpenVino 2022.1 support.
-- CANN backend support.
-
-Algorithms:
-- ArUco markers and April tags support including ChAruco and diamond boards detection and calibration.
-- QR code detection and decoding quality imrovement. Alignment markers support. Benchmark for QR codes: [link](https://github.com/opencv/opencv_benchmarks/tree/develop/python_benchmarks/qr_codes)
-- Nanotrack v2 tracker based on neural networks.
-- Stackblur algorithm implementation.
-
-
-Multimedia:
-- FFmpeg 5.x support.
-- CUDA 12.0 support. Hardware accelerated video codecs support on NVIDIA platforms with modern Video Codec SDK (NVCUVID and NVENCODEAPI).
-- CV_16UC1 read/write video support with FFmpeg.
-- Orientation meta support on Mac with native media API.
-- New iterator-based API for multi-page image formats.
-- libSPNG support for PNG format.
-- SIMD acceleration for self-built libJPEG-Turbo
-- H264/H265 support on Android. Multiple fixes for video decoder, endcoder and camera memory layout.
-
-
-G-API
-- Exposed all core APIs to Python, including stateful kernels.
-- Introduced efficient path from oneVPL GPU surfaces to OpenCL GPU buffers.
-
-Optimization:
-- New universal intrinsics backend for scalable vector instructions. The first scalable implementation for RISC-V RVV 1.0.
--
-
 ![](images/dnn.png)
 
 - DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2022-06-07..2022-12-25):
@@ -56,12 +20,13 @@ Optimization:
 
       - Fixes in Slice (support negative step [#22898](https://github.com/opencv/opencv/pull/22898))
       - Support some reduce layers of ONNX [#21601](https://github.com/opencv/opencv/pull/21601)
-
+      - Support for Tile layer [#22809](https://github.com/opencv/opencv/pull/22809)
     - Added CANN backend support [#22634](https://github.com/opencv/opencv/pull/22634). Link to the manual:  https://github.com/opencv/opencv/wiki/Huawei-CANN-Backend.
 
     - Added bacthed NMS for multi-class object detection [#22857](https://github.com/opencv/opencv/pull/22857)
     - Accelerating convolution, especially for ARM CPU. [#21910](https://github.com/opencv/opencv/pull/21910) and [#22905](https://github.com/opencv/opencv/pull/22905)
     - Winograd's convolution optimization
+    - Nanotrack v2 tracker based on neural networks.
 
 
 ![](images/gapi.png)
@@ -100,15 +65,34 @@ Optimization:
     - Updated ADE (the core internal graph library) to version 0.1.2a: [#22432](https://github.com/opencv/opencv/pull/22432);
     - Fixed various build warnings: [#22935](https://github.com/opencv/opencv/pull/22935), and issues: [#22712](https://github.com/opencv/opencv/pull/22712);
 
+- Objdetect module:
+
+  - ArUco markers and April tags support including ChAruco and diamond boards detection and calibration [#22986](https://github.com/opencv/opencv/pull/22986).
+  - QR code detection and decoding quality imrovement [22695](https://github.com/opencv/opencv/pull/22695), [22659](https://github.com/opencv/opencv/pull/22659). Alignment markers support [22891](https://github.com/opencv/opencv/pull/22891).
+  - Benchmark for QR codes: [link](https://github.com/opencv/opencv_benchmarks/tree/develop/python_benchmarks/qr_codes).
+
+- Core module:
+
+  - New universal intrinsics backend for scalable vector instructions. The first scalable implementation for RISC-V RVV 1.0 [#22179](https://github.com/opencv/opencv/pull/22179).
+  - N-dimensional flip [#22898](https://github.com/opencv/opencv/pull/22898)
+  - CUDA 12.0 support.
+
+- Imgproc:
+  - Add StackBlur for imgproc [#20379](https://github.com/opencv/opencv/pull/20379)
+
+- Multimedia:
+  - FFmpeg 5.x support.
+  - Hardware accelerated video codecs support on NVIDIA platforms with modern Video Codec SDK (NVCUVID and NVENCODEAPI).
+  - CV_16UC1 read/write video support with FFmpeg.
+  - Orientation meta support on Mac with native media API.
+  - New iterator-based API for multi-page image formats.
+  - libSPNG support for PNG format.
+  - SIMD acceleration for self-built libJPEG-Turbo
+  - H264/H265 support on Android. Multiple fixes for video decoder, endcoder and camera memory layout.
+
 ![](images/github2.png)
 
-- And many other contributions:
-
-    - Added n-dimensional flip to core [#22898](https://github.com/opencv/opencv/pull/22898)
-    - Add StackBlur for imgproc [#20379](https://github.com/opencv/opencv/pull/20379)
-
-    - TBD
-
+- And many other contributions!
 
 ### Contributors
 
