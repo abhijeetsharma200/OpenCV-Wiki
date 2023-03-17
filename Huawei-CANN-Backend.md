@@ -33,7 +33,7 @@ export PATH=/usr/local/python3.7.5/bin:$PATH
 ## Install CANN
 
 Download `Ascend-cann-toolkit_{version}_{platform}.run` from https://www.hiascend.com/software/cann/community-history.
-- `version >= 5.1.RC1.alpha005` is recommanded and tested by us.
+- `version >= 5.1.RC2.alpha008` is recommanded and tested by us.
 - Choose your platform. `linux-x86` and `linux-aarch64` are supported.
 
 Follow instructions from this page ([CN](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/51RC1alpha005/softwareinstall/instg/atlasdeploy_03_0018.html), [EN](https://www.hiascend.com/document/detail/en/CANNCommunityEdition/51RC1alphaX/softwareinstall/instg/atlasdeploy_03_0018.html)) to install the CANN library. The links to the instruction page is for **version 5.1.RC1.alpha005**. You could switch to your specific version by clicking the top-left drop-down menu.
