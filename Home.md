@@ -20,7 +20,7 @@ General resources
 Development
 -----------
 
-- **[[:computer: :camera: OpenCV GSoC Ideas List 2022 :computer: :movie_camera:  | GSoC_2022]]**
+- **[[:computer: :camera: OpenCV GSoC Ideas List 2023 :computer: :movie_camera:  | GSoC_2023]]**
 
 - Repositories:
     - [opencv](https://github.com/opencv/opencv) - main repository, contains core types and functions, stable algorithms, build scripts and tools
