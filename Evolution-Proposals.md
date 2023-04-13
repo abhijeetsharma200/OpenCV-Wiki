@@ -40,4 +40,4 @@ The pool of evolution proposals can then be used to plan GSoC projects, as the l
 * (DONE) ~~[[OE-32 - Change OpenCV License to Apache 2|OE-32.--Change-OpenCV-License-to-Apache-2]]~~
 * (In Progress) [OE-33 - 3D Module](OE-33.-3D-Module)
 * (In Progress) [OE-34 - Named Parameters](OE-34.-Named-Parameters)
-* (In Progress) [OE-35 - TFLite support](OE-35.-TFLite-support)
+* (DONE) ~~[OE-35 - TFLite support](OE-35.-TFLite-support)~~
