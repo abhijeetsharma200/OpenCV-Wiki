@@ -244,6 +244,16 @@ $ cd models
 $ git lfs pull --include=path-to-desired-onnx-model --exclude=""
 ```
 
+The following models are known to be required as for OpenCV 4.7:
+```bash
+git lfs pull --include vision/classification/squeezenet/model/squeezenet1.0-9.onnx --exclude=""
+git lfs pull --include vision/object_detection_segmentation/ssd-mobilenetv1/model/ssd_mobilenet_v1_10.onnx
+git lfs pull --include vision/object_detection_segmentation/faster-rcnn/model/FasterRCNN-10.onnx
+git lfs pull --include vision/object_detection_segmentation/yolov3/model/yolov3-10.onnx --exclude=""
+git lfs pull --include vision/body_analysis/emotion_ferplus/model/emotion-ferplus-8.onnx --exclude=""
+git lfs pull --include vision/object_detection_segmentation/tiny-yolov2/model/tinyyolov2-8.onnx --exclude=""
+```
+
 Submitting G-API PRs
 ====================
 
