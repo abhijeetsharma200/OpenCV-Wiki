@@ -54,12 +54,12 @@ cmake /path-to-opencv -DPlaidML2_DIR=path-to-miniconda3/share/plaidml2 -DWITH_PL
 
 ## Building with Microsoft ONNX Runtime support
 
-* Build and install the ONNX RT (currently tested with v1.5.1):
+* Build and install the ONNX RT (currently tested with v1.14.1):
 
 ```bash
  $ git clone --recursive https://github.com/microsoft/onnxruntime.git
  $ cd onnxruntime
- $ git checkout v1.5.1
+ $ git checkout v1.14.1
  $ git submodule update --init
  $ ./build.sh --config Release --build_shared_lib --parallel \
  $     --cmake_extra_defines CMAKE_INSTALL_PREFIX=/path-to-install-dir
