@@ -15,6 +15,7 @@
     - [[Running OpenCV on RISC-V|OpenCV-RISC-V]]
 - [[OpenCV 4|Opencv4]]
     - [[Graph API (G-API)|Graph-API]]
+      - [[Using G-API with ONNX Runtime|g-api-onnx]]
 - [[OpenCV 3|Opencv3]]
     - [[OpenCL optimizations|OpenCL-optimizations]]
     - [[CPU optimizations|CPU-optimizations-build-options]]
