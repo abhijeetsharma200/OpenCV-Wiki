@@ -5,7 +5,7 @@
   $ sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-{base,good,bad}
   ```
 
-* Secondly, you need to launch OpenCV cmake with the extra options specified:    
+* Secondly, you need to launch OpenCV cmake with an extra option specified:    
   ```bash
   $ cmake /path-to-opencv -DOPENCV_GAPI_GSTREAMER=ON
   ```
@@ -58,7 +58,8 @@ For example:
 ![image](https://github.com/opencv/opencv/assets/15359579/016da457-1370-4297-ba15-3b3ee20ad67f)
 
 You may, however, notice some warnings during execution, like these ones:
-![image](https://github.com/opencv/opencv/assets/15359579/426f1eca-7e8e-479a-96e3-17e7cc9b9f3a)
+
+![image](https://github.com/opencv/opencv/assets/15359579/29b80e31-b560-47bd-9d49-1c384a52ceee)
 
 or
 
