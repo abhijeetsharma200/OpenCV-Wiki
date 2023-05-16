@@ -5,7 +5,7 @@ G-API is also available in OpenCV for Python. This page explains how to build an
 ## Requirements
 
 * Python3+ with `numpy`
-* OpenVINO - for inference tests with OpenVINO backend;
+* [OpenVINO](Using-G-API-with-OpenVINO-Toolkit) - for inference tests with OpenVINO backend;
 * [ONNX RT](Using-G-API-with-MS-ONNX-Runtime) - for inference tests with ONNX Runtime backend;
 * Working `videoio` module - built with either FFMPEG or [GStreamer] support - as some tests are using video files as input.
 
