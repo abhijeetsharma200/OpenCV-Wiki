@@ -18,6 +18,7 @@
       - [[G-API Python bindings|G-API-Python-Bindings]]
       - [[Using G-API with OpenVINO Toolkit|Using-G-API-with-OpenVINO-Toolkit]]
       - [[Using G-API with MS ONNX Runtime|Using-G-API-with-MS-ONNX-Runtime]]
+      - [[Using G API with OpenCV AI Kit (OAK)|Using-G-API-with-OpenCV-AI-Kit-(OAK)]]
       - [[Enabling GStreamer source in G-API|Enabling-GStreamer-source-in-G-API]]
       - [[Enabling oneVPL source in G-API|Enabling-oneVPL-source-in-G-API]]
 - [[OpenCV 3|Opencv3]]
