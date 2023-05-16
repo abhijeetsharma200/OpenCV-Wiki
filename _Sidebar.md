@@ -16,6 +16,7 @@
 - [[OpenCV 4|Opencv4]]
     - [[Graph API (G-API)|Graph-API]]
       - [[G-API Python bindings|G-API-Python-Bindings]]
+      - [[Using G-API with OpenVINO Toolkit|Using-G-API-with-OpenVINO-Toolkit]]
       - [[Using G-API with MS ONNX Runtime|Using-G-API-with-MS-ONNX-Runtime]]
       - [[Enabling GStreamer source in G-API|Enabling-GStreamer-source-in-G-API]]
 - [[OpenCV 3|Opencv3]]
