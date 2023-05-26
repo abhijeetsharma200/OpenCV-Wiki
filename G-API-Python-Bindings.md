@@ -27,6 +27,7 @@ $ export LD_LIBRARY_PATH=<path-to-opencv-build>/lib/:$LD_LIBRARY_PATH
 $ export PYTHONPATH=<path-to-opencv-build>/python_loader/:$PYTHONPATH
 $ export OPENCV_TEST_DATA_PATH=<path-to-opencv_extra>/testdata/
 $ export OPENCV_DNN_TEST_DATA_PATH=<path-to-opencv_extra>/testdata/dnn
+$ export OPENCV_GAPI_ONNX_MODEL_PATH=<path-to-onnx-zoo>                 # Required if built with ONNX support
 ```
 
 Now run G-API tests:
