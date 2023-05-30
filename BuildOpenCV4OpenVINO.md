@@ -67,7 +67,6 @@ If you would like to use a minimal set of compilation flags and dependencies to 
 > sudo apt-get install \  
 build-essential \  
 cmake \  
-ninja-build \  
 libgtk-3-dev \  
 libpng-dev \  
 libjpeg-dev \  
@@ -94,13 +93,11 @@ libgstreamer-plugins-base1.0-dev
 > source /opt/intel/openvino/bin/setupvars.sh
 1. Copy OpenCV repository:
 > git clone --recurse-submodules https://github.com/opencv/opencv.git
-2. Create build directory and enter into it:
-> mkdir ~/build-opencv && cd ~/build-opencv
-3. Compile and install OpenCV:
+2. Compile and install OpenCV:
 <details>
   <summary>The command</summary>
 
-> cmake -G Ninja \  
+> cmake \  
 -D BUILD_INFO_SKIP_EXTRA_MODULES=ON \  
 -D BUILD_EXAMPLES=OFF \  
 -D BUILD_JASPER=OFF \  
@@ -172,8 +169,11 @@ libgstreamer-plugins-base1.0-dev
 -D WITH_OPENVINO=ON \  
 -D VIDEOIO_PLUGIN_LIST=ffmpeg,gstreamer,mfx \  
 -D CMAKE_EXE_LINKER_FLAGS=-Wl,--allow-shlib-undefined \  
--D CMAKE_BUILD_TYPE=Release <OpenCV_ROOT_REPO_DIRECTORY> && \  
-ninja && cmake --install .
+-D CMAKE_BUILD_TYPE=Release \  
+-S <OpenCV_ROOT_REPO_DIRECTORY> \  
+-B ~/build-opencv && \  
+cmake --build ~/build-opencv --parallel $(nproc) && \
+cmake --install ~/build-opencv
 </details>
 
 OpenCV package is available at `~/build-opencv/install` directory. 
