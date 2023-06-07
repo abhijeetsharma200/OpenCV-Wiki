@@ -91,6 +91,30 @@ Links: [Green's Theorem](http://en.wikipedia.org/wiki/Green's_theorem)
 <br>The problem appeared during ``.onnx`` feeding into ``cv2.dnn.readNetFromONNX(...)``.</br>
 <br>**Discussion:** [#19366](https://github.com/opencv/opencv/issues/19366), [#19977](https://github.com/opencv/opencv/issues/19977)</br>
 
+
+**Q**: _Why OpenCV ONNX parser is not able to parse onnx file that contains `torch.nn.functional.interpolate` resize function and how to solve that_?_
+
+**A**:  When flag `recompute_scale_factor=True` of `torch.nn.functional.interpolate` function, due to internal implementation of interpolate function in torch library, currently some nodes are not be handled by OpenCV properly. Solution to this problem is to follow simply the graph that contains `torch.nn.functional.interpolate`. It can be does as follows: 
+
+```python
+from onnxsim import simplify
+
+....
+
+onnx_model = onnx.load(full_model_path)
+onnx.checker.check_model(onnx_model)
+
+############################################
+## =======> Simplify ONNX graph <======== ##
+onnx_model, check = simplify(onnx_model)
+onnx.save(onnx_model, full_model_path)
+############################################ 
+```
+
+See this [thread](https://github.com/opencv/opencv/issues/23730) for me details
+
+
+
 # Python Bindings
 
 **Q**: _I call OpenCV function as it's done in C++ or stated in documentation, but get some strange data type or buffer size exception. How to debug it?_
