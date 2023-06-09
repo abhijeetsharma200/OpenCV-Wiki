@@ -21,6 +21,7 @@
       - [[Enabling GStreamer source in G-API|Enabling-GStreamer-source-in-G-API]]
       - [[Enabling oneVPL source in G-API|Enabling-oneVPL-source-in-G-API]]
       - [[Contributing to G-API: PRs|Contributing-to-G-API:-PRs]]
+      - [[Ideas and plans towards OpenCV 5.0|G-API-Ideas-towards-OpenCV-5.0]]
 - [[OpenCV 3|Opencv3]]
     - [[OpenCL optimizations|OpenCL-optimizations]]
     - [[CPU optimizations|CPU-optimizations-build-options]]
