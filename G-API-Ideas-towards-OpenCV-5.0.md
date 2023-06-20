@@ -34,6 +34,10 @@ Note: This page is currently brainstormed. The idea of this page is to collect i
   - Dmitry - should be controllable (an option), as it may alter the "multi-context" cases.
   - Tolik - the input data precision may cause a new instance to be initiated.
 
+### Operations
+
+- Dmitry - Object tracking functionality still isn't there by default
+
 ### Documentation
 
 - Doxygen documentation refined, redesigned (for new goals)
