@@ -48,3 +48,9 @@ Note: This page is currently brainstormed. The idea of this page is to collect i
 ## What we'd like to fix
 
 - Tolik - Need to fix Python bindings for Python 3.7+ - fails on Windows. Applies to OpenCV in general, but we're affected most.
+
+## Beyond 5.0
+
+- Dmitry - Revive S11N (serialization) as a deployment model for API-reduced environments
+- Dmitry - Portable S11N with first-class kernels (written in G-API opset)
+- Dmitry - JS API (maybe in a reduced mode to load & run computations via S11N)
