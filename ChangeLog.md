@@ -1,6 +1,56 @@
 OpenCV Change Logs
 ==================
 
+version:4.8.0
+-------------
+
+
+*June, 2023*
+
+Summer update for OpenCV 4.x has been released.
+
+![](images/dnn.png)
+- DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2022-12-29..2023-06-25):
+
+    - TBD
+
+![](images/gapi.png)
+
+- G-API module:
+
+    - TBD
+
+- Objdetect module:
+
+    - TBD
+
+- Core module:
+
+    - TBD
+
+- Multimedia:
+
+    - TBD
+
+### Contributors
+
+<details>
+<summary>opencv (XXX contributors)</summary>
+</details>
+
+<details>
+<summary>opencv_contrib (YYY contributors)</summary>
+</details>
+
+
+version:3.4.20
+--------------
+
+*June, 2023*
+
+OpenCV 3.4.20 has been released. Bug fixes, optimizations and other enhancements are propagated into OpenCV 4.8.0.
+OpenCV 3.4.20 is last official release in 3.4 branch.
+
 
 version:4.7.0
 -------------
