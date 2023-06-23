@@ -30,7 +30,7 @@ Note: This page is currently brainstormed. The idea of this page is to collect i
   - Manual preprocessing pipeline configuration. Currently for ONNX (and, in theory, for OCV DNN), the configuration path is not very clean.
   - OpenVINO backend with imported blobs[?]
 - Tolik - OpenVINO - Allow reading models from from memory (stream interface), not only file
-- Tolik - OpenVINO - Use OpenVINO resize (ov::PrePostProcessor) for InferList, InferList2, InferROI.
+- Tolik - OpenVINO - Use OpenVINO resize (ov::PrePostProcessor) for InferList, InferList2, InferROI
 - Dmitry - OpenVINO models as shared pool (in graph / for multiple graphs)
   - Dmitry - should be controllable (an option), as it may alter the "multi-context" cases.
   - Tolik - the input data precision may cause a new instance to be initiated.
