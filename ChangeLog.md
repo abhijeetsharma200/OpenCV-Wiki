@@ -31,6 +31,8 @@ Summer update for OpenCV 4.x has been released.
             - [#23557](https://github.com/opencv/opencv/pull/23557) Fixes in CPU.
 
             - [#23528](https://github.com/opencv/opencv/pull/23528) and [#23560](https://github.com/opencv/opencv/pull/23560) Fixes in CUDA backend.
+        - Improve DNN speed on ARM and X86, add Winograd branch for Convolution layer.
+        - Add full FP16 computation branch on ARMv8 platform, twice faster than before.
 
 ![](images/gapi.png)
 
