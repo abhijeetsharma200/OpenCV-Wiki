@@ -26,6 +26,12 @@ Summer update for OpenCV 4.x has been released.
 
         - [#23491](https://github.com/opencv/opencv/pull/23491) Fixes for SAM.
 
+        - Fixes in nary element wise layer about broadcast:
+
+            - [#23557](https://github.com/opencv/opencv/pull/23557) Fixes in CPU.
+
+            - [#23528](https://github.com/opencv/opencv/pull/23528) and [#23560](https://github.com/opencv/opencv/pull/23560) Fixes in CUDA backend.
+
 ![](images/gapi.png)
 
 - G-API module:
