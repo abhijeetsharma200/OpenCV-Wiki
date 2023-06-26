@@ -51,7 +51,10 @@ Summer update for OpenCV 4.x has been released.
 
 - Core module:
 
-    - TBD
+    - [#13879](https://github.com/opencv/opencv/pull/13879) Added REDUCE_SUM2 option to `cv::reduce`.
+    - [#22947](https://github.com/opencv/opencv/pull/22947) Introduced `cv::hasNonZero` function.
+    - Imroved RISC-V RVV vector extentions support.
+
 
 - Multimedia:
 
