@@ -13,7 +13,7 @@ Summer update for OpenCV 4.x has been released.
 - DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2022-12-29..2023-06-25):
 
     - [#23161](https://github.com/opencv/opencv/pull/23161), [#23409](https://github.com/opencv/opencv/pull/23409) TFLite models support, including int8 quantized models.
-    - []() Enabled DNN module build without Protobuf
+    - [#23604](https://github.com/opencv/opencv/pull/23604) Enabled DNN module build without Protobuf dependency.
     - Improved layers / supported more models:
         - ONNX: [#23047](https://github.com/opencv/opencv/pull/23047) Layer normalization, [#23219](https://github.com/opencv/opencv/pull/23219) GELU and [#23655](https://github.com/opencv/opencv/pull/23655) QLinearSoftmax.
         - Fixes in CANN backend:
