@@ -12,6 +12,7 @@ Summer update for OpenCV 4.x has been released.
 ![](images/dnn.png)
 - DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2022-12-29..2023-06-25):
 
+    - [#23161](https://github.com/opencv/opencv/pull/23161) TFLite models support
     - Improved layers / supported more models:
 
         - ONNX: [#23047](https://github.com/opencv/opencv/pull/23047) Layer normalization, [#23219](https://github.com/opencv/opencv/pull/23219) GELU and [#23655](https://github.com/opencv/opencv/pull/23655) QLinearSoftmax.
@@ -33,6 +34,7 @@ Summer update for OpenCV 4.x has been released.
             - [#23528](https://github.com/opencv/opencv/pull/23528) and [#23560](https://github.com/opencv/opencv/pull/23560) Fixes in CUDA backend.
         - Improve DNN speed on ARM and X86, add Winograd branch for Convolution layer.
         - Add full FP16 computation branch on ARMv8 platform, twice faster than before.
+        - [#22957](https://github.com/opencv/opencv/pull/22957) Modern OpenVINO support.
 
 ![](images/gapi.png)
 
@@ -49,16 +51,35 @@ Summer update for OpenCV 4.x has been released.
     - Multiple bug fixes and improvements in QR code dection and decoding pipelines. 
     - Multiple bug fixes and improvements in ArUco based pipelines. Added legacy flag for pre-4.6.0 ChAruco board support.
 
+- Calibration module:
+
+    - [#23078](https://github.com/opencv/opencv/pull/23078) USAC framework improvements.
+    - [#23025](https://github.com/opencv/opencv/pull/23025) Fixed stddev estimation in  camera calibration pipelines.
+
+- Image processing module:
+
+   - [#23210](https://github.com/opencv/opencv/pull/23210) Various fixes in line segments detector.
+
+- Feature2d module:
+
+   - [#23124](https://github.com/opencv/opencv/pull/23124) SIFT accuracy improvements.
+
 - Core module:
 
     - [#13879](https://github.com/opencv/opencv/pull/13879) Added REDUCE_SUM2 option to `cv::reduce`.
     - [#22947](https://github.com/opencv/opencv/pull/22947) Introduced `cv::hasNonZero` function.
-    - Imroved RISC-V RVV vector extentions support.
+    - Imroved RISC-V RVV vector extensions support.
+
+- Python Bindings:
+
+    - [#20370](https://github.com/opencv/opencv/pull/20370) Python typing stubs
 
 
 - Multimedia:
 
-    - TBD
+    - [#23237](https://github.com/opencv/opencv/pull/23237) Orbbec Femto Mega cameras support.
+    - [#23172](https://github.com/opencv/opencv/pull/23172) HEVC/H265 support in VideoWriter with MS Media Foundation backend.
+    -  Support VideoCapture CAP_PROP_AUTO_WB and CV_CAP_PROP_WHITE_BALANCE_BLUE_U for DShow backend.
 
 ### Contributors
 
