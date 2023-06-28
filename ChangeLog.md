@@ -80,7 +80,7 @@ Summer update for OpenCV 4.x has been released.
     - [#23300](https://github.com/opencv/opencv/pull/23300) Added support for VideoCapture CAP_PROP_AUTO_WB and CV_CAP_PROP_WHITE_BALANCE_BLUE_U for DShow backend.
     - [#23460](https://github.com/opencv/opencv/pull/23460), [#23469](https://github.com/opencv/opencv/pull/23469) Fixes OBS Virtual Camera capture.
     - [#23433](https://github.com/opencv/opencv/pull/23433) CV_32S encoding support with tiff.
-    - [#3486](https://github.com/opencv/opencv_contrib/pull/3486), [3453](https://github.com/opencv/opencv_contrib/pull/3453) More strict decoder checks and dynamic resolution support in cudacodec module (opencv_contrib).
+    - [#3486](https://github.com/opencv/opencv_contrib/pull/3486), [#3453](https://github.com/opencv/opencv_contrib/pull/3453) More strict decoder checks and dynamic resolution support in cudacodec module (opencv_contrib).
     - [#3485](https://github.com/opencv/opencv_contrib/pull/3485) Added basic VideoCapture properties support to cudacodec module (opencv_conrib).
 
 - Python Bindings:
