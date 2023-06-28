@@ -230,8 +230,8 @@ Summer update for OpenCV 4.x has been released.
 
 <details>
 <summary>opencv_contrib (18 contributors)</summary>
-```
 
+```
 git shortlog --no-merges -ns 4.7.0..4.8.0
      8  cudawarped
      7  Alexander Smorkalov
@@ -251,8 +251,8 @@ git shortlog --no-merges -ns 4.7.0..4.8.0
      1  SpaceIm
      1  smeng9
      1  unknown
-
 ```
+
 </details>
 
 
