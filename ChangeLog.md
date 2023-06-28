@@ -112,6 +112,7 @@ Summer update for OpenCV 4.x has been released.
 <summary>opencv (112 contributors)</summary>
 
 ```
+git shortlog --no-merges -ns 4.7.0..4.8.0
     32  Alexander Smorkalov
     18  Dmitry Kurtaev
     14  zihaomu
