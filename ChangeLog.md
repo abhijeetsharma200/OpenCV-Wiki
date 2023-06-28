@@ -69,6 +69,8 @@ Summer update for OpenCV 4.x has been released.
     - [#22947](https://github.com/opencv/opencv/pull/22947) Introduced `cv::hasNonZero` function.
     - [#23443](https://github.com/opencv/opencv/pull/23443) Update IPP binaries update  to version 20230330.
     - Improved RISC-V RVV vector extensions support.
+        - [#23383](https://github.com/opencv/opencv/pull/23383) Support RVV v0.11 intrinsics available in LLVM 16 and GCC 13
+        - [#23246](https://github.com/opencv/opencv/pull/23246) Support build with T-Head RISC-V toolchain (RVV 0.7.1 and 1.0)
     - Several OpenCL vendor and version handling improvements.
 
 - Multimedia:
