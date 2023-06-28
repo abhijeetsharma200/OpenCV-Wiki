@@ -40,8 +40,9 @@ Summer update for OpenCV 4.x has been released.
     - [#23264](https://github.com/opencv/opencv/pull/23264) New QR code detection algorithm based  on ArUco code. 
     - [#23666](https://github.com/opencv/opencv/pull/23666) Bar code detector and decoder moved from Contrib to main repository.
     - [#23758](https://github.com/opencv/opencv/pull/23758) Introduced common API for all graphical codes  like bar codes and QR codes.
-    - Multiple bug fixes and improvements in QR code detection and decoding pipelines       
-    - Multiple bug fixes and improvements in ArUco based pipelines. Added legacy flag for pre-4.6.0 ChAruco board support.
+    - [23153](https://github.com/opencv/opencv/pull/23153) Added flag for legacy pre-4.6.0 ChAruco boards support.
+    - Multiple bug fixes and improvements in QR code detection and decoding pipelines       .
+    - Multiple bug fixes and improvements in ArUco based pipelines. 
 
 - Calibration module:
 
