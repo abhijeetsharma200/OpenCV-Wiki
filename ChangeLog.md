@@ -12,25 +12,17 @@ Summer update for OpenCV 4.x has been released.
 ![](images/dnn.png)
 - DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2022-12-29..2023-06-25):
 
-    - [#23161](https://github.com/opencv/opencv/pull/23161) TFLite models support
+    - [#23161](https://github.com/opencv/opencv/pull/23161), [#23409](https://github.com/opencv/opencv/pull/23409) TFLite models support, including int8 quantized models.
+    - []() Enabled DNN module build without Protobuf
     - Improved layers / supported more models:
-
         - ONNX: [#23047](https://github.com/opencv/opencv/pull/23047) Layer normalization, [#23219](https://github.com/opencv/opencv/pull/23219) GELU and [#23655](https://github.com/opencv/opencv/pull/23655) QLinearSoftmax.
-
         - Fixes in CANN backend:
-
             - [#23319](https://github.com/opencv/opencv/pull/23319) support ONNX Split, Slice, Clip (Relu6) and Conv with auto_pad.
-
             - [#23401](https://github.com/opencv/opencv/pull/23401) support ONNX Sub, PRelu, ConvTranspose.
-
         - [#23613](https://github.com/opencv/opencv/pull/23613) Reduce Refactor for robustness and potential follow-up improvements.
-
-        - [#23491](https://github.com/opencv/opencv/pull/23491) Fixes for SAM.
-
+        - [#23491](https://github.com/opencv/opencv/pull/23491) Fixes for Segment Anything.
         - Fixes in nary element wise layer about broadcast:
-
             - [#23557](https://github.com/opencv/opencv/pull/23557) Fixes in CPU.
-
             - [#23528](https://github.com/opencv/opencv/pull/23528) and [#23560](https://github.com/opencv/opencv/pull/23560) Fixes in CUDA backend.
         - Improve DNN speed on ARM and X86, add Winograd branch for Convolution layer.
         - Add full FP16 computation branch on ARMv8 platform, twice faster than before.
@@ -48,8 +40,7 @@ Summer update for OpenCV 4.x has been released.
     - [#23264](https://github.com/opencv/opencv/pull/23264) New QR code detection algorithm based  on ArUco code. 
     - [#23666](https://github.com/opencv/opencv/pull/23666) Bar code detector and decoder moved from Contrib to main repository.
     - [#23758](https://github.com/opencv/opencv/pull/23758) Introduced common API for all graphical codes  like bar codes and QR codes.
-    - Multiple bug fixes and improvements in QR code detection and decoding pipelines:
-      - [#23275](https://github.com/opencv/opencv/pull/23275) Added QR_Code data flip support, flip and retry after first ECC failure.
+    - Multiple bug fixes and improvements in QR code detection and decoding pipelines       
     - Multiple bug fixes and improvements in ArUco based pipelines. Added legacy flag for pre-4.6.0 ChAruco board support.
 
 - Calibration module:
@@ -57,10 +48,15 @@ Summer update for OpenCV 4.x has been released.
     - [#23078](https://github.com/opencv/opencv/pull/23078) USAC framework improvements.
     - [#23025](https://github.com/opencv/opencv/pull/23025) Fixed stddev estimation in  camera calibration pipelines.
     - [#23305](https://github.com/opencv/opencv/pull/23305) Fixed incorrect pixel grid generation in icvGetRectangles that improves accuracy of getOptimalNewCameraMatrix, stereoRectify and some other calibration functions.
+    - Charuco board support in patterns generator, interactive calibration tool and calibration samples.
 
 - Image processing module:
 
    - [#23210](https://github.com/opencv/opencv/pull/23210), [#23388](https://github.com/opencv/opencv/pull/23388) Various fixes in line segments detector.
+   - [#23634](https://github.com/opencv/opencv/pull/23634) Fixed even input dimensions for INTER_NEAREST_EXACT in resize.
+   - [#21959](https://github.com/opencv/opencv/pull/21959) Optimise local cost computation in IntelligentScissorsMB::buildMap.
+   - Keep inliers for linear remap with BORDER_TRANSPARENT #23754
+   - [#22798](https://github.com/opencv/opencv/pull/22798) Fix distransform to work with large images.
 
 - Feature2d module:
 
@@ -70,13 +66,17 @@ Summer update for OpenCV 4.x has been released.
 
     - [#13879](https://github.com/opencv/opencv/pull/13879) Added REDUCE_SUM2 option to `cv::reduce`.
     - [#22947](https://github.com/opencv/opencv/pull/22947) Introduced `cv::hasNonZero` function.
+    - [#23443](https://github.com/opencv/opencv/pull/23443) Update IPP binaries update  to version 20230330.
     - Improved RISC-V RVV vector extensions support.
+    - Several OpenCL vendor and version handling imrovements.
 
 - Multimedia:
 
+    - [#23596](https://github.com/opencv/opencv/pull/23596) Added AVIF support through libavif. #23596
     - [#23237](https://github.com/opencv/opencv/pull/23237) Orbbec Femto Mega cameras support.
     - [#23172](https://github.com/opencv/opencv/pull/23172) HEVC/H265 support in VideoWriter with MS Media Foundation backend.
-    -  Support VideoCapture CAP_PROP_AUTO_WB and CV_CAP_PROP_WHITE_BALANCE_BLUE_U for DShow backend.
+    - [#23692](https://github.com/opencv/opencv/pull/23692) Fixed FPS computation on some videos for FFmpeg backend.
+    -  Added support for VideoCapture CAP_PROP_AUTO_WB and CV_CAP_PROP_WHITE_BALANCE_BLUE_U for DShow backend.
     - [#23460](https://github.com/opencv/opencv/pull/23460), [#23469](https://github.com/opencv/opencv/pull/23469) Fixes OBS Virtual Camera capture.
     - [#23433](https://github.com/opencv/opencv/pull/23433) CV_32S encoding support with tiff 
 
@@ -84,12 +84,21 @@ Summer update for OpenCV 4.x has been released.
 
     - [#20370](https://github.com/opencv/opencv/pull/20370) Python typing stubs.
     - [#23350](https://github.com/opencv/opencv/pull/23350) Fix reference counting errors in registerNewType.
-    - [#23399](https://github.com/opencv/opencv/pull/23399), [#23436](https://github.com/opencv/opencv/pull/23436) Fixed charuco and diamond boards detector  bindings.
+    - [#23399](https://github.com/opencv/opencv/pull/23399), [#23436](https://github.com/opencv/opencv/pull/23436), [23138](https://github.com/opencv/opencv/pull/23138) Fixed ChAruco and diamond boards detector  bindings.
+    - [23371](https://github.com/opencv/opencv/pull/23371) Added bindings to allow GpuMat and Stream objects to be initialized from memory initialized in other libraries
+     - [#23691](https://github.com/opencv/opencv/pull/23691) np.float16 support.
+    - Python bindings for RotatedRect, CV_MAKETYPE, CV_8UC(n).
 
-- Javascript bindings:
+- JavaScript bindings:
 
     - [#23344](https://github.com/opencv/opencv/pull/23344) Added possibility for disabling inlining `wasm` in `opencv.js`
     - Extended JS bindings for Aruco, Charuco, QR codes and bar codes.
+
+- Platforms:
+
+    - [#21736](https://github.com/opencv/opencv/pull/21736) Android: don't require deprecated tools.
+    - [#23768](https://github.com/opencv/opencv/pull/23768) iOS: Fixed framework build issues with CMake 3.25.1+.
+
 
 ### Contributors
 
