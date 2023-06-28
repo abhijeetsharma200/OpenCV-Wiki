@@ -40,7 +40,7 @@ Summer update for OpenCV 4.x has been released.
     - [#23264](https://github.com/opencv/opencv/pull/23264) New QR code detection algorithm based  on ArUco code. 
     - [#23666](https://github.com/opencv/opencv/pull/23666) Bar code detector and decoder moved from Contrib to main repository.
     - [#23758](https://github.com/opencv/opencv/pull/23758) Introduced common API for all graphical codes  like bar codes and QR codes.
-    - [23153](https://github.com/opencv/opencv/pull/23153) Added flag for legacy pre-4.6.0 ChAruco boards support.
+    - [#23153](https://github.com/opencv/opencv/pull/23153) Added flag for legacy pre-4.6.0 ChAruco boards support.
     - Multiple bug fixes and improvements in QR code detection and decoding pipelines       .
     - Multiple bug fixes and improvements in ArUco based pipelines. 
 
@@ -87,7 +87,7 @@ Summer update for OpenCV 4.x has been released.
 
     - [#20370](https://github.com/opencv/opencv/pull/20370) Python typing stubs.
     - [#23350](https://github.com/opencv/opencv/pull/23350) Fix reference counting errors in registerNewType.
-    - [#23399](https://github.com/opencv/opencv/pull/23399), [#23436](https://github.com/opencv/opencv/pull/23436), [23138](https://github.com/opencv/opencv/pull/23138) Fixed ChAruco and diamond boards detector  bindings.
+    - [#23399](https://github.com/opencv/opencv/pull/23399), [#23436](https://github.com/opencv/opencv/pull/23436), [#23138](https://github.com/opencv/opencv/pull/23138) Fixed ChAruco and diamond boards detector  bindings.
     - [#23371](https://github.com/opencv/opencv/pull/23371) Added bindings to allow GpuMat and Stream objects to be initialized from memory initialized in other libraries
     - [#23691](https://github.com/opencv/opencv/pull/23691) np.float16 support.
     - Python bindings for RotatedRect, CV_MAKETYPE, CV_8UC(n).
