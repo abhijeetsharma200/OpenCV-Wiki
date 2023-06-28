@@ -109,11 +109,146 @@ Summer update for OpenCV 4.x has been released.
 ### Contributors
 
 <details>
-<summary>opencv (XXX contributors)</summary>
+<summary>opencv (112 contributors)</summary>
+```
+    32  Alexander Smorkalov
+    18  Dmitry Kurtaev
+    14  zihaomu
+    13  Maksim Shabunin
+    12  Alexander Alekhin
+    11  Yuantao Feng
+    10  Vadim Levin
+     8  Alex
+     8  Anatoliy Talamanov
+     7  Abduragim Shtanchaev
+     7  unknown
+     6  TolyaTalamanov
+     6  Vladimir Ponomarev
+     6  Zihao Mu
+     6  cudawarped
+     5  Sean McBride
+     5  wanli
+     4  Christine Poerschke
+     3  Alexander Panov
+     3  Dmitry Matveev
+     3  Giles Payne
+     3  Kumataro
+     3  Pierre Chatelier
+     3  Rostislav Vasilikhin
+     3  Wang Kai
+     3  fengyuentau
+     3  keith siilats
+     3  vovka643
+     2  Anna Khakimova
+     2  Anna Petrovicheva
+     2  CSBVision
+     2  Corentin Noël
+     2  Genci Berisha
+     2  Labib Asari
+     2  Laurent Berger
+     2  Stefan Becker
+     2  Tomoaki Teshima
+     2  TuNanTang
+     2  Vadim Pisarevsky
+     2  Vincent Rabaud
+     2  Yannis Guyon
+     2  gottagofaster236
+     2  smeng9
+     1  Abduragim
+     1  Akshat Chauhan
+     1  Alessandro de Oliveira Faria (A.K.A. CABELO)
+     1  Alexander Duda
+     1  Alexey Shtern
+     1  Avasam
+     1  Bhavit Patel
+     1  Christian Henkel
+     1  Christoph Rackwitz
+     1  Damiano Falcioni
+     1  Duong Dac
+     1  Fabrizio Di Vittorio
+     1  Funatomi Takuya
+     1  Gabriel Nascarella
+     1  Gaotianhong
+     1  HAN Liutong
+     1  Ibai Gorordo
+     1  Ihsan Soydemir
+     1  Jaakko Rantala
+     1  Jesus Noland
+     1  Jindřich Šaršon
+     1  Lilit Grigoryan
+     1  Lilo Huang
+     1  Lukas Weber
+     1  Maksym Ivashechkin
+     1  Matthias Möller
+     1  Maxim Smolskiy
+     1  Milan van Wouden
+     1  Olivier Hotel
+     1  Onuralp Sezer
+     1  Paul Kim (김형준)
+     1  Peter Rekdal Khan-Sunde
+     1  Prasanth R
+     1  Rahul Noronha
+     1  Raj Kachhadiya
+     1  Sajjad Ali
+     1  Sergey Petrenko
+     1  Simon Lynen
+     1  SoY Szala
+     1  Spike
+     1  Tinson Lai
+     1  Ulvi YELEN
+     1  Vaclav Vavra
+     1  WU Jia
+     1  Wwupup
+     1  Xxfore
+     1  Yang Chao
+     1  Zero-nnkn
+     1  Zero2key
+     1  Zhi-Qiang Zhou
+     1  Zwyx
+     1  anders-nylander
+     1  anderskiaer
+     1  captain-n3m0
+     1  dizcza
+     1  eplankin
+     1  hzcyf
+     1  inayd
+     1  ippei.i
+     1  kallaballa
+     1  lamm45
+     1  n0099
+     1  souch
+     1  tantei3
+     1  thewoz
+     1  tingbo.liao
+     1  tkram01
+     1  triple Mu
+     1  whuaegeansea
+```
 </details>
 
 <details>
-<summary>opencv_contrib (YYY contributors)</summary>
+<summary>opencv_contrib (18 contributors)</summary>
+```
+git shortlog --no-merges -ns 4.7.0..4.8.0
+     8  cudawarped
+     7  Alexander Smorkalov
+     4  Maksim Shabunin
+     3  Mariya Sinitsina
+     2  Nano
+     2  Tomoaki Teshima
+     2  vovka643
+     1  747
+     1  Alex
+     1  Dmitry Kurtaev
+     1  Kumataro
+     1  Mat&I
+     1  Maxim Milashchenko
+     1  Rostislav Vasilikhin
+     1  Sergei Shutov
+     1  SpaceIm
+     1  smeng9
+     1  unknown
+```
 </details>
 
 
