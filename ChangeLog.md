@@ -73,21 +73,21 @@ Summer update for OpenCV 4.x has been released.
 
 - Multimedia:
 
-    - [#23596](https://github.com/opencv/opencv/pull/23596) Added AVIF support through libavif. #23596
+    - [#23596](https://github.com/opencv/opencv/pull/23596) Added AVIF support through libavif.
     - [#23237](https://github.com/opencv/opencv/pull/23237) Orbbec Femto Mega cameras support.
     - [#23172](https://github.com/opencv/opencv/pull/23172) HEVC/H265 support in VideoWriter with MS Media Foundation backend.
     - [#23692](https://github.com/opencv/opencv/pull/23692) Fixed FPS computation on some videos for FFmpeg backend.
-    -  Added support for VideoCapture CAP_PROP_AUTO_WB and CV_CAP_PROP_WHITE_BALANCE_BLUE_U for DShow backend.
+    - [#23300](https://github.com/opencv/opencv/pull/23300) Added support for VideoCapture CAP_PROP_AUTO_WB and CV_CAP_PROP_WHITE_BALANCE_BLUE_U for DShow backend.
     - [#23460](https://github.com/opencv/opencv/pull/23460), [#23469](https://github.com/opencv/opencv/pull/23469) Fixes OBS Virtual Camera capture.
-    - [#23433](https://github.com/opencv/opencv/pull/23433) CV_32S encoding support with tiff 
+    - [#23433](https://github.com/opencv/opencv/pull/23433) CV_32S encoding support with tiff.
 
 - Python Bindings:
 
     - [#20370](https://github.com/opencv/opencv/pull/20370) Python typing stubs.
     - [#23350](https://github.com/opencv/opencv/pull/23350) Fix reference counting errors in registerNewType.
     - [#23399](https://github.com/opencv/opencv/pull/23399), [#23436](https://github.com/opencv/opencv/pull/23436), [23138](https://github.com/opencv/opencv/pull/23138) Fixed ChAruco and diamond boards detector  bindings.
-    - [23371](https://github.com/opencv/opencv/pull/23371) Added bindings to allow GpuMat and Stream objects to be initialized from memory initialized in other libraries
-     - [#23691](https://github.com/opencv/opencv/pull/23691) np.float16 support.
+    - [#23371](https://github.com/opencv/opencv/pull/23371) Added bindings to allow GpuMat and Stream objects to be initialized from memory initialized in other libraries
+    - [#23691](https://github.com/opencv/opencv/pull/23691) np.float16 support.
     - Python bindings for RotatedRect, CV_MAKETYPE, CV_8UC(n).
 
 - JavaScript bindings:
@@ -99,7 +99,6 @@ Summer update for OpenCV 4.x has been released.
 
     - [#21736](https://github.com/opencv/opencv/pull/21736) Android: don't require deprecated tools.
     - [#23768](https://github.com/opencv/opencv/pull/23768) iOS: Fixed framework build issues with CMake 3.25.1+.
-
 
 ### Contributors
 
