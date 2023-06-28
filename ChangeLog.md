@@ -24,8 +24,8 @@ Summer update for OpenCV 4.x has been released.
         - Fixes in nary element wise layer about broadcast:
             - [#23557](https://github.com/opencv/opencv/pull/23557) Fixes in CPU.
             - [#23528](https://github.com/opencv/opencv/pull/23528) and [#23560](https://github.com/opencv/opencv/pull/23560) Fixes in CUDA backend.
-        - Improved DNN speed on ARM and X86, replaced convolution with more efficient general-case and 3x3s1d1 Winograd-based convolution.
-        - Added full FP16 computation branch on ARMv8 platform, twice faster than before (FP16 Winograd is still pending).
+        - Improved DNN speed on ARM and X86 (>2x faster than 4.7.0 on Resnet-50, MobileNet etc.) by replacing convolution with more efficient general-case and 3x3s1d1 Winograd-based convolution.
+        - Added full FP16 computation branch on ARMv8 platform, 1.5x faster than FP32 (FP16 Winograd is still pending).
         - [#22957](https://github.com/opencv/opencv/pull/22957) Modern OpenVINO support.
 
 ![](images/gapi.png)
