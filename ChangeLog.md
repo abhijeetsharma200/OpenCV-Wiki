@@ -48,17 +48,19 @@ Summer update for OpenCV 4.x has been released.
     - [#23264](https://github.com/opencv/opencv/pull/23264) New QR code detection algorithm based  on ArUco code. 
     - [#23666](https://github.com/opencv/opencv/pull/23666) Bar code detector and decoder moved from Contrib to main repository.
     - [#23758](https://github.com/opencv/opencv/pull/23758) Introduced common API for all graphical codes  like bar codes and QR codes.
-    - Multiple bug fixes and improvements in QR code dection and decoding pipelines. 
+    - Multiple bug fixes and improvements in QR code detection and decoding pipelines:
+      - [#23275](https://github.com/opencv/opencv/pull/23275) Added QR_Code data flip support, flip and retry after first ECC failure.
     - Multiple bug fixes and improvements in ArUco based pipelines. Added legacy flag for pre-4.6.0 ChAruco board support.
 
 - Calibration module:
 
     - [#23078](https://github.com/opencv/opencv/pull/23078) USAC framework improvements.
     - [#23025](https://github.com/opencv/opencv/pull/23025) Fixed stddev estimation in  camera calibration pipelines.
+    - [#23305](https://github.com/opencv/opencv/pull/23305) Fixed incorrect pixel grid generation in icvGetRectangles that improves accuracy of getOptimalNewCameraMatrix, stereoRectify and some other calibration functions.
 
 - Image processing module:
 
-   - [#23210](https://github.com/opencv/opencv/pull/23210) Various fixes in line segments detector.
+   - [#23210](https://github.com/opencv/opencv/pull/23210), [#23388](https://github.com/opencv/opencv/pull/23388) Various fixes in line segments detector.
 
 - Feature2d module:
 
@@ -68,18 +70,26 @@ Summer update for OpenCV 4.x has been released.
 
     - [#13879](https://github.com/opencv/opencv/pull/13879) Added REDUCE_SUM2 option to `cv::reduce`.
     - [#22947](https://github.com/opencv/opencv/pull/22947) Introduced `cv::hasNonZero` function.
-    - Imroved RISC-V RVV vector extensions support.
-
-- Python Bindings:
-
-    - [#20370](https://github.com/opencv/opencv/pull/20370) Python typing stubs
-
+    - Improved RISC-V RVV vector extensions support.
 
 - Multimedia:
 
     - [#23237](https://github.com/opencv/opencv/pull/23237) Orbbec Femto Mega cameras support.
     - [#23172](https://github.com/opencv/opencv/pull/23172) HEVC/H265 support in VideoWriter with MS Media Foundation backend.
     -  Support VideoCapture CAP_PROP_AUTO_WB and CV_CAP_PROP_WHITE_BALANCE_BLUE_U for DShow backend.
+    - [#23460](https://github.com/opencv/opencv/pull/23460), [#23469](https://github.com/opencv/opencv/pull/23469) Fixes OBS Virtual Camera capture.
+    - [#23433](https://github.com/opencv/opencv/pull/23433) CV_32S encoding support with tiff 
+
+- Python Bindings:
+
+    - [#20370](https://github.com/opencv/opencv/pull/20370) Python typing stubs.
+    - [#23350](https://github.com/opencv/opencv/pull/23350) Fix reference counting errors in registerNewType.
+    - [#23399](https://github.com/opencv/opencv/pull/23399), [#23436](https://github.com/opencv/opencv/pull/23436) Fixed charuco and diamond boards detector  bindings.
+
+- Javascript bindings:
+
+    - [#23344](https://github.com/opencv/opencv/pull/23344) Added possibility for disabling inlining `wasm` in `opencv.js`
+    - Extended JS bindings for Aruco, Charuco, QR codes and bar codes.
 
 ### Contributors
 
