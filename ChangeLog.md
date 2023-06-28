@@ -20,7 +20,7 @@ Summer update for OpenCV 4.x has been released.
             - [#23319](https://github.com/opencv/opencv/pull/23319) support ONNX Split, Slice, Clip (Relu6) and Conv with auto_pad.
             - [#23401](https://github.com/opencv/opencv/pull/23401) support ONNX Sub, PRelu, ConvTranspose.
         - [#23613](https://github.com/opencv/opencv/pull/23613) Reduce Refactor for robustness and potential follow-up improvements.
-        - [#23491](https://github.com/opencv/opencv/pull/23491) Fixes for Segment Anything.
+        - [#23491](https://github.com/opencv/opencv/pull/23491) Fixes for Segment Anything Model by Meta.
         - Fixes in nary element wise layer about broadcast:
             - [#23557](https://github.com/opencv/opencv/pull/23557) Fixes in CPU.
             - [#23528](https://github.com/opencv/opencv/pull/23528) and [#23560](https://github.com/opencv/opencv/pull/23560) Fixes in CUDA backend.
@@ -80,6 +80,8 @@ Summer update for OpenCV 4.x has been released.
     - [#23300](https://github.com/opencv/opencv/pull/23300) Added support for VideoCapture CAP_PROP_AUTO_WB and CV_CAP_PROP_WHITE_BALANCE_BLUE_U for DShow backend.
     - [#23460](https://github.com/opencv/opencv/pull/23460), [#23469](https://github.com/opencv/opencv/pull/23469) Fixes OBS Virtual Camera capture.
     - [#23433](https://github.com/opencv/opencv/pull/23433) CV_32S encoding support with tiff.
+    - [#3486](https://github.com/opencv/opencv_contrib/pull/3486), [3453](https://github.com/opencv/opencv_contrib/pull/3453) More strict decoder checks and dynamic resolution support in cudacodec module (opencv_contrib).
+    - [#3485](https://github.com/opencv/opencv_contrib/pull/3485) Added basic VideoCapture properties support to cudacodec module (opencv_conrib).
 
 - Python Bindings:
 
@@ -99,6 +101,10 @@ Summer update for OpenCV 4.x has been released.
 
     - [#21736](https://github.com/opencv/opencv/pull/21736) Android: don't require deprecated tools.
     - [#23768](https://github.com/opencv/opencv/pull/23768) iOS: Fixed framework build issues with CMake 3.25.1+.
+
+- Other:
+
+    - Several critical issue fixes in wechat_qrcode module (opencv_contrib)
 
 ### Contributors
 
