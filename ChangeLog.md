@@ -14,7 +14,7 @@ Summer update for OpenCV 4.x has been released.
 
     - [#23161](https://github.com/opencv/opencv/pull/23161), [#23409](https://github.com/opencv/opencv/pull/23409) TFLite models support, including int8 quantized models.
     - [#23604](https://github.com/opencv/opencv/pull/23604) Enabled DNN module build without Protobuf dependency.
-    - Improved layers / supported more models:
+    - Improved layers => supported more models:
         - ONNX: [#23047](https://github.com/opencv/opencv/pull/23047) Layer normalization, [#23219](https://github.com/opencv/opencv/pull/23219) GELU and [#23655](https://github.com/opencv/opencv/pull/23655) QLinearSoftmax.
         - Fixes in CANN backend:
             - [#23319](https://github.com/opencv/opencv/pull/23319) support ONNX Split, Slice, Clip (Relu6) and Conv with auto_pad.
@@ -24,8 +24,8 @@ Summer update for OpenCV 4.x has been released.
         - Fixes in nary element wise layer about broadcast:
             - [#23557](https://github.com/opencv/opencv/pull/23557) Fixes in CPU.
             - [#23528](https://github.com/opencv/opencv/pull/23528) and [#23560](https://github.com/opencv/opencv/pull/23560) Fixes in CUDA backend.
-        - Improve DNN speed on ARM and X86, add Winograd branch for Convolution layer.
-        - Add full FP16 computation branch on ARMv8 platform, twice faster than before.
+        - Improved DNN speed on ARM and X86, replaced convolution with more efficient general-case and 3x3s1d1 Winograd-based convolution.
+        - Added full FP16 computation branch on ARMv8 platform, twice faster than before (FP16 Winograd is still pending).
         - [#22957](https://github.com/opencv/opencv/pull/22957) Modern OpenVINO support.
 
 ![](images/gapi.png)
@@ -59,7 +59,7 @@ Summer update for OpenCV 4.x has been released.
    - Keep inliers for linear remap with BORDER_TRANSPARENT #23754
    - [#22798](https://github.com/opencv/opencv/pull/22798) Fix distransform to work with large images.
 
-- Feature2d module:
+- Features2d module:
 
    - [#23124](https://github.com/opencv/opencv/pull/23124) SIFT accuracy improvements.
 
