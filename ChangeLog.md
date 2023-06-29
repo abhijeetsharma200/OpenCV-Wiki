@@ -26,6 +26,8 @@ Summer update for OpenCV 4.x has been released.
             - [#23528](https://github.com/opencv/opencv/pull/23528) and [#23560](https://github.com/opencv/opencv/pull/23560) Fixes in CUDA backend.
         - Further increased DNN speed on ARM and X86 by improving convolution, covering 1D and 3D cases, supporting convolution+element-wise op fusion.
         - Added full FP16 computation branch on ARMv8 platform, 1.5x faster than FP32 (FP16 Winograd is still pending).
+        - [#23349](https://github.com/opencv/opencv/pull/23349) Vulkan backend refactor for better performance and robustness. It runs 4X faster than before.
+        - [#22750](https://github.com/opencv/opencv/pull/22750) Added API `blobFromImageParam` to build network inputs with pre-processings.
         - [#22957](https://github.com/opencv/opencv/pull/22957) Modern OpenVINO support.
 
 ![](images/gapi.png)
