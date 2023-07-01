@@ -34,17 +34,44 @@ Summer update for OpenCV 4.x has been released.
 
 - G-API module:
 
-    - TBD
+  - Intel® OpenVINO™ inference backend:
+
+    - [#23668](/#23668) [#23786](/#23786) Streamlined preprocessing in OpenVINO Inference Engine (ie) API 1.0 backend. Note: this backend will be deprecated after OpenVINO removes the API 1.0 support in its subsequent releases.
+    - [#23796](/#23796) Aligned OpenVINO IE API 1.0 backend with the latest OpenVINO 2023.0 (as some features were removed there).
+    - [#23595](/#23595) Introduced a brand new OpenVINO API 2.0 backend.
+    - [#23799](/#23799) Implemented the required inference operations for the OpenVINO API 2.0 backend.
+
+  - Microsoft® ONNX Runtime inference backend:
+
+    - [#23597](https://github.com/opencv/opencv/pull/23597) Updated G-API ONNX RT backend to support ONNX RT version 1.14.1. Now it is the minimum version required to build this backend.
+
+  - Python bindings:
+
+    - [#23597](https://github.com/opencv/opencv/pull/23597) Exposed varions normalization options for ONNX RT backend in Python bindings.
+    - [#23597](https://github.com/opencv/opencv/pull/23597) Exposed Fluid kernels and kernel package manipulation functions (`combine()`) in Python.
+    - [#23597](https://github.com/opencv/opencv/pull/23597) Fixed issues in Stateful Python kernel state handling; also fixed various issues in Python tests.
+    - [#23843](/#23843) Fixed issue with opaque kernel output information handling which broke Python custom kernels.
+
+  - Samples:
+
+    - [#23766](/#23766) Introduced a new Segmentation demo with `desync()` to enable slow-running networks in the real-time.
+    - [#23211](https://github.com/opencv/opencv/pull/23211) Updated stats calculation in the G-API-based pipeline modelling tool.
+
+  - Other changes and fixes:
+
+    - [#22471](https://github.com/opencv/opencv/pull/22471) Fixed tolerance in Fluid resize tests to avoid issues on ARM.
+    - [#21797](/#21797) Fluid backend: extended Merge3 kernel with more supported data types.
+    - [#23448](/#23448) Fixed standalone mode compilation issues.
 
 - Objdetect module:
 
     - [#23020](https://github.com/opencv/opencv/pull/23020) FaceDetectorYN upgrade for better performance, accuracy and facial landmarks support.
-    - [#23264](https://github.com/opencv/opencv/pull/23264) New QR code detection algorithm based  on ArUco code. 
+    - [#23264](https://github.com/opencv/opencv/pull/23264) New QR code detection algorithm based  on ArUco code.
     - [#23666](https://github.com/opencv/opencv/pull/23666) Bar code detector and decoder moved from Contrib to main repository.
     - [#23758](https://github.com/opencv/opencv/pull/23758) Introduced common API for all graphical codes  like bar codes and QR codes.
     - [#23153](https://github.com/opencv/opencv/pull/23153) Added flag for legacy pre-4.6.0 ChAruco boards support.
     - Multiple bug fixes and improvements in QR code detection and decoding pipelines.
-    - Multiple bug fixes and improvements in ArUco based pipelines. 
+    - Multiple bug fixes and improvements in ArUco based pipelines.
 
 - Calibration module:
 
