@@ -36,10 +36,10 @@ Summer update for OpenCV 4.x has been released.
 
   - Intel® OpenVINO™ inference backend:
 
-    - [#23668](/#23668) [#23786](/#23786) Streamlined preprocessing in OpenVINO Inference Engine (ie) API 1.0 backend. Note: this backend will be deprecated after OpenVINO removes the API 1.0 support in its subsequent releases.
-    - [#23796](/#23796) Aligned OpenVINO IE API 1.0 backend with the latest OpenVINO 2023.0 (as some features were removed there).
-    - [#23595](/#23595) Introduced a brand new OpenVINO API 2.0 backend.
-    - [#23799](/#23799) Implemented the required inference operations for the OpenVINO API 2.0 backend.
+    - [#23668](https://github.com/opencv/opencv/pull/23668) [#23786](https://github.com/opencv/opencv/pull/23786) Streamlined preprocessing in OpenVINO Inference Engine (ie) API 1.0 backend. Note: this backend will be deprecated after OpenVINO removes the API 1.0 support in its subsequent releases.
+    - [#23796](https://github.com/opencv/opencv/pull/23796) Aligned OpenVINO IE API 1.0 backend with the latest OpenVINO 2023.0 (as some features were removed there).
+    - [#23595](https://github.com/opencv/opencv/pull/23595) Introduced a brand new OpenVINO API 2.0 backend.
+    - [#23799](https://github.com/opencv/opencv/pull/23799) Implemented the required inference operations for the OpenVINO API 2.0 backend.
 
   - Microsoft® ONNX Runtime inference backend:
 
@@ -50,18 +50,18 @@ Summer update for OpenCV 4.x has been released.
     - [#23597](https://github.com/opencv/opencv/pull/23597) Exposed varions normalization options for ONNX RT backend in Python bindings.
     - [#23597](https://github.com/opencv/opencv/pull/23597) Exposed Fluid kernels and kernel package manipulation functions (`combine()`) in Python.
     - [#23597](https://github.com/opencv/opencv/pull/23597) Fixed issues in Stateful Python kernel state handling; also fixed various issues in Python tests.
-    - [#23843](/#23843) Fixed issue with opaque kernel output information handling which broke Python custom kernels.
+    - [#23843](https://github.com/opencv/opencv/pull/23843) Fixed issue with opaque kernel output information handling which broke Python custom kernels.
 
   - Samples:
 
-    - [#23766](/#23766) Introduced a new Segmentation demo with `desync()` to enable slow-running networks in the real-time.
+    - [#23766](https://github.com/opencv/opencv/pull/23766) Introduced a new Segmentation demo with `desync()` to enable slow-running networks in the real-time.
     - [#23211](https://github.com/opencv/opencv/pull/23211) Updated stats calculation in the G-API-based pipeline modelling tool.
 
   - Other changes and fixes:
 
     - [#22471](https://github.com/opencv/opencv/pull/22471) Fixed tolerance in Fluid resize tests to avoid issues on ARM.
-    - [#21797](/#21797) Fluid backend: extended Merge3 kernel with more supported data types.
-    - [#23448](/#23448) Fixed standalone mode compilation issues.
+    - [#21797](https://github.com/opencv/opencv/pull/21797) Fluid backend: extended Merge3 kernel with more supported data types.
+    - [#23448](https://github.com/opencv/opencv/pull/23448) Fixed standalone mode compilation issues.
 
 - Objdetect module:
 
