@@ -63,6 +63,8 @@ Summer update for OpenCV 4.x has been released.
     - [#21797](https://github.com/opencv/opencv/pull/21797) Fluid backend: extended Merge3 kernel with more supported data types.
     - [#23448](https://github.com/opencv/opencv/pull/23448) Fixed standalone mode compilation issues.
 
+![](images/opencv_qr-code_small.png)
+
 - Objdetect module:
 
     - [#23020](https://github.com/opencv/opencv/pull/23020) FaceDetectorYN upgrade for better performance, accuracy and facial landmarks support.
