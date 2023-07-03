@@ -16,16 +16,16 @@ Please target Pull Requests (PR) to the right branches. Quick summary of the rul
 
 ### Which branch should I target my PR?
 
-Policy  |   5.x     |    4.x    |    3.4   |
--------- | --------- | --------- | -------- |
-Preserve API compatibility | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-Preserve ABI compatibility | :x: | :x::grey_exclamation: | :heavy_check_mark: |
-Change applicable only to this branch | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-Bugfix / minor fix | :point_right: | :point_right: | :heavy_check_mark: |
-Optimization | :point_right: | :point_right: | :heavy_check_mark: |
-Small feature | :point_right: | :heavy_check_mark: | :x: |
-Large feature | :heavy_check_mark: | :x: | :x: |
-Branch alias (do not use!) | next | master | - |
+Policy                                |   5.x              |    4.x                |
+------------------------------------- | ------------------ | --------------------- |
+Preserve API compatibility            | :heavy_check_mark: | :heavy_check_mark:    |
+Preserve ABI compatibility            | :x:                | :x::grey_exclamation: |
+Change applicable only to this branch | :heavy_check_mark: | :heavy_check_mark:    |
+Bugfix / minor fix                    | :point_right:      | :heavy_check_mark:    |
+Optimization                          | :point_right:      | :heavy_check_mark:    |
+Small feature                         | :point_right:      | :heavy_check_mark:    |
+Large feature                         | :heavy_check_mark: | :x:                   |
+Branch alias (do not use!)            | next               | master                |
 
 - :grey_exclamation: - avoid major breakages
 - :point_right: - rebase to previous branch if patch is applicable, it will be ported to other branches by the Core team in a week or two
@@ -51,27 +51,11 @@ This is the branch for [4.x](https://github.com/opencv/opencv/tree/4.x) releases
 * We will merge changes from _4.x_ into _5.x_ regularly (weekly/bi-weekly)
   There is no regular process for backporting patches from _5.x_ branch
 
-
-### 3.4
-
-This is the branch for [3.4.x](https://github.com/opencv/opencv/tree/3.4) releases.
-This release series is in the maintenance status. Releases with binary artifacts are not planned.
-
-* ABI compatibility must be preserved
-* Target this branch in case of these patches:
-  * bug fixes
-  * optimizations
-  * documentation improvements
-  * and other patches which are applicable for the _3.4_ branch
-* Improvements or features should be targeted to _4.x_ or _5.x_ branches
-* We will merge changes from _3.4_ into _4.x_ regularly (weekly/bi-weekly)
-  So if your pull request contains a bug fix and it is applicable to several branches, you should choose _3.4_ branch as base
-  There is no regular process for backporting patches from _4.x_, _5.x_ branches
-
-
 ### EOL branches
 
 EOL branches:
+- "3.4": this is the branch for [3.4.x](https://github.com/opencv/opencv/tree/3.4) releases. This release series is EOL in 2023. CI is turned off, so no more patches are accepted to 3.4 branch.
+
 - "2.4": this is the branch for [2.4.x](https://github.com/opencv/opencv/tree/2.4) releases. This release series is EOL in 2020. CI is turned off, so no more patches are accepted to 2.4 branch.
 
 
@@ -83,21 +67,21 @@ Merge to this branches is prohibited. Use 4.x / 5.x as target branches for your 
 
 
 Rebasing a pull request between branches
-----------------------------------------------
+----------------------------------------
 
 _If you can not do this by yourself, please ask maintainers for help._
 
-Example of rebasing from 4.x branch to 3.4 branch:
+Example of rebasing from 5.x branch to 4.x branch:
 * do not close the existing pull request
 * change the "base" branch of the pull request:
   * open PR on GitHub in your browser
   * press the "Edit" button near the pull request title
-  * choose "3.4" from the dropdown list
-* rebase your commits from 4.x onto 3.4:
+  * choose "4.x" from the dropdown list
+* rebase your commits from 5.x onto 4.x:
   * `git checkout <your-branch>`
   * (optional) create a backup branch: `git branch <your-branch>-backup`
   * `git remote update upstream` (assuming _upstream_ [is pointing](https://help.github.com/articles/configuring-a-remote-for-a-fork/) to the `opencv/opencv` GitHub repository)
-  * `git rebase -i --onto upstream/3.4 upstream/4.x`
+  * `git rebase -i --onto upstream/4.x upstream/5.x`
   * an editor will be opened. Please check the list of commits - there should be only your commits - save and exit
   * `git push --force origin <your-branch>` (assuming _origin_ [is pointing](https://help.github.com/articles/configuring-a-remote-for-a-fork/) to `<your-username>/opencv` forked GitHub repository)
 
