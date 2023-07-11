@@ -90,7 +90,7 @@ libgstreamer-plugins-base1.0-dev
 
 ### Procedure
 0. Setup environment variables to detect OpenVINO:
-> source /opt/intel/openvino/bin/setupvars.sh
+> source /opt/intel/openvino/setupvars.sh
 1. Copy OpenCV repository:
 > git clone --recurse-submodules https://github.com/opencv/opencv.git
 2. Compile and install OpenCV:
@@ -204,7 +204,7 @@ ffmpeg-devel
 
 ### Procedure
 0. Setup environment variables to detect OpenVINO:
-> source /opt/intel/openvino/bin/setupvars.sh
+> source /opt/intel/openvino/setupvars.sh
 1. Copy OpenCV repository:
 > git clone --recurse-submodules https://github.com/opencv/opencv.git
 2. Create build directory and enter into it:
@@ -414,7 +414,7 @@ set "PYTHONPATH=<OpenCV_INSTALL_DIR>\python;%PYTHONPATH%"
 
 ### Procedure
 0. Setup environment variables to detect OpenVINO:
-> source /opt/intel/openvino/bin/setupvars.sh
+> source /opt/intel/openvino/setupvars.sh
 1. Copy OpenCV repository:
 > git clone --recurse-submodules https://github.com/opencv/opencv.git
 2. Create build directory and enter into it:
