@@ -307,7 +307,7 @@ export PYTHONPATH="<OpenCV_INSTALL_DIR>/python${PYTHONPATH:+:$PYTHONPATH}"
 
 ### Procedure
 0. Setup environment variables to detect OpenVINO:
-> "C:\Program Files (x86)\IntelSWTools\openvino\bin\setupvars.bat"
+> "C:\Program Files (x86)\IntelSWTools\openvino\setupvars.bat"
 1. Copy OpenCV repository:
 > git clone --recurse-submodules https://github.com/opencv/opencv.git
 2. Create build directory and enter into it:
