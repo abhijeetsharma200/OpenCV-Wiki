@@ -286,8 +286,7 @@ More comprehensive set of compilation flags and additional dependencies were use
 
 Setup environment variables to detect Inference Engine:
 ```
-source /opt/intel/openvino/bin/setupvars.sh
-export ngraph_DIR=/opt/intel/openvino/deployment_tools/ngraph/cmake/
+source /opt/intel/openvino/setupvars.sh
 ```
 
 Build OpenCV with extra flags:
@@ -301,7 +300,7 @@ cmake \
 
 Setup environment variables to detect Inference Engine:
 ```
-"C:\Program Files (x86)\IntelSWTools\openvino\bin\setupvars.bat"
+"C:\Program Files (x86)\IntelSWTools\openvino\setupvars.bat"
 ```
 
 Build OpenCV with extra flags:
