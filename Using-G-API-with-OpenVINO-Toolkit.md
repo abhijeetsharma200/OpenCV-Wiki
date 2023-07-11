@@ -3,7 +3,7 @@
 * Get `openvino` from https://docs.openvinotoolkit.org/
 * Configure enviroment:
 ```bash
-source path-to-unpacked-openvino/bin/setupvars.sh
+source path-to-unpacked-openvino/setupvars.sh
 ```
 * Build G-API with OpenVINO support:
 ```bash
