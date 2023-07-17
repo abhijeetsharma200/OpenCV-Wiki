@@ -39,6 +39,11 @@ Note: This page is currently brainstormed. The idea of this page is to collect i
 
 - Dmitry - Object tracking functionality still isn't there by default
 
+### Debugging and profiling
+
+- Dmitry - Debugging accuracy in-pipeline. People often ask what's the way to debug accuracy issues with G-API, esp. if it happens inside the pipeline. As we gained more experience with it recently, 5.0 should be the right time to summarize the debugging story.
+- Dmitry - Pipeline performance. Same as above, a frequently asked feature. What we have right now is only ITT which may be not the most user-friendly option (in terms of its UX as well as the data provided in there).
+
 ### Documentation
 
 - Doxygen documentation refined, redesigned (for new goals)
@@ -49,6 +54,10 @@ Note: This page is currently brainstormed. The idea of this page is to collect i
 ## What we'd like to fix
 
 - Tolik - Need to fix Python bindings for Python 3.7+ - fails on Windows. Applies to OpenCV in general, but we're affected most.
+
+## What we'd like to remove
+
+- Dmitry - async API, as it is just a wrapper over regular synchronous API, not actively used, but causes issues time to time. Instead, Streaming mode can be extended to support queue-like push-pop interface which will be asynchronous in its sense.
 
 ## Beyond 5.0
 
