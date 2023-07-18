@@ -42,6 +42,18 @@ Note: This page is currently brainstormed. The idea of this page is to collect i
 ### Debugging and profiling
 
 - Dmitry - Debugging accuracy in-pipeline. People often ask what's the way to debug accuracy issues with G-API, esp. if it happens inside the pipeline. As we gained more experience with it recently, 5.0 should be the right time to summarize the debugging story.
+
+  - Tolik - practical example. What we did is we dumped binary data from operation inputs/outputs. Then visualize with Python & compare with reference. What did is actually added extra outputs to graph. Thinks of assigning names to data objects & querying data afterwards. Could be done atop of the existing API. More details:
+    - We've had a big pipeline, tried to match its result against a reference. Hypotheses:
+      - What if our source produces slightly different data? (a different decode path, etc).
+        - Fed pipeline with a custom source producing reference raw data (taken from the original pipeline).
+      - What if our infers are configured differently?
+        - What if we pass "2nd" infer with the reference data, not with ours? Output mismatched with the reference input, found that there was an issue with infer configuration. E.g., a wrong preprocessing combination?
+
+  - Ruslan - we should separate island-level data from backend-level data.
+  - Ruslan - dump data required to produce a certain output (G-API can figure dependencies automatically).
+  - Anatoliy - can we write a pass with readable names? Can run this pass & assign names which will be persistent for further queries. 
+
 - Dmitry - Pipeline performance. Same as above, a frequently asked feature. What we have right now is only ITT which may be not the most user-friendly option (in terms of its UX as well as the data provided in there).
 
 ### Documentation
