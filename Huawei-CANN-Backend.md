@@ -1,5 +1,7 @@
 ## 📢 News
 
+- [Jun. 29, 2023] 🎉 OpenCV 4.8.0 is released along with patches for CANN backend.
+- [Mar. 24, 2023] 💡 Support Sub, PRelu, ConvTranspose. Add one-time warning when backend is switched back to CPU if CANN is not available. This patch will be available in 4.8.0 release. [PR#23401](https://github.com/opencv/opencv/pull/23401).
 - [Mar. 14, 2023] 🐛 Fixed some bugs and added some new features to support most of the models in opencv_zoo. **This patch will be released along with 4.8.0**. Build from source with latest code to experience latest features. [PR#23319](https://github.com/opencv/opencv/pull/23319).
 - [Dec. 28, 2022] 🎉 We released OpenCV 4.7.0 with CANN backend! [PR#22634](https://github.com/opencv/opencv/pull/22634).
 
