@@ -34,6 +34,7 @@ Note: This page is currently brainstormed. The idea of this page is to collect i
 - Dmitry - OpenVINO models as shared pool (in graph / for multiple graphs)
   - Dmitry - should be controllable (an option), as it may alter the "multi-context" cases.
   - Tolik - the input data precision may cause a new instance to be initiated.
+- Tolik - Support modern iterative topologies (infer using its own results from past iteration). Like Stable Diffusion. May be implemented as "high order constructs" (see above).
 
 ### Operations
 
