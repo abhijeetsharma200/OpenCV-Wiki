@@ -6,14 +6,14 @@ Please put the below lines to the PR description to validate that this mode is n
 
 ```
 force_builders=Custom,Custom Win,Custom Mac
-build_gapi_standalone:Linux x64=ade-0.1.1f
-build_gapi_standalone:Win64=ade-0.1.1f
-build_gapi_standalone:Mac=ade-0.1.1f
-build_gapi_standalone:Linux x64 Debug=ade-0.1.1f
+build_gapi_standalone:Linux x64=ade-0.1.2b
+build_gapi_standalone:Win64=ade-0.1.2b
+build_gapi_standalone:Mac=ade-0.1.2b
+build_gapi_standalone:Linux x64 Debug=ade-0.1.2b
 
 Xbuild_image:Custom=centos:7
 Xbuildworker:Custom=linux-1
-build_gapi_standalone:Custom=ade-0.1.1f
+build_gapi_standalone:Custom=ade-0.1.2b
 
 build_image:Custom=ubuntu-openvino-2021.4.1:20.04
 build_image:Custom Win=openvino-2021.4.1
