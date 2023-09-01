@@ -1,4 +1,4 @@
-**Notes**: Tengine backend is not available any more since 4.9.0.
+**Notes**: Tengine backend is not available any more since 4.9.0. See https://github.com/opencv/opencv/pull/24122 for more details.
 
 # Introduction/Configuration
 
