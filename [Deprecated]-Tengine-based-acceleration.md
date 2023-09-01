@@ -1,3 +1,5 @@
+**Notes**: Tengine backend is not available any more since 4.9.0.
+
 # Introduction/Configuration
 
 Tengine (https://github.com/OAID/Tengine) is the efficient Deep Learning inference library for ARM. Since OpenCV v3.4.10 and OpenCV v4.3.0 it's possible to compile OpenCV with Tengine support and that results in a significant performance improvements on ARM:
