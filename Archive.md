@@ -62,4 +62,6 @@ Previous idea lists:
 
 ##### Others
 
+Tengine based acceleration: [[\[Deprecated\]-Tengine-based-acceleration]]
+
 New functionality discussion: [[RGBD]]
