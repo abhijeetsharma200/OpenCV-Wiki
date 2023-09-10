@@ -1,21 +1,32 @@
 Note: This page is currently brainstormed. The idea of this page is to collect ideas and issues to address to refine G-API for the OpenCV 5.0 release.
 
+Note(2): This page is now a list of linked features or discussions. Please follow the link for details.
+
 ## How we see G-API in 5.0
 
-- Dmitry - Python becomes interface #️⃣1️⃣
-  - **pip-installable**, with dynamically loadable options when available (e.g., onnx runtime, gstreamer, openvino)
-  - Well-documented (GSoC on tutorials in ongoing)
-  - Tolik - Extensible in Python, including for Sources (e.g. to extend on audio/speech scenarios)
-  - Tolik - Expose operation functions (API)
-  - Tolik - Expose Operations as types - to make them implementable in Python.
-    - Examples: use PIL resize as part of pipeline
-  - Tolik - Refine API, how easy it is to use?
-    - Example: GInferInputs versus a Python dict
+### Core functionality
+
 - Tolik - High-order constructs (conditions and loops)
   - Can retire infer-list and infer-2 if implemented well. Also can work faster with more precise pipelining
 - Tolik - TBB executor. Useful for latency case
 - Dmitry - Streaming executor
   - Utilizes lots of threads, can be redesigned to use a limited thread pool
+
+### Python
+
+Python should become a first-class interface to G-API:
+- 🔲 Full-featured [**pip package**](https://github.com/orgs/g-api-org/discussions/4), with dynamically loadable options when available (e.g., onnx runtime, gstreamer, openvino).
+- 🔲 Well-documented:
+  - ✅ [GSoC'23](https://github.com/opencv/opencv/wiki/GSoC_2023#idea-g-api-a-complete-python-tutorial) project on G-API Jupyter Notebooks is [now complete](https://github.com/g-api-org/tutorials-py/pull/1).
+  - 🔲 Need to wrap up the repo in 5.0 timeframe and import notebooks into OpenCV Documentation.
+- 🔲 Extensible:
+  - 🔲 [Expose Operations as types](https://github.com/orgs/g-api-org/discussions/5).
+  - 🔲 [Expose Operation wrappers](https://github.com/orgs/g-api-org/discussions/6).
+  - ☑️ Allow new input sources in Python, for a better Python inter-operability:
+    - ❌ [GSoC'23](https://github.com/opencv/opencv/wiki/GSoC_2023#idea-g-api-implement-custom-stream-sources-in-python) wasn't success;
+    - ☑️ Can be substituted with [`QueueInput`](https://github.com/opencv/opencv/pull/24178) interface for data and use-case of any type, if wrapped in Python.
+- 🔲 Refined:
+  - 🔲 [Inference API](https://github.com/orgs/g-api-org/discussions/7)
 
 ## What we miss
 
