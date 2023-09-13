@@ -1,13 +1,14 @@
 ## 📢 News
 
+- [Jul. 27, 2023] 💡 Support all Huawei NPU models and building with new CANN versions. [PR#23936](https://github.com/opencv/opencv/pull/23936)
 - [Jun. 29, 2023] 🎉 OpenCV 4.8.0 is released along with patches for CANN backend.
-- [Mar. 24, 2023] 💡 Support Sub, PRelu, ConvTranspose. Add one-time warning when backend is switched back to CPU if CANN is not available. This patch will be available in 4.8.0 release. [PR#23401](https://github.com/opencv/opencv/pull/23401).
-- [Mar. 14, 2023] 🐛 Fixed some bugs and added some new features to support most of the models in opencv_zoo. **This patch will be released along with 4.8.0**. Build from source with latest code to experience latest features. [PR#23319](https://github.com/opencv/opencv/pull/23319).
-- [Dec. 28, 2022] 🎉 We released OpenCV 4.7.0 with CANN backend! [PR#22634](https://github.com/opencv/opencv/pull/22634).
+- [Mar. 24, 2023] 💡 Support Sub, PRelu, ConvTranspose. Add one-time warning when backend is switched back to CPU if CANN is not available. This patch will be available in 4.8.0 release. [PR#23401](https://github.com/opencv/opencv/pull/23401)
+- [Mar. 14, 2023] 🐛 Fixed some bugs and added some new features to support most of the models in opencv_zoo. **This patch will be released along with 4.8.0**. Build from source with latest code to experience latest features. [PR#23319](https://github.com/opencv/opencv/pull/23319)
+- [Dec. 28, 2022] 🎉 We released OpenCV 4.7.0 with CANN backend! [PR#22634](https://github.com/opencv/opencv/pull/22634)
 
 ---
 
-CANN (Compute Architecture of Neural Networks), developped by Huawei, is a heterogeneous computing architecture for AI. With CANN backend in OpenCV DNN, you can run your AI models on the Ascend NPU. Learn more about Ascend NPU and the CANN library from [en_doc](https://www.hiascend.com/document), [cn_doc](https://www.hiascend.com/zh/document). ***Please note that OpenCV DNN supports CANN backend on Ascend 310 for now***.
+CANN (Compute Architecture of Neural Networks), developped by Huawei, is a heterogeneous computing architecture for AI. With CANN backend in OpenCV DNN, you can run your AI models on the Ascend NPU. Learn more about Ascend NPU and the CANN library from [en_doc](https://www.hiascend.com/document), [cn_doc](https://www.hiascend.com/zh/document). With the CANN backend we introduce in OpenCV dnn, you can easily run your deep learning models on Ascend NPU.
 
 To use OpenCV DNN with CANN backend, read the following sections:
 
