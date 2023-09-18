@@ -9,7 +9,7 @@
     - [[TensorFlow Object Detection API|TensorFlow Object Detection API]]
     - [[Intel OpenVINO backend|Intel OpenVINO backend]]
     - [[TIM-VX Backend On NPU|TIM-VX-Backend-For-Running-OpenCV-On-NPU]]
-    - [[Huawei CANN backend|Huawei-CANN-Backend]]
+    - [[Huawei CANN backend on NPU|Huawei-CANN-Backend]]
 - [[Running OpenCV on Various Platforms|OpenCV-Platforms]]
     - [[Running OpenCV on RISC-V|OpenCV-RISC-V]]
 - [[OpenCV 4|Opencv4]]
