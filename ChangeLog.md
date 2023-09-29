@@ -1,6 +1,20 @@
 OpenCV Change Logs
 ==================
 
+version:4.8.1
+-------------
+
+
+*September, 2023*
+
+Security release.
+
+Changes:
+
+- WebP security update for [CVE-2023-4863](https://nvd.nist.gov/vuln/detail/CVE-2023-4863)
+- Depthwise convolution 5x5 performance regression fix (#23941).
+
+
 version:4.8.0
 -------------
 
