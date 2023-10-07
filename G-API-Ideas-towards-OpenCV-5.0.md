@@ -81,6 +81,7 @@ Python should become a first-class interface to G-API:
 - Tolik - Need to fix Python bindings for Python 3.7+ - fails on Windows. Applies to OpenCV in general, but we're affected most.
 - Dmitry - Test time. Unit tests for G-API run longer than for all other modules (e.g. 5m against 1-2m on the Github Actions Ubuntu machines). Need to revise test scope and tested configurations.
 - Dmitry - Performance tests. Need to be revised and restructured for a better reporting.
+- Dmitry - exception handling: the non-template `util::throw_error(std::runtime_error(..))` should go!
 
 ## What we'd like to remove
 
