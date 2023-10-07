@@ -86,6 +86,7 @@ Python should become a first-class interface to G-API:
 ## What we'd like to remove
 
 - Dmitry - async API, as it is just a wrapper over regular synchronous API, not actively used, but causes issues time to time. Instead, Streaming mode can be extended to support queue-like push-pop interface which will be asynchronous in its sense.
+- Dmitry - PlaidML backend - no longer needed.
 
 ## Beyond 5.0
 
