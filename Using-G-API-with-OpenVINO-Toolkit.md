@@ -26,6 +26,7 @@ $ export OPENCV_DNN_TEST_DATA_PATH=/path/to/opencv_extra/testdata/dnn
 ```
 
 Note that the `downloader.py` script has the following dependencies:
+
 ```
 pyyaml
 requests
