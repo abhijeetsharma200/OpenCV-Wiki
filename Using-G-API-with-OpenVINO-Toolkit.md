@@ -24,3 +24,9 @@ $ ./downloader.py -o /path/to/opencv_extra/testdata/dnn/omz_intel_models/ \
     --name age-gender-recognition-retail-0013
 $ export OPENCV_DNN_TEST_DATA_PATH=/path/to/opencv_extra/testdata/dnn
 ```
+
+Note that the `downloader.py` script has the following dependencies:
+```
+pyyaml
+requests
+```
