@@ -1,3 +1,5 @@
+[![OCV Nightly RISC-V (RVV 0.7.1)](https://github.com/opencv/ci-gha-workflow/actions/workflows/OCV-Nightly-RISCV.yaml/badge.svg?event=schedule)](https://github.com/opencv/ci-gha-workflow/actions/workflows/OCV-Nightly-RISCV.yaml)
+
 # Running OpenCV on RISC-V CPUs
 
 [RISC-V](https://riscv.org) is the relatively new platform with growing popularity, especially in the IoT market. In 2020 OpenCV has got support for this platform.
