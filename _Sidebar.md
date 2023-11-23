@@ -12,6 +12,7 @@
     - [[Huawei CANN backend on NPU|Huawei-CANN-Backend]]
 - [[Running OpenCV on Various Platforms|OpenCV-Platforms]]
     - [[Running OpenCV on RISC-V|OpenCV-RISC-V]]
+    - [[Building custom OpenCV for Android Development|OpenCV-Android-SDK]]
 - [[OpenCV 4|Opencv4]]
     - [[Graph API (G-API)|Graph-API]]
       - [[G-API Python bindings|G-API-Python-Bindings]]
