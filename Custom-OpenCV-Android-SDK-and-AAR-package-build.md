@@ -89,15 +89,15 @@ class ABI:
 ```
 `cmake_vars` parameter allows to substitute custom CMake arguments as a dictionary. Several examples:
 
-Disable G-API and DNN module for armv8-a architecture:
+- Disable G-API and DNN module for armv8-a architecture:
 ```
 ABI("3", "arm64-v8a",   None, 21, cmake_vars=dict('BUILD_opencv_gapi': 'OFF', 'BUILD_opencv_dnn': 'OFF'))
 ```
-Force particular tools version for OpenCV build:
+- Force particular tools version for OpenCV build:
 ```
 ABI("3", "arm64-v8a",   None, 21, cmake_vars=dict('ANDROID_GRADLE_PLUGIN_VERSION': '7.3.1', 'GRADLE_VERSION': '7.5.1', 'KOTLIN_PLUGIN_VERSION': '1.5.20'))
 ```
-Point to external libraries location for CMake find_package procedure:
+- Point to external libraries location for CMake find_package procedure:
 ```
 ABI("3", "arm64-v8a",   None, 21, cmake_vars=dict('libavif_DIR': '<path to libavif library cross-compiled for Android arm-v8a>')
 ```
