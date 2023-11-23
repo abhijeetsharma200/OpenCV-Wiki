@@ -7,7 +7,7 @@ How to run tests on the connected Android device using ADB
 
 ## Prerequisites:
 - Ubuntu 20.04+
-- [Android Studio] (https://developer.android.com/studio)
+- [Android Studio](https://developer.android.com/studio)
 - OpenJDK 17: `sudo apt install openjdk-17-jdk openjdk-17-jre`
 - CMake
 - Ninja build tool: `sudo apt install ninja-build`
