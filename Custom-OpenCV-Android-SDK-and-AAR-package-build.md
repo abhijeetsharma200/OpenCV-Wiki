@@ -3,7 +3,6 @@ In this article we’ll cover the following topics:
 * How to cross-compile OpenCV for Android under Ubuntu
 * How to use contrib modules in the Android build
 * How to run sample applications on a device using Android Studio
-* How to run tests on the connected Android device using ADB
 
 ## Prerequisites:
 - Ubuntu 20.04+
