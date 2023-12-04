@@ -1,6 +1,6 @@
-h2. Building OpenCV4Android from trunk
-
 **The page content is obsolete!** Use [[Custom OpenCV Android SDK and AAR package build|Custom-OpenCV-Android-SDK-and-AAR-package-build]]
+
+h2. Building OpenCV4Android from trunk
 
 The new android build is based on android-cmake project originally developed by Ethan Rublee.
 You can find the latest version of his project at http://code.google.com/p/android-cmake/
