@@ -86,7 +86,7 @@ Links:
 
 ## Debugging RISC-V applications
 
-Usually most convenient way is to debug user application remotely, because either target system do not have a debugger, or the one it has in packages does not match the compiler used for build (e.g. does not support RVV). Remote debugging process with GDB is ass follows:
+Usually most convenient way is to debug user application remotely, because either target system do not have a debugger, or the one it has in packages does not match the compiler used for build (e.g. does not support RVV). Remote debugging process with GDB is as follows:
 1. Build your application with debugging information enabled, use `-g -Og` compiler options or `-DCMAKE_BUILD_TYPE=Debug` cmake option in case of OpenCV
 2. On remote machine run your application with the gdbserver (port can be chosen arbitrarily, e.g. 1234): 
    ```.sh
