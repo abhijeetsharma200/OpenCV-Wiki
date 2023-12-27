@@ -1,6 +1,53 @@
 OpenCV Change Logs
 ==================
 
+version:4.9.0
+-------------
+
+*December, 2023*
+
+![](images/dnn.png)
+- DNN module
+ 
+    - (link TBD) Better support for transformer models and accelerated attention
+    - (link and more details TBD) The first release of model zoo
+    - (link TBD) Einsum and other layers have been added/extended
+    - ...
+
+![](images/gapi.png)
+
+- G-API module:
+
+  - TBD
+
+![](images/opencv_qr-code_small.png)
+
+- Objdetect module:
+
+    - TBD
+
+- Calibration module:
+
+    - TBD
+
+- Python Bindings:
+
+    - TBD
+
+- Other:
+
+    - TBD
+
+### Contributors
+
+<details>
+<summary>opencv (TBD contributors)</summary>
+
+```
+git shortlog --no-merges -ns 4.8.1..4.9.0
+    ...
+```
+
 version:4.8.1
 -------------
 
