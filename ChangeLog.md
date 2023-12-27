@@ -48,6 +48,8 @@ git shortlog --no-merges -ns 4.8.1..4.9.0
     ...
 ```
 
+</details>
+
 version:4.8.1
 -------------
 
