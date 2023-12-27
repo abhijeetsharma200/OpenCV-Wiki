@@ -7,12 +7,18 @@ version:4.9.0
 *December, 2023*
 
 ![](images/dnn.png)
-- DNN module
- 
-    - (link TBD) Better support for transformer models and accelerated attention
-    - (link and more details TBD) The first release of model zoo
-    - (link TBD) Einsum and other layers have been added/extended
-    - ...
+- DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2023-06-25..2023-12-28+):
+    - Experimental transformers support
+    - [#24476](https://github.com/opencv/opencv/pull/24476) ONNX attention layer support
+    - [#24037](https://github.com/opencv/opencv/pull/24037) ONNX Einsum layer support
+    - [#23987](https://github.com/opencv/opencv/pull/23987) OpenVINO backend for INT8 models
+    - [#24092](https://github.com/opencv/opencv/pull/24092) ONNX Gather Elements layer
+    - [#24378](https://github.com/opencv/opencv/pull/24378) ONNX InstanceNorm layer
+    - [#24463](https://github.com/opencv/opencv/pull/24463) [#24577](https://github.com/opencv/opencv/pull/24577) [#24483](https://github.com/opencv/opencv/pull/24483) Improved DNN graph fusion with shared nodes and commutative operations
+    - [#24694](https://github.com/opencv/opencv/pull/24694) [#24509](https://github.com/opencv/opencv/pull/24509) New fastGEMM implementation and several layers on top of it.
+    - [#23654](https://github.com/opencv/opencv/pull/23654) Winograd fp16 optimizations on ARM
+    - Tests and multiple fixes for Yolo family models support
+    - New layers support and bug fixes in CUDA backend: GEMM, Gelu, Add
 
 ![](images/gapi.png)
 
@@ -24,7 +30,11 @@ version:4.9.0
 
 - Objdetect module:
 
-    - TBD
+    - [#24364](https://github.com/opencv/opencv/pull/24364) Bug fixes in QR code encoder version estimation
+    - [#24355](https://github.com/opencv/opencv/pull/24355) More accurate Aruco marker corner refinement with dynamic window
+    - [#24479](https://github.com/opencv/opencv/pull/24479) Fixed contour filtering in ArUco
+    - [#24598](https://github.com/opencv/opencv/pull/24598) QR code detection sample for Android
+    - Multiple local bug fixes and documentation update for Aruco makers, Charuco boards and QR codes.
 
 - Calibration module:
 
