@@ -47,6 +47,7 @@ version:4.9.0
 - Other:
 
     - TBD
+    - OpenCV Summer of Code: semi-automated refactoring across [multiple pull requests](https://github.com/opencv/opencv/pulls?q=is%3Apr+author%3Ahanliutong+milestone%3A4.9.0) by HAN Liutong made our CPU-optimized code compatible with SIMD with variable vector length (RISC-V RVV)
 
 ### Contributors
 
