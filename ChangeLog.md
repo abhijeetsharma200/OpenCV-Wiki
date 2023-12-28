@@ -6,7 +6,9 @@ version:4.9.0
 
 *December, 2023*
 
-- Core Module
+- Core Module:
+
+  TBD
 
 ![](images/dnn.png)
 - DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2023-06-25..2023-12-28+):
@@ -48,7 +50,6 @@ version:4.9.0
     - [#24035](https://github.com/opencv/opencv/pull/24035) Fixed stereoRectify image boundaries
     - [#24211](https://github.com/opencv/opencv/pull/24211) Fixed "use after free" issue in essential_solver.cpp
 
-
 - Python Bindings:
 
     - Added type stub generation for missed types and manually wrapped types.
@@ -61,6 +62,10 @@ version:4.9.0
     - New Android Archive Package (AAR) distrubuted with [Maven Central](https://central.sonatype.com/artifact/org.opencv/opencv/overview)
     - New Android samples: QR code detector, video IO sample. DNN and Face Detector samples refresh.
     - Switch to Gradle 7.6.3, modern Android tools.
+
+- Platforms Support:
+
+    - [#23021](https://github.com/opencv/opencv/pull/23021) Experimental CUDA support as first class language in CMake
 
 - Other:
 
