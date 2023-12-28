@@ -6,6 +6,8 @@ version:4.9.0
 
 *December, 2023*
 
+- Core Module
+
 ![](images/dnn.png)
 - DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2023-06-25..2023-12-28+):
     - Experimental transformers support
@@ -38,11 +40,27 @@ version:4.9.0
 
 - Calibration module:
 
-    - TBD
+    - Multiple fixes and improvements chess board calibration rig detector.
+    - [#23025](https://github.com/opencv/opencv/pull/23025) calibrateCamera throws exception, if calibration system is underconstrained.
+    - [#24482](https://github.com/opencv/opencv/issues/24482) Fixed bug in findEssentialMat with USAC
+    - [#24527](https://github.com/opencv/opencv/pull/24527) Fixed out-of-image access in `cv::cornerSubPix`
+    - [#23607](https://github.com/opencv/opencv/pull/23607) Fixed crash in ap3p 
+    - [#24035](https://github.com/opencv/opencv/pull/24035) Fixed stereoRectify image boundaries
+    - [#24211](https://github.com/opencv/opencv/pull/24211) Fixed "use after free" issue in essential_solver.cpp
+
 
 - Python Bindings:
 
-    - TBD
+    - Added type stub generation for missed types and manually wrapped types.
+    - [#24026](https://github.com/opencv/opencv/pull/24026) Added read-only flag handling for Numpy arrays.
+    - [#24028](https://github.com/opencv/opencv/pull/24028) Fixed exception handling and bindings for in module.
+    - [#23958](https://github.com/opencv/opencv/pull/23958) Improved error messages in Numpy array type handling.
+    - [#24468](https://github.com/opencv/opencv/pull/24468) Fixed constructors documentation in Python.
+
+- Android:
+    - New Android Archive Package (AAR) distrubuted with [Maven Central](https://central.sonatype.com/artifact/org.opencv/opencv/overview)
+    - New Android samples: QR code detector, video IO sample. DNN and Face Detector samples refresh.
+    - Switch to Gradle 7.6.3, modern Android tools.
 
 - Other:
 
