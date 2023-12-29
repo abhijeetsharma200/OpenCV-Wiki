@@ -8,21 +8,24 @@ version:4.9.0
 
 - Core Module:
 
-  TBD
+    - [#23965](https://github.com/opencv/opencv/pull/23965) added `cv::broadcast`
 
 ![](images/dnn.png)
 - DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2023-06-25..2023-12-28+):
     - Experimental transformers support
-    - [#24476](https://github.com/opencv/opencv/pull/24476) ONNX attention layer support
+    - [#24476](https://github.com/opencv/opencv/pull/24476) ONNX Attention layer support
     - [#24037](https://github.com/opencv/opencv/pull/24037) ONNX Einsum layer support
     - [#23987](https://github.com/opencv/opencv/pull/23987) OpenVINO backend for INT8 models
     - [#24092](https://github.com/opencv/opencv/pull/24092) ONNX Gather Elements layer
     - [#24378](https://github.com/opencv/opencv/pull/24378) ONNX InstanceNorm layer
+    - [#24295](https://github.com/opencv/opencv/pull/24295) better support of ONNX Expand layer with `cv::broadcast`
     - [#24463](https://github.com/opencv/opencv/pull/24463) [#24577](https://github.com/opencv/opencv/pull/24577) [#24483](https://github.com/opencv/opencv/pull/24483) Improved DNN graph fusion with shared nodes and commutative operations
-    - [#24694](https://github.com/opencv/opencv/pull/24694) [#24509](https://github.com/opencv/opencv/pull/24509) New fastGEMM implementation and several layers on top of it.
+    - [#23897](https://github.com/opencv/opencv/pull/23897) [#24694](https://github.com/opencv/opencv/pull/24694) [#24509](https://github.com/opencv/opencv/pull/24509) New fastGEMM implementation and several layers on top of it
     - [#23654](https://github.com/opencv/opencv/pull/23654) Winograd fp16 optimizations on ARM
     - Tests and multiple fixes for Yolo family models support
     - New layers support and bug fixes in CUDA backend: GEMM, Gelu, Add
+    - [#24462](https://github.com/opencv/opencv/pull/24462) CANN backend: bug fix, support HardSwish, LayerNormalization and InstanceNormalization
+    - [#24552](https://github.com/opencv/opencv/pull/24552) LayerNormalization: support OpenVINO, OpenCL and CUDA backend.
 
 ![](images/gapi.png)
 
@@ -39,6 +42,10 @@ version:4.9.0
     - [#24479](https://github.com/opencv/opencv/pull/24479) Fixed contour filtering in ArUco
     - [#24598](https://github.com/opencv/opencv/pull/24598) QR code detection sample for Android
     - Multiple local bug fixes and documentation update for Aruco makers, Charuco boards and QR codes.
+
+- Video:
+
+    - [#24201](https://github.com/opencv/opencv/pull/24201) Google Summer of Code: added a new object tracking API `TrackerVit` for a vision transformer-based [VitTrack](https://github.com/opencv/opencv_zoo/tree/main/models/object_tracking_vittrack). This work is done by LIU Pengyu.
 
 - Calibration module:
 
