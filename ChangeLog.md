@@ -13,6 +13,7 @@ New Year's update for OpenCV 4.x has been released. The release also includes [O
     - [#23965](https://github.com/opencv/opencv/pull/23965) added `cv::broadcast`
     - [#24163](https://github.com/opencv/opencv/issues/24163) Fixed several rounding issues on ARM platform
     - [#24420](https://github.com/opencv/opencv/pull/24420) added detection & dispatching of some modern NEON instructions (NEON_FP16, NEON_BF16)
+    - [#23929](https://github.com/opencv/opencv/pull/23929) added optimization for LoongArch 128-bit vector, detection & dispatching of LoongArch
 
 ![](images/dnn.png)
 - DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2023-06-25..2023-12-28+):
