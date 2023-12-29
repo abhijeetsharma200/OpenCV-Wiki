@@ -6,9 +6,13 @@ version:4.9.0
 
 *December, 2023*
 
+New Year's update for OpenCV 4.x has been released. The release also includes [OpenCV Model Zoo](https://github.com/opencv/opencv_zoo/tree/4.9.0).
+
 - Core Module:
 
     - [#23965](https://github.com/opencv/opencv/pull/23965) added `cv::broadcast`
+    - [#24163](https://github.com/opencv/opencv/issues/24163) Fixed several rounding issues on ARM platform
+    - [#24420](https://github.com/opencv/opencv/pull/24420) added detection & dispatching of some modern NEON instructions (NEON_FP16, NEON_BF16)
 
 ![](images/dnn.png)
 - DNN module [patches](https://github.com/opencv/opencv/pulls?q=is%3Apr+label%3A%22category%3A+dnn%22+merged%3A2023-06-25..2023-12-28+):
@@ -37,6 +41,7 @@ version:4.9.0
 
 - Objdetect module:
 
+    - [#24299](https://github.com/opencv/opencv/pull/24299) Implemented own QR code decoder as replacement for QUIRC library
     - [#24364](https://github.com/opencv/opencv/pull/24364) Bug fixes in QR code encoder version estimation
     - [#24355](https://github.com/opencv/opencv/pull/24355) More accurate Aruco marker corner refinement with dynamic window
     - [#24479](https://github.com/opencv/opencv/pull/24479) Fixed contour filtering in ArUco
@@ -46,6 +51,11 @@ version:4.9.0
 - Video:
 
     - [#24201](https://github.com/opencv/opencv/pull/24201) Google Summer of Code: added a new object tracking API `TrackerVit` for a vision transformer-based [VitTrack](https://github.com/opencv/opencv_zoo/tree/main/models/object_tracking_vittrack). This work is done by LIU Pengyu.
+
+- VideoIO:
+
+    - [#24363](https://github.com/opencv/opencv/pull/24363) videoio: Add raw encoded video stream encapsulation to cv::VideoWriter with CAP_FFMPEG
+    - [#24243](https://github.com/opencv/opencv/pull/24243) Fix GStreamer backend with manual pipelines.
 
 - Calibration module:
 
@@ -59,7 +69,7 @@ version:4.9.0
 
 - Python Bindings:
 
-    - Added type stub generation for missed types and manually wrapped types.
+    - [#24023](https://github.com/opencv/opencv/pull/24023), [#24022](https://github.com/opencv/opencv/pull/24022), [#23910](https://github.com/opencv/opencv/issues/23910) Added type stub generation for missed types and manually wrapped types.
     - [#24026](https://github.com/opencv/opencv/pull/24026) Added read-only flag handling for Numpy arrays.
     - [#24028](https://github.com/opencv/opencv/pull/24028) Fixed exception handling and bindings for in module.
     - [#23958](https://github.com/opencv/opencv/pull/23958) Improved error messages in Numpy array type handling.
@@ -67,12 +77,16 @@ version:4.9.0
 
 - Android:
     - New Android Archive Package (AAR) distrubuted with [Maven Central](https://central.sonatype.com/artifact/org.opencv/opencv/overview)
+    - Finally removed API for OpenCV manager. `OpenCVLoader.initLocal()` should be used to initialize OpenCV.
     - New Android samples: QR code detector, video IO sample. DNN and Face Detector samples refresh.
     - Switch to Gradle 7.6.3, modern Android tools.
 
-- Platforms Support:
+- Platforms and hardware Support:
 
     - [#23021](https://github.com/opencv/opencv/pull/23021) Experimental CUDA support as first class language in CMake
+    - [#24136](https://github.com/opencv/opencv/pull/24136) Added experimental support for Apple VisionOS platform
+    - [#24666](https://github.com/opencv/opencv/pull/24666) Add support Orbbec Gemini2 and Gemini2 XL camera
+    - [#24098](https://github.com/opencv/opencv/pull/24098) Fix fullscreen behavior on macOS
 
 - Other:
 
