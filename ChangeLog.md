@@ -36,7 +36,36 @@ New Year's update for OpenCV 4.x has been released. The release also includes [O
 
 - G-API module:
 
-  - TBD
+  - Intel® OpenVINO™ DL inference backend:
+
+    - [#24584](https://github.com/opencv/opencv/pull/24584) Introduced "inferenence only" ("benchmark") mode in the OV2.0 backend.
+    - [#24658](https://github.com/opencv/opencv/pull/24658) Fixed model layout setting issue in the OV2.0 backend.
+    - [#24615](https://github.com/opencv/opencv/pull/24615) Fixed/relaxed various asserts in the OV2.0 backend.
+
+  - Microsoft® ONNX Runtime DL inference backend:
+
+    - [#24024](https://github.com/opencv/opencv/pull/24024) Introduced OpenVINO™ execution provider (EP) support for the ONNX RT DL backend.
+    - [#24045](https://github.com/opencv/opencv/pull/24045) [#24060](https://github.com/opencv/opencv/pull/24060) Introduced Microsoft® DirectML execution provider (EP) support for the ONNX RT DL backend.
+    - [#24059](https://github.com/opencv/opencv/pull/24059) Introduced NVIDIA® CUDA® and TensorRT execution provider (EP) support for the ONNX RT DL backend.
+    - [#24068](https://github.com/opencv/opencv/pull/24068) Introduced Apple® CoreML execution provider (EP) support for the ONNX RT DL backend.
+
+  - Core and image processing functionality:
+
+    - [#24324](https://github.com/opencv/opencv/pull/24324) [#24371](https://github.com/opencv/opencv/pullo/24371) Fluid kernels were rewritten to new universal intrinsics. Thanks for this contribution!
+
+  - Streaming and video functionality:
+
+    - [#24178](https://github.com/opencv/opencv/pull/24178) Introduced a `QueueSource`: an alternative way to manually push input frames to the G-API pipeline in the streaming mode.
+    - [#24224](https://github.com/opencv/opencv/pull/24224) Introduced VAS Object Tracker (OT) for the various video analytics scenarios.
+
+  - Python bindings:
+
+    - [#24576](https://github.com/opencv/opencv/pull/24576) Exposed VAS OT in G-API Python bindings.
+
+  - Other changes and fixes:
+
+    - [#24160](https://github.com/opencv/opencv/pull/24160) Updated ADE (the G-API's graph library) to the latest version.
+    - [#23904](https://github.com/opencv/opencv/pull/23904) [#23109](https://github.com/opencv/opencv/pull/23109) [#24434](https://github.com/opencv/opencv/pull/24434) Various code clean-ups and warning fixes.
 
 ![](images/opencv_qr-code_small.png)
 
@@ -64,7 +93,7 @@ New Year's update for OpenCV 4.x has been released. The release also includes [O
     - [#23025](https://github.com/opencv/opencv/pull/23025) calibrateCamera throws exception, if calibration system is underconstrained.
     - [#24482](https://github.com/opencv/opencv/issues/24482) Fixed bug in findEssentialMat with USAC
     - [#24527](https://github.com/opencv/opencv/pull/24527) Fixed out-of-image access in `cv::cornerSubPix`
-    - [#23607](https://github.com/opencv/opencv/pull/23607) Fixed crash in ap3p 
+    - [#23607](https://github.com/opencv/opencv/pull/23607) Fixed crash in ap3p
     - [#24035](https://github.com/opencv/opencv/pull/24035) Fixed stereoRectify image boundaries
     - [#24211](https://github.com/opencv/opencv/pull/24211) Fixed "use after free" issue in essential_solver.cpp
 
