@@ -24,6 +24,7 @@ The supported layers:
  * Deconvolution, a.k.a. transposed convolution or full convolution
  * DetectionOutput (SSD-specific layer)
  * Dropout
+ * Einsum
  * Eltwise (+, *, max)
  * ELU
  * Expand
