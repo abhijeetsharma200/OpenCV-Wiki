@@ -126,11 +126,113 @@ New Year's update for OpenCV 4.x has been released. The release also includes [O
 ### Contributors
 
 <details>
-<summary>opencv (TBD contributors)</summary>
+<summary>contributors</summary>
 
 ```
 git shortlog --no-merges -ns 4.8.1..4.9.0
-    ...
+    56	Alexander Smorkalov
+    31	Dmitry Kurtaev
+    20	Vincent Rabaud
+    20	Yuantao Feng
+    17	Maksim Shabunin
+    14	Vadim Levin
+    13	Alexander Alekhin
+    11	Kumataro
+    10	Maxim Smolskiy
+     9	Alex
+     8	cudawarped
+     7	Anatoliy Talamanov
+     7	HAN Liutong
+     7	Letu Ren
+     7	alexlyulkov
+     6	Abduragim Shtanchaev
+     6	Alexander Lyulkov
+     6	Liutong HAN
+     6	Wanli
+     6	Yuriy Chernyshov
+     5	Rostislav Vasilikhin
+     5	Tomoaki Teshima
+     4	Alexander Panov
+     3	Avasam
+     3	Mihir Patil
+     3	Sean McBride
+     3	Wang Kai
+     3	fengyuentau
+     3	unknown
+     2	Alexey Smirnov
+     2	Anastasiya Pronina
+     2	CSBVision
+     2	Giles Payne
+     2	JUBIN CHHEDA
+     2	Laurent Berger
+     2	Maksym Ivashechkin
+     2	Vadim Pisarevsky
+     2	autoantwort
+     2	thewoz
+     1	Alessandro de Oliveira Faria (A.K.A.CABELO)
+     1	Amir Hassan
+     1	Aser Atawya
+     1	Berke
+     1	Björn Böken
+     1	CNClareChen
+     1	COOLIRON2311
+     1	Chia-Hsiang Tsai
+     1	Chris Lee
+     1	Clement Courbet
+     1	Csaba Kertész
+     1	DeePingXian
+     1	Dhanwanth1803
+     1	Dmitry Matveev
+     1	Emmanuel Ferdman
+     1	FlyinTeller
+     1	Ginkgo
+     1	Hao Chen
+     1	Ivashechkin, Maxim (PG/R - Comp Sci & Elec Eng)
+     1	Jeremy Lyda
+     1	Kirin Chu
+     1	Kuan-Wei Chiu
+     1	Marek Kochanczyk
+     1	MuZihao
+     1	Peter Johnson
+     1	Phil Nelson
+     1	Philip Allgaier
+     1	Philipp Schrader
+     1	SaltFish-T
+     1	Sam James
+     1	Samuel Thibault
+     1	Shubh Raheja
+     1	Stanley Mwangi
+     1	Stefan Dragnev
+     1	Stefan Isak
+     1	Sérgio M. Basto
+     1	Yusuke Kameda
+     1	Zhang Na
+     1	Zihao Mu
+     1	alexander-varjo
+     1	andrewerf
+     1	ashadrina
+     1	beanjoy
+     1	casualwinds
+     1	chacha21
+     1	chaebkimm
+     1	definitelyuncertain
+     1	eplankin
+     1	firebladed
+     1	headshog
+     1	huafengchun
+     1	iarspider
+     1	jason_w
+     1	jvuillaumier
+     1	kallaballa
+     1	laolaolulu
+     1	lpylpy0514
+     1	richard28039
+     1	skycat8
+     1	zihaomu
+     1	zixgo
+     1	zzuliys
+     1	不鱼儿
+     1	刘佩其
 ```
 
 </details>
