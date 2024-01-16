@@ -8,7 +8,7 @@ Note(2): This page is now a list of linked features or discussions. Please follo
 
 - Tolik - High-order constructs (conditions and loops)
   - Can retire infer-list and infer-2 if implemented well. Also can work faster with more precise pipelining
-- Tolik - TBB executor. Useful for latency case
+- Tolik - 🔲[~~TBB~~Threaded executor](https://github.com/opencv/opencv/pull/24845). Useful for latency case
 - Dmitry - Streaming executor
   - Utilizes lots of threads, can be redesigned to use a limited thread pool
 
@@ -50,7 +50,7 @@ Python should become a first-class interface to G-API:
 
 ### Operations
 
-- Dmitry - Object tracking functionality still isn't there by default
+- Dmitry - ✅Object tracking functionality still is ~~n't~~ [there by default now](https://github.com/opencv/opencv/pull/24224)! 
 
 ### Debugging and profiling
 
