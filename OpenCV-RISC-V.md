@@ -52,7 +52,8 @@ Usually software for RISC-V is built on regular Linux or Window platforms using 
 
 - By the [T-Head](https://github.com/T-head-Semi)
    - xuantie-gnu-toolchain 1.x based on GCC 8.4.0 (???) - uses obsolete intrinsics dialect, supports only vector extension v0.7.1
-   - xuantie-gnu-toolchain 2.6.1 based on GCC 10.2.0 (https://github.com/T-head-Semi/xuantie-gnu-toolchain, see "Releases") - uses modern but old intrinsics specification and scalable vectors, supports vector extension v0.7.1
+   - xuantie-gnu-toolchain 2.6.x based on GCC 10.2.0 (https://github.com/T-head-Semi/xuantie-gnu-toolchain, see "Releases") - uses modern but not the latest intrinsics specification and scalable vectors, supports vector extension v0.7.1 and v1.0)
+   - xuantie-gnu-toolchain 2.8.x based on GCC 10.4.0 (https://github.com/T-head-Semi/xuantie-gnu-toolchain, see "Releases") - same as 2.6.x
 - Mainline compilers
    - GCC 13-14 (https://github.com/riscv-collab/riscv-gnu-toolchain) - uses recent intrinsics specification, supports v1.0 of vector extension
    - LLVM/Clang 16-18 (https://github.com/llvm/llvm-project) - uses recent intsinsics specification, supports v1.0 of vector extension
@@ -123,9 +124,11 @@ Scalable intrinsics implementation matches well with RVV sizeless vectors paradi
 ## Universal intrinsics for RISC-V RVV
 
 There are 3 implementations of universal intrinsics for RISC-V RVV in OpenCV (files located in `modules/core/include/opencv2/core/hal`):
-1. `intrin_rvv071.hpp` - this implementation uses obsolete intrinsics dialect with fixed vector size (128-bit) and can be built only using T-Head toolchain 1.x. It supports only RVV v0.7.1 and can run on T-Head QEMU (`c906fdv`, `c910v`) or MangoPi MQ Pro or LicheePi 4A boards. It shows good efficiency, but future development of this implementation is not possible due to large difference with modern RVV syntax.
-2. `intrin_rvv.hpp` - uses modern RVV intrinsics, but is limited to v0.7.1. Can be built only with T-Head toolchain 2.x. This implementation is inefficient because it uses memory buffers as register substitution to overcome sizeless nature of builtin register types. It serves as intermediate step between fixed size implementation and scalable paradigm. Can be executed on same QEMU CPUs and hardware as previous one. Future development is not considered due to inefficiency.
-3. `intrin_rvv_scalable.hpp` - uses latest RVV intrinsics, limited to RVV v1.0. Can be built with recent versions of GCC and LLVM toolchains. First real implementation of Scalable Universal Intriniscs. Can be run on T-Head QEMU (`c908v`), mainline QEMU with RVV 1.0 enabled or CanMV K230 board.
+1. `intrin_rvv071.hpp`:
+   a. Until (and including) OpenCV 4.9.0 this implementation used obsolete intrinsics dialect with fixed vector size (128 bit) and could only be built using T-Head toolchain 1.x. It supported only RVV v0.7.1 and could run on T-Head QEMU (`c906fdv`, `c910v`) or MangoPi MQ Pro or LicheePi 4A boards. It showed good efficiency, but future development of this implementation was not possible due to large difference with modern RVV syntax.
+   b. Soon after OpenCV 4.9.0 release this implementation has been reworked by the T-Head to support modern intrinsics dialect, toolchains (2.6.x - 2.8.x) and both 0.7.1 and 1.0 RVV versions (see [PR#24841](https://github.com/opencv/opencv/pull/24841)). It still uses fixed vector length (128 bit) by setting the compiler option: `-mrvv-vector-bits=128`. At the time of writing this implementation shows worse efficiency than previous one, but further improvements in this direction should be possible.
+2. `intrin_rvv.hpp` - uses modern RVV intrinsics, but is limited to v0.7.1. Can be built only with T-Head toolchain 2.x. This implementation is inefficient because it uses memory buffers as register substitution to overcome sizeless nature of built-in register types. It serves as intermediate step between fixed size implementation and scalable paradigm. Can be executed on same QEMU CPUs and hardware as previous one. Future development is not considered due to inefficiency.
+3. `intrin_rvv_scalable.hpp` - uses latest RVV intrinsics, limited to RVV v1.0. Can be built with recent versions of GCC and LLVM toolchains. First real implementation of Scalable Universal Intriniscs. Can be run on the T-Head QEMU (`c908v`), mainline QEMU with RVV 1.0 enabled or CanMV K230 board.
 
 
 ## Building OpenCV with RVV support
@@ -149,7 +152,9 @@ We will use static builds (`BUILD_SHARED_LIBS` option) for deployment convenienc
 
 Main difference between build variants is the `<toolchain>.cmake` file being used and some specific options.
 
-### Build for old RVV 0.7.1 intrinsics (1)
+### Build intrin_rvv071, RVV 0.7.1, old T-Head toolchain 1.x (1a)
+
+_OpenCV <= 4.9.0_
 
 _Use T-Head 1.x toolchain._
 
@@ -175,9 +180,40 @@ ${QEMU_DIR}/bin/qemu-riscv64 \
    ./bin/opencv_test_core
 ```
 
+### Build intrin_rvv071, RVV 0.7.1 and 1.0, new T-Head toolchain 2.x (1b)
+
+_OpenCV > 4.9.0_
+
+_Use T-Head 2.x toolchain._
+
+Build (see available CPU configurations for `-DCORE=` option in the `platforms/linux/riscv64-071-gcc.toolchain.cmake`):
+```.sh
+cd build
+PATH=${TOOLCHAIN_ROOT}/bin:${PATH} \
+cmake -GNinja \
+   -DCMAKE_BUILD_TYPE=Release \
+   -DBUILD_SHARED_LIBS=OFF \
+   -DWITH_OPENCL=OFF \
+   -DCMAKE_TOOLCHAIN_FILE=../opencv/platforms/linux/riscv64-071-gcc.toolchain.cmake \
+   -DCORE=C910V \
+   ../opencv
+ninja
+```
+Run OpenCV core test using T-Head QEMU (select CPU model corresponding to the build CPU option):
+```.sh
+cd build
+OPENCV_TEST_DATA_PATH=../opencv_extra/testdata \
+${QEMU_DIR}/bin/qemu-riscv64 \
+   -L ${TOOLCHAIN_ROOT}/sysroot \
+   -cpu c910v \
+   ./bin/opencv_test_core
+```
+
+**Note:** RVV version and availability depends on selected CPU model.
+
 ### Build for new RVV 0.7.1 intrinsics (2)
 
-_Use T-Head 2.6.1 toolchain._
+_Use T-Head 2.x toolchain._
 
 Build:
 ```.sh
