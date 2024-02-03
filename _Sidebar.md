@@ -37,6 +37,7 @@
     - [[OpenCV Debugging Facilities]]
     - [[Evolution Proposals|Evolution-Proposals]]
     - [[Contributors]]
+    - [[OpenCV 5.0 weekly updates|OpenCV5.0_Weekly_Updates]]
     - [[Meeting notes|Meeting_notes]]
         - [[2024]]
         - [[2023]]
