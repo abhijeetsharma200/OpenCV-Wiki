@@ -14,7 +14,6 @@
     - [[Running OpenCV on RISC-V|OpenCV-RISC-V]]
     - [[Custom OpenCV Android SDK and AAR package build|Custom-OpenCV-Android-SDK-and-AAR-package-build]]
 - [[OpenCV 5|OpenCV 5]]
-    - [[5.0 Updates|5.0 Updates]]
 - [[OpenCV 4|Opencv4]]
     - [[Graph API (G-API)|Graph-API]]
       - [[G-API Python bindings|G-API-Python-Bindings]]
