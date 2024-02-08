@@ -48,6 +48,5 @@
 - [[OpenCV GSoC | OpenCV_GSoC]]
     - [[2024 Ideas List|GSoC_2024]]
     - [[2023 Ideas List|GSoC_2023]]
-    - [[2022 Ideas List|GSoC_2022]]
     - [[Our Application|OpenCV_GSoC_Application]]
 - [[Archive]]
