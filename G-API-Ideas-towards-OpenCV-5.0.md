@@ -6,27 +6,30 @@ Note(2): This page is now a list of linked features or discussions. Please follo
 
 ### Core functionality
 
-- Tolik - High-order constructs (conditions and loops)
-  - Can retire infer-list and infer-2 if implemented well. Also can work faster with more precise pipelining
-- Tolik - 🔲[~~TBB~~Threaded executor](https://github.com/opencv/opencv/pull/24845). Useful for latency case
-- Dmitry - Streaming executor
-  - Utilizes lots of threads, can be redesigned to use a limited thread pool
+- ⬜ [High-order constructs](https://github.com/orgs/g-api-org/discussions/16): conditions and loops
+  - Can retire infer-list and infer-2 if implemented well. Also can work faster with more precise pipelining.
+  - Can also help running modern NN topologies (e.g., stateful models and models with external kv-cache).
+- ☑️[Threaded Regular executor](https://github.com/orgs/g-api-org/discussions/13)
+  - ✅[A new implementation](https://github.com/opencv/opencv/pull/24845) is merged, a good starting point but there's yet some things to do. Not enabled by default.
+  - There is an older [TBB version](https://github.com/opencv/opencv/pull/19551) left in history - just in case.
+- ⬜ [Threaded Streaming executor](https://github.com/orgs/g-api-org/discussions/15)
+  - The current one utilizes lots of threads, can be redesigned to use a limited thread pool.
 
 ### Python
 
 Python should become a first-class interface to G-API:
-- 🔲 Full-featured [**pip package**](https://github.com/orgs/g-api-org/discussions/4), with dynamically loadable options when available (e.g., onnx runtime, gstreamer, openvino).
-- 🔲 Well-documented:
+- ⬜ Full-featured [**pip package**](https://github.com/orgs/g-api-org/discussions/4), with dynamically loadable options when available (e.g., onnx runtime, gstreamer, openvino).
+- ⬜ Well-documented:
   - ✅ [GSoC'23](https://github.com/opencv/opencv/wiki/GSoC_2023#idea-g-api-a-complete-python-tutorial) project on G-API Jupyter Notebooks is [now complete](https://github.com/g-api-org/tutorials-py/pull/1).
-  - 🔲 Need to wrap up the repo in 5.0 timeframe and import notebooks into OpenCV Documentation.
-- 🔲 Extensible:
-  - 🔲 [Expose Operations as types](https://github.com/orgs/g-api-org/discussions/5).
-  - 🔲 [Expose Operation wrappers](https://github.com/orgs/g-api-org/discussions/6).
+  - ⬜ Need to wrap up the repo in 5.0 timeframe and import notebooks into OpenCV Documentation.
+- ⬜ Extensible:
+  - ⬜ [Expose Operations as types](https://github.com/orgs/g-api-org/discussions/5).
+  - ⬜ [Expose Operation wrappers](https://github.com/orgs/g-api-org/discussions/6).
   - ☑️ Allow new input sources in Python, for a better Python inter-operability:
     - ❌ [GSoC'23](https://github.com/opencv/opencv/wiki/GSoC_2023#idea-g-api-implement-custom-stream-sources-in-python) wasn't success;
     - ☑️ Can be substituted with [`QueueInput`](https://github.com/opencv/opencv/pull/24178) interface for data and use-case of any type, if wrapped in Python.
-- 🔲 Refined:
-  - 🔲 [Inference API](https://github.com/orgs/g-api-org/discussions/7)
+- ⬜ Refined:
+  - ⬜ Python [Inference API](https://github.com/orgs/g-api-org/discussions/7).
 
 ## What we miss
 
@@ -46,7 +49,8 @@ Python should become a first-class interface to G-API:
   - Dmitry - should be controllable (an option), as it may alter the "multi-context" cases.
   - Tolik - the input data precision may cause a new instance to be initiated.
 - Tolik - Support modern iterative topologies (infer using its own results from past iteration). Like Stable Diffusion. May be implemented as "high order constructs" (see above).
-- Dmitry - DL Model introspection https://github.com/orgs/g-api-org/discussions/3
+- ⬜ [DL Model introspection](https://github.com/orgs/g-api-org/discussions/3)
+  - Required to drop the framework-dependent details from Open Model Zoo Demos and several tools we use.
 
 ### Operations
 
