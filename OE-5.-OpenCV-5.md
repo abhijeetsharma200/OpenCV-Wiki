@@ -7,7 +7,7 @@
 
 # Introduction
 
-OpenCV 5.0 is a significant release, initially scheduled for 2020, but currently shifted to 2024, Summer. It's going to be the first release since OpenCV 2.x in 2009 that attempts to radically revise API and content of the library to follow the modern trends in Computer Vision and AI in general.
+OpenCV 5.0 is a significant release, initially scheduled for 2020, but currently shifted to Summer, 2024. It's going to be the first release since OpenCV 2.x in 2009 that attempts to radically revise API and content of the library to follow the modern trends in Computer Vision and AI in general.
 
 The document outlines the list of features and changes planned for OpenCV 5.0 and maybe subsequent 5.x releases, namely:
   - [x] The new license
