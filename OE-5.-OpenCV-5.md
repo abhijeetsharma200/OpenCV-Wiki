@@ -7,14 +7,12 @@
 
 # Introduction
 
-OpenCV 5.0 is the 20-th year anniversary release, initially scheduled for 2020, although the gold release will likely happen in 2021 (as of the moment of writing this document in 2020 December). First of all, as anniversary release, it should be great and should be a strong statement that OpenCV is here, it’s modern, up-to-date library and it is going to retain its title of one of the most popular CV API in the world. Also, since it’s a major release, it’s another good chance to fix some things in a bit more radical way than we can in minor updates. But on the other hand, it should continue the tradition started with OpenCV 2.x – i.e. be a modular C++ library with a rather stable API, so that it should be more or less easy to migrate to it from the previous versions of OpenCV.
+OpenCV 5.0 is a significant release, initially scheduled for 2020, but currently shifted to 2024, Summer. It's going to be the first release since OpenCV 2.x in 2009 that attempts to radically revise API and content of the library to follow the modern trends in Computer Vision and AI in general.
 
-The document outlines the list of features and changes planned for OpenCV 5.x, not necessarily 5.0. And some of the features might be postponed till OpenCV 6 or even later versions. As they say, plan is nothing, but planning is everything.
-
-The major directions for 5.0 release are:
-  - [x] New license
-  - [ ] [Clean up API](https://github.com/opencv/opencv/issues/25007) and refresh it to make make the library more future-proof. Make better use of the latest C++ standards and much improved C++ compiler that fully support those standards.
-  - [ ] Revise the basic modules, such as [Core](https://github.com/opencv/opencv/issues/25011), [Imgproc](https://github.com/opencv/opencv/issues/25012), [Features~~2D~~](https://github.com/opencv/opencv/issues/24999), [Objdetect](https://github.com/opencv/opencv/issues/25004) etc.
+The document outlines the list of features and changes planned for OpenCV 5.0 and maybe subsequent 5.x releases, namely:
+  - [x] The new license
+  - [ ] [API cleanup](https://github.com/opencv/opencv/issues/25007) and refresh it to make make the library more future-proof. Make better use of the latest C++ standards and much improved C++ compiler that fully support those standards.
+  - [ ] Revised basic modules, such as [Core](https://github.com/opencv/opencv/issues/25011), [Imgproc](https://github.com/opencv/opencv/issues/25012), [Features~~2D~~](https://github.com/opencv/opencv/issues/24999), [Objdetect](https://github.com/opencv/opencv/issues/25004) etc.
   - [ ] Better efficiency on various architectures, CPUs and GPUs; Better ARM support and added RISC-V support are two of the major topics.
     - [x] In the latest OpenCV 4.x releases we already greatly extended our [Universal intrinsics](https://github.com/opencv/opencv/tree/4.x/modules/core/include/opencv2/core/hal) to support vector architectures, such as RISC-V with RVV extension.
     - [ ] In OpenCV 5 we are going to revise our [CPU HAL API](https://github.com/opencv/opencv/issues/25019)
