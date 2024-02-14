@@ -11,7 +11,7 @@ OpenCV 5.0 is a significant release, initially scheduled for 2020, but currently
 
 The document outlines the list of features and changes planned for OpenCV 5.0 and maybe subsequent 5.x releases, namely:
   - [x] The new license
-  - [ ] [API cleanup](https://github.com/opencv/opencv/issues/25007) and refresh it to make make the library more future-proof. Make better use of the latest C++ standards and much improved C++ compiler that fully support those standards.
+  - [ ] [API cleanup](https://github.com/opencv/opencv/issues/25007) and refresh it to make make the library more future-proof. Make better use of the latest C++ standards and much improved C++ compilers that fully support those standards.
   - [ ] Revised basic modules, such as [Core](https://github.com/opencv/opencv/issues/25011), [Imgproc](https://github.com/opencv/opencv/issues/25012), [Features~~2D~~](https://github.com/opencv/opencv/issues/24999), [Objdetect](https://github.com/opencv/opencv/issues/25004) etc.
   - [ ] Better efficiency on various architectures, CPUs and GPUs; Better ARM support and added RISC-V support are two of the major topics.
     - [x] In the latest OpenCV 4.x releases we already greatly extended our [Universal intrinsics](https://github.com/opencv/opencv/tree/4.x/modules/core/include/opencv2/core/hal) to support vector architectures, such as RISC-V with RVV extension.
@@ -57,10 +57,11 @@ There should be convenient and unified logging capabilities across the whole lib
 
 ## Improved matrix calculus/linear algebra support in OpenCV
 
-Lapack (a subset of it) is now always available in OpenCV; see https://github.com/opencv/opencv/wiki/OE-12.-Lapack.
-In order to reduce fragmentation and the number of branches to tests, `Eigen` calls will be gradually eliminated from the library and replaced with either Lapack or our own matrix operations. For Eigen+OpenCV users the conversions functions from OpenCV matrix types to/from Eigen matrices will still be available.
+The goal for OpenCV 5.0 is to implement a big subset of [Python array API standard](https://data-apis.org/array-api/latest/) and essential subset of numpy, but with C++ API. [Here is the detailed proposal](https://github.com/opencv/opencv/issues/25011).
 
-Speaking of our own matrix operations, a decent quaternion support has been recently added (https://github.com/opencv/opencv/pull/18335) and is being improved.
+An imporant part of 'Python array API' and numpy is linear algebra. Lapack (a subset of it) is now always available in 5.x branch; see https://github.com/opencv/opencv/wiki/OE-12.-Lapack. In order to reduce fragmentation and the number of branches to tests, `Eigen` calls will be gradually eliminated from the library and replaced with either Lapack or our own matrix operations. For Eigen+OpenCV users the conversions functions from OpenCV matrix types to/from Eigen matrices will still be available.
+
+Also, speaking of our own matrix operations, a decent quaternion support has been recently added (https://github.com/opencv/opencv/pull/18335) and is being improved.
 
 ## Extended set of basic types; built-in color space information
 
@@ -74,9 +75,13 @@ In OpenCV 4.x the following data types are supported:
 
 and also the "uniform" tuples of such numbers, such as CV_8UC3 (3-tuple of bytes), CV_32FC2 (a pair of floating-point numbers) etc.
 
-Until recently, this value set was sufficient. But now, when people are interested in efficient deep learning and, in general, low-power computing, some new interesting formats appeared, such as `bfloat16` and various flavors of `posit`. Of course, it can be very impractical to implement the whole set of OpenCV operations for each data type. Even the current data types are not universally supported in OpenCV. But still it would be useful to be able to represent various data types and let users implement the missing algorithms.
+Until recently, this value set was sufficient. But now, when people are interested in efficient deep learning and, in general, low-power computing, some new interesting formats appeared, such as `bfloat16`.
 
-Since the beginning of the library and till now we allocate just 3 bits to specify the "depth", i.e. the type of each data channel, and all 8 options are already taken, as you may see. The solution is to extend this number to, e.g., 8 bits. Then we have a plenty of space for new types. 
+In OpenCV 5.0 we will support [extended set of types](https://github.com/opencv/opencv/pull/23865):
+   * `CV_64S`, `CV_64U`
+   * `CV_32U`
+   * `CV_Bool`
+   * `CV_16BF` (bfloat16)
 
 Another proposed feature attempts to answer one of the old questions from OpenCV users - is a particular image BGR or RGB? In deep learning era it is more relevant when ever, since some of the networks are trained on RGB images, whereas other on BGR ones, and so incorrect order of the channel may slightly decrease accuracy, which will be annoying and hard-to-catch.
 
