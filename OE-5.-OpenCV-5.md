@@ -130,12 +130,6 @@ OpenCV provides universal intrinsics for a few years already, and so it's conven
 
 See https://github.com/opencv/opencv/wiki/OE-33.-3D-Module.
 
-## Tracking module
-
-(More detailed description)
-Some of the best OpenCV trackers are moved from opencv_contrib/tracking and more deep learning trackers are added.
-Already in master: https://github.com/opencv/opencv/pull/18838
-
 ## Improvements in UI
 
 * See https://github.com/opencv/opencv/wiki/OE-24.-Module-HighGUI
