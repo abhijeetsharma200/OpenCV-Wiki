@@ -16,7 +16,7 @@ The document outlines the list of features and changes planned for OpenCV 5.0 an
   - [ ] Better efficiency on various architectures, CPUs and GPUs; Better ARM support and added RISC-V support are two of the major topics.
     - [x] In the latest OpenCV 4.x releases we already greatly extended our [Universal intrinsics](https://github.com/opencv/opencv/tree/4.x/modules/core/include/opencv2/core/hal) to support vector architectures, such as RISC-V with RVV extension.
     - [ ] In OpenCV 5 we are going to revise our [CPU HAL API](https://github.com/opencv/opencv/issues/25019)
-    - [ ] And introduce [non-CPU HAL](https://github.com/opencv/opencv/issues/25555), which will be an extension of our [OpenCL-based transparent API](https://learnopencv.com/opencv-transparent-api/).
+    - [ ] And introduce [non-CPU HAL](https://github.com/opencv/opencv/issues/25025), which will be an extension of our [OpenCL-based transparent API](https://learnopencv.com/opencv-transparent-api/).
   - [ ] The new, completely revised deep learning engine with excellent support of ONNX specification and that will be able to run many modern transformer-based models efficiently.
   - [ ] Improved and extended 3D vision and camera calibration functionality, including:
     - [x] a dedicated 3D module
