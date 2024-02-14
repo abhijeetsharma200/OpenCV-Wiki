@@ -61,7 +61,7 @@ The goal for OpenCV 5.0 is to implement a big subset of [Python array API standa
 
 An imporant part of 'Python array API' and numpy is linear algebra. Lapack (a subset of it) is now always available in 5.x branch; see https://github.com/opencv/opencv/wiki/OE-12.-Lapack. In order to reduce fragmentation and the number of branches to tests, `Eigen` calls will be gradually eliminated from the library and replaced with either Lapack or our own matrix operations. For Eigen+OpenCV users the conversions functions from OpenCV matrix types to/from Eigen matrices will still be available.
 
-Since OpenCV 5.0 cv::Mat/cv::UMat could be [0-dimensional or 1-dimensional](https://github.com/opencv/opencv/pull/23473), not just 2D or above.
+Since OpenCV 5.0 `cv::Mat` and `cv::UMat` could be [0-dimensional or 1-dimensional](https://github.com/opencv/opencv/pull/23473), not just 2D or above.
 
 Also, speaking of our own matrix operations, a decent quaternion support has been recently added (https://github.com/opencv/opencv/pull/18335) and is being improved.
 
