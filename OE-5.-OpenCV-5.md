@@ -12,8 +12,9 @@ OpenCV 5.0 is the 20-th year anniversary release, initially scheduled for 2020, 
 The document outlines the list of features and changes planned for OpenCV 5.x, not necessarily 5.0. And some of the features might be postponed till OpenCV 6 or even later versions. As they say, plan is nothing, but planning is everything.
 
 The major directions for 5.0 release are:
-  * New license
-  * Clean up API and refresh it to make make the library more future-proof. Make better use of the latest C++ standards and much improved C++ compiler that fully support those standards.
+  - [x] New license
+  - [ ] [Clean up API](https://github.com/opencv/opencv/issues/25007) and refresh it to make make the library more future-proof. Make better use of the latest C++ standards and much improved C++ compiler that fully support those standards.
+  - [ ] Revise the basic modules, such as [Core](https://github.com/opencv/opencv/issues/25011), [Imgproc](https://github.com/opencv/opencv/issues/25012), [Features~~2D~~](https://github.com/opencv/opencv/issues/24999).
   * Better efficiency on various architectures, CPUs and GPUs; Better ARM support and added RISC-V support are two of the major topics.
   * Emphasis on deep learning. More architectures will be supported, including the ones from GSoC 2020 for text detection & recognition, object tracking, color calibration etc. Also, deep learning engine itself will be made more modular and will be further optimized.
   * Improved and extended 3D vision functionality
