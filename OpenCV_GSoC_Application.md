@@ -229,7 +229,7 @@ python interface
 
 ### IRC channel?
 
-`#opencv` on freenode
+[#opencv Libera.chat](https://web.libera.chat/#opencv)
 
 https://github.com/opencv/opencv/wiki/GSoC_2020
 
