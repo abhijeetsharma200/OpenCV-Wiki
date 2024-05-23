@@ -1,6 +1,28 @@
 OpenCV Change Logs
 ==================
 
+version:4.10.0
+-------------
+
+*June, 2024*
+
+Summer's update for OpenCV 4.x has been released. The release also includes [OpenCV Model Zoo](https://github.com/opencv/opencv_zoo/tree/4.10.0).
+
+- Core Module:
+  TBD
+![](images/dnn.png)
+- DNN module
+   TBD
+![](images/gapi.png)
+- G-API module:
+   TBD
+![](images/opencv_qr-code_small.png)
+- Objdetect module:
+   TBD
+- Python Bindings:
+   TBD
+
+
 version:4.9.0
 -------------
 
