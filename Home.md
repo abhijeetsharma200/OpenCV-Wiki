@@ -4,13 +4,13 @@ OpenCV Wiki
 General resources
 -----------------
 
-- :globe_with_meridians: [Official site](https://opencv.org/) - read about the library, subscribe to the [news](https://opencv.org/news.html), browse [releases](https://opencv.org/releases.html) and study the [license](https://opencv.org/license.html)
+- :globe_with_meridians: [Official site](https://opencv.org/) - read about the library, subscribe to the [news](https://opencv.org/news), browse [releases](https://opencv.org/releases/) and study the [license](https://opencv.org/license/)
 
 - :question: [FAQ](FAQ) list of frequently asked questions and answers  moderated by the core team
 - :speech_balloon: [Q&A forum](https://forum.opencv.org) - ask questions and share your knowledge by answering others' questions
 
 - :books: [Documentation](https://docs.opencv.org/):
-    - latest releases: [4.8.0](https://docs.opencv.org/4.8.0), [3.4.20](https://docs.opencv.org/3.4.20)
+    - latest releases: [4.9.0](https://docs.opencv.org/4.9.0), [3.4.20](https://docs.opencv.org/3.4.20)
     - nightly releases: [4.x](https://docs.opencv.org/4.x) / [3.4](https://docs.opencv.org/3.4) and upcoming [5.x](https://docs.opencv.org/5.x) branch
 
 - :hammer_and_wrench: [Changelog](ChangeLog) - highlights for each library release
