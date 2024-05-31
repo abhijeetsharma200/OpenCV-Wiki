@@ -2,25 +2,73 @@ OpenCV Change Logs
 ==================
 
 version:4.10.0
--------------
+--------------
 
 *June, 2024*
 
 Summer's update for OpenCV 4.x has been released. The release also includes [OpenCV Model Zoo](https://github.com/opencv/opencv_zoo/tree/4.10.0).
 
 - Core Module:
-  TBD
+  - Added CV_FP16 data type for cv::Mat # . Deprecated convertFp16 function, added FP16 support to cv::Mat::convertTo and analogs #
+  - Fixed undefined behaviour in some cases related to FP16 arithmetic #25598
+  - Extended HAL API for minMaxIdx #25563, projectPoints #25511, equalizeHist #25565, LUT #25554, meanStdDev #25483, moments 25490, Otsu threshold #25509, normHamming #25491, added more cases for gaussianBlur #25397, remap #25399, bilaterialFilter #25343, Transpose #25342,  some arithmetic functions #25574, 25506
+  - Persistence: output reals as human-friendly expression. #25351
+  - Added cgroups v2 support to parallel framework #25285
+  - Added in-place support for cartToPolar and polarToCart #24893
+
+- Imgproc
+  - Added cv::remap option for relative displacement field (#24603) #24621
+  - New findContours implementation #25146, #25680, #25385
+  - Fix allocation issue in EMD #25583
+  - Fix bug in stackBlur with large kernels #25513
+
+- Calib3d
+  - Fixes to the hand-eye calibration methods #24897, #25423
+  - Fixed several bugs in findHomography implementation #25308, #25665
+  - Multiple improvements in findChessboardCorners implementation: #25365, 25195, 25177, 25182, 25145 
+  - Improved cymmetric circles grid pattern detection #25258
+
 ![](images/dnn.png)
 - DNN module
-   TBD
+   - Significantly improved DNN memory consumption #25181, 25163
+   - Added Net::dumpToPbtxt method to review optimized graph with Netron #25582
+   - Added support for several TFLite layers: Global_Pool_2D #25613, Transpose #25297, 
+   - Fixed bugs in several ONNX layers: slice #25660, range #25414, Clip #25319, ReduceMean #25120, einsum #25100.
+   - Added more DNN layers with OpenVINO #25524, 25291, split, fully connected, SoftMax, Cast #25273
+   - Optimized fastDepthwiseConv #25361 and int8 layers 25230 for RISC-V with RVV extension
+   - Optimized Attention #25271, #25238, 25076.
+   - CuDNN 9+ support #25412
+   - OpenVINO 2024 support #25199    
+
 ![](images/gapi.png)
 - G-API module:
-   TBD
+   - Ported G-API ONNXRT backend into V2 API #25662
+   - A quick value-initialization support GMat #25055
+
 ![](images/opencv_qr-code_small.png)
 - Objdetect module:
-   TBD
+   - Fixed inaccurate Charuco board generation in some cases (`.generateImage()`) #25673
+
+- VideoIO:
+  - Fix race condition in InternalFFMpegRegister initialization. #25419
+  - Orbbec Camera supports MacOS，Gemini2 and Gemini2L support Y16 format #24877
+  - Added V4L2_PIX_FMT_SGRBG8 pixel format support to V4L2 backend #25249
+
 - Python Bindings:
-   TBD
+   - Experimental NumPy 2.0 support
+   - use numeric dtype for MatLike instead of generic #25406
+
+- Platforms support:
+  - CUDA 12.4+ support #25658  
+  - Ubuntu 24.04 Support
+  - Wayland back-end for Linux #25551, #25510, #25502
+  - New LAPACK interface support on MacOS and derivatives #24804, #25625
+  - Added initial version of HAL for RISC-V processors with P-extension #25167
+  - Added ARM KleidiCV as HAL for ARM v8 and v9 processors #25443, #25618
+  - Added zlib-ng  as alternative to classic zlib (-DWITH_ZLIB_NG=ON CMake option) #24782
+  - OneAPI 2024 support (IPP, TBB)
+  - Experimental Apple VisionOS support
+  - Experimental Windows ARM64 support
 
 
 version:4.9.0
