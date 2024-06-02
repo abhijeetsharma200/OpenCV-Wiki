@@ -9,67 +9,95 @@ version:4.10.0
 Summer's update for OpenCV 4.x has been released. The release also includes [OpenCV Model Zoo](https://github.com/opencv/opencv_zoo/tree/4.10.0).
 
 - Core Module:
-  - Added CV_FP16 data type for cv::Mat # . Deprecated convertFp16 function, added FP16 support to cv::Mat::convertTo and analogs #
-  - Fixed undefined behaviour in some cases related to FP16 arithmetic #25598
-  - Extended HAL API for minMaxIdx #25563, projectPoints #25511, equalizeHist #25565, LUT #25554, meanStdDev #25483, moments 25490, Otsu threshold #25509, normHamming #25491, added more cases for gaussianBlur #25397, remap #25399, bilaterialFilter #25343, Transpose #25342,  some arithmetic functions #25574, 25506
-  - Persistence: output reals as human-friendly expression. #25351
-  - Added cgroups v2 support to parallel framework #25285
-  - Added in-place support for cartToPolar and polarToCart #24893
+  - Added CV_FP16 data type for cv::Mat [#24892](https://github.com/opencv/opencv/issues/24892), [#24918](https://github.com/opencv/opencv/issues/24918). Deprecated convertFp16 function, added FP16 support to cv::Mat::convertTo and analogs.
+  - Fixed undefined behaviour in some cases related to FP16 arithmetic [#25598](https://github.com/opencv/opencv/issues/25598)
+  - Extended HAL API for minMaxIdx [#25563](https://github.com/opencv/opencv/issues/25563), LUT [#25554](https://github.com/opencv/opencv/issues/25554), meanStdDev [#25483](https://github.com/opencv/opencv/issues/25483), moments 25490, normHamming [#25491](https://github.com/opencv/opencv/issues/25491). HAL entries for transpose [#25342](https://github.com/opencv/opencv/issues/25342),  some arithmetic functions [#25574](https://github.com/opencv/opencv/issues/25574), [#25506](https://github.com/opencv/opencv/issues/25506)
+  - Persistence: output reals as human-friendly expression. [#25351](https://github.com/opencv/opencv/issues/25351)
+  - Added cgroups v2 support to parallel framework [#25285](https://github.com/opencv/opencv/issues/25285)
+  - Added in-place support for cartToPolar and polarToCart [#24893](https://github.com/opencv/opencv/issues/24893)
 
-- Imgproc
-  - Added cv::remap option for relative displacement field (#24603) #24621
-  - New findContours implementation #25146, #25680, #25385
-  - Fix allocation issue in EMD #25583
-  - Fix bug in stackBlur with large kernels #25513
+- Imgproc Module:
+  - Added relative displacement field option to cv::remap [#24621](https://github.com/opencv/opencv/issues/24621)
+  - Added new findContours implementation [#25146](https://github.com/opencv/opencv/issues/25146), [#25680](https://github.com/opencv/opencv/issues/25680), [#25385](https://github.com/opencv/opencv/issues/25385)
+  - Fixed allocation issue in EMD [#25583](https://github.com/opencv/opencv/issues/25583)
+  - Fixed bug in stackBlur with large kernels [#25513](https://github.com/opencv/opencv/issues/25513)
+  - Extended HAL for projectPoints [#25511](https://github.com/opencv/opencv/issues/25511), equalizeHist [#25565](https://github.com/opencv/opencv/issues/25565), Otsu threshold [#25509](https://github.com/opencv/opencv/issues/25509). Added new HAL entries for gaussianBlur [#25397](https://github.com/opencv/opencv/issues/25397), remap [#25399](https://github.com/opencv/opencv/issues/25399), bilaterialFilter [#25343](https://github.com/opencv/opencv/issues/25343).
 
-- Calib3d
-  - Fixes to the hand-eye calibration methods #24897, #25423
-  - Fixed several bugs in findHomography implementation #25308, #25665
-  - Multiple improvements in findChessboardCorners implementation: #25365, 25195, 25177, 25182, 25145 
-  - Improved cymmetric circles grid pattern detection #25258
+- Calib3d Module:
+  - Fixed several bugs in hand-eye calibration methods [#24897](https://github.com/opencv/opencv/issues/24897), [#25423](https://github.com/opencv/opencv/issues/25423)
+  - Fixed several bugs in findHomography implementation [#25308](https://github.com/opencv/opencv/issues/25308), [#25665](https://github.com/opencv/opencv/issues/25665)
+  - Multiple improvements in findChessboardCorners implementation: [#25365](https://github.com/opencv/opencv/issues/25365), 25195, 25177, 25182, 25145, 24779, 24710, 24833, 25090
+  - Improved symmetric circles grid pattern detection [#25258](https://github.com/opencv/opencv/issues/25258)
+  - Fixed possible infinite loop in USAC [#24987](https://github.com/opencv/opencv/issues/24987)
+  - Changed approach for initial estimation for focal length in fisheye calibration [#25030](https://github.com/opencv/opencv/issues/25030)
+  - Added solvePnP implementation for Fisheye camera model [#25028](https://github.com/opencv/opencv/issues/25028)
 
 ![](images/dnn.png)
-- DNN module
-   - Significantly improved DNN memory consumption #25181, 25163
-   - Added Net::dumpToPbtxt method to review optimized graph with Netron #25582
-   - Added support for several TFLite layers: Global_Pool_2D #25613, Transpose #25297, 
-   - Fixed bugs in several ONNX layers: slice #25660, range #25414, Clip #25319, ReduceMean #25120, einsum #25100.
-   - Added more DNN layers with OpenVINO #25524, 25291, split, fully connected, SoftMax, Cast #25273
-   - Optimized fastDepthwiseConv #25361 and int8 layers 25230 for RISC-V with RVV extension
-   - Optimized Attention #25271, #25238, 25076.
-   - CuDNN 9+ support #25412
-   - OpenVINO 2024 support #25199    
+- DNN module:
+   - Significantly improved DNN memory consumption [#25181](https://github.com/opencv/opencv/issues/25181), 25163
+   - Added Net::dumpToPbtxt method to review optimized graph with Netron [#25582](https://github.com/opencv/opencv/issues/25582)
+   - Added support for several TFLite layers: Global_Pool_2D [#25613](https://github.com/opencv/opencv/issues/25613), Transpose [#25297](https://github.com/opencv/opencv/issues/25297), HardSwishInt8 [#24985](https://github.com/opencv/opencv/issues/24985), split, fully connected, SoftMax, Cast [#25273](https://github.com/opencv/opencv/issues/25273).
+   - Fixed bugs in several ONNX layers: Slice [#25660](https://github.com/opencv/opencv/issues/25660), Range [#25414](https://github.com/opencv/opencv/issues/25414), Clip [#25319](https://github.com/opencv/opencv/issues/25319), ReduceMean [#25120](https://github.com/opencv/opencv/issues/25120), Einsum [#25100](https://github.com/opencv/opencv/issues/25100), Norm [#24808](https://github.com/opencv/opencv/issues/24808), negative axis support in Concat [#24865](https://github.com/opencv/opencv/issues/24865). 
+   - Added new ONNX layers: Mod [#24765](https://github.com/opencv/opencv/issues/24765), GroupNorm layer [#24610](https://github.com/opencv/opencv/issues/24610).
+   - Added more DNN layers with OpenVINO [#25524](https://github.com/opencv/opencv/issues/25524), [#25291](https://github.com/opencv/opencv/issues/25291).
+   - Optimized fastDepthwiseConv [#25361](https://github.com/opencv/opencv/issues/25361) and int8 layers 25230 for RISC-V with RVV extension
+   - Optimized fastDepthwiseConv for RISC-V P Packed SIMD Extension v0.5.2 [#24556](https://github.com/opencv/opencv/issues/24556)
+   - Optimized Attention [#24476](https://github.com/opencv/opencv/issues/24476), [#25271](https://github.com/opencv/opencv/issues/25271), [#25238](https://github.com/opencv/opencv/issues/25238), 25076.
+   - Added parallel version for scatter and scatterND [#24813](https://github.com/opencv/opencv/issues/24813)
+   - Added broadcasting if a.rank() != b.rank() with CuDNN backend [#24834](https://github.com/opencv/opencv/issues/24834)
+   - Tuned Winograd algorithm usage for convolutions [#24709](https://github.com/opencv/opencv/issues/24709)
+   - Added Raft model support and tracking sample with it [#24913](https://github.com/opencv/opencv/issues/24913)
+   - Added Vulkan backend for NaryEltwiseLayer in DNN module [#24768](https://github.com/opencv/opencv/issues/24768)
+   - Imporved modern Yolo detectors support. Added sample and documentation [#24898](https://github.com/opencv/opencv/issues/24898).
+   - Added CuDNN 9+ support [#25412](https://github.com/opencv/opencv/issues/25412)
+   - Added OpenVINO 2024 support [#25199](https://github.com/opencv/opencv/issues/25199)
 
 ![](images/gapi.png)
 - G-API module:
-   - Ported G-API ONNXRT backend into V2 API #25662
-   - A quick value-initialization support GMat #25055
+   - Ported G-API ONNXRT backend into V2 API [#25662](https://github.com/opencv/opencv/issues/25662)
+   - Implement concurrent executor [#24845](https://github.com/opencv/opencv/issues/24845)
+   - A quick value-initialization support GMat [#25055](https://github.com/opencv/opencv/issues/25055)
+   - Fixed support of mean/scale preprocessing in OV backend for non-real types [#24704](https://github.com/opencv/opencv/issues/24704)
 
 ![](images/opencv_qr-code_small.png)
 - Objdetect module:
-   - Fixed inaccurate Charuco board generation in some cases (`.generateImage()`) #25673
+   - Fixed inaccurate Charuco board generation in some cases (`.generateImage()`) [#24873](https://github.com/opencv/opencv/issues/24873), [#25673](https://github.com/opencv/opencv/issues/25673)
+   - Fixed Aruco detector thread safety issue [#24807](https://github.com/opencv/opencv/issues/24807), made Aruco detector more deterministic [#24829](https://github.com/opencv/opencv/issues/24829)
+   - Added QR codes Structured Append decoding mode [#24548](https://github.com/opencv/opencv/issues/24548)
+   - Several bug fixes in QR code detector and decoder [#25026](https://github.com/opencv/opencv/issues/25026)
+   - Fixed barcode detectAndDecode [#25035](https://github.com/opencv/opencv/issues/25035)
+   - Ported remaning Aruco and Charuco documentation and samples to modern API [#23018](https://github.com/opencv/opencv/issues/23018)
 
 - VideoIO:
-  - Fix race condition in InternalFFMpegRegister initialization. #25419
-  - Orbbec Camera supports MacOS，Gemini2 and Gemini2L support Y16 format #24877
-  - Added V4L2_PIX_FMT_SGRBG8 pixel format support to V4L2 backend #25249
+  - Fix race condition in InternalFFMpegRegister initialization. [#25419](https://github.com/opencv/opencv/issues/25419)
+  - Orbbec Camera supports MacOS，Gemini2 and Gemini2L support Y16 format [#24877](https://github.com/opencv/opencv/issues/24877)
+  - Added V4L2_PIX_FMT_SGRBG8 pixel format support to V4L2 backend [#25249](https://github.com/opencv/opencv/issues/25249)
+  - Fix incorrect timestamps returned by VideoCapture when CAP_PROP_FORMAT == -1 [#24828](https://github.com/opencv/opencv/issues/24828)
 
 - Python Bindings:
    - Experimental NumPy 2.0 support
-   - use numeric dtype for MatLike instead of generic #25406
+   - Added python bindings for Rect2f and Point3i [#24919](https://github.com/opencv/opencv/issues/24919)
+   - Switched to numeric dtype for MatLike instead of generic [#25406](https://github.com/opencv/opencv/issues/25406)
+   - Added path-like objects support wherever file names are expected [#24773](https://github.com/opencv/opencv/issues/24773)
 
+- Android:
+  - Added any screen orientation support for JavaCameraView [#24827](https://github.com/opencv/opencv/issues/24827), avaCamera2View and NativeCameraView [#24869](https://github.com/opencv/opencv/issues/24869) in Android samples. Fixed double preview initialization bug in JavaCamera2View [#24869](https://github.com/opencv/opencv/issues/24869).
+  - Removed Android AIDL from build scrips and tutorials as it's not needed since 4.9.0 [#24843](https://github.com/opencv/opencv/issues/24843)
+  - Enable file system on Emscripten [#24949](https://github.com/opencv/opencv/issues/24949)
+  - Updated Android samples for modern Android studio. Added OpenCV from Maven support. [#24473](https://github.com/opencv/opencv/issues/24473)
+  - Added kotlin classes to AAR [#24884](https://github.com/opencv/opencv/issues/24884)
+  - Added ARM KleidiCV as HAL for ARM v8 and v9 processors (`-DWITH_KLEIDICV=ON` CMake option) [#25443](https://github.com/opencv/opencv/issues/25443), [#25618](https://github.com/opencv/opencv/issues/25618)    
+   
 - Platforms support:
-  - CUDA 12.4+ support #25658  
-  - Ubuntu 24.04 Support
-  - Wayland back-end for Linux #25551, #25510, #25502
-  - New LAPACK interface support on MacOS and derivatives #24804, #25625
-  - Added initial version of HAL for RISC-V processors with P-extension #25167
-  - Added ARM KleidiCV as HAL for ARM v8 and v9 processors #25443, #25618
-  - Added zlib-ng  as alternative to classic zlib (-DWITH_ZLIB_NG=ON CMake option) #24782
+  - CUDA 12.4+ support [#25658](https://github.com/opencv/opencv/issues/25658)
+  - Wayland back-end for Linux [#25551](https://github.com/opencv/opencv/issues/25551), [#25510](https://github.com/opencv/opencv/issues/25510), [#25502](https://github.com/opencv/opencv/issues/25502)
+  - New LAPACK interface support on MacOS and derivatives [#24804](https://github.com/opencv/opencv/issues/24804), [#25625](https://github.com/opencv/opencv/issues/25625)
+  - Added initial version of HAL for RISC-V processors with P-extension [#25167](https://github.com/opencv/opencv/issues/25167)
+  - Added ARM KleidiCV as HAL for ARM v8 and v9 processors (`-DWITH_KLEIDICV=ON` CMake option) [#25443](https://github.com/opencv/opencv/issues/25443), [#25618](https://github.com/opencv/opencv/issues/25618)
+  - Added zlib-ng  as alternative to classic zlib (`-DWITH_ZLIB_NG=ON` CMake option) [#24782](https://github.com/opencv/opencv/issues/24782)
   - OneAPI 2024 support (IPP, TBB)
   - Experimental Apple VisionOS support
   - Experimental Windows ARM64 support
-
 
 version:4.9.0
 -------------
