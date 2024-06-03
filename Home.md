@@ -10,8 +10,8 @@ General resources
 - :speech_balloon: [Q&A forum](https://forum.opencv.org) - ask questions and share your knowledge by answering others' questions
 
 - :books: [Documentation](https://docs.opencv.org/):
-    - latest releases: [4.9.0](https://docs.opencv.org/4.9.0), [3.4.20](https://docs.opencv.org/3.4.20)
-    - nightly releases: [4.x](https://docs.opencv.org/4.x) / [3.4](https://docs.opencv.org/3.4) and upcoming [5.x](https://docs.opencv.org/5.x) branch
+    - latest release: [4.10.0](https://docs.opencv.org/4.10.0)
+    - nightly releases: [4.x](https://docs.opencv.org/4.x) and upcoming [5.x](https://docs.opencv.org/5.x) branch
 
 - :hammer_and_wrench: [Changelog](ChangeLog) - highlights for each library release
 
