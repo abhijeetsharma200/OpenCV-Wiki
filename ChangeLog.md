@@ -99,6 +99,127 @@ Summer's update for OpenCV 4.x has been released. The release also includes [Ope
   - Experimental Apple VisionOS support
   - Experimental Windows ARM64 support
 
+### Contributors
+
+<details>
+<summary>contributors</summary>
+
+```
+git shortlog --no-merges -ns 4.9.0..4.10.0
+    64  Alexander Smorkalov
+    28  Maksim Shabunin
+    22  Kumataro
+    15  Yuantao Feng
+    13  Rostislav Vasilikhin
+    11  Vincent Rabaud
+    10  Dmitry Kurtaev
+     9  fengyuentau
+     6  Letu Ren
+     6  MaximSmolskiy
+     6  alexlyulkov
+     5  Alexander Alekhin
+     5  Alexander Lyulkov
+     4  Abduragim Shtanchaev
+     4  Laurent Berger
+     4  Maxim Smolskiy
+     4  Michael Klatis
+     3  Adrian Kretz
+     3  Alessandro de Oliveira Faria (A.K.A.CABELO)
+     3  Alex
+     3  Alexander Panov
+     3  Brad Smith
+     3  Dhanwanth1803
+     3  Suleyman TURKMEN
+     3  cudawarped
+     2  Anatoliy Talamanov
+     2  Benjamin Buch
+     2  CNOCycle
+     2  Dmitry Matveev
+     2  HAN Liutong
+     2  Misha Klatis
+     2  Pierre Chatelier
+     2  Stefan Dragnev
+     2  Tomoaki Teshima
+     2  Vadim Levin
+     2  Wanli
+     2  Yusuke Kameda
+     2  Zhuo Zhang
+     2  catree
+     2  eplankin
+     2  lpanaf
+     2  unknown
+     1  Abduragim
+     1  Ahmed Essam
+     1  AleksandrPanov
+     1  Aman-Vishwakarma1729
+     1  Anastasiya Pronina
+     1  Aryan
+     1  CSBVision
+     1  Carlos Azevedo
+     1  Cristian Dobre
+     1  Dan Rosser
+     1  Danial Javady
+     1  Daria Mityagina
+     1  Giorgos Karagounis
+     1  Gonzalo Matheu
+     1  Haosonn
+     1  Ingrid Wang
+     1  John Slade
+     1  John Stechschulte
+     1  Jun
+     1  JunX
+     1  Junyan721113
+     1  Linaname
+     1  Liutong HAN
+     1  Lollyrana
+     1  LuukvandenBent
+     1  Maksym Ivashechkin
+     1  Markus Murschitz
+     1  Matthias Möller
+     1  MengqingCao
+     1  NlSEMONO
+     1  Oleg Pipikin
+     1  Phil Nelson
+     1  Rageking8
+     1  RoboSchmied
+     1  Ryo H
+     1  Sean McBride
+     1  Sergei Shutov
+     1  Susumu IINO
+     1  Székely Gábor
+     1  TolyaTalamanov
+     1  Tsukasa Sugiura
+     1  Ujjayant Kadian
+     1  Vadim Pisarevsky
+     1  Yannis Guyon
+     1  Yu SuiXian
+     1  Yuriy Chernyshov
+     1  Yuya Unno
+     1  Zhi-Qiang Zhou
+     1  _Burnside
+     1  ache
+     1  ajithvallabai
+     1  daiyin
+     1  ecchen
+     1  inkredibl
+     1  jimmylaw21
+     1  lackhole
+     1  llh721113
+     1  lpylpy0514
+     1  mikhail.shtennikov
+     1  ryanking13
+     1  sepperliu
+     1  shenleban tongying
+     1  thewoz
+     1  uday
+     1  utibenkei
+     1  xndcn
+     1  zihaomu
+     1  zzuliys
+     1  刘雄康
+```
+</details>
+
 version:4.9.0
 -------------
 
