@@ -42,13 +42,13 @@ Summer's update for OpenCV 4.x has been released. The release also includes [Ope
    - Added more DNN layers with OpenVINO [#25524](https://github.com/opencv/opencv/issues/25524), [#25291](https://github.com/opencv/opencv/issues/25291).
    - Optimized fastDepthwiseConv [#25361](https://github.com/opencv/opencv/issues/25361) and int8 layers 25230 for RISC-V with RVV extension
    - Optimized fastDepthwiseConv for RISC-V P Packed SIMD Extension v0.5.2 [#24556](https://github.com/opencv/opencv/issues/24556)
-   - Optimized Attention [#24476](https://github.com/opencv/opencv/issues/24476), [#25271](https://github.com/opencv/opencv/issues/25271), [#25238](https://github.com/opencv/opencv/issues/25238), 25076.
+   - Optimized Attention [#24476](https://github.com/opencv/opencv/issues/24476), [#25271](https://github.com/opencv/opencv/issues/25271), [#25238](https://github.com/opencv/opencv/issues/25238), [#24613](https://github.com/opencv/opencv/issues/24613),  25076.
    - Added parallel version for scatter and scatterND [#24813](https://github.com/opencv/opencv/issues/24813)
    - Added broadcasting if a.rank() != b.rank() with CuDNN backend [#24834](https://github.com/opencv/opencv/issues/24834)
    - Tuned Winograd algorithm usage for convolutions [#24709](https://github.com/opencv/opencv/issues/24709)
    - Added Raft model support and tracking sample with it [#24913](https://github.com/opencv/opencv/issues/24913)
    - Added Vulkan backend for NaryEltwiseLayer in DNN module [#24768](https://github.com/opencv/opencv/issues/24768)
-   - Imporved modern Yolo detectors support. Added sample and documentation [#24898](https://github.com/opencv/opencv/issues/24898).
+   - Imporved modern Yolo detectors support. Added sample and documentation [#24898](https://github.com/opencv/opencv/issues/24898), [#24611](https://github.com/opencv/opencv/pull/24611)
    - Added CuDNN 9+ support [#25412](https://github.com/opencv/opencv/issues/25412)
    - Added OpenVINO 2024 support [#25199](https://github.com/opencv/opencv/issues/25199)
 
