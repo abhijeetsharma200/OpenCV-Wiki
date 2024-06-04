@@ -19,7 +19,7 @@ Summer's update for OpenCV 4.x has been released. The release also includes [Ope
 - Imgproc Module:
   - Added relative displacement field option to cv::remap [#24621](https://github.com/opencv/opencv/issues/24621)
   - Added new findContours implementation [#25146](https://github.com/opencv/opencv/issues/25146), [#25680](https://github.com/opencv/opencv/issues/25680), [#25385](https://github.com/opencv/opencv/issues/25385)
-  - Fixed allocation issue in EMD [#25583](https://github.com/opencv/opencv/issues/25583)
+  - Refactored EMD algorithm to get rid of C-API usage [#25469](https://github.com/opencv/opencv/pull/25469)
   - Fixed bug in stackBlur with large kernels [#25513](https://github.com/opencv/opencv/issues/25513)
   - Extended HAL for projectPoints [#25511](https://github.com/opencv/opencv/issues/25511), equalizeHist [#25565](https://github.com/opencv/opencv/issues/25565), Otsu threshold [#25509](https://github.com/opencv/opencv/issues/25509). Added new HAL entries for gaussianBlur [#25397](https://github.com/opencv/opencv/issues/25397), remap [#25399](https://github.com/opencv/opencv/issues/25399), bilaterialFilter [#25343](https://github.com/opencv/opencv/issues/25343).
 
@@ -92,7 +92,7 @@ Summer's update for OpenCV 4.x has been released. The release also includes [Ope
   - CUDA 12.4+ support [#25658](https://github.com/opencv/opencv/issues/25658)
   - Wayland back-end for Linux [#25551](https://github.com/opencv/opencv/issues/25551), [#25510](https://github.com/opencv/opencv/issues/25510), [#25502](https://github.com/opencv/opencv/issues/25502)
   - New LAPACK interface support on MacOS and derivatives [#24804](https://github.com/opencv/opencv/issues/24804), [#25625](https://github.com/opencv/opencv/issues/25625)
-  - Added initial version of HAL for RISC-V processors with P-extension [#25167](https://github.com/opencv/opencv/issues/25167)
+  - Added initial version of HAL for RISC-V processors with P-extension (v0.5.2, Andes platforms) [#25167](https://github.com/opencv/opencv/issues/25167)
   - Added ARM KleidiCV as HAL for ARM v8 and v9 processors (`-DWITH_KLEIDICV=ON` CMake option) [#25443](https://github.com/opencv/opencv/issues/25443), [#25618](https://github.com/opencv/opencv/issues/25618)
   - Added zlib-ng  as alternative to classic zlib (`-DWITH_ZLIB_NG=ON` CMake option) [#24782](https://github.com/opencv/opencv/issues/24782)
   - OneAPI 2024 support (IPP, TBB)
