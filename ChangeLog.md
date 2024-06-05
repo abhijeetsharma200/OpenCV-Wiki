@@ -81,11 +81,11 @@ Summer's update for OpenCV 4.x has been released. The release also includes [Ope
    - Added path-like objects support wherever file names are expected [#24773](https://github.com/opencv/opencv/issues/24773)
 
 - Android:
-  - Added any screen orientation support for JavaCameraView [#24827](https://github.com/opencv/opencv/issues/24827), avaCamera2View and NativeCameraView [#24869](https://github.com/opencv/opencv/issues/24869) in Android samples. Fixed double preview initialization bug in JavaCamera2View [#24869](https://github.com/opencv/opencv/issues/24869).
+  - Added any screen orientation support for JavaCameraView [#24827](https://github.com/opencv/opencv/issues/24827), JavaCamera2View and NativeCameraView [#24869](https://github.com/opencv/opencv/issues/24869) in Android samples. Fixed double preview initialization bug in JavaCamera2View [#24869](https://github.com/opencv/opencv/issues/24869).
   - Removed Android AIDL from build scrips and tutorials as it's not needed since 4.9.0 [#24843](https://github.com/opencv/opencv/issues/24843)
   - Enable file system on Emscripten [#24949](https://github.com/opencv/opencv/issues/24949)
   - Updated Android samples for modern Android studio. Added OpenCV from Maven support. [#24473](https://github.com/opencv/opencv/issues/24473)
-  - Added kotlin classes to AAR [#24884](https://github.com/opencv/opencv/issues/24884)
+  - Added Kotlin classes to AAR [#24884](https://github.com/opencv/opencv/issues/24884)
   - Added ARM KleidiCV as HAL for ARM v8 and v9 processors (`-DWITH_KLEIDICV=ON` CMake option) [#25443](https://github.com/opencv/opencv/issues/25443), [#25618](https://github.com/opencv/opencv/issues/25618)    
    
 - Platforms support:
