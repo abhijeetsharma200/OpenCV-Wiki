@@ -86,14 +86,14 @@ Summer's update for OpenCV 4.x has been released. The release also includes [Ope
   - Enable file system on Emscripten [#24949](https://github.com/opencv/opencv/issues/24949)
   - Updated Android samples for modern Android studio. Added OpenCV from Maven support. [#24473](https://github.com/opencv/opencv/issues/24473)
   - Added Kotlin classes to AAR [#24884](https://github.com/opencv/opencv/issues/24884)
-  - Added ARM KleidiCV as HAL for ARM v8 and v9 processors (`-DWITH_KLEIDICV=ON` CMake option) [#25443](https://github.com/opencv/opencv/issues/25443), [#25618](https://github.com/opencv/opencv/issues/25618)    
+  - Added ARM KleidiCV as HAL for ARM v8 and v9 processors (`-DWITH_KLEIDICV=ON` CMake option) [#25443](https://github.com/opencv/opencv/issues/25443), [#25618](https://github.com/opencv/opencv/issues/25618), [ARM  announcement](https://community.arm.com/arm-community-blogs/b/ai-and-ml-blog/posts/kleidicv).    
    
 - Platforms support:
   - CUDA 12.4+ support [#25658](https://github.com/opencv/opencv/issues/25658)
   - Wayland back-end for Linux [#25551](https://github.com/opencv/opencv/issues/25551), [#25510](https://github.com/opencv/opencv/issues/25510), [#25502](https://github.com/opencv/opencv/issues/25502)
   - New LAPACK interface support on MacOS and derivatives [#24804](https://github.com/opencv/opencv/issues/24804), [#25625](https://github.com/opencv/opencv/issues/25625)
   - Added initial version of HAL for RISC-V processors with P-extension (v0.5.2, Andes platforms) [#25167](https://github.com/opencv/opencv/issues/25167)
-  - Added ARM KleidiCV as HAL for ARM v8 and v9 processors (`-DWITH_KLEIDICV=ON` CMake option) [#25443](https://github.com/opencv/opencv/issues/25443), [#25618](https://github.com/opencv/opencv/issues/25618)
+  - Added ARM KleidiCV as HAL for ARM v8 and v9 processors (`-DWITH_KLEIDICV=ON` CMake option) [#25443](https://github.com/opencv/opencv/issues/25443), [#25618](https://github.com/opencv/opencv/issues/25618), [ARM  announcement](https://community.arm.com/arm-community-blogs/b/ai-and-ml-blog/posts/kleidicv).
   - Added zlib-ng  as alternative to classic zlib (`-DWITH_ZLIB_NG=ON` CMake option) [#24782](https://github.com/opencv/opencv/issues/24782)
   - OneAPI 2024 support (IPP, TBB)
   - Experimental Apple VisionOS support
