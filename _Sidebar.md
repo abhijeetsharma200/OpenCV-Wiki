@@ -13,6 +13,7 @@
 - [[Running OpenCV on Various Platforms|OpenCV-Platforms]]
     - [[Running OpenCV on RISC-V|OpenCV-RISC-V]]
     - [[Custom OpenCV Android SDK and AAR package build|Custom-OpenCV-Android-SDK-and-AAR-package-build]]
+    - [[Running native OpenCV code with Hardware Address Sanitizer|Running-native-OpenCV-code-with-Hardware-Address-Sanitizer]]
 - [[OpenCV 5|OpenCV 5]]
 - [[OpenCV 4|Opencv4]]
     - [[Graph API (G-API)|Graph-API]]
