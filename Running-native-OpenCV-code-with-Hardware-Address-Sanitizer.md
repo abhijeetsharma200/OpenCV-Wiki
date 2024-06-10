@@ -23,7 +23,7 @@ To use it with OpenCV, the library should be build with HWASan support enabled. 
    * `./adb push $YOUR_OPENCV_BUILD_FOLDER/o4a/opencv_android/opencv/build/intermediates/stripped_native_libs/debug/out/lib/arm64-v8a/libc++_shared.so /data/local/tmp`
 4. Open ADB shell `./adb shell` and run tests on a device:
    ```
-   export OPENCV_TEST_DATA_PATH=/sdcard
+   export OPENCV_TEST_DATA_PATH=/sdcard/testdata
    cd /data/local/tmp
    LD_HWASAN=1 LD_PRELOAD=/data/local/tmp/libc++_shared.so ./opencv_test_core 2> out.txt
    ```
