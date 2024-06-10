@@ -1,5 +1,5 @@
 [Hardware Address Sanitizer](https://developer.android.com/ndk/guides/hwasan) or HWASan is an ARM64 processor feature that simplifies detection of potential memory problems such as stack/buffer overflow, double free and so on.
-To use it with OpenCV, the library should be build with HWASan support enabled. In this instruction we'll describe how to build it, run it on a device and get actual stack traces when memory error is detected.
+To use it with OpenCV, the library should be build with HWASan support enabled. In this instruction we'll describe how to build it, run tests on a device and get actual stack traces when memory error is detected.
 
 1. Build OpenCV for Android:
    * Clone the code from this branch: [#25718](https://github.com/opencv/opencv/pull/25718) (or from 4.x branch if this PR is already merged)
