@@ -28,7 +28,7 @@ To use it with OpenCV, the library should be build with HWASan support enabled. 
    LD_HWASAN=1 LD_PRELOAD=/data/local/tmp/libc++_shared.so ./opencv_test_core 2> out.txt
    ```
 5. Extract logs from device: `./adb pull /data/local/tmp/out.txt $YOUR_LOGS_FILE` (do not forget to set `YOUR_LOGS_FILE` variable)
-6. HWAsan logs contain stack traces with return addresses expressed in hexadecimal. We’d like to get source file and line numbers instead as we expect that from typical stack trace for a debug build. To get them, we post process these logs by `hwasan_symbolize` script:
+6. HWAsan logs contain stack traces with return addresses expressed in hexadecimal. We’d like to get source files and line numbers instead as we expect that from typical stack trace for a debug build. To get them, we post process these logs by `hwasan_symbolize` script:
 ```
 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/bin/hwasan_symbolize  --symbols $YOUR_OPENCV_BUILD_FOLDER/o4a/bin/  < $YOUR_LOGS_FILE
 ```
