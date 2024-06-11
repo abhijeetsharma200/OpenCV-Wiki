@@ -2,7 +2,7 @@
 To use it with OpenCV, the library should be build with HWASan support enabled. In this instruction we'll describe how to build it, run tests on a device and get actual stack traces when memory error is detected.
 
 1. Build OpenCV for Android:
-   * Clone the code from this branch: [#25718](https://github.com/opencv/opencv/pull/25718) (or from 4.x branch if this PR is already merged)
+   * Clone the code from this branch: [#25746](https://github.com/opencv/opencv/pull/25746) (or from 4.x branch if this PR is already merged)
    * Open [this instruction](https://github.com/opencv/opencv/wiki/Custom-OpenCV-Android-SDK-and-AAR-package-build)
    * Add `--hwasan` and `--debug` flags to `build_sdk.py` script call
    * Use NDK with version not less than 25
