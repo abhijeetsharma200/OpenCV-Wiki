@@ -31,7 +31,7 @@ export YOUR_OPENCV_BUILD_FOLDER=<path to your OpenCV build folder>
 export ANDROID_SDK=<path to your Android SDK, for example /home/user123/Android/Sdk>
 export ANDROID_NDK_HOME=<path to NDK, for example /home/user123/Android/Sdk/ndk/18.1.5063045>
 
-python3 $YOUR_OPENCV_SRC_FOLDER/platforms/android/build_sdk.py $YOUR_OPENCV_BUILD_FOLDER $YOUR_OPENCV_SRC_FOLDER --ndk_path $ANDROID_NDK_HOME --sdk_path $ANDROID_SDK --extra_modules_path $YOUR_CONTRIB_SRC_FOLDER/modules --config $YOUR_OPENCV_SRC_FOLDER/platforms/android/ndk-18-api-level-21.config.py
+python3 $YOUR_OPENCV_SRC_FOLDER/platforms/android/build_sdk.py $YOUR_OPENCV_BUILD_FOLDER $YOUR_OPENCV_SRC_FOLDER --ndk_path $ANDROID_NDK_HOME --sdk_path $ANDROID_SDK --extra_modules_path $YOUR_CONTRIB_SRC_FOLDER/modules --config $YOUR_OPENCV_SRC_FOLDER/platforms/android/ndk-18-api-level-21.config.py --use_android_buildtools
 ```
 
 7. Change folder to some new one, let’s call it `YOUR_AAR_FOLDER`
