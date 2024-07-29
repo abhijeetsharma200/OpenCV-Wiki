@@ -64,9 +64,8 @@ TODO: replace link with the one of opencv official after PR is merged
 -->
 Compile OpenCV with CANN using the following commands:
 ```shell
-git clone https://github.com/fengyuentau/opencv.git
+git clone https://github.com/opencv/opencv.git
 cd opencv
-git checkout cann_backend_221010
 mkdir build
 cd build
 cmake -D WITH_CANN=ON \
