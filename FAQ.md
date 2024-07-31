@@ -1,7 +1,7 @@
 The page contains Frequently Asked Questions and Answers for them and list of well known problems with links to related discussions.
 
 # Social
-**Q:** _OpenCV still uses Lena image. Why?_
+**Q:** _OpenCV still uses Lena image. Why?_  
 **A:** The Lena image is widely used for accuracy testing, performance testing and a lot of algorithms illustration. OpenCV team respects the wishes of Lena Forsén and decides will no longer accept new pull requests and documentation pages with Lena image. However complete image removal from will break performance comparison (some algorithms are data dependent) and requires a lot of regression data re-generation as soon as documentation illustrations. OpenCV team agreed not to decline contributions that do not bring extra value rather than just the image replacement in the existing code.
 
 # Build & Install
