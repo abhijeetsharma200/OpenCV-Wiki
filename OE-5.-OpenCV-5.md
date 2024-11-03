@@ -80,6 +80,7 @@ and also the "uniform" tuples of such numbers, such as CV_8UC3 (3-tuple of bytes
 Until recently, this value set was sufficient. But now, when people are interested in efficient deep learning and, in general, low-power computing, some new interesting formats appeared, such as `bfloat16`.
 
 In OpenCV 5.0 we will support [extended set of types](https://github.com/opencv/opencv/pull/23865):
+   * all the above types plus
    * `CV_64S`, `CV_64U`
    * `CV_32U`
    * `CV_Bool`
