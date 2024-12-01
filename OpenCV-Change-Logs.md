@@ -1,6 +1,3 @@
-OpenCV Change Logs
-==================
-
 Previous Change Logs:
 * [OpenCV v2.2-v4.10](https://github.com/opencv/opencv/wiki/OpenCV-ChangeLog-v2.2%E2%80%90v4.10)
 * [OpenCV v1.0-v2.1](https://github.com/opencv/opencv/wiki/ChangeLog_v10-v21)
