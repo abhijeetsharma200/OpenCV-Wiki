@@ -13,7 +13,7 @@ General resources
     - latest release: [4.10.0](https://docs.opencv.org/4.10.0)
     - nightly releases: [4.x](https://docs.opencv.org/4.x) and upcoming [5.x](https://docs.opencv.org/5.x) branch
 
-- :hammer_and_wrench: [Changelog](ChangeLog) - highlights for each library release
+- :hammer_and_wrench: [Changelog](OpenCV-ChangeLog) - highlights for each library release
 
 - :telephone_receiver: [Meeting Notes](Meeting_notes)
 
