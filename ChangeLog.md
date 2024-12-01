@@ -4,7 +4,7 @@ OpenCV Change Logs
 version:5.0-alpha
 --------------
 
-*October, 2024*
+*December, 2024*
 
 The alpha release for the new OpenCV generation. The release is designed as technology preview and not ready for production usage yet.
 
