@@ -1,5 +1,5 @@
 - [[Home]]
-    - [[Changelog|OpenCV-Change-Logs]] ([[older|https://github.com/opencv/opencv/wiki/OpenCV-Change-Logs-v2.2%E2%80%90v4.10]])
+    - [[Changelog|OpenCV-Change-Logs]] ([[older|OpenCV-Change-Logs-v2.2%E2%80%90v4.10]])
         - [[Documentation improvement plan]]
     - [[CiteOpenCV]]
     - [[OpenCVLogo]]
