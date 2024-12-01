@@ -1,5 +1,5 @@
 - [[Home]]
-    - [[Changelog|ChangeLog]] ([[older|ChangeLog_v10-v21]])
+    - [[Changelog|OpenCV-Change-Logs]] ([[older|OpenCV-Change-Logs-v2.2%E2%80%90v4.10]])
         - [[Documentation improvement plan]]
     - [[CiteOpenCV]]
     - [[OpenCVLogo]]
