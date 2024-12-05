@@ -42,9 +42,9 @@ The following notation is used to mark various items below:
   - `uint8_t: CV_8U`, `int8_t: CV_8S`, `uint16_t: CV_16U`, `int16_t: CV_16S`, `int32_t: CV_32S`, `float: CV_32F`, `double: CV_64F`, `hfloat` (a.k.a. `half` or `float16_t` or `__fp16`): `CV_16F`.
   - (new in OpenCV 5): `bfloat` (a.k.a. `bfloat16_t`): `CV_16BF`, `uint32_t: CV_32U`, `uint64_t: CV_64U`, `int64_t: CV_64S`, `bool: CV_Bool`.
   - `bool` type takes 1 byte per value, not 1 bit. Any non-zero byte is considered `true`, zero byte means `false`. `cv::Mat` of type `bool (CV_Bool)` can now be used as a mask for all functions where we used `cv::Mat` of `uchar/uint8_t` or `schar/int8_t` before.
-  - Operations on `hfloat` and `bfloat` are always available, even on hardware that does not support those types natively. If necessary, internally we use efficient inline functions for scalar and vector float⇔float16/bfloat16 conversion.
+  - Operations on `hfloat` and `bfloat` are always available, even on hardware that does not support those types natively. If necessary, internally we use efficient inline functions for scalar and vector `float<=>hfloat/bfloat` conversion.
 	Support for the new types has been added to `cv::Mat`, `cv::UMat`,
-            InputArray/OutputArray, key modules (core, dnn, 5.x imgproc etc.), FileStorage,
+            `InputArray/OutputArray`, key modules (core, dnn, (5.x) imgproc etc.), `FileStorage`,
             various programming language bindings etc.
 - OpenCV now supports arrays of lower than 2 dimensionality, i.e. 1D (vectors) and 0D (scalars). `std::vector<T>` wrapped into `Mat` or `InputArray/OutputArray` is interpreted as a 1D array, not 2D Nx1 or 1xN array (as in OpenCV 4.x). For 1D arrays `Mat::dims == Mat::rows == 1`, `Mat::cols == Mat::total() == <number_of_elements>`. For 0D arrays `Mat::dims == 0`, `Mat::rows == Mat::cols == Mat::total() == 1`.
 - Lapack is now always available within OpenCV. In particular, it’s used for more efficient SVD and eigenvalue/eigenvector decomposition and the USAC framework. When there is no external Lapack library installed in the system, OpenCV builds and uses the internal small subset of Lapack.
