@@ -8,7 +8,7 @@ Previous Change Logs:
 
 The alpha release for the new OpenCV generation. The release is designed as technology preview and not ready for production usage yet.
 
-Some notation is used to make various items below:
+Some notation is used to mark various items below:
 * 5+4.x: notable changes shared between the latest 4.x releases and 5.0
 * 5.0: the item will be finished in 5.0 release; currently it's planned or in progress.
 * 5.x: the item will be put in some form into 5.0 release, but will mostly be finished in subsequent 5.x releases.
