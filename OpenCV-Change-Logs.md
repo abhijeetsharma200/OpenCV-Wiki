@@ -53,7 +53,10 @@ The following notation is used to mark various items below:
 ### Updated Imgproc module
 
 - Accelerated image warping functions: warpAffine, warpPerspective, remap. Acceleration factor varies from 10% to more than 300%, depending on the platform, image size, type and operation flags. More optimizations for those functions, as well as other important image processing functions are expected in 5.0 gold.
-- Text rendering now uses STB-based truetype engine and the embedded variable truetype font. Users can also load and use custom fonts. Consequently, many Unicode symbols are now supported, with a few caveats though: 1) some scripts, such as Arabic or Devanagari, are not rendered properly, we need to add Harfbuzz for that; 2) some compound Unicode symbols are not rendered properly for the same reason; 3) color emoji are not supported, as STB is a simple black-n-white engine.
+- Text rendering now uses STB-based truetype engine and the embedded variable truetype font. Users can also load and use custom fonts. Consequently, many Unicode symbols are now supported, with a few caveats though:
+  1. some scripts, such as Arabic or Devanagari, are not rendered properly, we need to add Harfbuzz for that
+  2. some compound Unicode symbols are not rendered properly for the same reason
+  3. color emoji are not supported, as STB is a simple black-n-white engine.
 - 5.0, 5.x: Further refactoring and improvements are expected before and after 5.0 release: https://github.com/opencv/opencv/issues/25012
 
 ### Updated HAL
