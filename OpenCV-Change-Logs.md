@@ -25,15 +25,15 @@ The following notation is used to mark various items below:
 
 - C API has been removed. We still use some `CV_` macros, such as `CV_8U`, but all C functions (like `cvCreateMat()` or `cvFindContours()`) and structures (such as `CvMat`) have been removed. Goodbye, good old OpenCV 1.x API, RIP :)
 - OpenVX support has been removed. If some vendors provide OpenVX kernels and want to use them for OpenCV acceleration, they can create a custom “non-CPU” HAL for that, see below.
-- Graph API (G-API) module has been moved to opencv_contrib.
-- Classic ML module has been moved to opencv_contrib. If you use Python, [scikit-learn](https://scikit-learn.org/) is a much better alternative.
-- Features2D module has been renamed to Features. Scope of the renamed module has been extended to process feature vectors produced by the modern deep nets. Several obsolete feature detectors/descriptors have been moved to opencv_contrib. `SIFT`, `ORB`, `FAST`, `GoodFeaturesToTrack`, `MSER` are still available, though.
-- 5.0: FLANN as a separate module will be gone. Annoy-based ANN (*approximate nearest neighbor*) search algorithm, which has been already added to Features module, will replace it.
+- `Graph API` (`G-API`) module has been moved to `opencv_contrib`.
+- Classic `ML` module has been moved to `opencv_contrib`. If you use Python, [scikit-learn](https://scikit-learn.org/) is a much better alternative.
+- `Features2D` module has been renamed to `Features`. Scope of the renamed module has been extended to process feature vectors produced by the modern deep nets. Several obsolete feature detectors/descriptors have been moved to opencv_contrib. `SIFT`, `ORB`, `FAST`, `GoodFeaturesToTrack`, `MSER` are still available, though.
+- 5.0: `FLANN` as a separate module will be gone. Annoy-based ANN (*approximate nearest neighbor*) search algorithm, which has been already added to `Features` module, will replace it.
 - Cleaned objdetect module: Haar-based and HOG-based detectors have been moved to opencv_contrib, xobjdetect module. There are modern deep learning-based object/face detectors that are both faster and more accurate.
 - Calib3d module has been split into 3 modules:
-  - 3d — basic 3D geometry and 3D vision functionality
-  - calib — camera calibration
-  - stereo — algorithms for depth map estimation via stereo correspondence.
+  - `3d` — basic 3D geometry and 3D vision functionality
+  - `calib` — camera calibration
+  - `stereo` — algorithms for depth map estimation via stereo correspondence.
 - Many obsolete samples (~50% of C++ samples and 5% of Python samples) have been removed. Many of the remaining samples have been revised. 
 
 ### Updated Core module
