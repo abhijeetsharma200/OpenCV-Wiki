@@ -46,7 +46,7 @@ The following notation is used to mark various items below:
 	Support for the new types has been added to `cv::Mat`, `cv::UMat`,
             `InputArray/OutputArray`, key modules (core, dnn, (5.x) imgproc etc.), `FileStorage`,
             various programming language bindings etc.
-- OpenCV now supports arrays of lower than 2 dimensionality, i.e. 1D (vectors) and 0D (scalars). `std::vector<T>` wrapped into `Mat` or `InputArray/OutputArray` is interpreted as a 1D array, not 2D Nx1 or 1xN array (as in OpenCV 4.x). For 1D arrays `Mat::dims == Mat::rows == 1`, `Mat::cols == Mat::total() == <number_of_elements>`. For 0D arrays `Mat::dims == 0`, `Mat::rows == Mat::cols == Mat::total() == 1`.
+- OpenCV now supports arrays of lower than 2 dimensionality, i.e. 1D (vectors) and 0D (scalars). `std::vector<T>` wrapped into `Mat` or `InputArray/OutputArray` is now a real 1D array, not 2D Nx1 or 1xN array (as in OpenCV 4.x). For 1D arrays `Mat::dims == Mat::rows == 1`, `Mat::cols == Mat::total() == <number_of_elements>`. For 0D arrays `Mat::dims == 0`, `Mat::rows == Mat::cols == Mat::total() == 1`. The safe method to distinguish between an empty matrix and a scalar is to use `<some_mat>.empty()`, which is basically equivalent to (but is slightly faster than) `<some_mat>.total() == 0`.  
 - Lapack is now always available within OpenCV. In particular, it’s used for more efficient SVD and eigenvalue/eigenvector decomposition and the USAC framework. When there is no external Lapack library installed in the system, OpenCV builds and uses the internal small subset of Lapack.
 - 5.0, 5.x: Further refactoring and improvements are expected before and after 5.0 release: https://github.com/opencv/opencv/issues/25011.
 
