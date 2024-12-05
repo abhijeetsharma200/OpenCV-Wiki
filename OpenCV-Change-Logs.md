@@ -84,7 +84,7 @@ The following notation is used to mark various items below:
 
 ### Revised Samples
 
-- Revised the following deep learning samples: classification, segmentation, object detection, edge detection, tracking, person reid. All the samples use a collection of models that can be conveniently downloaded with ‘cd <opencv>/samples/dnn && python3 download_models.py’.
+- Revised the following deep learning samples: classification, segmentation, object detection, edge detection, tracking, person reid. All the samples use a collection of models that can be conveniently downloaded with `cd <opencv>/samples/dnn && python3 download_models.py`.
 - Added experimental samples for LLM (GPT2) and diffusion (LDM) models.
 
 ## Migration for 4.x
