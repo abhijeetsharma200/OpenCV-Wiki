@@ -39,7 +39,7 @@ The following notation is used to mark various items below:
 ### Updated Core module
 
 - OpenCV now supports the extended set of data types:
-`uint8_t: CV_8U`, `int8_t: CV_8S`, `uint16_t: CV_16U`, `int16_t: CV_16S`, `int32_t: CV_32S`, float: CV_32F, double: CV_64F, `hfloat` (a.k.a. `half` or `float16_t` or `__fp16`): `CV_16F`.
+`uint8_t: CV_8U`, `int8_t: CV_8S`, `uint16_t: CV_16U`, `int16_t: CV_16S`, `int32_t: CV_32S`, `float: CV_32F`, `double: CV_64F`, `hfloat` (a.k.a. `half` or `float16_t` or `__fp16`): `CV_16F`.
 (new in OpenCV 5): `bfloat` (a.k.a. `bfloat16_t`): `CV_16BF`, `uint32_t: CV_32U`, `uint64_t: CV_64U`, `int64_t: CV_64S`, `bool: CV_Bool`.
 `bool` type takes 1 byte per value, not 1 bit. Any non-zero byte is considered `true`, zero byte means `false`. `cv::Mat` of type `bool (CV_Bool)` can now be used as a mask for all functions where we used `cv::Mat` of `uchar/uint8_t` or `schar/int8_t` before.
 Operations on `hfloat` and `bfloat` are always available, even on hardware that does not support those types natively. If necessary, internally we use efficient inline functions for scalar and vector float⇔float16/bfloat16 conversion.
