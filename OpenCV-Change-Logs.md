@@ -69,9 +69,10 @@ The following notation is used to mark various items below:
 
 ### Updated DNN (Deep Learning Inference Module)
 
-The new engine has been introduced that now co-exists with the old engine. The new engine provides better support for dynamic shapes and other modern ONNX features. By 5.0 gold it will also provide much better coverage of ONNX specification than the old engine; now the coverage is comparable.
-Added parameter `int engine = ENGINE_AUTO` to `cv::dnn::readNet()` to control which engine is used to load and further run the model. By default, we try the new engine first and if it fails to load the model, fall back to the old engine. We can also force the new engine or the old engine. Because of the different internal representation the engine cannot be switched after the model is loaded. Parsers for ONNX, Caffe, TF and TFLite formats have been updated to support the engine selection.
-5.0, 5.x: currently, the new engine only supports the default backend and CPU target. It’s planned to enable more backends and targets by 5.0 gold and even more backends in subsequent 5.x releases [#26198](https://github.com/opencv/opencv/issues/26198).
+- The new engine has been introduced that now co-exists with the old engine. The new engine provides better support for dynamic shapes and other modern ONNX features. By 5.0 gold it will also provide much better coverage of ONNX specification than the old engine; now the coverage is comparable.
+- Added parameter `int engine = ENGINE_AUTO` to `cv::dnn::readNet()` to control which engine is used to load and further run the model. By default, we try the new engine first and if it fails to load the model, fall back to the old engine. We can also force the new engine or the old engine. Because of the different internal representation the engine cannot be switched after the model is loaded.
+- Parsers for ONNX, Caffe, TF and TFLite formats have been updated to support the engine selection.
+- 5.0, 5.x: currently, the new engine only supports the default backend and CPU target. It’s planned to enable more backends and targets by 5.0 gold and even more backends in subsequent 5.x releases [#26198](https://github.com/opencv/opencv/issues/26198).
 
 ### Updated 3D/Calib
 
