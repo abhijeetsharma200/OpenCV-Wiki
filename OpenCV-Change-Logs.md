@@ -60,16 +60,17 @@ Operations on hfloat and bfloat are always available, even on hardware that does
 - 5.0, 5.x: UMat will be extended to be able to store any CPU or non-CPU array/tensor. That is, from an OpenCL-only solution (T-API) we now migrate to a universal heterogeneous API (we might call it U-API or “non-CPU HAL”) and UMat will be the main data container for it. Many other improvements are expected as well: https://github.com/opencv/opencv/issues/25019, https://github.com/opencv/opencv/issues/25025
 
 ### Updated DNN (Deep Learning Inference Module)
+
 The new engine has been introduced that now co-exists with the old engine. The new engine provides better support for dynamic shapes and other modern ONNX features. By 5.0 gold it will also provide much better coverage of ONNX specification than the old engine; now the coverage is comparable.
 Added parameter ‘int engine = ENGINE_AUTO’ to cv::dnn::readNet() to control which engine is used to load and further run the model. By default, we try the new engine first and if it fails to load the model, fall back to the old engine. We can also force the new engine or the old engine. Because of the different internal representation the engine cannot be switched after the model is loaded. Parsers for ONNX, Caffe, TF and TFLite formats have been updated to support the engine selection.
-5.0, 5.x: currently, the new engine only supports the default backend and CPU target. It’s planned to enable more backends and targets by 5.0 gold and even more backends in subsequent 5.x releases.
+5.0, 5.x: currently, the new engine only supports the default backend and CPU target. It’s planned to enable more backends and targets by 5.0 gold and even more backends in subsequent 5.x releases [#26198](https://github.com/opencv/opencv/issues/26198).
 
 ### Updated 3D/Calib
 
 - 5+4.x: Significantly more efficient USAC framework (especially in the case of noisy datasets) is now used for RANSAC-based algorithms to estimate homography, essential matrix, solve PnP problem etc. See https://docs.opencv.org/5.x/de/d3e/tutorial_usac.html
 - New Levenberg–Marquardt algorithm implementation. It's faster and more accurate.
-- Efficient multi-camera calibration framework has been added to calib module. It includes smart initialization and USAC-based optimization pipeline to compute relative positions of all simultaneously calibrated cameras w.r.t. the 1st camera. Various camera configurations are supported (all pinhole cameras, all fisheye cameras and the mixed case). See https://docs.opencv.org/5.x/d6/d36/tutorial_multiview_camera_calibration.html for more details.
-- Initiated work on basic mesh processing and point cloud processing algorithms: TSDF, ICP, etc.
+- Efficient multi-camera calibration framework has been added to calib module. It includes smart initialization and USAC-based optimization pipeline to compute relative positions of all simultaneously calibrated cameras w.r.t. the 1st camera. Various camera configurations are supported (all pinhole cameras, all fisheye cameras and the mixed case). See [tutorial](https://docs.opencv.org/5.x/d6/d36/tutorial_multiview_camera_calibration.html) for more details.
+- Initiated work on basic mesh processing and point cloud processing algorithms: TSDF, ICP, etc. 
 - Added importers and exporters for some popular point cloud formats, such as .ply and .obj.
 
 ### Revised Samples
