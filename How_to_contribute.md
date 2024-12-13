@@ -12,7 +12,7 @@ Before you start contributing you should
 
 -   If you are submitting a new algorithm implementation, do a quick search over internet to see whether the algorithm is patented or not. **Note:** All new algorithms should go into [opencv_contrib](https://github.com/opencv/opencv_contrib) repository by default.
 
--   If you are going to fix a bug, check that it still exists. This can be done by building the latest [2.4](https://github.com/opencv/opencv/tree/2.4)/[3.4](https://github.com/opencv/opencv/tree/3.4) branch or the [latest master branch](https://github.com/opencv/opencv), and make sure that the error is still reproducible there. We do not fix bugs that only affect deprecated versions like OpenCV 2.1 for example.
+-   If you are going to fix a bug, check that it still exists. This can be done by building the latest [4.x](https://github.com/opencv/opencv/tree/4.x)/[5.x](https://github.com/opencv/opencv/tree/5.x) branch or the [latest master branch](https://github.com/opencv/opencv), and make sure that the error is still reproducible there. We do not fix bugs that only affect deprecated versions like OpenCV 2.x/3.x for example. **Note:** Please note that issues found in older versions may already be resolved in the latest version.
 
 -   Make sure that nobody beat you into fixing or reporting the issue by doing a search on the Github [OpenCV issues page](https://github.com/opencv/opencv/issues), and making sure that there isn't someone working on it. In the latter case you might provide support or suggestion in the issue or in the linked pull request.
 
